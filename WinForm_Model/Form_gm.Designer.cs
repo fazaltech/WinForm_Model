@@ -48,8 +48,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.text_cr10 = new System.Windows.Forms.TextBox();
             this.text_cr11 = new System.Windows.Forms.TextBox();
             this.text_cr12 = new System.Windows.Forms.TextBox();
@@ -68,11 +66,20 @@
             this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.combox_cr24 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.check_cr240a = new System.Windows.Forms.CheckBox();
+            this.check_cr240b = new System.Windows.Forms.CheckBox();
+            this.check_cr240c = new System.Windows.Forms.CheckBox();
+            this.check_cr240d = new System.Windows.Forms.CheckBox();
+            this.check_cr240e = new System.Windows.Forms.CheckBox();
+            this.check_cr240f = new System.Windows.Forms.CheckBox();
+            this.check_cr250a = new System.Windows.Forms.CheckBox();
+            this.check_cr250b = new System.Windows.Forms.CheckBox();
+            this.check_cr250c = new System.Windows.Forms.CheckBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.check_cr260a = new System.Windows.Forms.CheckBox();
+            this.check_cr260b = new System.Windows.Forms.CheckBox();
+            this.check_cr260c = new System.Windows.Forms.CheckBox();
+            this.check_cr260d = new System.Windows.Forms.CheckBox();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -80,11 +87,19 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.comboBox6);
-            this.tabPage2.Controls.Add(this.comboBox5);
-            this.tabPage2.Controls.Add(this.comboBox4);
-            this.tabPage2.Controls.Add(this.comboBox3);
-            this.tabPage2.Controls.Add(this.combox_cr24);
+            this.tabPage2.Controls.Add(this.check_cr240f);
+            this.tabPage2.Controls.Add(this.check_cr240e);
+            this.tabPage2.Controls.Add(this.check_cr240d);
+            this.tabPage2.Controls.Add(this.check_cr260d);
+            this.tabPage2.Controls.Add(this.check_cr260c);
+            this.tabPage2.Controls.Add(this.check_cr250c);
+            this.tabPage2.Controls.Add(this.check_cr260b);
+            this.tabPage2.Controls.Add(this.check_cr250b);
+            this.tabPage2.Controls.Add(this.check_cr240c);
+            this.tabPage2.Controls.Add(this.check_cr260a);
+            this.tabPage2.Controls.Add(this.check_cr250a);
+            this.tabPage2.Controls.Add(this.check_cr240b);
+            this.tabPage2.Controls.Add(this.check_cr240a);
             this.tabPage2.Controls.Add(this.radioButton8);
             this.tabPage2.Controls.Add(this.radioButton6);
             this.tabPage2.Controls.Add(this.radioButton4);
@@ -93,8 +108,6 @@
             this.tabPage2.Controls.Add(this.radioButton5);
             this.tabPage2.Controls.Add(this.radioButton3);
             this.tabPage2.Controls.Add(this.radioButton1);
-            this.tabPage2.Controls.Add(this.label19);
-            this.tabPage2.Controls.Add(this.label18);
             this.tabPage2.Controls.Add(this.label17);
             this.tabPage2.Controls.Add(this.label16);
             this.tabPage2.Controls.Add(this.label15);
@@ -144,6 +157,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -293,7 +307,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(29, 370);
+            this.label16.Location = new System.Drawing.Point(29, 486);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(83, 13);
             this.label16.TabIndex = 0;
@@ -303,32 +317,12 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(29, 408);
+            this.label17.Location = new System.Drawing.Point(29, 588);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(130, 13);
             this.label17.TabIndex = 0;
             this.label17.Text = "Supplementation provided";
             this.label17.Click += new System.EventHandler(this.label15_Click);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(29, 446);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(161, 13);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "Quantity of Supplement provided";
-            this.label18.Click += new System.EventHandler(this.label15_Click);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(29, 484);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(261, 13);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "Any illnesses/complications reported in last one month";
-            this.label19.Click += new System.EventHandler(this.label15_Click);
             // 
             // text_cr10
             // 
@@ -491,45 +485,145 @@
             this.radioButton8.Text = "radioButton1";
             this.radioButton8.UseVisualStyleBackColor = true;
             // 
-            // combox_cr24
+            // check_cr240a
             // 
-            this.combox_cr24.FormattingEnabled = true;
-            this.combox_cr24.Location = new System.Drawing.Point(454, 323);
-            this.combox_cr24.Name = "combox_cr24";
-            this.combox_cr24.Size = new System.Drawing.Size(187, 21);
-            this.combox_cr24.TabIndex = 3;
+            this.check_cr240a.AutoSize = true;
+            this.check_cr240a.Location = new System.Drawing.Point(454, 328);
+            this.check_cr240a.Name = "check_cr240a";
+            this.check_cr240a.Size = new System.Drawing.Size(80, 17);
+            this.check_cr240a.TabIndex = 3;
+            this.check_cr240a.Text = "checkBox1";
+            this.check_cr240a.UseVisualStyleBackColor = true;
             // 
-            // comboBox3
+            // check_cr240b
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(454, 362);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(187, 21);
-            this.comboBox3.TabIndex = 3;
+            this.check_cr240b.AutoSize = true;
+            this.check_cr240b.Location = new System.Drawing.Point(454, 351);
+            this.check_cr240b.Name = "check_cr240b";
+            this.check_cr240b.Size = new System.Drawing.Size(80, 17);
+            this.check_cr240b.TabIndex = 3;
+            this.check_cr240b.Text = "checkBox1";
+            this.check_cr240b.UseVisualStyleBackColor = true;
             // 
-            // comboBox4
+            // check_cr240c
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(454, 400);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(187, 21);
-            this.comboBox4.TabIndex = 3;
+            this.check_cr240c.AutoSize = true;
+            this.check_cr240c.Location = new System.Drawing.Point(454, 374);
+            this.check_cr240c.Name = "check_cr240c";
+            this.check_cr240c.Size = new System.Drawing.Size(80, 17);
+            this.check_cr240c.TabIndex = 3;
+            this.check_cr240c.Text = "checkBox1";
+            this.check_cr240c.UseVisualStyleBackColor = true;
             // 
-            // comboBox5
+            // check_cr240d
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(454, 438);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(187, 21);
-            this.comboBox5.TabIndex = 3;
+            this.check_cr240d.AutoSize = true;
+            this.check_cr240d.Location = new System.Drawing.Point(454, 397);
+            this.check_cr240d.Name = "check_cr240d";
+            this.check_cr240d.Size = new System.Drawing.Size(80, 17);
+            this.check_cr240d.TabIndex = 3;
+            this.check_cr240d.Text = "checkBox1";
+            this.check_cr240d.UseVisualStyleBackColor = true;
             // 
-            // comboBox6
+            // check_cr240e
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(454, 476);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(187, 21);
-            this.comboBox6.TabIndex = 3;
+            this.check_cr240e.AutoSize = true;
+            this.check_cr240e.Location = new System.Drawing.Point(454, 420);
+            this.check_cr240e.Name = "check_cr240e";
+            this.check_cr240e.Size = new System.Drawing.Size(80, 17);
+            this.check_cr240e.TabIndex = 3;
+            this.check_cr240e.Text = "checkBox1";
+            this.check_cr240e.UseVisualStyleBackColor = true;
+            // 
+            // check_cr240f
+            // 
+            this.check_cr240f.AutoSize = true;
+            this.check_cr240f.Location = new System.Drawing.Point(454, 443);
+            this.check_cr240f.Name = "check_cr240f";
+            this.check_cr240f.Size = new System.Drawing.Size(80, 17);
+            this.check_cr240f.TabIndex = 3;
+            this.check_cr240f.Text = "checkBox1";
+            this.check_cr240f.UseVisualStyleBackColor = true;
+            // 
+            // check_cr250a
+            // 
+            this.check_cr250a.AutoSize = true;
+            this.check_cr250a.Location = new System.Drawing.Point(454, 482);
+            this.check_cr250a.Name = "check_cr250a";
+            this.check_cr250a.Size = new System.Drawing.Size(80, 17);
+            this.check_cr250a.TabIndex = 3;
+            this.check_cr250a.Text = "checkBox1";
+            this.check_cr250a.UseVisualStyleBackColor = true;
+            // 
+            // check_cr250b
+            // 
+            this.check_cr250b.AutoSize = true;
+            this.check_cr250b.Location = new System.Drawing.Point(454, 505);
+            this.check_cr250b.Name = "check_cr250b";
+            this.check_cr250b.Size = new System.Drawing.Size(80, 17);
+            this.check_cr250b.TabIndex = 3;
+            this.check_cr250b.Text = "checkBox1";
+            this.check_cr250b.UseVisualStyleBackColor = true;
+            // 
+            // check_cr250c
+            // 
+            this.check_cr250c.AutoSize = true;
+            this.check_cr250c.Location = new System.Drawing.Point(454, 528);
+            this.check_cr250c.Name = "check_cr250c";
+            this.check_cr250c.Size = new System.Drawing.Size(80, 17);
+            this.check_cr250c.TabIndex = 3;
+            this.check_cr250c.Text = "checkBox1";
+            this.check_cr250c.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(747, 714);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // check_cr260a
+            // 
+            this.check_cr260a.AutoSize = true;
+            this.check_cr260a.Location = new System.Drawing.Point(459, 588);
+            this.check_cr260a.Name = "check_cr260a";
+            this.check_cr260a.Size = new System.Drawing.Size(80, 17);
+            this.check_cr260a.TabIndex = 3;
+            this.check_cr260a.Text = "checkBox1";
+            this.check_cr260a.UseVisualStyleBackColor = true;
+            // 
+            // check_cr260b
+            // 
+            this.check_cr260b.AutoSize = true;
+            this.check_cr260b.Location = new System.Drawing.Point(459, 611);
+            this.check_cr260b.Name = "check_cr260b";
+            this.check_cr260b.Size = new System.Drawing.Size(80, 17);
+            this.check_cr260b.TabIndex = 3;
+            this.check_cr260b.Text = "checkBox1";
+            this.check_cr260b.UseVisualStyleBackColor = true;
+            // 
+            // check_cr260c
+            // 
+            this.check_cr260c.AutoSize = true;
+            this.check_cr260c.Location = new System.Drawing.Point(459, 634);
+            this.check_cr260c.Name = "check_cr260c";
+            this.check_cr260c.Size = new System.Drawing.Size(80, 17);
+            this.check_cr260c.TabIndex = 3;
+            this.check_cr260c.Text = "checkBox1";
+            this.check_cr260c.UseVisualStyleBackColor = true;
+            // 
+            // check_cr260d
+            // 
+            this.check_cr260d.AutoSize = true;
+            this.check_cr260d.Location = new System.Drawing.Point(459, 657);
+            this.check_cr260d.Name = "check_cr260d";
+            this.check_cr260d.Size = new System.Drawing.Size(80, 17);
+            this.check_cr260d.TabIndex = 3;
+            this.check_cr260d.Text = "checkBox1";
+            this.check_cr260d.UseVisualStyleBackColor = true;
             // 
             // Form_gm
             // 
@@ -569,8 +663,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.DateTimePicker dateTime_cr14;
@@ -579,11 +671,6 @@
         private System.Windows.Forms.TextBox text_cr12;
         private System.Windows.Forms.TextBox text_cr11;
         private System.Windows.Forms.TextBox text_cr10;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox combox_cr24;
         private System.Windows.Forms.RadioButton radioButton8;
         private System.Windows.Forms.RadioButton radioButton6;
         private System.Windows.Forms.RadioButton radioButton4;
@@ -596,5 +683,19 @@
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.CheckBox check_cr240a;
+        private System.Windows.Forms.CheckBox check_cr240f;
+        private System.Windows.Forms.CheckBox check_cr240e;
+        private System.Windows.Forms.CheckBox check_cr240d;
+        private System.Windows.Forms.CheckBox check_cr240c;
+        private System.Windows.Forms.CheckBox check_cr240b;
+        private System.Windows.Forms.CheckBox check_cr260d;
+        private System.Windows.Forms.CheckBox check_cr260c;
+        private System.Windows.Forms.CheckBox check_cr250c;
+        private System.Windows.Forms.CheckBox check_cr260b;
+        private System.Windows.Forms.CheckBox check_cr250b;
+        private System.Windows.Forms.CheckBox check_cr260a;
+        private System.Windows.Forms.CheckBox check_cr250a;
+        private System.Windows.Forms.TabPage tabPage3;
     }
 }

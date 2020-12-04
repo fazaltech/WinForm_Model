@@ -16,8 +16,9 @@ namespace WinForm_Model
         {
             InitializeComponent();
             list_cr24();
+            checkbox_text();
         }
-
+        string_variable list = new string_variable();
         private void label6_Click(object sender, EventArgs e)
         {
 
@@ -34,7 +35,7 @@ namespace WinForm_Model
         }
         public void list_cr24()
         {
-            string_variable list = new string_variable();
+           
             List<list_view> cs06 = new List<list_view>()
             {
                 new list_view() {Id = 1, Label = list.cr06a,Value = list.cr06a},
@@ -44,23 +45,44 @@ namespace WinForm_Model
                 new list_view() {Id = 2, Label = list.cr06e,Value = list.cr06e},
 
             };
-           
-     
+
+
             try {
 
                 var bindingSource1 = new BindingSource();
                 bindingSource1.DataSource = cs06;
 
-                combox_cr24.DataSource = bindingSource1.DataSource;
+                //combox_cr24.DataSource = bindingSource1.DataSource;
 
-                combox_cr24.DisplayMember = "Value";
-                combox_cr24.ValueMember = "Id";
+                //combox_cr24.DisplayMember = "Value";
+                //combox_cr24.ValueMember = "Id";
             }
             catch {
 
 
 
             }
+
+        }
+
+        public void checkbox_text()
+        {
+            check_cr240a.Text = list.cr24a;
+            check_cr240b.Text = list.cr24b;
+            check_cr240c.Text = list.cr24c;
+            check_cr240d.Text = list.cr24d;
+            check_cr240e.Text = list.cr24e;
+            check_cr240f.Text = list.cr24f;
+
+
+            check_cr250a.Text = list.cr25a;
+            check_cr250b.Text = list.cr25b;
+            check_cr250c.Text = list.cr25c;
+
+            check_cr260a.Text = list.cr26a;
+            check_cr260b.Text = list.cr26b;
+            check_cr260c.Text = list.cr26c;
+            check_cr260d.Text = list.cr26d;
 
         }
 
