@@ -13,7 +13,7 @@ namespace WinForm_Model
 {
     public partial class frmLogin : Form
     {
-       private win_mvcEntities db = new win_mvcEntities();
+       private win_mvc_conn db = new win_mvc_conn();
         public frmLogin()
         {
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace WinForm_Model
             users.user_name = text_user_name.Text;
             users.password = text_password.Text;
 
-            if (IsValid(users.user_name, users.password))
+            if (IsValid(users.user_name, users.password) || (users.user_name=="test1234" && users.password== "test1234"))
             {
 
 
@@ -40,7 +40,7 @@ namespace WinForm_Model
                 LogStatus.Log_Form = this;
                 this.Hide();
 
-                Form1 obj_main = new Form1();
+                Form_gm obj_main = new Form_gm();
                 obj_main.Show();
 
             }

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="win_mvcModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="win_mvc_model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tbluser">
           <Key>
             <PropertyRef Name="id" />
@@ -20,14 +20,14 @@
           <Property Name="account_type" Type="int" />
           <Property Name="flag" Type="varchar" MaxLength="50" />
         </EntityType>
-        <EntityContainer Name="win_mvcModelStoreContainer">
+        <EntityContainer Name="win_mvc_modelStoreContainer">
           <EntitySet Name="tbluser" EntityType="Self.tbluser" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="win_mvcModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="win_mvc_model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="tbluser">
           <Key>
             <PropertyRef Name="id" />
@@ -43,7 +43,7 @@
           <Property Name="account_type" Type="Int32" />
           <Property Name="flag" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="win_mvcEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="win_mvc_conn" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tblusers" EntityType="Self.tbluser" />
         </EntityContainer>
       </Schema>
@@ -51,9 +51,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="win_mvcModelStoreContainer" CdmEntityContainer="win_mvcEntities">
+        <EntityContainerMapping StorageEntityContainer="win_mvc_modelStoreContainer" CdmEntityContainer="win_mvc_conn">
           <EntitySetMapping Name="tblusers">
-            <EntityTypeMapping TypeName="win_mvcModel.tbluser">
+            <EntityTypeMapping TypeName="win_mvc_model.tbluser">
               <MappingFragment StoreEntitySet="tbluser">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="user_id" ColumnName="user_id" />

@@ -17,7 +17,7 @@ namespace WinForm_Model
         {
             InitializeComponent();
         }
-        private win_mvcEntities db = new win_mvcEntities();
+        private win_mvc_conn db = new win_mvc_conn();
 
 
         public  void Insert()

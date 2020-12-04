@@ -13,10 +13,10 @@ namespace WinForm_Model.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class win_mvcEntities : DbContext
+    public partial class win_mvc_conn : DbContext
     {
-        public win_mvcEntities()
-            : base("name=win_mvc_con")
+        public win_mvc_conn()
+            : base("name=win_mvc_conn")
         {
         }
     
