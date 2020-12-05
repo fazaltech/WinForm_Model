@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.text_user_name = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.text_password = new System.Windows.Forms.TextBox();
             this.button_login = new System.Windows.Forms.Button();
+            this.text_password = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.text_user_name = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,21 +54,25 @@
             this.groupBox1.UseWaitCursor = true;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // label1
+            // button_login
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "User Name";
+            this.button_login.Location = new System.Drawing.Point(58, 163);
+            this.button_login.Name = "button_login";
+            this.button_login.Size = new System.Drawing.Size(133, 27);
+            this.button_login.TabIndex = 2;
+            this.button_login.Text = "Login";
+            this.button_login.UseVisualStyleBackColor = true;
+            this.button_login.UseWaitCursor = true;
+            this.button_login.Click += new System.EventHandler(this.button_login_Click);
             // 
-            // text_user_name
+            // text_password
             // 
-            this.text_user_name.Location = new System.Drawing.Point(23, 53);
-            this.text_user_name.Name = "text_user_name";
-            this.text_user_name.Size = new System.Drawing.Size(203, 20);
-            this.text_user_name.TabIndex = 1;
+            this.text_password.Location = new System.Drawing.Point(23, 105);
+            this.text_password.Name = "text_password";
+            this.text_password.Size = new System.Drawing.Size(203, 20);
+            this.text_password.TabIndex = 1;
+            this.text_password.UseSystemPasswordChar = true;
+            this.text_password.UseWaitCursor = true;
             // 
             // label2
             // 
@@ -78,24 +82,25 @@
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Password";
+            this.label2.UseWaitCursor = true;
             // 
-            // text_password
+            // text_user_name
             // 
-            this.text_password.Location = new System.Drawing.Point(23, 105);
-            this.text_password.Name = "text_password";
-            this.text_password.Size = new System.Drawing.Size(203, 20);
-            this.text_password.TabIndex = 1;
-            this.text_password.UseSystemPasswordChar = true;
+            this.text_user_name.Location = new System.Drawing.Point(23, 53);
+            this.text_user_name.Name = "text_user_name";
+            this.text_user_name.Size = new System.Drawing.Size(203, 20);
+            this.text_user_name.TabIndex = 1;
+            this.text_user_name.UseWaitCursor = true;
             // 
-            // button_login
+            // label1
             // 
-            this.button_login.Location = new System.Drawing.Point(58, 163);
-            this.button_login.Name = "button_login";
-            this.button_login.Size = new System.Drawing.Size(133, 27);
-            this.button_login.TabIndex = 2;
-            this.button_login.Text = "Login";
-            this.button_login.UseVisualStyleBackColor = true;
-            this.button_login.Click += new System.EventHandler(this.button_login_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(23, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "User Name";
+            this.label1.UseWaitCursor = true;
             // 
             // frmLogin
             // 
@@ -104,6 +109,7 @@
             this.ClientSize = new System.Drawing.Size(287, 431);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

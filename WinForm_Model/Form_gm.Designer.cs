@@ -173,7 +173,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(747, 681);
+            this.tabPage2.Size = new System.Drawing.Size(718, 718);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -196,7 +196,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(747, 681);
+            this.tabPage1.Size = new System.Drawing.Size(675, 681);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -209,7 +209,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(755, 707);
+            this.tabControl1.Size = new System.Drawing.Size(726, 744);
             this.tabControl1.TabIndex = 0;
             // 
             // label1
@@ -409,28 +409,28 @@
             // 
             // text_cr16
             // 
-            this.text_cr16.Location = new System.Drawing.Point(454, 14);
+            this.text_cr16.Location = new System.Drawing.Point(389, 11);
             this.text_cr16.Name = "text_cr16";
             this.text_cr16.Size = new System.Drawing.Size(187, 20);
             this.text_cr16.TabIndex = 1;
             // 
             // text_cr21
             // 
-            this.text_cr21.Location = new System.Drawing.Point(454, 218);
+            this.text_cr21.Location = new System.Drawing.Point(389, 215);
             this.text_cr21.Name = "text_cr21";
             this.text_cr21.Size = new System.Drawing.Size(187, 20);
             this.text_cr21.TabIndex = 1;
             // 
             // text_cr22
             // 
-            this.text_cr22.Location = new System.Drawing.Point(454, 250);
+            this.text_cr22.Location = new System.Drawing.Point(389, 247);
             this.text_cr22.Name = "text_cr22";
             this.text_cr22.Size = new System.Drawing.Size(187, 20);
             this.text_cr22.TabIndex = 1;
             // 
             // text_cr23
             // 
-            this.text_cr23.Location = new System.Drawing.Point(454, 287);
+            this.text_cr23.Location = new System.Drawing.Point(389, 284);
             this.text_cr23.Name = "text_cr23";
             this.text_cr23.Size = new System.Drawing.Size(187, 20);
             this.text_cr23.TabIndex = 1;
@@ -438,7 +438,7 @@
             // check_cr24a
             // 
             this.check_cr24a.AutoSize = true;
-            this.check_cr24a.Location = new System.Drawing.Point(454, 328);
+            this.check_cr24a.Location = new System.Drawing.Point(389, 325);
             this.check_cr24a.Name = "check_cr24a";
             this.check_cr24a.Size = new System.Drawing.Size(80, 17);
             this.check_cr24a.TabIndex = 3;
@@ -448,7 +448,7 @@
             // check_cr24b
             // 
             this.check_cr24b.AutoSize = true;
-            this.check_cr24b.Location = new System.Drawing.Point(454, 351);
+            this.check_cr24b.Location = new System.Drawing.Point(389, 348);
             this.check_cr24b.Name = "check_cr24b";
             this.check_cr24b.Size = new System.Drawing.Size(80, 17);
             this.check_cr24b.TabIndex = 3;
@@ -458,7 +458,7 @@
             // check_cr24c
             // 
             this.check_cr24c.AutoSize = true;
-            this.check_cr24c.Location = new System.Drawing.Point(454, 374);
+            this.check_cr24c.Location = new System.Drawing.Point(389, 371);
             this.check_cr24c.Name = "check_cr24c";
             this.check_cr24c.Size = new System.Drawing.Size(80, 17);
             this.check_cr24c.TabIndex = 3;
@@ -468,7 +468,7 @@
             // check_cr24d
             // 
             this.check_cr24d.AutoSize = true;
-            this.check_cr24d.Location = new System.Drawing.Point(454, 397);
+            this.check_cr24d.Location = new System.Drawing.Point(389, 394);
             this.check_cr24d.Name = "check_cr24d";
             this.check_cr24d.Size = new System.Drawing.Size(80, 17);
             this.check_cr24d.TabIndex = 3;
@@ -478,7 +478,7 @@
             // check_cr24e
             // 
             this.check_cr24e.AutoSize = true;
-            this.check_cr24e.Location = new System.Drawing.Point(454, 420);
+            this.check_cr24e.Location = new System.Drawing.Point(389, 417);
             this.check_cr24e.Name = "check_cr24e";
             this.check_cr24e.Size = new System.Drawing.Size(80, 17);
             this.check_cr24e.TabIndex = 3;
@@ -488,7 +488,7 @@
             // check_cr24f
             // 
             this.check_cr24f.AutoSize = true;
-            this.check_cr24f.Location = new System.Drawing.Point(454, 443);
+            this.check_cr24f.Location = new System.Drawing.Point(389, 440);
             this.check_cr24f.Name = "check_cr24f";
             this.check_cr24f.Size = new System.Drawing.Size(80, 17);
             this.check_cr24f.TabIndex = 3;
@@ -498,7 +498,7 @@
             // check_cr25a
             // 
             this.check_cr25a.AutoSize = true;
-            this.check_cr25a.Location = new System.Drawing.Point(454, 482);
+            this.check_cr25a.Location = new System.Drawing.Point(389, 479);
             this.check_cr25a.Name = "check_cr25a";
             this.check_cr25a.Size = new System.Drawing.Size(80, 17);
             this.check_cr25a.TabIndex = 3;
@@ -508,7 +508,7 @@
             // check_cr25b
             // 
             this.check_cr25b.AutoSize = true;
-            this.check_cr25b.Location = new System.Drawing.Point(454, 505);
+            this.check_cr25b.Location = new System.Drawing.Point(389, 502);
             this.check_cr25b.Name = "check_cr25b";
             this.check_cr25b.Size = new System.Drawing.Size(80, 17);
             this.check_cr25b.TabIndex = 3;
@@ -518,7 +518,7 @@
             // check_cr25c
             // 
             this.check_cr25c.AutoSize = true;
-            this.check_cr25c.Location = new System.Drawing.Point(454, 528);
+            this.check_cr25c.Location = new System.Drawing.Point(389, 525);
             this.check_cr25c.Name = "check_cr25c";
             this.check_cr25c.Size = new System.Drawing.Size(80, 17);
             this.check_cr25c.TabIndex = 3;
@@ -550,7 +550,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(747, 681);
+            this.tabPage3.Size = new System.Drawing.Size(718, 718);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -558,7 +558,7 @@
             // check_cr26a
             // 
             this.check_cr26a.AutoSize = true;
-            this.check_cr26a.Location = new System.Drawing.Point(459, 588);
+            this.check_cr26a.Location = new System.Drawing.Point(394, 585);
             this.check_cr26a.Name = "check_cr26a";
             this.check_cr26a.Size = new System.Drawing.Size(80, 17);
             this.check_cr26a.TabIndex = 3;
@@ -568,7 +568,7 @@
             // check_cr26b
             // 
             this.check_cr26b.AutoSize = true;
-            this.check_cr26b.Location = new System.Drawing.Point(459, 611);
+            this.check_cr26b.Location = new System.Drawing.Point(394, 608);
             this.check_cr26b.Name = "check_cr26b";
             this.check_cr26b.Size = new System.Drawing.Size(80, 17);
             this.check_cr26b.TabIndex = 3;
@@ -578,7 +578,7 @@
             // check_cr26c
             // 
             this.check_cr26c.AutoSize = true;
-            this.check_cr26c.Location = new System.Drawing.Point(459, 634);
+            this.check_cr26c.Location = new System.Drawing.Point(394, 631);
             this.check_cr26c.Name = "check_cr26c";
             this.check_cr26c.Size = new System.Drawing.Size(80, 17);
             this.check_cr26c.TabIndex = 3;
@@ -588,7 +588,7 @@
             // check_cr26d
             // 
             this.check_cr26d.AutoSize = true;
-            this.check_cr26d.Location = new System.Drawing.Point(459, 657);
+            this.check_cr26d.Location = new System.Drawing.Point(394, 654);
             this.check_cr26d.Name = "check_cr26d";
             this.check_cr26d.Size = new System.Drawing.Size(80, 17);
             this.check_cr26d.TabIndex = 3;
@@ -598,7 +598,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(51, 50);
+            this.label18.Location = new System.Drawing.Point(25, 29);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(161, 13);
             this.label18.TabIndex = 0;
@@ -607,7 +607,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(51, 173);
+            this.label19.Location = new System.Drawing.Point(25, 152);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(264, 13);
             this.label19.TabIndex = 1;
@@ -616,7 +616,7 @@
             // check_cr27a
             // 
             this.check_cr27a.AutoSize = true;
-            this.check_cr27a.Location = new System.Drawing.Point(342, 49);
+            this.check_cr27a.Location = new System.Drawing.Point(300, 29);
             this.check_cr27a.Name = "check_cr27a";
             this.check_cr27a.Size = new System.Drawing.Size(80, 17);
             this.check_cr27a.TabIndex = 2;
@@ -626,7 +626,7 @@
             // check_cr27b
             // 
             this.check_cr27b.AutoSize = true;
-            this.check_cr27b.Location = new System.Drawing.Point(342, 83);
+            this.check_cr27b.Location = new System.Drawing.Point(300, 63);
             this.check_cr27b.Name = "check_cr27b";
             this.check_cr27b.Size = new System.Drawing.Size(80, 17);
             this.check_cr27b.TabIndex = 2;
@@ -636,7 +636,7 @@
             // check_cr27c
             // 
             this.check_cr27c.AutoSize = true;
-            this.check_cr27c.Location = new System.Drawing.Point(342, 117);
+            this.check_cr27c.Location = new System.Drawing.Point(300, 97);
             this.check_cr27c.Name = "check_cr27c";
             this.check_cr27c.Size = new System.Drawing.Size(80, 17);
             this.check_cr27c.TabIndex = 2;
@@ -800,7 +800,7 @@
             // label_cr28a
             // 
             this.label_cr28a.AutoSize = true;
-            this.label_cr28a.Location = new System.Drawing.Point(339, 173);
+            this.label_cr28a.Location = new System.Drawing.Point(310, 152);
             this.label_cr28a.Name = "label_cr28a";
             this.label_cr28a.Size = new System.Drawing.Size(41, 13);
             this.label_cr28a.TabIndex = 4;
@@ -809,7 +809,7 @@
             // label_cr28b
             // 
             this.label_cr28b.AutoSize = true;
-            this.label_cr28b.Location = new System.Drawing.Point(339, 216);
+            this.label_cr28b.Location = new System.Drawing.Point(310, 195);
             this.label_cr28b.Name = "label_cr28b";
             this.label_cr28b.Size = new System.Drawing.Size(41, 13);
             this.label_cr28b.TabIndex = 4;
@@ -818,7 +818,7 @@
             // label_cr28c
             // 
             this.label_cr28c.AutoSize = true;
-            this.label_cr28c.Location = new System.Drawing.Point(339, 252);
+            this.label_cr28c.Location = new System.Drawing.Point(310, 231);
             this.label_cr28c.Name = "label_cr28c";
             this.label_cr28c.Size = new System.Drawing.Size(41, 13);
             this.label_cr28c.TabIndex = 4;
@@ -827,7 +827,7 @@
             // label_cr28d
             // 
             this.label_cr28d.AutoSize = true;
-            this.label_cr28d.Location = new System.Drawing.Point(339, 293);
+            this.label_cr28d.Location = new System.Drawing.Point(310, 272);
             this.label_cr28d.Name = "label_cr28d";
             this.label_cr28d.Size = new System.Drawing.Size(41, 13);
             this.label_cr28d.TabIndex = 4;
@@ -836,7 +836,7 @@
             // label_cr28e
             // 
             this.label_cr28e.AutoSize = true;
-            this.label_cr28e.Location = new System.Drawing.Point(339, 332);
+            this.label_cr28e.Location = new System.Drawing.Point(310, 311);
             this.label_cr28e.Name = "label_cr28e";
             this.label_cr28e.Size = new System.Drawing.Size(41, 13);
             this.label_cr28e.TabIndex = 4;
@@ -845,7 +845,7 @@
             // label_cr28f
             // 
             this.label_cr28f.AutoSize = true;
-            this.label_cr28f.Location = new System.Drawing.Point(339, 373);
+            this.label_cr28f.Location = new System.Drawing.Point(310, 352);
             this.label_cr28f.Name = "label_cr28f";
             this.label_cr28f.Size = new System.Drawing.Size(41, 13);
             this.label_cr28f.TabIndex = 4;
@@ -854,7 +854,7 @@
             // label_cr28fx
             // 
             this.label_cr28fx.AutoSize = true;
-            this.label_cr28fx.Location = new System.Drawing.Point(339, 410);
+            this.label_cr28fx.Location = new System.Drawing.Point(310, 389);
             this.label_cr28fx.Name = "label_cr28fx";
             this.label_cr28fx.Size = new System.Drawing.Size(41, 13);
             this.label_cr28fx.TabIndex = 4;
@@ -896,7 +896,7 @@
             // 
             this.groupBox1.Controls.Add(this.radio_cr17b);
             this.groupBox1.Controls.Add(this.radio_cr17a);
-            this.groupBox1.Location = new System.Drawing.Point(454, 40);
+            this.groupBox1.Location = new System.Drawing.Point(389, 37);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(235, 40);
             this.groupBox1.TabIndex = 4;
@@ -928,7 +928,7 @@
             // 
             this.groupBox2.Controls.Add(this.radio_cr18b);
             this.groupBox2.Controls.Add(this.radio_cr18a);
-            this.groupBox2.Location = new System.Drawing.Point(454, 84);
+            this.groupBox2.Location = new System.Drawing.Point(389, 81);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(235, 40);
             this.groupBox2.TabIndex = 4;
@@ -960,7 +960,7 @@
             // 
             this.groupBox3.Controls.Add(this.radio_cr19b);
             this.groupBox3.Controls.Add(this.radio_cr19a);
-            this.groupBox3.Location = new System.Drawing.Point(454, 128);
+            this.groupBox3.Location = new System.Drawing.Point(389, 125);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(235, 40);
             this.groupBox3.TabIndex = 4;
@@ -993,7 +993,7 @@
             // 
             this.groupBox4.Controls.Add(this.radio_cr20b);
             this.groupBox4.Controls.Add(this.radio_cr20a);
-            this.groupBox4.Location = new System.Drawing.Point(454, 174);
+            this.groupBox4.Location = new System.Drawing.Point(389, 171);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(235, 40);
             this.groupBox4.TabIndex = 4;
@@ -1025,7 +1025,7 @@
             // 
             this.groupBox5.Controls.Add(this.radio_cr28a01);
             this.groupBox5.Controls.Add(this.radio_cr28a02);
-            this.groupBox5.Location = new System.Drawing.Point(504, 163);
+            this.groupBox5.Location = new System.Drawing.Point(444, 143);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(200, 35);
             this.groupBox5.TabIndex = 5;
@@ -1035,7 +1035,7 @@
             // 
             this.groupBox6.Controls.Add(this.radio_cr28b01);
             this.groupBox6.Controls.Add(this.radio_cr28b02);
-            this.groupBox6.Location = new System.Drawing.Point(504, 204);
+            this.groupBox6.Location = new System.Drawing.Point(444, 184);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(200, 35);
             this.groupBox6.TabIndex = 5;
@@ -1045,7 +1045,7 @@
             // 
             this.groupBox7.Controls.Add(this.radio_cr28c01);
             this.groupBox7.Controls.Add(this.radio_cr28c02);
-            this.groupBox7.Location = new System.Drawing.Point(504, 240);
+            this.groupBox7.Location = new System.Drawing.Point(444, 220);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(200, 35);
             this.groupBox7.TabIndex = 5;
@@ -1055,7 +1055,7 @@
             // 
             this.groupBox8.Controls.Add(this.radio_cr28d01);
             this.groupBox8.Controls.Add(this.radio_cr28d02);
-            this.groupBox8.Location = new System.Drawing.Point(504, 281);
+            this.groupBox8.Location = new System.Drawing.Point(444, 261);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(200, 35);
             this.groupBox8.TabIndex = 5;
@@ -1065,7 +1065,7 @@
             // 
             this.groupBox9.Controls.Add(this.radio_cr28e01);
             this.groupBox9.Controls.Add(this.radio_cr28e02);
-            this.groupBox9.Location = new System.Drawing.Point(504, 322);
+            this.groupBox9.Location = new System.Drawing.Point(444, 302);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(200, 35);
             this.groupBox9.TabIndex = 5;
@@ -1075,7 +1075,7 @@
             // 
             this.groupBox10.Controls.Add(this.radio_cr28f02);
             this.groupBox10.Controls.Add(this.radio_cr28f01);
-            this.groupBox10.Location = new System.Drawing.Point(504, 363);
+            this.groupBox10.Location = new System.Drawing.Point(444, 343);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(200, 35);
             this.groupBox10.TabIndex = 5;
@@ -1085,7 +1085,7 @@
             // 
             this.groupBox11.Controls.Add(this.radio_cr28fx01);
             this.groupBox11.Controls.Add(this.radio_cr28fx02);
-            this.groupBox11.Location = new System.Drawing.Point(504, 404);
+            this.groupBox11.Location = new System.Drawing.Point(444, 384);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(200, 35);
             this.groupBox11.TabIndex = 5;
@@ -1095,7 +1095,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(779, 773);
+            this.ClientSize = new System.Drawing.Size(769, 797);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form_gm";
             this.Text = "Form_gm";
