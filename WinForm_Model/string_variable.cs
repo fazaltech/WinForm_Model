@@ -84,5 +84,23 @@ namespace WinForm_Model
       public string cr28fx = "other";
 
 
+        //additional variables
+       
+        public string cr28a01 = "Yes";
+        public string cr28a02 = "No";
+        public string cr28b01 = "Yes";
+        public string cr28b02 = "No";
+        public string cr28c01 = "Yes";
+        public string cr28c02 = "No";
+        public string cr28d01 = "Yes";
+        public string cr28d02 = "No";
+        public string cr28e01 = "Yes";
+        public string cr28e02 = "No";
+        public string cr28f01 = "Yes";
+        public string cr28f02 = "No";
+        public string cr28fx01 = "Yes";
+        public string cr28fx02 = "No";
+
+
     }
 }

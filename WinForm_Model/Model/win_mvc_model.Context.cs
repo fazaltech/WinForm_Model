@@ -26,5 +26,6 @@ namespace WinForm_Model.Model
         }
     
         public virtual DbSet<tbluser> tblusers { get; set; }
+        public virtual DbSet<form> forms { get; set; }
     }
 }

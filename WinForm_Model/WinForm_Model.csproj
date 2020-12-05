@@ -74,6 +74,9 @@
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="LogStatus.cs" />
+    <Compile Include="Model\form.cs">
+      <DependentUpon>win_mvc_model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\tbluser.cs">
       <DependentUpon>win_mvc_model.tt</DependentUpon>
     </Compile>

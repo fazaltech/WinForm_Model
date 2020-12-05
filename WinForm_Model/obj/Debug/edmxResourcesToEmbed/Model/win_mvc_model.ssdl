@@ -1,5 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="win_mvc_model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="forms">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cr10" Type="varchar" MaxLength="50" />
+    <Property Name="cr11" Type="varchar" MaxLength="50" />
+    <Property Name="cr12" Type="varchar" MaxLength="50" />
+    <Property Name="cr16" Type="varchar" MaxLength="50" />
+    <Property Name="cr21" Type="varchar" MaxLength="50" />
+    <Property Name="cr22" Type="varchar" MaxLength="50" />
+    <Property Name="cr23" Type="varchar" MaxLength="50" />
+    <Property Name="cr17a" Type="varchar" MaxLength="50" />
+    <Property Name="cr17b" Type="varchar" MaxLength="50" />
+    <Property Name="cr18a" Type="varchar" MaxLength="50" />
+    <Property Name="cr18b" Type="varchar" MaxLength="50" />
+    <Property Name="cr19a" Type="varchar" MaxLength="50" />
+    <Property Name="cr19b" Type="varchar" MaxLength="50" />
+    <Property Name="cr20a" Type="varchar" MaxLength="50" />
+    <Property Name="cr20b" Type="varchar" MaxLength="50" />
+    <Property Name="cr24a" Type="varchar" MaxLength="50" />
+    <Property Name="cr24b" Type="varchar" MaxLength="50" />
+    <Property Name="cr24c" Type="varchar" MaxLength="50" />
+    <Property Name="cr24d" Type="varchar" MaxLength="50" />
+    <Property Name="cr24e" Type="varchar" MaxLength="50" />
+    <Property Name="cr24f" Type="varchar" MaxLength="50" />
+    <Property Name="cr25a" Type="varchar" MaxLength="50" />
+    <Property Name="cr25b" Type="varchar" MaxLength="50" />
+    <Property Name="cr25c" Type="varchar" MaxLength="50" />
+    <Property Name="cr26a" Type="varchar" MaxLength="50" />
+    <Property Name="cr26b" Type="varchar" MaxLength="50" />
+    <Property Name="cr26c" Type="varchar" MaxLength="50" />
+    <Property Name="cr26d" Type="varchar" MaxLength="50" />
+    <Property Name="cr27a" Type="varchar" MaxLength="50" />
+    <Property Name="cr27b" Type="varchar" MaxLength="50" />
+    <Property Name="cr27c" Type="varchar" MaxLength="50" />
+    <Property Name="cr28a01" Type="varchar" MaxLength="50" />
+    <Property Name="cr28a02" Type="varchar" MaxLength="50" />
+    <Property Name="cr28b01" Type="varchar" MaxLength="50" />
+    <Property Name="cr28b02" Type="varchar" MaxLength="50" />
+    <Property Name="cr28c01" Type="varchar" MaxLength="50" />
+    <Property Name="cr28c02" Type="varchar" MaxLength="50" />
+    <Property Name="cr28d01" Type="varchar" MaxLength="50" />
+    <Property Name="cr28d02" Type="varchar" MaxLength="50" />
+    <Property Name="cr28e01" Type="varchar" MaxLength="50" />
+    <Property Name="cr28e02" Type="varchar" MaxLength="50" />
+    <Property Name="cr28f01" Type="varchar" MaxLength="50" />
+    <Property Name="cr28f02" Type="varchar" MaxLength="50" />
+    <Property Name="cr28fx01" Type="varchar" MaxLength="50" />
+    <Property Name="cr28fx02" Type="varchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="tbluser">
     <Key>
       <PropertyRef Name="id" />
@@ -16,6 +67,7 @@
     <Property Name="flag" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityContainer Name="win_mvc_modelStoreContainer">
+    <EntitySet Name="forms" EntityType="Self.forms" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tbluser" EntityType="Self.tbluser" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

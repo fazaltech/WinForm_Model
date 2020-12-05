@@ -52,62 +52,95 @@
             this.text_cr11 = new System.Windows.Forms.TextBox();
             this.text_cr12 = new System.Windows.Forms.TextBox();
             this.text_cr15 = new System.Windows.Forms.TextBox();
-            this.combo_cr13 = new System.Windows.Forms.ComboBox();
             this.dateTime_cr14 = new System.Windows.Forms.DateTimePicker();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.check_cr240a = new System.Windows.Forms.CheckBox();
-            this.check_cr240b = new System.Windows.Forms.CheckBox();
-            this.check_cr240c = new System.Windows.Forms.CheckBox();
-            this.check_cr240d = new System.Windows.Forms.CheckBox();
-            this.check_cr240e = new System.Windows.Forms.CheckBox();
-            this.check_cr240f = new System.Windows.Forms.CheckBox();
-            this.check_cr250a = new System.Windows.Forms.CheckBox();
-            this.check_cr250b = new System.Windows.Forms.CheckBox();
-            this.check_cr250c = new System.Windows.Forms.CheckBox();
+            this.text_cr16 = new System.Windows.Forms.TextBox();
+            this.text_cr21 = new System.Windows.Forms.TextBox();
+            this.text_cr22 = new System.Windows.Forms.TextBox();
+            this.text_cr23 = new System.Windows.Forms.TextBox();
+            this.check_cr24a = new System.Windows.Forms.CheckBox();
+            this.check_cr24b = new System.Windows.Forms.CheckBox();
+            this.check_cr24c = new System.Windows.Forms.CheckBox();
+            this.check_cr24d = new System.Windows.Forms.CheckBox();
+            this.check_cr24e = new System.Windows.Forms.CheckBox();
+            this.check_cr24f = new System.Windows.Forms.CheckBox();
+            this.check_cr25a = new System.Windows.Forms.CheckBox();
+            this.check_cr25b = new System.Windows.Forms.CheckBox();
+            this.check_cr25c = new System.Windows.Forms.CheckBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.check_cr260a = new System.Windows.Forms.CheckBox();
-            this.check_cr260b = new System.Windows.Forms.CheckBox();
-            this.check_cr260c = new System.Windows.Forms.CheckBox();
-            this.check_cr260d = new System.Windows.Forms.CheckBox();
+            this.check_cr26a = new System.Windows.Forms.CheckBox();
+            this.check_cr26b = new System.Windows.Forms.CheckBox();
+            this.check_cr26c = new System.Windows.Forms.CheckBox();
+            this.check_cr26d = new System.Windows.Forms.CheckBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.check_cr27a = new System.Windows.Forms.CheckBox();
+            this.check_cr27b = new System.Windows.Forms.CheckBox();
+            this.check_cr27c = new System.Windows.Forms.CheckBox();
+            this.radio_cr28a01 = new System.Windows.Forms.RadioButton();
+            this.radio_cr28b01 = new System.Windows.Forms.RadioButton();
+            this.radio_cr28c01 = new System.Windows.Forms.RadioButton();
+            this.radio_cr28d01 = new System.Windows.Forms.RadioButton();
+            this.radio_cr28e01 = new System.Windows.Forms.RadioButton();
+            this.radio_cr28f01 = new System.Windows.Forms.RadioButton();
+            this.radio_cr28fx01 = new System.Windows.Forms.RadioButton();
+            this.radio_cr28a02 = new System.Windows.Forms.RadioButton();
+            this.radio_cr28b02 = new System.Windows.Forms.RadioButton();
+            this.radio_cr28c02 = new System.Windows.Forms.RadioButton();
+            this.radio_cr28e02 = new System.Windows.Forms.RadioButton();
+            this.radio_cr28d02 = new System.Windows.Forms.RadioButton();
+            this.radio_cr28f02 = new System.Windows.Forms.RadioButton();
+            this.radio_cr28fx02 = new System.Windows.Forms.RadioButton();
+            this.label_cr28a = new System.Windows.Forms.Label();
+            this.label_cr28b = new System.Windows.Forms.Label();
+            this.label_cr28c = new System.Windows.Forms.Label();
+            this.label_cr28d = new System.Windows.Forms.Label();
+            this.label_cr28e = new System.Windows.Forms.Label();
+            this.label_cr28f = new System.Windows.Forms.Label();
+            this.label_cr28fx = new System.Windows.Forms.Label();
+            this.radio_cr13m = new System.Windows.Forms.RadioButton();
+            this.radio_cr13f = new System.Windows.Forms.RadioButton();
+            this.button_frmdata = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radio_cr17a = new System.Windows.Forms.RadioButton();
+            this.radio_cr17b = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radio_cr18b = new System.Windows.Forms.RadioButton();
+            this.radio_cr18a = new System.Windows.Forms.RadioButton();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.radio_cr19b = new System.Windows.Forms.RadioButton();
+            this.radio_cr19a = new System.Windows.Forms.RadioButton();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.radio_cr20b = new System.Windows.Forms.RadioButton();
+            this.radio_cr20a = new System.Windows.Forms.RadioButton();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.check_cr240f);
-            this.tabPage2.Controls.Add(this.check_cr240e);
-            this.tabPage2.Controls.Add(this.check_cr240d);
-            this.tabPage2.Controls.Add(this.check_cr260d);
-            this.tabPage2.Controls.Add(this.check_cr260c);
-            this.tabPage2.Controls.Add(this.check_cr250c);
-            this.tabPage2.Controls.Add(this.check_cr260b);
-            this.tabPage2.Controls.Add(this.check_cr250b);
-            this.tabPage2.Controls.Add(this.check_cr240c);
-            this.tabPage2.Controls.Add(this.check_cr260a);
-            this.tabPage2.Controls.Add(this.check_cr250a);
-            this.tabPage2.Controls.Add(this.check_cr240b);
-            this.tabPage2.Controls.Add(this.check_cr240a);
-            this.tabPage2.Controls.Add(this.radioButton8);
-            this.tabPage2.Controls.Add(this.radioButton6);
-            this.tabPage2.Controls.Add(this.radioButton4);
-            this.tabPage2.Controls.Add(this.radioButton2);
-            this.tabPage2.Controls.Add(this.radioButton7);
-            this.tabPage2.Controls.Add(this.radioButton5);
-            this.tabPage2.Controls.Add(this.radioButton3);
-            this.tabPage2.Controls.Add(this.radioButton1);
+            this.tabPage2.Controls.Add(this.groupBox4);
+            this.tabPage2.Controls.Add(this.groupBox3);
+            this.tabPage2.Controls.Add(this.groupBox2);
+            this.tabPage2.Controls.Add(this.groupBox1);
+            this.tabPage2.Controls.Add(this.check_cr24f);
+            this.tabPage2.Controls.Add(this.check_cr24e);
+            this.tabPage2.Controls.Add(this.check_cr24d);
+            this.tabPage2.Controls.Add(this.check_cr26d);
+            this.tabPage2.Controls.Add(this.check_cr26c);
+            this.tabPage2.Controls.Add(this.check_cr25c);
+            this.tabPage2.Controls.Add(this.check_cr26b);
+            this.tabPage2.Controls.Add(this.check_cr25b);
+            this.tabPage2.Controls.Add(this.check_cr24c);
+            this.tabPage2.Controls.Add(this.check_cr26a);
+            this.tabPage2.Controls.Add(this.check_cr25a);
+            this.tabPage2.Controls.Add(this.check_cr24b);
+            this.tabPage2.Controls.Add(this.check_cr24a);
             this.tabPage2.Controls.Add(this.label17);
             this.tabPage2.Controls.Add(this.label16);
             this.tabPage2.Controls.Add(this.label15);
@@ -119,22 +152,23 @@
             this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.textBox12);
-            this.tabPage2.Controls.Add(this.textBox11);
-            this.tabPage2.Controls.Add(this.textBox10);
-            this.tabPage2.Controls.Add(this.textBox4);
+            this.tabPage2.Controls.Add(this.text_cr23);
+            this.tabPage2.Controls.Add(this.text_cr22);
+            this.tabPage2.Controls.Add(this.text_cr21);
+            this.tabPage2.Controls.Add(this.text_cr16);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(747, 714);
+            this.tabPage2.Size = new System.Drawing.Size(747, 681);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.radio_cr13f);
+            this.tabPage1.Controls.Add(this.radio_cr13m);
             this.tabPage1.Controls.Add(this.dateTime_cr14);
-            this.tabPage1.Controls.Add(this.combo_cr13);
             this.tabPage1.Controls.Add(this.text_cr15);
             this.tabPage1.Controls.Add(this.text_cr12);
             this.tabPage1.Controls.Add(this.text_cr11);
@@ -148,7 +182,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(747, 714);
+            this.tabPage1.Size = new System.Drawing.Size(747, 681);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -161,7 +195,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(755, 740);
+            this.tabControl1.Size = new System.Drawing.Size(755, 707);
             this.tabControl1.TabIndex = 0;
             // 
             // label1
@@ -225,7 +259,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(29, 28);
+            this.label7.Location = new System.Drawing.Point(29, 14);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(112, 13);
             this.label7.TabIndex = 0;
@@ -352,16 +386,6 @@
             this.text_cr15.Size = new System.Drawing.Size(172, 20);
             this.text_cr15.TabIndex = 1;
             // 
-            // combo_cr13
-            // 
-            this.combo_cr13.FormattingEnabled = true;
-            this.combo_cr13.Items.AddRange(new object[] {
-            "1"});
-            this.combo_cr13.Location = new System.Drawing.Point(484, 163);
-            this.combo_cr13.Name = "combo_cr13";
-            this.combo_cr13.Size = new System.Drawing.Size(172, 21);
-            this.combo_cr13.TabIndex = 2;
-            // 
             // dateTime_cr14
             // 
             this.dateTime_cr14.Location = new System.Drawing.Point(484, 207);
@@ -369,267 +393,632 @@
             this.dateTime_cr14.Size = new System.Drawing.Size(172, 20);
             this.dateTime_cr14.TabIndex = 3;
             // 
-            // textBox4
+            // text_cr16
             // 
-            this.textBox4.Location = new System.Drawing.Point(454, 28);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(187, 20);
-            this.textBox4.TabIndex = 1;
+            this.text_cr16.Location = new System.Drawing.Point(454, 14);
+            this.text_cr16.Name = "text_cr16";
+            this.text_cr16.Size = new System.Drawing.Size(187, 20);
+            this.text_cr16.TabIndex = 1;
             // 
-            // textBox10
+            // text_cr21
             // 
-            this.textBox10.Location = new System.Drawing.Point(454, 213);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(187, 20);
-            this.textBox10.TabIndex = 1;
+            this.text_cr21.Location = new System.Drawing.Point(454, 218);
+            this.text_cr21.Name = "text_cr21";
+            this.text_cr21.Size = new System.Drawing.Size(187, 20);
+            this.text_cr21.TabIndex = 1;
             // 
-            // textBox11
+            // text_cr22
             // 
-            this.textBox11.Location = new System.Drawing.Point(454, 250);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(187, 20);
-            this.textBox11.TabIndex = 1;
+            this.text_cr22.Location = new System.Drawing.Point(454, 250);
+            this.text_cr22.Name = "text_cr22";
+            this.text_cr22.Size = new System.Drawing.Size(187, 20);
+            this.text_cr22.TabIndex = 1;
             // 
-            // textBox12
+            // text_cr23
             // 
-            this.textBox12.Location = new System.Drawing.Point(454, 287);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(187, 20);
-            this.textBox12.TabIndex = 1;
+            this.text_cr23.Location = new System.Drawing.Point(454, 287);
+            this.text_cr23.Name = "text_cr23";
+            this.text_cr23.Size = new System.Drawing.Size(187, 20);
+            this.text_cr23.TabIndex = 1;
             // 
-            // radioButton1
+            // check_cr24a
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(454, 66);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.check_cr24a.AutoSize = true;
+            this.check_cr24a.Location = new System.Drawing.Point(454, 328);
+            this.check_cr24a.Name = "check_cr24a";
+            this.check_cr24a.Size = new System.Drawing.Size(80, 17);
+            this.check_cr24a.TabIndex = 3;
+            this.check_cr24a.Text = "checkBox1";
+            this.check_cr24a.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // check_cr24b
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(545, 66);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(85, 17);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton1";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.check_cr24b.AutoSize = true;
+            this.check_cr24b.Location = new System.Drawing.Point(454, 351);
+            this.check_cr24b.Name = "check_cr24b";
+            this.check_cr24b.Size = new System.Drawing.Size(80, 17);
+            this.check_cr24b.TabIndex = 3;
+            this.check_cr24b.Text = "checkBox1";
+            this.check_cr24b.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // check_cr24c
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(454, 100);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(85, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "radioButton1";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.check_cr24c.AutoSize = true;
+            this.check_cr24c.Location = new System.Drawing.Point(454, 374);
+            this.check_cr24c.Name = "check_cr24c";
+            this.check_cr24c.Size = new System.Drawing.Size(80, 17);
+            this.check_cr24c.TabIndex = 3;
+            this.check_cr24c.Text = "checkBox1";
+            this.check_cr24c.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // check_cr24d
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(545, 100);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(85, 17);
-            this.radioButton4.TabIndex = 2;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "radioButton1";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.check_cr24d.AutoSize = true;
+            this.check_cr24d.Location = new System.Drawing.Point(454, 397);
+            this.check_cr24d.Name = "check_cr24d";
+            this.check_cr24d.Size = new System.Drawing.Size(80, 17);
+            this.check_cr24d.TabIndex = 3;
+            this.check_cr24d.Text = "checkBox1";
+            this.check_cr24d.UseVisualStyleBackColor = true;
             // 
-            // radioButton5
+            // check_cr24e
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(454, 138);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(85, 17);
-            this.radioButton5.TabIndex = 2;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "radioButton1";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.check_cr24e.AutoSize = true;
+            this.check_cr24e.Location = new System.Drawing.Point(454, 420);
+            this.check_cr24e.Name = "check_cr24e";
+            this.check_cr24e.Size = new System.Drawing.Size(80, 17);
+            this.check_cr24e.TabIndex = 3;
+            this.check_cr24e.Text = "checkBox1";
+            this.check_cr24e.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // check_cr24f
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(545, 138);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(85, 17);
-            this.radioButton6.TabIndex = 2;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "radioButton1";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.check_cr24f.AutoSize = true;
+            this.check_cr24f.Location = new System.Drawing.Point(454, 443);
+            this.check_cr24f.Name = "check_cr24f";
+            this.check_cr24f.Size = new System.Drawing.Size(80, 17);
+            this.check_cr24f.TabIndex = 3;
+            this.check_cr24f.Text = "checkBox1";
+            this.check_cr24f.UseVisualStyleBackColor = true;
             // 
-            // radioButton7
+            // check_cr25a
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(454, 176);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(85, 17);
-            this.radioButton7.TabIndex = 2;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "radioButton1";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.check_cr25a.AutoSize = true;
+            this.check_cr25a.Location = new System.Drawing.Point(454, 482);
+            this.check_cr25a.Name = "check_cr25a";
+            this.check_cr25a.Size = new System.Drawing.Size(80, 17);
+            this.check_cr25a.TabIndex = 3;
+            this.check_cr25a.Text = "checkBox1";
+            this.check_cr25a.UseVisualStyleBackColor = true;
             // 
-            // radioButton8
+            // check_cr25b
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(545, 176);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(85, 17);
-            this.radioButton8.TabIndex = 2;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "radioButton1";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.check_cr25b.AutoSize = true;
+            this.check_cr25b.Location = new System.Drawing.Point(454, 505);
+            this.check_cr25b.Name = "check_cr25b";
+            this.check_cr25b.Size = new System.Drawing.Size(80, 17);
+            this.check_cr25b.TabIndex = 3;
+            this.check_cr25b.Text = "checkBox1";
+            this.check_cr25b.UseVisualStyleBackColor = true;
             // 
-            // check_cr240a
+            // check_cr25c
             // 
-            this.check_cr240a.AutoSize = true;
-            this.check_cr240a.Location = new System.Drawing.Point(454, 328);
-            this.check_cr240a.Name = "check_cr240a";
-            this.check_cr240a.Size = new System.Drawing.Size(80, 17);
-            this.check_cr240a.TabIndex = 3;
-            this.check_cr240a.Text = "checkBox1";
-            this.check_cr240a.UseVisualStyleBackColor = true;
-            // 
-            // check_cr240b
-            // 
-            this.check_cr240b.AutoSize = true;
-            this.check_cr240b.Location = new System.Drawing.Point(454, 351);
-            this.check_cr240b.Name = "check_cr240b";
-            this.check_cr240b.Size = new System.Drawing.Size(80, 17);
-            this.check_cr240b.TabIndex = 3;
-            this.check_cr240b.Text = "checkBox1";
-            this.check_cr240b.UseVisualStyleBackColor = true;
-            // 
-            // check_cr240c
-            // 
-            this.check_cr240c.AutoSize = true;
-            this.check_cr240c.Location = new System.Drawing.Point(454, 374);
-            this.check_cr240c.Name = "check_cr240c";
-            this.check_cr240c.Size = new System.Drawing.Size(80, 17);
-            this.check_cr240c.TabIndex = 3;
-            this.check_cr240c.Text = "checkBox1";
-            this.check_cr240c.UseVisualStyleBackColor = true;
-            // 
-            // check_cr240d
-            // 
-            this.check_cr240d.AutoSize = true;
-            this.check_cr240d.Location = new System.Drawing.Point(454, 397);
-            this.check_cr240d.Name = "check_cr240d";
-            this.check_cr240d.Size = new System.Drawing.Size(80, 17);
-            this.check_cr240d.TabIndex = 3;
-            this.check_cr240d.Text = "checkBox1";
-            this.check_cr240d.UseVisualStyleBackColor = true;
-            // 
-            // check_cr240e
-            // 
-            this.check_cr240e.AutoSize = true;
-            this.check_cr240e.Location = new System.Drawing.Point(454, 420);
-            this.check_cr240e.Name = "check_cr240e";
-            this.check_cr240e.Size = new System.Drawing.Size(80, 17);
-            this.check_cr240e.TabIndex = 3;
-            this.check_cr240e.Text = "checkBox1";
-            this.check_cr240e.UseVisualStyleBackColor = true;
-            // 
-            // check_cr240f
-            // 
-            this.check_cr240f.AutoSize = true;
-            this.check_cr240f.Location = new System.Drawing.Point(454, 443);
-            this.check_cr240f.Name = "check_cr240f";
-            this.check_cr240f.Size = new System.Drawing.Size(80, 17);
-            this.check_cr240f.TabIndex = 3;
-            this.check_cr240f.Text = "checkBox1";
-            this.check_cr240f.UseVisualStyleBackColor = true;
-            // 
-            // check_cr250a
-            // 
-            this.check_cr250a.AutoSize = true;
-            this.check_cr250a.Location = new System.Drawing.Point(454, 482);
-            this.check_cr250a.Name = "check_cr250a";
-            this.check_cr250a.Size = new System.Drawing.Size(80, 17);
-            this.check_cr250a.TabIndex = 3;
-            this.check_cr250a.Text = "checkBox1";
-            this.check_cr250a.UseVisualStyleBackColor = true;
-            // 
-            // check_cr250b
-            // 
-            this.check_cr250b.AutoSize = true;
-            this.check_cr250b.Location = new System.Drawing.Point(454, 505);
-            this.check_cr250b.Name = "check_cr250b";
-            this.check_cr250b.Size = new System.Drawing.Size(80, 17);
-            this.check_cr250b.TabIndex = 3;
-            this.check_cr250b.Text = "checkBox1";
-            this.check_cr250b.UseVisualStyleBackColor = true;
-            // 
-            // check_cr250c
-            // 
-            this.check_cr250c.AutoSize = true;
-            this.check_cr250c.Location = new System.Drawing.Point(454, 528);
-            this.check_cr250c.Name = "check_cr250c";
-            this.check_cr250c.Size = new System.Drawing.Size(80, 17);
-            this.check_cr250c.TabIndex = 3;
-            this.check_cr250c.Text = "checkBox1";
-            this.check_cr250c.UseVisualStyleBackColor = true;
+            this.check_cr25c.AutoSize = true;
+            this.check_cr25c.Location = new System.Drawing.Point(454, 528);
+            this.check_cr25c.Name = "check_cr25c";
+            this.check_cr25c.Size = new System.Drawing.Size(80, 17);
+            this.check_cr25c.TabIndex = 3;
+            this.check_cr25c.Text = "checkBox1";
+            this.check_cr25c.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label_cr28fx);
+            this.tabPage3.Controls.Add(this.label_cr28f);
+            this.tabPage3.Controls.Add(this.label_cr28d);
+            this.tabPage3.Controls.Add(this.label_cr28e);
+            this.tabPage3.Controls.Add(this.label_cr28c);
+            this.tabPage3.Controls.Add(this.label_cr28b);
+            this.tabPage3.Controls.Add(this.label_cr28a);
+            this.tabPage3.Controls.Add(this.radio_cr28fx02);
+            this.tabPage3.Controls.Add(this.radio_cr28fx01);
+            this.tabPage3.Controls.Add(this.radio_cr28f02);
+            this.tabPage3.Controls.Add(this.radio_cr28f01);
+            this.tabPage3.Controls.Add(this.radio_cr28d02);
+            this.tabPage3.Controls.Add(this.radio_cr28d01);
+            this.tabPage3.Controls.Add(this.radio_cr28e02);
+            this.tabPage3.Controls.Add(this.radio_cr28e01);
+            this.tabPage3.Controls.Add(this.radio_cr28c02);
+            this.tabPage3.Controls.Add(this.radio_cr28c01);
+            this.tabPage3.Controls.Add(this.radio_cr28b02);
+            this.tabPage3.Controls.Add(this.radio_cr28b01);
+            this.tabPage3.Controls.Add(this.radio_cr28a02);
+            this.tabPage3.Controls.Add(this.radio_cr28a01);
+            this.tabPage3.Controls.Add(this.check_cr27c);
+            this.tabPage3.Controls.Add(this.check_cr27b);
+            this.tabPage3.Controls.Add(this.check_cr27a);
+            this.tabPage3.Controls.Add(this.label19);
+            this.tabPage3.Controls.Add(this.label18);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(747, 714);
+            this.tabPage3.Size = new System.Drawing.Size(747, 681);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // check_cr260a
+            // check_cr26a
             // 
-            this.check_cr260a.AutoSize = true;
-            this.check_cr260a.Location = new System.Drawing.Point(459, 588);
-            this.check_cr260a.Name = "check_cr260a";
-            this.check_cr260a.Size = new System.Drawing.Size(80, 17);
-            this.check_cr260a.TabIndex = 3;
-            this.check_cr260a.Text = "checkBox1";
-            this.check_cr260a.UseVisualStyleBackColor = true;
+            this.check_cr26a.AutoSize = true;
+            this.check_cr26a.Location = new System.Drawing.Point(459, 588);
+            this.check_cr26a.Name = "check_cr26a";
+            this.check_cr26a.Size = new System.Drawing.Size(80, 17);
+            this.check_cr26a.TabIndex = 3;
+            this.check_cr26a.Text = "checkBox1";
+            this.check_cr26a.UseVisualStyleBackColor = true;
             // 
-            // check_cr260b
+            // check_cr26b
             // 
-            this.check_cr260b.AutoSize = true;
-            this.check_cr260b.Location = new System.Drawing.Point(459, 611);
-            this.check_cr260b.Name = "check_cr260b";
-            this.check_cr260b.Size = new System.Drawing.Size(80, 17);
-            this.check_cr260b.TabIndex = 3;
-            this.check_cr260b.Text = "checkBox1";
-            this.check_cr260b.UseVisualStyleBackColor = true;
+            this.check_cr26b.AutoSize = true;
+            this.check_cr26b.Location = new System.Drawing.Point(459, 611);
+            this.check_cr26b.Name = "check_cr26b";
+            this.check_cr26b.Size = new System.Drawing.Size(80, 17);
+            this.check_cr26b.TabIndex = 3;
+            this.check_cr26b.Text = "checkBox1";
+            this.check_cr26b.UseVisualStyleBackColor = true;
             // 
-            // check_cr260c
+            // check_cr26c
             // 
-            this.check_cr260c.AutoSize = true;
-            this.check_cr260c.Location = new System.Drawing.Point(459, 634);
-            this.check_cr260c.Name = "check_cr260c";
-            this.check_cr260c.Size = new System.Drawing.Size(80, 17);
-            this.check_cr260c.TabIndex = 3;
-            this.check_cr260c.Text = "checkBox1";
-            this.check_cr260c.UseVisualStyleBackColor = true;
+            this.check_cr26c.AutoSize = true;
+            this.check_cr26c.Location = new System.Drawing.Point(459, 634);
+            this.check_cr26c.Name = "check_cr26c";
+            this.check_cr26c.Size = new System.Drawing.Size(80, 17);
+            this.check_cr26c.TabIndex = 3;
+            this.check_cr26c.Text = "checkBox1";
+            this.check_cr26c.UseVisualStyleBackColor = true;
             // 
-            // check_cr260d
+            // check_cr26d
             // 
-            this.check_cr260d.AutoSize = true;
-            this.check_cr260d.Location = new System.Drawing.Point(459, 657);
-            this.check_cr260d.Name = "check_cr260d";
-            this.check_cr260d.Size = new System.Drawing.Size(80, 17);
-            this.check_cr260d.TabIndex = 3;
-            this.check_cr260d.Text = "checkBox1";
-            this.check_cr260d.UseVisualStyleBackColor = true;
+            this.check_cr26d.AutoSize = true;
+            this.check_cr26d.Location = new System.Drawing.Point(459, 657);
+            this.check_cr26d.Name = "check_cr26d";
+            this.check_cr26d.Size = new System.Drawing.Size(80, 17);
+            this.check_cr26d.TabIndex = 3;
+            this.check_cr26d.Text = "checkBox1";
+            this.check_cr26d.UseVisualStyleBackColor = true;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(51, 50);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(161, 13);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Quantity of Supplement provided";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(51, 173);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(264, 13);
+            this.label19.TabIndex = 1;
+            this.label19.Text = "Any illnesses/complications reported in last one month:";
+            // 
+            // check_cr27a
+            // 
+            this.check_cr27a.AutoSize = true;
+            this.check_cr27a.Location = new System.Drawing.Point(342, 49);
+            this.check_cr27a.Name = "check_cr27a";
+            this.check_cr27a.Size = new System.Drawing.Size(80, 17);
+            this.check_cr27a.TabIndex = 2;
+            this.check_cr27a.Text = "checkBox1";
+            this.check_cr27a.UseVisualStyleBackColor = true;
+            // 
+            // check_cr27b
+            // 
+            this.check_cr27b.AutoSize = true;
+            this.check_cr27b.Location = new System.Drawing.Point(342, 83);
+            this.check_cr27b.Name = "check_cr27b";
+            this.check_cr27b.Size = new System.Drawing.Size(80, 17);
+            this.check_cr27b.TabIndex = 2;
+            this.check_cr27b.Text = "checkBox1";
+            this.check_cr27b.UseVisualStyleBackColor = true;
+            // 
+            // check_cr27c
+            // 
+            this.check_cr27c.AutoSize = true;
+            this.check_cr27c.Location = new System.Drawing.Point(342, 117);
+            this.check_cr27c.Name = "check_cr27c";
+            this.check_cr27c.Size = new System.Drawing.Size(80, 17);
+            this.check_cr27c.TabIndex = 2;
+            this.check_cr27c.Text = "checkBox1";
+            this.check_cr27c.UseVisualStyleBackColor = true;
+            // 
+            // radio_cr28a01
+            // 
+            this.radio_cr28a01.AutoSize = true;
+            this.radio_cr28a01.Location = new System.Drawing.Point(544, 173);
+            this.radio_cr28a01.Name = "radio_cr28a01";
+            this.radio_cr28a01.Size = new System.Drawing.Size(85, 17);
+            this.radio_cr28a01.TabIndex = 3;
+            this.radio_cr28a01.TabStop = true;
+            this.radio_cr28a01.Text = "radioButton1";
+            this.radio_cr28a01.UseVisualStyleBackColor = true;
+            // 
+            // radio_cr28b01
+            // 
+            this.radio_cr28b01.AutoSize = true;
+            this.radio_cr28b01.Location = new System.Drawing.Point(544, 196);
+            this.radio_cr28b01.Name = "radio_cr28b01";
+            this.radio_cr28b01.Size = new System.Drawing.Size(85, 17);
+            this.radio_cr28b01.TabIndex = 3;
+            this.radio_cr28b01.TabStop = true;
+            this.radio_cr28b01.Text = "radioButton1";
+            this.radio_cr28b01.UseVisualStyleBackColor = true;
+            // 
+            // radio_cr28c01
+            // 
+            this.radio_cr28c01.AutoSize = true;
+            this.radio_cr28c01.Location = new System.Drawing.Point(544, 219);
+            this.radio_cr28c01.Name = "radio_cr28c01";
+            this.radio_cr28c01.Size = new System.Drawing.Size(85, 17);
+            this.radio_cr28c01.TabIndex = 3;
+            this.radio_cr28c01.TabStop = true;
+            this.radio_cr28c01.Text = "radioButton1";
+            this.radio_cr28c01.UseVisualStyleBackColor = true;
+            // 
+            // radio_cr28d01
+            // 
+            this.radio_cr28d01.AutoSize = true;
+            this.radio_cr28d01.Location = new System.Drawing.Point(544, 242);
+            this.radio_cr28d01.Name = "radio_cr28d01";
+            this.radio_cr28d01.Size = new System.Drawing.Size(85, 17);
+            this.radio_cr28d01.TabIndex = 3;
+            this.radio_cr28d01.TabStop = true;
+            this.radio_cr28d01.Text = "radioButton1";
+            this.radio_cr28d01.UseVisualStyleBackColor = true;
+            // 
+            // radio_cr28e01
+            // 
+            this.radio_cr28e01.AutoSize = true;
+            this.radio_cr28e01.Location = new System.Drawing.Point(544, 265);
+            this.radio_cr28e01.Name = "radio_cr28e01";
+            this.radio_cr28e01.Size = new System.Drawing.Size(85, 17);
+            this.radio_cr28e01.TabIndex = 3;
+            this.radio_cr28e01.TabStop = true;
+            this.radio_cr28e01.Text = "radioButton1";
+            this.radio_cr28e01.UseVisualStyleBackColor = true;
+            // 
+            // radio_cr28f01
+            // 
+            this.radio_cr28f01.AutoSize = true;
+            this.radio_cr28f01.Location = new System.Drawing.Point(544, 288);
+            this.radio_cr28f01.Name = "radio_cr28f01";
+            this.radio_cr28f01.Size = new System.Drawing.Size(85, 17);
+            this.radio_cr28f01.TabIndex = 3;
+            this.radio_cr28f01.TabStop = true;
+            this.radio_cr28f01.Text = "radioButton1";
+            this.radio_cr28f01.UseVisualStyleBackColor = true;
+            // 
+            // radio_cr28fx01
+            // 
+            this.radio_cr28fx01.AutoSize = true;
+            this.radio_cr28fx01.Location = new System.Drawing.Point(544, 311);
+            this.radio_cr28fx01.Name = "radio_cr28fx01";
+            this.radio_cr28fx01.Size = new System.Drawing.Size(85, 17);
+            this.radio_cr28fx01.TabIndex = 3;
+            this.radio_cr28fx01.TabStop = true;
+            this.radio_cr28fx01.Text = "radioButton1";
+            this.radio_cr28fx01.UseVisualStyleBackColor = true;
+            // 
+            // radio_cr28a02
+            // 
+            this.radio_cr28a02.AutoSize = true;
+            this.radio_cr28a02.Location = new System.Drawing.Point(635, 173);
+            this.radio_cr28a02.Name = "radio_cr28a02";
+            this.radio_cr28a02.Size = new System.Drawing.Size(85, 17);
+            this.radio_cr28a02.TabIndex = 3;
+            this.radio_cr28a02.TabStop = true;
+            this.radio_cr28a02.Text = "radioButton1";
+            this.radio_cr28a02.UseVisualStyleBackColor = true;
+            // 
+            // radio_cr28b02
+            // 
+            this.radio_cr28b02.AutoSize = true;
+            this.radio_cr28b02.Location = new System.Drawing.Point(635, 196);
+            this.radio_cr28b02.Name = "radio_cr28b02";
+            this.radio_cr28b02.Size = new System.Drawing.Size(85, 17);
+            this.radio_cr28b02.TabIndex = 3;
+            this.radio_cr28b02.TabStop = true;
+            this.radio_cr28b02.Text = "radioButton1";
+            this.radio_cr28b02.UseVisualStyleBackColor = true;
+            // 
+            // radio_cr28c02
+            // 
+            this.radio_cr28c02.AutoSize = true;
+            this.radio_cr28c02.Location = new System.Drawing.Point(635, 219);
+            this.radio_cr28c02.Name = "radio_cr28c02";
+            this.radio_cr28c02.Size = new System.Drawing.Size(85, 17);
+            this.radio_cr28c02.TabIndex = 3;
+            this.radio_cr28c02.TabStop = true;
+            this.radio_cr28c02.Text = "radioButton1";
+            this.radio_cr28c02.UseVisualStyleBackColor = true;
+            // 
+            // radio_cr28e02
+            // 
+            this.radio_cr28e02.AutoSize = true;
+            this.radio_cr28e02.Location = new System.Drawing.Point(635, 265);
+            this.radio_cr28e02.Name = "radio_cr28e02";
+            this.radio_cr28e02.Size = new System.Drawing.Size(85, 17);
+            this.radio_cr28e02.TabIndex = 3;
+            this.radio_cr28e02.TabStop = true;
+            this.radio_cr28e02.Text = "radioButton1";
+            this.radio_cr28e02.UseVisualStyleBackColor = true;
+            // 
+            // radio_cr28d02
+            // 
+            this.radio_cr28d02.AutoSize = true;
+            this.radio_cr28d02.Location = new System.Drawing.Point(635, 242);
+            this.radio_cr28d02.Name = "radio_cr28d02";
+            this.radio_cr28d02.Size = new System.Drawing.Size(85, 17);
+            this.radio_cr28d02.TabIndex = 3;
+            this.radio_cr28d02.TabStop = true;
+            this.radio_cr28d02.Text = "radioButton1";
+            this.radio_cr28d02.UseVisualStyleBackColor = true;
+            // 
+            // radio_cr28f02
+            // 
+            this.radio_cr28f02.AutoSize = true;
+            this.radio_cr28f02.Location = new System.Drawing.Point(635, 288);
+            this.radio_cr28f02.Name = "radio_cr28f02";
+            this.radio_cr28f02.Size = new System.Drawing.Size(85, 17);
+            this.radio_cr28f02.TabIndex = 3;
+            this.radio_cr28f02.TabStop = true;
+            this.radio_cr28f02.Text = "radioButton1";
+            this.radio_cr28f02.UseVisualStyleBackColor = true;
+            // 
+            // radio_cr28fx02
+            // 
+            this.radio_cr28fx02.AutoSize = true;
+            this.radio_cr28fx02.Location = new System.Drawing.Point(635, 311);
+            this.radio_cr28fx02.Name = "radio_cr28fx02";
+            this.radio_cr28fx02.Size = new System.Drawing.Size(85, 17);
+            this.radio_cr28fx02.TabIndex = 3;
+            this.radio_cr28fx02.TabStop = true;
+            this.radio_cr28fx02.Text = "radioButton1";
+            this.radio_cr28fx02.UseVisualStyleBackColor = true;
+            // 
+            // label_cr28a
+            // 
+            this.label_cr28a.AutoSize = true;
+            this.label_cr28a.Location = new System.Drawing.Point(339, 173);
+            this.label_cr28a.Name = "label_cr28a";
+            this.label_cr28a.Size = new System.Drawing.Size(41, 13);
+            this.label_cr28a.TabIndex = 4;
+            this.label_cr28a.Text = "label20";
+            // 
+            // label_cr28b
+            // 
+            this.label_cr28b.AutoSize = true;
+            this.label_cr28b.Location = new System.Drawing.Point(339, 196);
+            this.label_cr28b.Name = "label_cr28b";
+            this.label_cr28b.Size = new System.Drawing.Size(41, 13);
+            this.label_cr28b.TabIndex = 4;
+            this.label_cr28b.Text = "label20";
+            // 
+            // label_cr28c
+            // 
+            this.label_cr28c.AutoSize = true;
+            this.label_cr28c.Location = new System.Drawing.Point(339, 219);
+            this.label_cr28c.Name = "label_cr28c";
+            this.label_cr28c.Size = new System.Drawing.Size(41, 13);
+            this.label_cr28c.TabIndex = 4;
+            this.label_cr28c.Text = "label20";
+            // 
+            // label_cr28d
+            // 
+            this.label_cr28d.AutoSize = true;
+            this.label_cr28d.Location = new System.Drawing.Point(339, 242);
+            this.label_cr28d.Name = "label_cr28d";
+            this.label_cr28d.Size = new System.Drawing.Size(41, 13);
+            this.label_cr28d.TabIndex = 4;
+            this.label_cr28d.Text = "label20";
+            // 
+            // label_cr28e
+            // 
+            this.label_cr28e.AutoSize = true;
+            this.label_cr28e.Location = new System.Drawing.Point(339, 265);
+            this.label_cr28e.Name = "label_cr28e";
+            this.label_cr28e.Size = new System.Drawing.Size(41, 13);
+            this.label_cr28e.TabIndex = 4;
+            this.label_cr28e.Text = "label20";
+            // 
+            // label_cr28f
+            // 
+            this.label_cr28f.AutoSize = true;
+            this.label_cr28f.Location = new System.Drawing.Point(339, 288);
+            this.label_cr28f.Name = "label_cr28f";
+            this.label_cr28f.Size = new System.Drawing.Size(41, 13);
+            this.label_cr28f.TabIndex = 4;
+            this.label_cr28f.Text = "label20";
+            // 
+            // label_cr28fx
+            // 
+            this.label_cr28fx.AutoSize = true;
+            this.label_cr28fx.Location = new System.Drawing.Point(339, 311);
+            this.label_cr28fx.Name = "label_cr28fx";
+            this.label_cr28fx.Size = new System.Drawing.Size(41, 13);
+            this.label_cr28fx.TabIndex = 4;
+            this.label_cr28fx.Text = "label20";
+            // 
+            // radio_cr13m
+            // 
+            this.radio_cr13m.AutoSize = true;
+            this.radio_cr13m.Location = new System.Drawing.Point(484, 163);
+            this.radio_cr13m.Name = "radio_cr13m";
+            this.radio_cr13m.Size = new System.Drawing.Size(85, 17);
+            this.radio_cr13m.TabIndex = 4;
+            this.radio_cr13m.TabStop = true;
+            this.radio_cr13m.Text = "radioButton1";
+            this.radio_cr13m.UseVisualStyleBackColor = true;
+            // 
+            // radio_cr13f
+            // 
+            this.radio_cr13f.AutoSize = true;
+            this.radio_cr13f.Location = new System.Drawing.Point(571, 163);
+            this.radio_cr13f.Name = "radio_cr13f";
+            this.radio_cr13f.Size = new System.Drawing.Size(85, 17);
+            this.radio_cr13f.TabIndex = 4;
+            this.radio_cr13f.TabStop = true;
+            this.radio_cr13f.Text = "radioButton1";
+            this.radio_cr13f.UseVisualStyleBackColor = true;
+            // 
+            // button_frmdata
+            // 
+            this.button_frmdata.Location = new System.Drawing.Point(398, 726);
+            this.button_frmdata.Name = "button_frmdata";
+            this.button_frmdata.Size = new System.Drawing.Size(171, 23);
+            this.button_frmdata.TabIndex = 1;
+            this.button_frmdata.Text = "Enter Data Form";
+            this.button_frmdata.UseVisualStyleBackColor = true;
+            this.button_frmdata.Click += new System.EventHandler(this.button_frmdata_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radio_cr17b);
+            this.groupBox1.Controls.Add(this.radio_cr17a);
+            this.groupBox1.Location = new System.Drawing.Point(454, 40);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(235, 40);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            // 
+            // radio_cr17a
+            // 
+            this.radio_cr17a.AutoSize = true;
+            this.radio_cr17a.Location = new System.Drawing.Point(7, 17);
+            this.radio_cr17a.Name = "radio_cr17a";
+            this.radio_cr17a.Size = new System.Drawing.Size(85, 17);
+            this.radio_cr17a.TabIndex = 0;
+            this.radio_cr17a.TabStop = true;
+            this.radio_cr17a.Text = "radioButton1";
+            this.radio_cr17a.UseVisualStyleBackColor = true;
+            // 
+            // radio_cr17b
+            // 
+            this.radio_cr17b.AutoSize = true;
+            this.radio_cr17b.Location = new System.Drawing.Point(102, 17);
+            this.radio_cr17b.Name = "radio_cr17b";
+            this.radio_cr17b.Size = new System.Drawing.Size(85, 17);
+            this.radio_cr17b.TabIndex = 0;
+            this.radio_cr17b.TabStop = true;
+            this.radio_cr17b.Text = "radioButton1";
+            this.radio_cr17b.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.radio_cr18b);
+            this.groupBox2.Controls.Add(this.radio_cr18a);
+            this.groupBox2.Location = new System.Drawing.Point(454, 84);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(235, 40);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            // 
+            // radio_cr18b
+            // 
+            this.radio_cr18b.AutoSize = true;
+            this.radio_cr18b.Location = new System.Drawing.Point(102, 17);
+            this.radio_cr18b.Name = "radio_cr18b";
+            this.radio_cr18b.Size = new System.Drawing.Size(85, 17);
+            this.radio_cr18b.TabIndex = 0;
+            this.radio_cr18b.TabStop = true;
+            this.radio_cr18b.Text = "radioButton1";
+            this.radio_cr18b.UseVisualStyleBackColor = true;
+            // 
+            // radio_cr18a
+            // 
+            this.radio_cr18a.AutoSize = true;
+            this.radio_cr18a.Location = new System.Drawing.Point(7, 17);
+            this.radio_cr18a.Name = "radio_cr18a";
+            this.radio_cr18a.Size = new System.Drawing.Size(85, 17);
+            this.radio_cr18a.TabIndex = 0;
+            this.radio_cr18a.TabStop = true;
+            this.radio_cr18a.Text = "radioButton1";
+            this.radio_cr18a.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.radio_cr19b);
+            this.groupBox3.Controls.Add(this.radio_cr19a);
+            this.groupBox3.Location = new System.Drawing.Point(454, 128);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(235, 40);
+            this.groupBox3.TabIndex = 4;
+            this.groupBox3.TabStop = false;
+            // 
+            // radio_cr19b
+            // 
+            this.radio_cr19b.AutoSize = true;
+            this.radio_cr19b.Location = new System.Drawing.Point(102, 17);
+            this.radio_cr19b.Name = "radio_cr19b";
+            this.radio_cr19b.Size = new System.Drawing.Size(85, 17);
+            this.radio_cr19b.TabIndex = 0;
+            this.radio_cr19b.TabStop = true;
+            this.radio_cr19b.Text = "radioButton1";
+            this.radio_cr19b.UseVisualStyleBackColor = true;
+            // 
+            // radio_cr19a
+            // 
+            this.radio_cr19a.AutoSize = true;
+            this.radio_cr19a.Location = new System.Drawing.Point(7, 17);
+            this.radio_cr19a.Name = "radio_cr19a";
+            this.radio_cr19a.Size = new System.Drawing.Size(85, 17);
+            this.radio_cr19a.TabIndex = 0;
+            this.radio_cr19a.TabStop = true;
+            this.radio_cr19a.Text = "radioButton1";
+            this.radio_cr19a.UseVisualStyleBackColor = true;
+            this.radio_cr19a.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.radio_cr20b);
+            this.groupBox4.Controls.Add(this.radio_cr20a);
+            this.groupBox4.Location = new System.Drawing.Point(454, 174);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(235, 40);
+            this.groupBox4.TabIndex = 4;
+            this.groupBox4.TabStop = false;
+            // 
+            // radio_cr20b
+            // 
+            this.radio_cr20b.AutoSize = true;
+            this.radio_cr20b.Location = new System.Drawing.Point(102, 17);
+            this.radio_cr20b.Name = "radio_cr20b";
+            this.radio_cr20b.Size = new System.Drawing.Size(85, 17);
+            this.radio_cr20b.TabIndex = 0;
+            this.radio_cr20b.TabStop = true;
+            this.radio_cr20b.Text = "radioButton1";
+            this.radio_cr20b.UseVisualStyleBackColor = true;
+            // 
+            // radio_cr20a
+            // 
+            this.radio_cr20a.AutoSize = true;
+            this.radio_cr20a.Location = new System.Drawing.Point(7, 17);
+            this.radio_cr20a.Name = "radio_cr20a";
+            this.radio_cr20a.Size = new System.Drawing.Size(85, 17);
+            this.radio_cr20a.TabIndex = 0;
+            this.radio_cr20a.TabStop = true;
+            this.radio_cr20a.Text = "radioButton1";
+            this.radio_cr20a.UseVisualStyleBackColor = true;
             // 
             // Form_gm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(779, 773);
+            this.Controls.Add(this.button_frmdata);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form_gm";
             this.Text = "Form_gm";
@@ -639,6 +1028,16 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -666,36 +1065,68 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.DateTimePicker dateTime_cr14;
-        private System.Windows.Forms.ComboBox combo_cr13;
         private System.Windows.Forms.TextBox text_cr15;
         private System.Windows.Forms.TextBox text_cr12;
         private System.Windows.Forms.TextBox text_cr11;
         private System.Windows.Forms.TextBox text_cr10;
-        private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.CheckBox check_cr240a;
-        private System.Windows.Forms.CheckBox check_cr240f;
-        private System.Windows.Forms.CheckBox check_cr240e;
-        private System.Windows.Forms.CheckBox check_cr240d;
-        private System.Windows.Forms.CheckBox check_cr240c;
-        private System.Windows.Forms.CheckBox check_cr240b;
-        private System.Windows.Forms.CheckBox check_cr260d;
-        private System.Windows.Forms.CheckBox check_cr260c;
-        private System.Windows.Forms.CheckBox check_cr250c;
-        private System.Windows.Forms.CheckBox check_cr260b;
-        private System.Windows.Forms.CheckBox check_cr250b;
-        private System.Windows.Forms.CheckBox check_cr260a;
-        private System.Windows.Forms.CheckBox check_cr250a;
+        private System.Windows.Forms.TextBox text_cr23;
+        private System.Windows.Forms.TextBox text_cr22;
+        private System.Windows.Forms.TextBox text_cr21;
+        private System.Windows.Forms.TextBox text_cr16;
+        private System.Windows.Forms.CheckBox check_cr24a;
+        private System.Windows.Forms.CheckBox check_cr24f;
+        private System.Windows.Forms.CheckBox check_cr24e;
+        private System.Windows.Forms.CheckBox check_cr24d;
+        private System.Windows.Forms.CheckBox check_cr24c;
+        private System.Windows.Forms.CheckBox check_cr24b;
+        private System.Windows.Forms.CheckBox check_cr26d;
+        private System.Windows.Forms.CheckBox check_cr26c;
+        private System.Windows.Forms.CheckBox check_cr25c;
+        private System.Windows.Forms.CheckBox check_cr26b;
+        private System.Windows.Forms.CheckBox check_cr25b;
+        private System.Windows.Forms.CheckBox check_cr26a;
+        private System.Windows.Forms.CheckBox check_cr25a;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.CheckBox check_cr27c;
+        private System.Windows.Forms.CheckBox check_cr27b;
+        private System.Windows.Forms.CheckBox check_cr27a;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label_cr28fx;
+        private System.Windows.Forms.Label label_cr28f;
+        private System.Windows.Forms.Label label_cr28d;
+        private System.Windows.Forms.Label label_cr28e;
+        private System.Windows.Forms.Label label_cr28c;
+        private System.Windows.Forms.Label label_cr28b;
+        private System.Windows.Forms.Label label_cr28a;
+        private System.Windows.Forms.RadioButton radio_cr28fx02;
+        private System.Windows.Forms.RadioButton radio_cr28fx01;
+        private System.Windows.Forms.RadioButton radio_cr28f02;
+        private System.Windows.Forms.RadioButton radio_cr28f01;
+        private System.Windows.Forms.RadioButton radio_cr28d02;
+        private System.Windows.Forms.RadioButton radio_cr28d01;
+        private System.Windows.Forms.RadioButton radio_cr28e02;
+        private System.Windows.Forms.RadioButton radio_cr28e01;
+        private System.Windows.Forms.RadioButton radio_cr28c02;
+        private System.Windows.Forms.RadioButton radio_cr28c01;
+        private System.Windows.Forms.RadioButton radio_cr28b02;
+        private System.Windows.Forms.RadioButton radio_cr28b01;
+        private System.Windows.Forms.RadioButton radio_cr28a02;
+        private System.Windows.Forms.RadioButton radio_cr28a01;
+        private System.Windows.Forms.RadioButton radio_cr13f;
+        private System.Windows.Forms.RadioButton radio_cr13m;
+        private System.Windows.Forms.Button button_frmdata;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radio_cr17b;
+        private System.Windows.Forms.RadioButton radio_cr17a;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.RadioButton radio_cr20b;
+        private System.Windows.Forms.RadioButton radio_cr20a;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.RadioButton radio_cr19b;
+        private System.Windows.Forms.RadioButton radio_cr19a;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton radio_cr18b;
+        private System.Windows.Forms.RadioButton radio_cr18a;
     }
 }
