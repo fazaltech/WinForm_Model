@@ -25,9 +25,9 @@ namespace WinForm_Model
         private win_mvc_conn db = new win_mvc_conn();
 
 
-        public  void Insert()
+        public void Insert()
         {
-            
+
             //tbluser users = new tbluser();
             //users.user_id = Convert.ToInt32(this.txt_usr_id.Text);
             //users.user_name= txt_usr_name.Text;
@@ -65,52 +65,35 @@ namespace WinForm_Model
         }
         public class post_data
         {
-           public string table { get; set; }
-           
+            public string table { get; set; }
+
 
         }
 
         public class data_villages
         {
-         public string    country { get; set; }
-            public string    district { get; set; }
-            public string    uc { get; set; }
-            public string    village { get; set; }
-            public string    country_code { get; set; }
-            public string    district_code { get; set; }
-            public string    uc_code { get; set; }
-            public string    villlage_code { get; set; }
-            public string    cluster_no { get; set; }
+            public string country { get; set; }
+            public string district { get; set; }
+            public string uc { get; set; }
+            public string village { get; set; }
+            public string country_code { get; set; }
+            public string district_code { get; set; }
+            public string uc_code { get; set; }
+            public string villlage_code { get; set; }
+            public string cluster_no { get; set; }
 
 
         }
 
         public void get_data()
         {
-
-
-
             var get_key = new post_data()
             {
-                table="villages"
+                table = "villages"
             };
             var test = JsonConvert.SerializeObject(get_key);
 
-            //WebRequest request = WebRequest.Create("http://f38158/casi_gm/api/getdata.php");
-            //    request.Method = "POST";
-            //request.ContentType = "application/json; charset=UTF-8";
-            //request.Headers.Add(test);
 
-
-
-
-            //WebResponse response = request.GetResponse();
-
-            //    StreamReader sr = new StreamReader(response.GetResponseStream());
-            //    string jsonString = sr.ReadToEnd();
-            //    var obj = JsonConvert.DeserializeObject<List<data_villages>>(jsonString);
-
-            //    sr.Close();
 
             HttpWebRequest webRequest;
 
@@ -123,25 +106,26 @@ namespace WinForm_Model
 
             byte[] byteArray = Encoding.UTF8.GetBytes(requestParams);
             webRequest.ContentLength = byteArray.Length;
-            using (Stream requestStream = webRequest.GetRequestStream())
-            {
-                requestStream.Write(byteArray, 0, byteArray.Length);
-            }
+            Stream requestStream = webRequest.GetRequestStream();
+
+            requestStream.Write(byteArray, 0, byteArray.Length);
+
 
             // Get the response.
-            using (WebResponse response = webRequest.GetResponse())
-            {
-                using (Stream responseStream = response.GetResponseStream())
-                {
-                    StreamReader rdr = new StreamReader(responseStream, Encoding.UTF8);
-                    string Json = rdr.ReadToEnd(); // response from server
+            WebResponse response = webRequest.GetResponse();
 
-                }
-            }
+            Stream responseStream = response.GetResponseStream();
+
+            StreamReader rdr = new StreamReader(responseStream, Encoding.UTF8);
+            string Json = rdr.ReadToEnd(); // response from server
+            var obj = JsonConvert.DeserializeObject<List<data_villages>>(Json);
+            int a = 1;
+
+
 
 
         }
 
-        
+
     }
 }
