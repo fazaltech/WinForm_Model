@@ -1,6 +1,6 @@
 ﻿namespace WinForm_Model
 {
-    partial class Form1
+    partial class frm_main
     {
         /// <summary>
         /// Required designer variable.
@@ -28,106 +28,122 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txt_usr_id = new System.Windows.Forms.TextBox();
-            this.txt_usr_name = new System.Windows.Forms.TextBox();
-            this.txt_full_name = new System.Windows.Forms.TextBox();
-            this.txt_email = new System.Windows.Forms.TextBox();
-            this.button_insert = new System.Windows.Forms.Button();
+            this.label_cr01 = new System.Windows.Forms.Label();
+            this.label_cr02 = new System.Windows.Forms.Label();
+            this.label_cr03 = new System.Windows.Forms.Label();
+            this.label_cr04 = new System.Windows.Forms.Label();
+            this.label_cr05 = new System.Windows.Forms.Label();
+            this.combo_cr01 = new System.Windows.Forms.ComboBox();
+            this.combo_cr02 = new System.Windows.Forms.ComboBox();
+            this.combo_cr03 = new System.Windows.Forms.ComboBox();
+            this.combo_cr04 = new System.Windows.Forms.ComboBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // label1
+            // label_cr01
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "User ID";
+            this.label_cr01.AutoSize = true;
+            this.label_cr01.Location = new System.Drawing.Point(47, 44);
+            this.label_cr01.Name = "label_cr01";
+            this.label_cr01.Size = new System.Drawing.Size(35, 13);
+            this.label_cr01.TabIndex = 0;
+            this.label_cr01.Text = "label1";
             // 
-            // label2
+            // label_cr02
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(41, 70);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "User Name";
+            this.label_cr02.AutoSize = true;
+            this.label_cr02.Location = new System.Drawing.Point(47, 82);
+            this.label_cr02.Name = "label_cr02";
+            this.label_cr02.Size = new System.Drawing.Size(35, 13);
+            this.label_cr02.TabIndex = 1;
+            this.label_cr02.Text = "label2";
             // 
-            // label3
+            // label_cr03
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(41, 103);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Full Name";
+            this.label_cr03.AutoSize = true;
+            this.label_cr03.Location = new System.Drawing.Point(47, 120);
+            this.label_cr03.Name = "label_cr03";
+            this.label_cr03.Size = new System.Drawing.Size(35, 13);
+            this.label_cr03.TabIndex = 0;
+            this.label_cr03.Text = "label1";
+            this.label_cr03.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label4
+            // label_cr04
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(41, 136);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Email_ID";
+            this.label_cr04.AutoSize = true;
+            this.label_cr04.Location = new System.Drawing.Point(47, 158);
+            this.label_cr04.Name = "label_cr04";
+            this.label_cr04.Size = new System.Drawing.Size(35, 13);
+            this.label_cr04.TabIndex = 1;
+            this.label_cr04.Text = "label2";
+            this.label_cr04.Click += new System.EventHandler(this.label4_Click);
             // 
-            // txt_usr_id
+            // label_cr05
             // 
-            this.txt_usr_id.Location = new System.Drawing.Point(130, 37);
-            this.txt_usr_id.Name = "txt_usr_id";
-            this.txt_usr_id.Size = new System.Drawing.Size(100, 20);
-            this.txt_usr_id.TabIndex = 1;
+            this.label_cr05.AutoSize = true;
+            this.label_cr05.Location = new System.Drawing.Point(47, 196);
+            this.label_cr05.Name = "label_cr05";
+            this.label_cr05.Size = new System.Drawing.Size(35, 13);
+            this.label_cr05.TabIndex = 1;
+            this.label_cr05.Text = "label2";
+            this.label_cr05.Click += new System.EventHandler(this.label4_Click);
             // 
-            // txt_usr_name
+            // combo_cr01
             // 
-            this.txt_usr_name.Location = new System.Drawing.Point(130, 70);
-            this.txt_usr_name.Name = "txt_usr_name";
-            this.txt_usr_name.Size = new System.Drawing.Size(100, 20);
-            this.txt_usr_name.TabIndex = 1;
+            this.combo_cr01.FormattingEnabled = true;
+            this.combo_cr01.Location = new System.Drawing.Point(152, 44);
+            this.combo_cr01.Name = "combo_cr01";
+            this.combo_cr01.Size = new System.Drawing.Size(121, 21);
+            this.combo_cr01.TabIndex = 2;
             // 
-            // txt_full_name
+            // combo_cr02
             // 
-            this.txt_full_name.Location = new System.Drawing.Point(130, 100);
-            this.txt_full_name.Name = "txt_full_name";
-            this.txt_full_name.Size = new System.Drawing.Size(100, 20);
-            this.txt_full_name.TabIndex = 1;
+            this.combo_cr02.FormattingEnabled = true;
+            this.combo_cr02.Location = new System.Drawing.Point(152, 82);
+            this.combo_cr02.Name = "combo_cr02";
+            this.combo_cr02.Size = new System.Drawing.Size(121, 21);
+            this.combo_cr02.TabIndex = 2;
             // 
-            // txt_email
+            // combo_cr03
             // 
-            this.txt_email.Location = new System.Drawing.Point(130, 133);
-            this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(100, 20);
-            this.txt_email.TabIndex = 1;
+            this.combo_cr03.FormattingEnabled = true;
+            this.combo_cr03.Location = new System.Drawing.Point(152, 120);
+            this.combo_cr03.Name = "combo_cr03";
+            this.combo_cr03.Size = new System.Drawing.Size(121, 21);
+            this.combo_cr03.TabIndex = 2;
             // 
-            // button_insert
+            // combo_cr04
             // 
-            this.button_insert.Location = new System.Drawing.Point(130, 194);
-            this.button_insert.Name = "button_insert";
-            this.button_insert.Size = new System.Drawing.Size(75, 23);
-            this.button_insert.TabIndex = 2;
-            this.button_insert.Text = "Insert";
-            this.button_insert.UseVisualStyleBackColor = true;
-            this.button_insert.Click += new System.EventHandler(this.button_insert_Click);
+            this.combo_cr04.FormattingEnabled = true;
+            this.combo_cr04.Location = new System.Drawing.Point(152, 158);
+            this.combo_cr04.Name = "combo_cr04";
+            this.combo_cr04.Size = new System.Drawing.Size(121, 21);
+            this.combo_cr04.TabIndex = 2;
             // 
-            // Form1
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(152, 196);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(121, 21);
+            this.comboBox5.TabIndex = 2;
+            // 
+            // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(289, 317);
-            this.Controls.Add(this.button_insert);
-            this.Controls.Add(this.txt_email);
-            this.Controls.Add(this.txt_full_name);
-            this.Controls.Add(this.txt_usr_name);
-            this.Controls.Add(this.txt_usr_id);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.ClientSize = new System.Drawing.Size(392, 533);
+            this.Controls.Add(this.comboBox5);
+            this.Controls.Add(this.combo_cr04);
+            this.Controls.Add(this.combo_cr03);
+            this.Controls.Add(this.combo_cr02);
+            this.Controls.Add(this.combo_cr01);
+            this.Controls.Add(this.label_cr05);
+            this.Controls.Add(this.label_cr04);
+            this.Controls.Add(this.label_cr03);
+            this.Controls.Add(this.label_cr02);
+            this.Controls.Add(this.label_cr01);
+            this.Name = "frm_main";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -136,15 +152,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_usr_id;
-        private System.Windows.Forms.TextBox txt_usr_name;
-        private System.Windows.Forms.TextBox txt_full_name;
-        private System.Windows.Forms.TextBox txt_email;
-        private System.Windows.Forms.Button button_insert;
+        private System.Windows.Forms.Label label_cr01;
+        private System.Windows.Forms.Label label_cr02;
+        private System.Windows.Forms.Label label_cr03;
+        private System.Windows.Forms.Label label_cr04;
+        private System.Windows.Forms.Label label_cr05;
+        private System.Windows.Forms.ComboBox combo_cr01;
+        private System.Windows.Forms.ComboBox combo_cr02;
+        private System.Windows.Forms.ComboBox combo_cr03;
+        private System.Windows.Forms.ComboBox combo_cr04;
+        private System.Windows.Forms.ComboBox comboBox5;
     }
 }
 
