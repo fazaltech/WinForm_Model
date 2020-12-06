@@ -97,6 +97,9 @@
             this.combo_cr01.Name = "combo_cr01";
             this.combo_cr01.Size = new System.Drawing.Size(121, 21);
             this.combo_cr01.TabIndex = 2;
+            this.combo_cr01.SelectedIndexChanged += new System.EventHandler(this.combo_cr01_SelectedIndexChanged);
+            this.combo_cr01.DisplayMemberChanged += new System.EventHandler(this.combo_cr01_DisplayMemberChanged);
+            this.combo_cr01.SelectedValueChanged += new System.EventHandler(this.combo_cr01_SelectedValueChanged);
             // 
             // combo_cr02
             // 
@@ -116,6 +119,7 @@
             // 
             // combo_cr04
             // 
+            this.combo_cr04.Enabled = false;
             this.combo_cr04.FormattingEnabled = true;
             this.combo_cr04.Location = new System.Drawing.Point(199, 158);
             this.combo_cr04.Name = "combo_cr04";

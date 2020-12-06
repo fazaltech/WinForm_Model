@@ -34,11 +34,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.text_user_name = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button_download = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button_download);
             this.groupBox1.Controls.Add(this.button_login);
             this.groupBox1.Controls.Add(this.text_password);
             this.groupBox1.Controls.Add(this.label2);
@@ -102,6 +104,16 @@
             this.label1.Text = "User Name";
             this.label1.UseWaitCursor = true;
             // 
+            // button_download
+            // 
+            this.button_download.Location = new System.Drawing.Point(58, 257);
+            this.button_download.Name = "button_download";
+            this.button_download.Size = new System.Drawing.Size(133, 23);
+            this.button_download.TabIndex = 3;
+            this.button_download.Text = "DownLoad Data";
+            this.button_download.UseVisualStyleBackColor = true;
+            this.button_download.Click += new System.EventHandler(this.button_download_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -125,5 +137,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox text_user_name;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button_download;
     }
 }
