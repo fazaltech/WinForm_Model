@@ -129,6 +129,7 @@ namespace WinForm_Model
 
         }
 
+
         public void get_data()
         {
 
