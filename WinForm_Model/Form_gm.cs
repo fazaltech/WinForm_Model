@@ -404,5 +404,22 @@ namespace WinForm_Model
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnContinue_Click(object sender, EventArgs e)
+        {
+
+            MessageBox.Show("Cr10", "TEST");
+
+
+            if (ValidateChildren(ValidationConstraints.Enabled))
+            {
+                MessageBox.Show(text_cr10.Text, "Demo App - Message!");
+            }
+        }
     }
 }
