@@ -83,7 +83,7 @@ namespace WinForm_Model
             public string country_code { get; set; }
             public string district_code { get; set; }
             public string uc_code { get; set; }
-            public string villlage_code { get; set; }
+            public string village_code { get; set; }
             public string cluster_no { get; set; }
 
 
@@ -142,7 +142,7 @@ namespace WinForm_Model
             for (int a = 0; a <= obj.Count - 1; a++)
             {
 
-                string qry = "insert into users(username, password, full_name, district_code, designation, auth_level, dd) values('" + obj[a].username + "', '" + obj[a].password + "', '" + obj[a].full_name + "', '" + obj[a].district_code + "', '" + obj[a].designation + "', '" + obj[a].auth_level + "', '" + obj[a].dd + "')";
+                string qry = "insert into villages(village_code, village, district_code, district, uc_code, uc,country,country_code,cluster_no) values('" + obj[a].village_code + "', '" + obj[a].village + "', '" + obj[a].district_code + "', '" + obj[a].district + "', '" + obj[a].uc_code + "', '" + obj[a].uc + "', '" + obj[a].country + "', '" + obj[a].country_code + "', '" + obj[a].cluster_no + "')";
 
                 da = new SQLiteDataAdapter(qry, cn.cn);
 
@@ -166,14 +166,14 @@ namespace WinForm_Model
             {
                 DataBase cn = new DataBase();
 
-                SQLiteDataAdapter da = new SQLiteDataAdapter("select * from UC ", cn.cn);
+                SQLiteDataAdapter da = new SQLiteDataAdapter("select * from villages ", cn.cn);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
                 da.Fill(ds);
 
                 combo_cr01.DataSource = ds.Tables[0];
-                combo_cr01.DisplayMember = "UC";
-                combo_cr01.ValueMember = "id";
+                combo_cr01.DisplayMember = "district";
+                combo_cr01.ValueMember = "district_code";
             }
 
             catch (Exception ex)
@@ -183,5 +183,19 @@ namespace WinForm_Model
 
         }
 
+        private void frm_main_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_cr01_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_cr02_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
