@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="win_mvc_modelStoreContainer" CdmEntityContainer="win_mvc_conn">
+    <EntitySetMapping Name="tblusers">
+      <EntityTypeMapping TypeName="win_mvc_model.tbluser">
+        <MappingFragment StoreEntitySet="tbluser">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="email_id" ColumnName="email_id" />
+          <ScalarProperty Name="designation" ColumnName="designation" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="account_type" ColumnName="account_type" />
+          <ScalarProperty Name="flag" ColumnName="flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="forms">
+      <EntityTypeMapping TypeName="win_mvc_model.form">
+        <MappingFragment StoreEntitySet="forms">
+          <ScalarProperty Name="cr28fx02" ColumnName="cr28fx02" />
+          <ScalarProperty Name="cr28fx01" ColumnName="cr28fx01" />
+          <ScalarProperty Name="cr28f02" ColumnName="cr28f02" />
+          <ScalarProperty Name="cr28f01" ColumnName="cr28f01" />
+          <ScalarProperty Name="cr28e02" ColumnName="cr28e02" />
+          <ScalarProperty Name="cr28e01" ColumnName="cr28e01" />
+          <ScalarProperty Name="cr28d02" ColumnName="cr28d02" />
+          <ScalarProperty Name="cr28d01" ColumnName="cr28d01" />
+          <ScalarProperty Name="cr28c02" ColumnName="cr28c02" />
+          <ScalarProperty Name="cr28c01" ColumnName="cr28c01" />
+          <ScalarProperty Name="cr28b02" ColumnName="cr28b02" />
+          <ScalarProperty Name="cr28b01" ColumnName="cr28b01" />
+          <ScalarProperty Name="cr28a02" ColumnName="cr28a02" />
+          <ScalarProperty Name="cr28a01" ColumnName="cr28a01" />
+          <ScalarProperty Name="cr27c" ColumnName="cr27c" />
+          <ScalarProperty Name="cr27b" ColumnName="cr27b" />
+          <ScalarProperty Name="cr27a" ColumnName="cr27a" />
+          <ScalarProperty Name="cr26d" ColumnName="cr26d" />
+          <ScalarProperty Name="cr26c" ColumnName="cr26c" />
+          <ScalarProperty Name="cr26b" ColumnName="cr26b" />
+          <ScalarProperty Name="cr26a" ColumnName="cr26a" />
+          <ScalarProperty Name="cr25c" ColumnName="cr25c" />
+          <ScalarProperty Name="cr25b" ColumnName="cr25b" />
+          <ScalarProperty Name="cr25a" ColumnName="cr25a" />
+          <ScalarProperty Name="cr24f" ColumnName="cr24f" />
+          <ScalarProperty Name="cr24e" ColumnName="cr24e" />
+          <ScalarProperty Name="cr24d" ColumnName="cr24d" />
+          <ScalarProperty Name="cr24c" ColumnName="cr24c" />
+          <ScalarProperty Name="cr24b" ColumnName="cr24b" />
+          <ScalarProperty Name="cr24a" ColumnName="cr24a" />
+          <ScalarProperty Name="cr20b" ColumnName="cr20b" />
+          <ScalarProperty Name="cr20a" ColumnName="cr20a" />
+          <ScalarProperty Name="cr19b" ColumnName="cr19b" />
+          <ScalarProperty Name="cr19a" ColumnName="cr19a" />
+          <ScalarProperty Name="cr18b" ColumnName="cr18b" />
+          <ScalarProperty Name="cr18a" ColumnName="cr18a" />
+          <ScalarProperty Name="cr17b" ColumnName="cr17b" />
+          <ScalarProperty Name="cr17a" ColumnName="cr17a" />
+          <ScalarProperty Name="cr23" ColumnName="cr23" />
+          <ScalarProperty Name="cr22" ColumnName="cr22" />
+          <ScalarProperty Name="cr21" ColumnName="cr21" />
+          <ScalarProperty Name="cr16" ColumnName="cr16" />
+          <ScalarProperty Name="cr12" ColumnName="cr12" />
+          <ScalarProperty Name="cr11" ColumnName="cr11" />
+          <ScalarProperty Name="cr10" ColumnName="cr10" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="villages">
+      <EntityTypeMapping TypeName="win_mvc_model.village">
+        <MappingFragment StoreEntitySet="villages">
+          <ScalarProperty Name="cluster_no" ColumnName="cluster_no" />
+          <ScalarProperty Name="villlage_code" ColumnName="villlage_code" />
+          <ScalarProperty Name="uc_code" ColumnName="uc_code" />
+          <ScalarProperty Name="district_code" ColumnName="district_code" />
+          <ScalarProperty Name="country_code" ColumnName="country_code" />
+          <ScalarProperty Name="village1" ColumnName="village" />
+          <ScalarProperty Name="uc" ColumnName="uc" />
+          <ScalarProperty Name="district" ColumnName="district" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
