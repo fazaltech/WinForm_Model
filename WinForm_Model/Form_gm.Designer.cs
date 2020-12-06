@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -35,7 +36,7 @@
             this.check_cr26a = new System.Windows.Forms.RadioButton();
             this.check_cr26d = new System.Windows.Forms.RadioButton();
             this.check_cr26b = new System.Windows.Forms.RadioButton();
-            this.button_cnt = new System.Windows.Forms.Button();
+            this.btnContinue = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -123,6 +124,7 @@
             this.groupBox20 = new System.Windows.Forms.GroupBox();
             this.radio_cr13m = new System.Windows.Forms.RadioButton();
             this.radio_cr13f = new System.Windows.Forms.RadioButton();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -137,6 +139,7 @@
             this.groupBox15.SuspendLayout();
             this.groupBox16.SuspendLayout();
             this.groupBox20.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -155,7 +158,7 @@
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.groupBox5);
-            this.groupBox1.Controls.Add(this.button_cnt);
+            this.groupBox1.Controls.Add(this.btnContinue);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.textBox3);
@@ -239,15 +242,15 @@
             this.check_cr26b.Text = "radioButton1";
             this.check_cr26b.UseVisualStyleBackColor = false;
             // 
-            // button_cnt
+            // btnContinue
             // 
-            this.button_cnt.Location = new System.Drawing.Point(502, 1034);
-            this.button_cnt.Name = "button_cnt";
-            this.button_cnt.Size = new System.Drawing.Size(195, 39);
-            this.button_cnt.TabIndex = 111;
-            this.button_cnt.Text = "Enter Data Form";
-            this.button_cnt.UseVisualStyleBackColor = true;
-            this.button_cnt.Click += new System.EventHandler(this.Button_cnt);
+            this.btnContinue.Location = new System.Drawing.Point(502, 1034);
+            this.btnContinue.Name = "btnContinue";
+            this.btnContinue.Size = new System.Drawing.Size(195, 39);
+            this.btnContinue.TabIndex = 111;
+            this.btnContinue.Text = "Enter Data Form";
+            this.btnContinue.UseVisualStyleBackColor = true;
+            this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
             // 
             // label17
             // 
@@ -1201,13 +1204,17 @@
             this.radio_cr13f.Text = "radioButton1";
             this.radio_cr13f.UseVisualStyleBackColor = false;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Form_gm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(784, 729);
+            this.ClientSize = new System.Drawing.Size(1008, 729);
             this.Controls.Add(this.label_cr28d);
             this.Controls.Add(this.label_cr28fx);
             this.Controls.Add(this.label1);
@@ -1296,6 +1303,7 @@
             this.groupBox16.PerformLayout();
             this.groupBox20.ResumeLayout(false);
             this.groupBox20.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1305,7 +1313,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button_cnt;
+        private System.Windows.Forms.Button btnContinue;
         private System.Windows.Forms.Label label_cr28d;
         private System.Windows.Forms.Label label_cr28fx;
         private System.Windows.Forms.Label label_cr28f;
@@ -1398,5 +1406,6 @@
         private System.Windows.Forms.Label label_cr27b;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label_cr27a;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
