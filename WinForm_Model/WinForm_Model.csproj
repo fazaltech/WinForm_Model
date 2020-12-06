@@ -134,6 +134,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="Model\win_mvc_model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -170,6 +171,7 @@
       <DependentUpon>win_mvc_model.edmx</DependentUpon>
       <LastGenOutput>win_mvc_model.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\GB_gateway.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

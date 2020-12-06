@@ -16,7 +16,10 @@ namespace WinForm_Model
        private win_mvc_conn db = new win_mvc_conn();
         public frmLogin()
         {
+            //this.BackgroundImage = Properties.Resources.GB_gateway;
             InitializeComponent();
+            CenterToScreen();
+          
             //grp();
         }
 
@@ -31,7 +34,7 @@ namespace WinForm_Model
             users.user_name = text_user_name.Text;
             users.password = text_password.Text;
 
-            if (IsValid(users.user_name, users.password) || (users.user_name=="test1234" && users.password== "test1234"))
+            if ( (users.user_name=="test1234" && users.password== "test1234") || IsValid(users.user_name, users.password))
             {
 
 
@@ -89,6 +92,16 @@ namespace WinForm_Model
             }
 
             return IsValid;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

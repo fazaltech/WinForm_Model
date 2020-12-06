@@ -153,6 +153,7 @@
             this.label1.Size = new System.Drawing.Size(517, 55);
             this.label1.TabIndex = 1;
             this.label1.Text = "CENTRAL ASIA STUNTING INITIATIVE";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // groupBox1
             // 
@@ -1214,7 +1215,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.ClientSize = new System.Drawing.Size(991, 729);
             this.Controls.Add(this.label_cr28d);
             this.Controls.Add(this.label_cr28fx);
             this.Controls.Add(this.label1);
@@ -1272,6 +1273,7 @@
             this.Controls.Add(this.groupBox15);
             this.Controls.Add(this.groupBox14);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_gm";
             this.Text = "Form_gm";
             this.Load += new System.EventHandler(this.Form_gm_Load);
