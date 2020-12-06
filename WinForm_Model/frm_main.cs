@@ -22,8 +22,8 @@ namespace WinForm_Model
         public frm_main()
         {
             InitializeComponent();
-            get_data();
-            UCDropDown();
+            // get_data();
+            District_DropDown();
 
         }
         private win_mvc_conn db = new win_mvc_conn();
@@ -160,13 +160,15 @@ namespace WinForm_Model
 
 
 
-        private void UCDropDown()
+        private void District_DropDown()
         {
+            combo_cr01.DisplayMember = "Select";
+            
             try
             {
                 DataBase cn = new DataBase();
 
-                SQLiteDataAdapter da = new SQLiteDataAdapter("select * from villages ", cn.cn);
+                SQLiteDataAdapter da = new SQLiteDataAdapter("select * from villages where country_code=2 group by district_code", cn.cn);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
                 da.Fill(ds);
@@ -174,6 +176,42 @@ namespace WinForm_Model
                 combo_cr01.DataSource = ds.Tables[0];
                 combo_cr01.DisplayMember = "district";
                 combo_cr01.ValueMember = "district_code";
+                var dt = ds.Tables[0];
+
+       
+
+
+                //for (i = 0; i <= dt.Rows.Count; i++)
+                //{
+                //    combo_cr01.Items.Insert(0, "select member");
+                //    combo_cr01.SelectedIndex = 0;
+                //    combo_cr01.Items.Add(dt.Rows[i][1]);
+                //}
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+
+        private void UCDropDown()
+        {
+            string dis = combo_cr01.DisplayMember.ToString();
+            try
+            {
+                DataBase cn = new DataBase();
+
+                SQLiteDataAdapter da = new SQLiteDataAdapter("select * from villages where country_code=2 group by district_code", cn.cn);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                da.Fill(ds);
+
+                combo_cr04.DataSource = ds.Tables[0];
+                combo_cr04.DisplayMember = "uc";
+                combo_cr04.ValueMember = "uc_code";
             }
 
             catch (Exception ex)
