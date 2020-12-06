@@ -7,6 +7,7 @@
       <Diagram DiagramId="8b9f3872cdc64c998c4e54d91bb44419" Name="Diagram1">
         <EntityTypeShape EntityType="win_mvc_model.tbluser" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="win_mvc_model.form" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="win_mvc_model.village" Width="1.5" PointX="0.75" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

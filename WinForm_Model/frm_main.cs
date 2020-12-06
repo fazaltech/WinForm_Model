@@ -121,10 +121,9 @@ namespace WinForm_Model
             var obj = JsonConvert.DeserializeObject<List<data_villages>>(Json);
             int a = 1;
 
-
-
-
         }
+
+
 
 
     }
