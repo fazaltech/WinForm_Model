@@ -35,7 +35,7 @@
             this.check_cr26a = new System.Windows.Forms.RadioButton();
             this.check_cr26d = new System.Windows.Forms.RadioButton();
             this.check_cr26b = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_cnt = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -155,7 +155,7 @@
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.groupBox5);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.button_cnt);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.textBox3);
@@ -239,14 +239,15 @@
             this.check_cr26b.Text = "radioButton1";
             this.check_cr26b.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // button_cnt
             // 
-            this.button1.Location = new System.Drawing.Point(502, 1034);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(195, 39);
-            this.button1.TabIndex = 111;
-            this.button1.Text = "Enter Data Form";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_cnt.Location = new System.Drawing.Point(502, 1034);
+            this.button_cnt.Name = "button_cnt";
+            this.button_cnt.Size = new System.Drawing.Size(195, 39);
+            this.button_cnt.TabIndex = 111;
+            this.button_cnt.Text = "Enter Data Form";
+            this.button_cnt.UseVisualStyleBackColor = true;
+            this.button_cnt.Click += new System.EventHandler(this.Button_cnt);
             // 
             // label17
             // 
@@ -1304,7 +1305,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_cnt;
         private System.Windows.Forms.Label label_cr28d;
         private System.Windows.Forms.Label label_cr28fx;
         private System.Windows.Forms.Label label_cr28f;

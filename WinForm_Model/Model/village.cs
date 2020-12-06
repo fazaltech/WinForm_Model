@@ -15,14 +15,14 @@ namespace WinForm_Model.Model
     public partial class village
     {
         public int id { get; set; }
-        public Nullable<decimal> country { get; set; }
-        public Nullable<decimal> district { get; set; }
-        public Nullable<decimal> uc { get; set; }
-        public Nullable<decimal> village1 { get; set; }
-        public Nullable<decimal> country_code { get; set; }
-        public Nullable<decimal> district_code { get; set; }
-        public Nullable<decimal> uc_code { get; set; }
-        public Nullable<decimal> villlage_code { get; set; }
-        public Nullable<decimal> cluster_no { get; set; }
+        public string country { get; set; }
+        public string district { get; set; }
+        public string uc { get; set; }
+        public string village1 { get; set; }
+        public string country_code { get; set; }
+        public string district_code { get; set; }
+        public string uc_code { get; set; }
+        public string villlage_code { get; set; }
+        public string cluster_no { get; set; }
     }
 }

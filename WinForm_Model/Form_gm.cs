@@ -404,5 +404,10 @@ namespace WinForm_Model
         {
 
         }
+
+        private void Button_cnt(object sender, EventArgs e)
+        {
+
+        }
     }
 }
