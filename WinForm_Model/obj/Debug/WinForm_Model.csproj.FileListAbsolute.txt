@@ -20,3 +20,4 @@ E:\WinForm_Model\WinForm_Model\bin\Debug\System.Data.SQLite.dll
 E:\WinForm_Model\WinForm_Model\bin\Debug\System.Data.SQLite.EF6.dll
 E:\WinForm_Model\WinForm_Model\bin\Debug\System.Data.SQLite.Linq.dll
 E:\WinForm_Model\WinForm_Model\bin\Debug\System.Data.SQLite.xml
+E:\WinForm_Model\WinForm_Model\obj\Debug\WinForm_Model.csprojAssemblyReference.cache
