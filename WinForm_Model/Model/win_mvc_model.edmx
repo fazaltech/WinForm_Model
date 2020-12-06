@@ -76,15 +76,15 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="country" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="district" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="uc" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="village" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="country_code" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="district_code" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="uc_code" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="villlage_code" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="cluster_no" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="country" Type="varchar" MaxLength="50" />
+          <Property Name="district" Type="varchar" MaxLength="50" />
+          <Property Name="uc" Type="varchar" MaxLength="50" />
+          <Property Name="village" Type="varchar" MaxLength="50" />
+          <Property Name="country_code" Type="varchar" MaxLength="50" />
+          <Property Name="district_code" Type="varchar" MaxLength="50" />
+          <Property Name="uc_code" Type="varchar" MaxLength="50" />
+          <Property Name="villlage_code" Type="varchar" MaxLength="50" />
+          <Property Name="cluster_no" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="win_mvc_modelStoreContainer">
           <EntitySet Name="forms" EntityType="Self.forms" Schema="dbo" store:Type="Tables" />
@@ -171,15 +171,15 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="country" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="district" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="uc" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="village1" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="country_code" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="district_code" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="uc_code" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="villlage_code" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="cluster_no" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="district" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="uc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="village1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="country_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="district_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="uc_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="villlage_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="cluster_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>

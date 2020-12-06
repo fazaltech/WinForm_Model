@@ -10,8 +10,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WinForm_Model.Model;
+using System.Data.SqlClient;
 using Newtonsoft.Json;
 using System.Web;
+using System.Data.SQLite;
 
 namespace WinForm_Model
 {
@@ -21,6 +23,8 @@ namespace WinForm_Model
         {
             InitializeComponent();
             get_data();
+            UCDropDown();
+
         }
         private win_mvc_conn db = new win_mvc_conn();
 
@@ -87,6 +91,8 @@ namespace WinForm_Model
 
         public void get_data()
         {
+
+           
             var get_key = new post_data()
             {
                 table = "villages"
@@ -119,12 +125,63 @@ namespace WinForm_Model
             StreamReader rdr = new StreamReader(responseStream, Encoding.UTF8);
             string Json = rdr.ReadToEnd(); // response from server
             var obj = JsonConvert.DeserializeObject<List<data_villages>>(Json);
-            int a = 1;
+
+
+
+
+            DataBase cn = new DataBase();
+
+            SQLiteDataAdapter da = null;
+            DataSet ds = null;
+
+            da = new SQLiteDataAdapter("delete from villages", cn.cn);
+            ds = new DataSet();
+            da.Fill(ds);
+
+
+            for (int a = 0; a <= obj.Count - 1; a++)
+            {
+
+                string qry = "insert into users(username, password, full_name, district_code, designation, auth_level, dd) values('" + obj[a].username + "', '" + obj[a].password + "', '" + obj[a].full_name + "', '" + obj[a].district_code + "', '" + obj[a].designation + "', '" + obj[a].auth_level + "', '" + obj[a].dd + "')";
+
+                da = new SQLiteDataAdapter(qry, cn.cn);
+
+                ds = new DataSet();
+                da.Fill(ds);
+
+            }
+
+
+
 
         }
 
 
 
+
+
+        private void UCDropDown()
+        {
+            try
+            {
+                DataBase cn = new DataBase();
+
+                SQLiteDataAdapter da = new SQLiteDataAdapter("select * from UC ", cn.cn);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                da.Fill(ds);
+
+                combo_cr01.DataSource = ds.Tables[0];
+                combo_cr01.DisplayMember = "UC";
+                combo_cr01.ValueMember = "id";
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
 
     }
 }
