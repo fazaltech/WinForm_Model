@@ -108,9 +108,9 @@ namespace WinForm_Model
             check_cr26c.Text = list.cr26c;
             check_cr26d.Text = list.cr26d;
 
-            check_cr27a.Text = list.cr27a;
-            check_cr27b.Text = list.cr27b;
-            check_cr27c.Text = list.cr27c;
+            label_cr27a.Text = list.cr27a;
+            label_cr27b.Text = list.cr27b;
+            label_cr27c.Text = list.cr27c;
 
             label_cr28a.Text = list.cr28a;
             label_cr28b.Text = list.cr28b;
@@ -246,9 +246,9 @@ namespace WinForm_Model
             if (check_cr26c.Checked) { cr26c = "1"; }
             if (check_cr26d.Checked) { cr26d = "1"; }
 
-            if (check_cr27a.Checked) { cr27a = "1"; }
-            if (check_cr27b.Checked) { cr27b = "1"; }
-            if (check_cr27c.Checked) { cr27c = "1"; }
+            //if (check_cr27a.Checked) { cr27a = "1"; }
+            //if (check_cr27b.Checked) { cr27b = "1"; }
+            //if (check_cr27c.Checked) { cr27c = "1"; }
 
 
             if (radio_cr28a01.Checked) { cr28a01 = "1"; }
@@ -266,8 +266,8 @@ namespace WinForm_Model
             if (radio_cr28f02.Checked) { cr28f02 = "1"; }
             if (radio_cr28fx01.Checked) { cr28fx01 = "1"; }
             if (radio_cr28fx02.Checked) { cr28fx02 = "1"; }
-            
-        }                                            
+
+        }
 
         public class list_view
         {

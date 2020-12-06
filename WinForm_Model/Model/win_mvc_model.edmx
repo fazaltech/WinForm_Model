@@ -71,9 +71,25 @@
           <Property Name="account_type" Type="int" />
           <Property Name="flag" Type="varchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="villages">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="country" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="district" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="uc" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="village" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="country_code" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="district_code" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="uc_code" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="villlage_code" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="cluster_no" Type="numeric" Precision="18" Scale="0" />
+        </EntityType>
         <EntityContainer Name="win_mvc_modelStoreContainer">
           <EntitySet Name="forms" EntityType="Self.forms" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbluser" EntityType="Self.tbluser" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="villages" EntityType="Self.villages" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -97,6 +113,7 @@
         <EntityContainer Name="win_mvc_conn" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tblusers" EntityType="Self.tbluser" />
           <EntitySet Name="forms" EntityType="win_mvc_model.form" />
+          <EntitySet Name="villages" EntityType="win_mvc_model.village" />
         </EntityContainer>
         <EntityType Name="form">
           <Key>
@@ -148,6 +165,21 @@
           <Property Name="cr28f02" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="cr28fx01" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="cr28fx02" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="village">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="country" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="district" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="uc" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="village1" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="country_code" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="district_code" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="uc_code" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="villlage_code" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="cluster_no" Type="Decimal" Precision="18" Scale="0" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -219,6 +251,22 @@
                 <ScalarProperty Name="cr12" ColumnName="cr12" />
                 <ScalarProperty Name="cr11" ColumnName="cr11" />
                 <ScalarProperty Name="cr10" ColumnName="cr10" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="villages">
+            <EntityTypeMapping TypeName="win_mvc_model.village">
+              <MappingFragment StoreEntitySet="villages">
+                <ScalarProperty Name="cluster_no" ColumnName="cluster_no" />
+                <ScalarProperty Name="villlage_code" ColumnName="villlage_code" />
+                <ScalarProperty Name="uc_code" ColumnName="uc_code" />
+                <ScalarProperty Name="district_code" ColumnName="district_code" />
+                <ScalarProperty Name="country_code" ColumnName="country_code" />
+                <ScalarProperty Name="village1" ColumnName="village" />
+                <ScalarProperty Name="uc" ColumnName="uc" />
+                <ScalarProperty Name="district" ColumnName="district" />
+                <ScalarProperty Name="country" ColumnName="country" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
