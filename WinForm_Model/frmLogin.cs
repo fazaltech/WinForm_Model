@@ -17,7 +17,7 @@ namespace WinForm_Model
 {
     public partial class frmLogin : Form
     {
-     
+        private DataBase cn = new DataBase();
         public frmLogin()
         {
             InitializeComponent();
@@ -26,8 +26,8 @@ namespace WinForm_Model
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
-           
-            
+
+
 
         }
         //private win_mvc_conn db = new win_mvc_conn();
@@ -142,14 +142,24 @@ namespace WinForm_Model
 
         private void button_download_Click(object sender, EventArgs e)
         {
-            get_data();
-        }
-        public class post_data
-        {
-            public string table { get; set; }
+            bool result = false;
+            if (result == false)
+            {
+                System.Diagnostics.Debug.WriteLine("starting download");
+                
+                get_villages();
+                System.Diagnostics.Debug.WriteLine("continue download");
+
+                get_users();
+                System.Diagnostics.Debug.WriteLine("end download");
+
+                result = true;
+                MessageBox.Show("Data Download", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
 
         }
+
 
         public class data_villages
         {
@@ -167,15 +177,22 @@ namespace WinForm_Model
         }
 
 
-        public void get_data()
+        public class user_model
         {
+            public string username { get; set; }
+            public string password { get; set; }
+            public string full_name { get; set; }
+
+        }
 
 
-            var get_key = new post_data()
-            {
-                table = "villages"
-            };
-            var test = JsonConvert.SerializeObject(get_key);
+        public void get_villages()
+        {
+            System.Diagnostics.Debug.WriteLine("villages start");
+
+
+
+            var test = "{\"table\":\"villages\"}";
 
 
 
@@ -207,7 +224,7 @@ namespace WinForm_Model
 
 
 
-            DataBase cn = new DataBase();
+            
 
             SQLiteDataAdapter da = null;
             DataSet ds = null;
@@ -228,8 +245,74 @@ namespace WinForm_Model
                 da.Fill(ds);
 
             }
-            MessageBox.Show("Data Download", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show("Data Download", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+
+            System.Diagnostics.Debug.WriteLine("villages end");
+
+        }
+        public void get_users()
+        {
+            System.Diagnostics.Debug.WriteLine("user start");
+
+
+
+            var user_var = "{\"table\":\"users\"}"; ;
+
+
+
+            HttpWebRequest webRequest;
+
+            string requestParams = user_var.ToString();
+
+            webRequest = (HttpWebRequest)WebRequest.Create("http://f38158/casi_gm/api/getdata.php");
+
+            webRequest.Method = "POST";
+            webRequest.ContentType = "application/json";
+
+            byte[] byteArray = Encoding.UTF8.GetBytes(requestParams);
+            webRequest.ContentLength = byteArray.Length;
+            Stream requestStream = webRequest.GetRequestStream();
+
+            requestStream.Write(byteArray, 0, byteArray.Length);
+
+
+            // Get the response.
+            WebResponse response = webRequest.GetResponse();
+
+            Stream responseStream = response.GetResponseStream();
+
+            StreamReader rdr = new StreamReader(responseStream, Encoding.UTF8);
+            string Json = rdr.ReadToEnd(); // response from server
+            var user_obj = JsonConvert.DeserializeObject<List<user_model>>(Json);
+
+
+
+
+           
+
+            SQLiteDataAdapter da = null;
+            DataSet ds = null;
+
+            da = new SQLiteDataAdapter("delete from users", cn.cn);
+            ds = new DataSet();
+            da.Fill(ds);
+
+
+            for (int a = 0; a <= user_obj.Count - 1; a++)
+            {
+
+                string qry = "insert into users(username,password,full_name)  values('" + user_obj[a].username + "','" + user_obj[a].password + "','" + user_obj[a].full_name + "')";
+
+                da = new SQLiteDataAdapter(qry, cn.cn);
+
+                ds = new DataSet();
+                da.Fill(ds);
+
+            }
+            //MessageBox.Show("Data Download", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            System.Diagnostics.Debug.WriteLine("villages end");
 
 
         }
