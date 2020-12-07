@@ -233,5 +233,15 @@ namespace WinForm_Model
 
 
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            Version version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
+            //DateTime buildDate = new DateTime(2000, 1, 1)
+            //                        .AddDays(version.Build).AddMinutes(version.Revision);
+            //string displayableVersion = $"{version}";
+           
+            this.text_verNo.Text = version.Major + "."+Math.Round((version.Build/365.24))+"."+Math.Round((double)(version.Revision/60)); 
+        }
     }
 }
