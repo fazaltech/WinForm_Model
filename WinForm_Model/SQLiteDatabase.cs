@@ -16,32 +16,49 @@ namespace WinForm_Model
         public static String DATABASE_NAME = "case_gm.db";
         public static int DATABASE_VERSION = 1;
         
-        public static String SQL_CREATE_FORMS = "CREATE TABLE forms ("
+        public static String SQL_CREATE_USERS = "CREATE TABLE users ("
             + "_ID INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + " FormID TEXT,"
-            + " Data TEXT,"
-            + " DeviceID TEXT"
+            + " username TEXT,"
+            + " password TEXT,"
+            + " full_name TEXT"
             + " );";
 
-        public static String SQL_CREATE_IMS = "CREATE TABLE ims ("
+        public static String SQL_CREATE_VILLAGES = "CREATE TABLE villages ("
             + "_ID INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + "ImsID TEXT,"
-            + "Data TEXT );";
+            + " country TEXT,"
+            + " district TEXT,"
+            + " uc TEXT,"
+            + " village TEXT,"
+            + " country_code TEXT,"
+            + " district_code TEXT,"
+            + " uc_code TEXT,"
+            + " villlage_code TEXT,"
+            + " cluster_no TEXT"
+            + " );";
 
-        public static String SQL_CREATE_CFS = "CREATE TABLE cfs ("
+        public static String SQL_CREATE_ZSTANDARDS = "CREATE TABLE zstandards ("
             + "_ID INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + "CfsID TEXT,"
-            + "Data TEXT );";
+            + " sex TEXT,"
+            + " age TEXT,"
+            + " measure TEXT,"
+            + " L TEXT,"
+            + " M TEXT,"
+            + " S TEXT,"
+            + " cat TEXT"
+            + " );";
 
-        private static String TAG = "Shared_DB_HELPER_CLASS";
-        private static String SQL_DELETE_FORMS =
-            "DROP TABLE IF EXISTS forms";
 
-        private static String SQL_DELETE_IMS =
-            "DROP TABLE IF EXISTS ims";
 
-        private static String SQL_DELETE_CFS =
-            "DROP TABLE IF EXISTS cfs";
+        private static String SQL_DELETE_USERS =
+            "DROP TABLE IF EXISTS users";
+
+        private static String SQL_DELETE_VILLAGES =
+            "DROP TABLE IF EXISTS villages";
+
+        private static String SQL_DELETE_ZSTANDARDS =
+            "DROP TABLE IF EXISTS zstandards";
+
+
         private static SQLiteConnection con;
 
 
@@ -62,32 +79,21 @@ namespace WinForm_Model
 
         public static void CreateTables() {
 
-            string sql = null;
-
+            
             con.Open();
             using (var cmd = new SQLiteCommand(con)) {
 
-                sql = @"CREATE TABLE villages(
-                               country Text ,
-                               district Integer,
-                               uc TEXT,
-                               village TEXT,
-                               country_code TEXT,
-                               district_code TEXT,
-                               uc_code TEXT,
-                               villlage_code TEXT,
-                               cluster_no TEXT PRIMARY KEY,
+                cmd.CommandText = @SQL_CREATE_USERS;
+                cmd.ExecuteNonQuery();
 
+                cmd.CommandText = @SQL_CREATE_VILLAGES;
+                cmd.ExecuteNonQuery();
 
-);";
-
-                cmd.CommandText = "INSERT INTO cars(name, price) VALUES('Audi',52642)";
+                cmd.CommandText = @SQL_DELETE_ZSTANDARDS;
                 cmd.ExecuteNonQuery();
 
 
-
-
-};
+            };
         }
 
 

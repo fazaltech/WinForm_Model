@@ -49,13 +49,15 @@ namespace WinForm_Model
                 {
                     if (ds.Tables.Count > 0)
                     {
-                        if ((text_user_name.Text == "test1234" && text_password.Text == "test1234") || (text_user_name.Text == "dmu@aku" && text_password.Text == "aku?dmu") || ds.Tables[0].Rows.Count > 0 )
+                        if ((text_user_name.Text == "test1234" && text_password.Text == "test1234") 
+                            || (text_user_name.Text == "dmu@aku" && text_password.Text == "aku?dmu") 
+                            || ds.Tables[0].Rows.Count > 0 )
                         {
 
-                            DataBaseVariable.UserID = ds.Tables[0].Rows[0][0].ToString();
-                            DataBaseVariable.UserName = ds.Tables[0].Rows[0][1].ToString();
-                            DataBaseVariable.GetPassword = ds.Tables[0].Rows[0]["password"].ToString();
-                            DataBaseVariable.GetDBName = "win_gb";
+                            //DataBaseVariable.UserID = ds.Tables[0].Rows[0][0].ToString();
+                           // DataBaseVariable.UserName = ds.Tables[0].Rows[0][1].ToString();
+                           // DataBaseVariable.GetPassword = ds.Tables[0].Rows[0]["password"].ToString();
+                           // DataBaseVariable.GetDBName = "win_gb";
 
 
                             //if (ds.Tables[0].Rows[0]["IsUserOrAdmin"].ToString() == "True")
