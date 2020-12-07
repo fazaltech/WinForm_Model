@@ -22,8 +22,10 @@ namespace WinForm_Model
         public frm_main()
         {
             InitializeComponent();
-            get_data();
-            UCDropDown();
+            // get_data();
+            District_DropDown();
+            
+            //UCDropDown();
 
         }
         private win_mvc_conn db = new win_mvc_conn();
@@ -67,106 +69,87 @@ namespace WinForm_Model
         {
 
         }
-        public class post_data
-        {
-            public string table { get; set; }
-
-
-        }
-
-        public class data_villages
-        {
-            public string country { get; set; }
-            public string district { get; set; }
-            public string uc { get; set; }
-            public string village { get; set; }
-            public string country_code { get; set; }
-            public string district_code { get; set; }
-            public string uc_code { get; set; }
-            public string village_code { get; set; }
-            public string cluster_no { get; set; }
-
-
-        }
-
-        public void get_data()
-        {
+       
+        //public void get_data()
+        //{
 
            
-            var get_key = new post_data()
-            {
-                table = "villages"
-            };
-            var test = JsonConvert.SerializeObject(get_key);
+        //    var get_key = new post_data()
+        //    {
+        //        table = "villages"
+        //    };
+        //    var test = JsonConvert.SerializeObject(get_key);
 
 
 
-            HttpWebRequest webRequest;
+        //    HttpWebRequest webRequest;
 
-            string requestParams = test.ToString();
+        //    string requestParams = test.ToString();
 
-            webRequest = (HttpWebRequest)WebRequest.Create("http://f38158/casi_gm/api/getdata.php");
+        //    webRequest = (HttpWebRequest)WebRequest.Create("http://f38158/casi_gm/api/getdata.php");
 
-            webRequest.Method = "POST";
-            webRequest.ContentType = "application/json";
+        //    webRequest.Method = "POST";
+        //    webRequest.ContentType = "application/json";
 
-            byte[] byteArray = Encoding.UTF8.GetBytes(requestParams);
-            webRequest.ContentLength = byteArray.Length;
-            Stream requestStream = webRequest.GetRequestStream();
+        //    byte[] byteArray = Encoding.UTF8.GetBytes(requestParams);
+        //    webRequest.ContentLength = byteArray.Length;
+        //    Stream requestStream = webRequest.GetRequestStream();
 
-            requestStream.Write(byteArray, 0, byteArray.Length);
-
-
-            // Get the response.
-            WebResponse response = webRequest.GetResponse();
-
-            Stream responseStream = response.GetResponseStream();
-
-            StreamReader rdr = new StreamReader(responseStream, Encoding.UTF8);
-            string Json = rdr.ReadToEnd(); // response from server
-            var obj = JsonConvert.DeserializeObject<List<data_villages>>(Json);
+        //    requestStream.Write(byteArray, 0, byteArray.Length);
 
 
+        //    // Get the response.
+        //    WebResponse response = webRequest.GetResponse();
 
+        //    Stream responseStream = response.GetResponseStream();
 
-            DataBase cn = new DataBase();
-
-            SQLiteDataAdapter da = null;
-            DataSet ds = null;
-
-            da = new SQLiteDataAdapter("delete from villages", cn.cn);
-            ds = new DataSet();
-            da.Fill(ds);
-
-
-            for (int a = 0; a <= obj.Count - 1; a++)
-            {
-
-                string qry = "insert into villages(village_code, village, district_code, district, uc_code, uc,country,country_code,cluster_no) values('" + obj[a].village_code + "', '" + obj[a].village + "', '" + obj[a].district_code + "', '" + obj[a].district + "', '" + obj[a].uc_code + "', '" + obj[a].uc + "', '" + obj[a].country + "', '" + obj[a].country_code + "', '" + obj[a].cluster_no + "')";
-
-                da = new SQLiteDataAdapter(qry, cn.cn);
-
-                ds = new DataSet();
-                da.Fill(ds);
-
-            }
+        //    StreamReader rdr = new StreamReader(responseStream, Encoding.UTF8);
+        //    string Json = rdr.ReadToEnd(); // response from server
+        //    var obj = JsonConvert.DeserializeObject<List<data_villages>>(Json);
 
 
 
 
-        }
+        //    DataBase cn = new DataBase();
+
+        //    SQLiteDataAdapter da = null;
+        //    DataSet ds = null;
+
+        //    da = new SQLiteDataAdapter("delete from villages", cn.cn);
+        //    ds = new DataSet();
+        //    da.Fill(ds);
+
+
+        //    for (int a = 0; a <= obj.Count - 1; a++)
+        //    {
+
+        //        string qry = "insert into villages(village_code, village, district_code, district, uc_code, uc,country,country_code,cluster_no) values('" + obj[a].village_code + "', '" + obj[a].village + "', '" + obj[a].district_code + "', '" + obj[a].district + "', '" + obj[a].uc_code + "', '" + obj[a].uc + "', '" + obj[a].country + "', '" + obj[a].country_code + "', '" + obj[a].cluster_no + "')";
+
+        //        da = new SQLiteDataAdapter(qry, cn.cn);
+
+        //        ds = new DataSet();
+        //        da.Fill(ds);
+
+        //    }
+
+
+
+
+        //}
 
 
 
 
 
-        private void UCDropDown()
+        private void District_DropDown()
         {
+            combo_cr01.DisplayMember = "Select";
+            
             try
             {
                 DataBase cn = new DataBase();
 
-                SQLiteDataAdapter da = new SQLiteDataAdapter("select * from villages ", cn.cn);
+                SQLiteDataAdapter da = new SQLiteDataAdapter("select * from villages where country_code=2 group by district_code", cn.cn);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
                 da.Fill(ds);
@@ -174,6 +157,42 @@ namespace WinForm_Model
                 combo_cr01.DataSource = ds.Tables[0];
                 combo_cr01.DisplayMember = "district";
                 combo_cr01.ValueMember = "district_code";
+                var dt = ds.Tables[0];
+
+       
+
+
+                //for (i = 0; i <= dt.Rows.Count; i++)
+                //{
+                //    combo_cr01.Items.Insert(0, "select member");
+                //    combo_cr01.SelectedIndex = 0;
+                //    combo_cr01.Items.Add(dt.Rows[i][1]);
+                //}
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+
+        private void UCDropDown()
+        {
+            string dis = combo_cr01.ValueMember.ToString();
+            try
+            {
+                DataBase cn = new DataBase();
+
+                SQLiteDataAdapter da = new SQLiteDataAdapter("select * from villages where district_code ='" + dis + "' ", cn.cn);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                da.Fill(ds);
+
+                combo_cr04.DataSource = ds.Tables[0];
+                combo_cr04.DisplayMember = "uc";
+                combo_cr04.ValueMember = "uc_code";
             }
 
             catch (Exception ex)
@@ -195,7 +214,24 @@ namespace WinForm_Model
 
         private void label_cr02_Click(object sender, EventArgs e)
         {
+         
+        }
 
+        private void combo_cr01_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            combo_cr04.Enabled = true;
+            UCDropDown();
+        }
+
+        private void combo_cr01_SelectedValueChanged(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void combo_cr01_DisplayMemberChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }
