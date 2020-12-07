@@ -70,6 +70,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="List.cs" />
+    <Compile Include="SqliteCommand.cs" />
     <Compile Include="SQLiteDatabase.cs" />
     <Compile Include="DataBase.cs" />
     <Compile Include="DataBaseVariable.cs" />
