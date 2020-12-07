@@ -1,4 +1,6 @@
-﻿namespace WinForm_Model
+﻿using System;
+
+namespace WinForm_Model
 {
     partial class frmLogin
     {
@@ -156,6 +158,7 @@
 
         }
 
+      
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
