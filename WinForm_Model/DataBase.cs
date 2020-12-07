@@ -30,5 +30,39 @@ namespace WinForm_Model
 
             }
         }
+
+        public void MConnOpen()
+        {
+            try
+            {
+                cn.Open();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            finally
+            {
+            }
+        }
+
+        public void MConnClose()
+        {
+            try
+            {
+                cn.Close();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            finally
+            {
+            }
+        }
     }
 }

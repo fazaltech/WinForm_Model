@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button_download = new System.Windows.Forms.Button();
             this.button_login = new System.Windows.Forms.Button();
             this.text_password = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.text_user_name = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button_download = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +55,17 @@
             this.groupBox1.Text = "Login";
             this.groupBox1.UseWaitCursor = true;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // button_download
+            // 
+            this.button_download.Location = new System.Drawing.Point(58, 257);
+            this.button_download.Name = "button_download";
+            this.button_download.Size = new System.Drawing.Size(133, 23);
+            this.button_download.TabIndex = 3;
+            this.button_download.Text = "DownLoad Data";
+            this.button_download.UseVisualStyleBackColor = true;
+            this.button_download.UseWaitCursor = true;
+            this.button_download.Click += new System.EventHandler(this.button_download_Click);
             // 
             // button_login
             // 
@@ -103,16 +114,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "User Name";
             this.label1.UseWaitCursor = true;
-            // 
-            // button_download
-            // 
-            this.button_download.Location = new System.Drawing.Point(58, 257);
-            this.button_download.Name = "button_download";
-            this.button_download.Size = new System.Drawing.Size(133, 23);
-            this.button_download.TabIndex = 3;
-            this.button_download.Text = "DownLoad Data";
-            this.button_download.UseVisualStyleBackColor = true;
-            this.button_download.Click += new System.EventHandler(this.button_download_Click);
             // 
             // frmLogin
             // 

@@ -26,35 +26,72 @@ namespace WinForm_Model
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
+           
+            
 
         }
-        private win_mvc_conn db = new win_mvc_conn();
+        //private win_mvc_conn db = new win_mvc_conn();
         private void button_login_Click(object sender, EventArgs e)
         {
-            tbluser users = new tbluser();
-            users.user_name = text_user_name.Text;
-            users.password = text_password.Text;
-
-            if ((users.user_name == "test1234" && users.password == "test1234")|| (users.user_name == "dmu@aku" && users.password == "aku?dmu"))
+            if (text_user_name.Text != null && text_password.Text != null)
             {
 
+                DataBase cn = new DataBase();
 
-                LogStatus.Store_User = users.user_name;
+                SQLiteDataAdapter da = new SQLiteDataAdapter("select * from users where username='" + text_user_name.Text + "' and password='" + text_password.Text + "'", cn.cn);
+                //SQLiteDataAdapter da = new SQLiteDataAdapter("select * from users ", cn.cn);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
 
-                LogStatus.Log_Form = this;
-                this.Hide();
+                if (ds != null)
+                {
+                    if (ds.Tables.Count > 0)
+                    {
+                        if (ds.Tables[0].Rows.Count > 0)
+                        {
 
-                frm_main obj_main = new frm_main();
-                obj_main.Show();
+                            DataBaseVariable.UserID = ds.Tables[0].Rows[0][0].ToString();
+                            DataBaseVariable.UserName = ds.Tables[0].Rows[0][1].ToString();
+                            DataBaseVariable.GetPassword = ds.Tables[0].Rows[0]["password"].ToString();
+                            DataBaseVariable.GetDBName = "win_gb";
 
+
+                            //if (ds.Tables[0].Rows[0]["IsUserOrAdmin"].ToString() == "True")
+                            //{
+                            //    DataBaseVariable.IsAdmin = true;
+                            //}
+                            //else
+                            //{
+                            //    DataBaseVariable.IsAdmin = false;
+                            //}
+
+
+
+
+                            DataBaseVariable.frmlogin1 = this;
+                            this.Hide();
+
+                            frm_main obj_main = new frm_main();
+                            obj_main.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("User does not exist ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            text_user_name.Focus();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("User does not exist ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        text_user_name.Focus();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("User does not exist ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    text_user_name.Focus();
+                }
             }
-            else
-            {
-                MessageBox.Show("Not Registered 'User-ID' or 'Password'", "Invalid User", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                text_password.Text = "";
-                text_user_name.Focus();
-            }
-
 
         }
         //public void login( )
@@ -85,23 +122,23 @@ namespace WinForm_Model
         //}
 
 
-        private bool IsValid(string name, string passwords)
-        {
+        //private bool IsValid(string name, string passwords)
+        //{
 
-            bool IsValid = false;
+        //    //bool IsValid = false;
 
 
-            var user = db.tblusers.FirstOrDefault(u => u.user_name == name);
-            if (user != null)
-            {
-                if (user.password == passwords)
-                {
-                    IsValid = true;
-                }
-            }
+        //    //var user = db.tblusers.FirstOrDefault(u => u.user_name == name);
+        //    //if (user != null)
+        //    //{
+        //    //    if (user.password == passwords)
+        //    //    {
+        //    //        IsValid = true;
+        //    //    }
+        //    //}
 
-            return IsValid;
-        }
+        //    return IsValid;
+        //}
 
         private void button_download_Click(object sender, EventArgs e)
         {
