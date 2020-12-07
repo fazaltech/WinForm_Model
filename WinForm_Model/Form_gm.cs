@@ -21,6 +21,8 @@ namespace WinForm_Model
             list_cr24();
             controls_text();
             controls_value();
+            CenterToScreen();
+
         }
 
         
@@ -200,6 +202,7 @@ namespace WinForm_Model
         public string cr28fx01 = "-1";
         public string cr28fx02 = "-1";
 
+    
 
         public void controls_value()
         {
@@ -420,6 +423,11 @@ namespace WinForm_Model
             {
                 MessageBox.Show(text_cr10.Text, "Demo App - Message!");
             }
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
