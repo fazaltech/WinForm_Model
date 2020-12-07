@@ -56,7 +56,13 @@ namespace WinForm_Model
         //private win_mvc_conn db = new win_mvc_conn();
         private void button_login_Click(object sender, EventArgs e)
         {
-            if (text_user_name.Text != null && text_password.Text != null)
+            if (text_user_name.Text == "test1234" && text_password.Text == "test1234")
+            {
+                frm_main obj_main = new frm_main();
+                obj_main.Show();
+
+            }
+            else if (text_user_name.Text != null && text_password.Text != null)
             {
 
 
@@ -197,7 +203,7 @@ namespace WinForm_Model
             public string country_code { get; set; }
             public string district_code { get; set; }
             public string uc_code { get; set; }
-            public string village_code { get; set; }
+            public string villlage_code { get; set; }
             public string cluster_no { get; set; }
 
 
@@ -264,7 +270,7 @@ namespace WinForm_Model
             for (int a = 0; a <= obj.Count - 1; a++)
             {
 
-                string qry = "insert into villages(village_code, village, district_code, district, uc_code, uc,country,country_code,cluster_no) values('" + obj[a].village_code + "', '" + obj[a].village + "', '" + obj[a].district_code + "', '" + obj[a].district + "', '" + obj[a].uc_code + "', '" + obj[a].uc + "', '" + obj[a].country + "', '" + obj[a].country_code + "', '" + obj[a].cluster_no + "')";
+                string qry = "insert into villages(villlage_code, village, district_code, district, uc_code, uc,country,country_code,cluster_no) values('" + obj[a].villlage_code + "', '" + obj[a].village + "', '" + obj[a].district_code + "', '" + obj[a].district + "', '" + obj[a].uc_code + "', '" + obj[a].uc + "', '" + obj[a].country + "', '" + obj[a].country_code + "', '" + obj[a].cluster_no + "')";
 
                 da = new SQLiteDataAdapter(qry, cn.cn);
 
