@@ -60,35 +60,11 @@
             this.groupBox1.UseWaitCursor = true;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // text_verNo
-            // 
-            this.text_verNo.AutoSize = true;
-            this.text_verNo.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.text_verNo.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.text_verNo.Location = new System.Drawing.Point(43, 420);
-            this.text_verNo.Name = "text_verNo";
-            this.text_verNo.Size = new System.Drawing.Size(0, 10);
-            this.text_verNo.TabIndex = 4;
-            this.text_verNo.UseWaitCursor = true;
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label4.Location = new System.Drawing.Point(12, 420);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Version ";
-            this.label4.UseWaitCursor = true;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
             // button_download
             // 
-            this.button_download.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.button_download.Location = new System.Drawing.Point(125, 202);
+            this.button_download.Location = new System.Drawing.Point(58, 257);
             this.button_download.Name = "button_download";
-            this.button_download.Size = new System.Drawing.Size(133, 27);
+            this.button_download.Size = new System.Drawing.Size(133, 23);
             this.button_download.TabIndex = 3;
             this.button_download.Text = "DownLoad Data";
             this.button_download.UseVisualStyleBackColor = true;
