@@ -21,6 +21,8 @@ namespace WinForm_Model
         public frmLogin()
         {
             InitializeComponent();
+
+            CenterToScreen();
             //grp();
         }
 
@@ -35,7 +37,7 @@ namespace WinForm_Model
             users.user_name = text_user_name.Text;
             users.password = text_password.Text;
 
-            if ((users.user_name == "test1234" && users.password == "test1234")|| (users.user_name == "dmu@aku" && users.password == "aku?dmu"))
+            if ((users.user_name == "test1234" && users.password == "test1234") || (users.user_name == "dmu@aku" && users.password == "aku?dmu") || IsValid(users.user_name, users.password))
             {
 
 
@@ -193,6 +195,18 @@ namespace WinForm_Model
             MessageBox.Show("Data Download", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
+
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            Version version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
+   
+            text_verNo.Text = $"{version}";
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
 
         }
     }
