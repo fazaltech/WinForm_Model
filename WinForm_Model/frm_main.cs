@@ -24,8 +24,8 @@ namespace WinForm_Model
             InitializeComponent();
             // get_data();
             District_DropDown();
-            
-            //UCDropDown();
+            Village_DropDown();
+            UCDropDown();
 
         }
         private win_mvc_conn db = new win_mvc_conn();
@@ -177,6 +177,41 @@ namespace WinForm_Model
 
         }
 
+        private void Village_DropDown()
+        {
+            combo_cr05.DisplayMember = "Select";
+
+            try
+            {
+                DataBase cn = new DataBase();
+
+                SQLiteDataAdapter da = new SQLiteDataAdapter("select * from villages ", cn.cn);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                da.Fill(ds);
+
+                combo_cr05.DataSource = ds.Tables[0];
+                combo_cr05.DisplayMember = "village";
+                combo_cr05.ValueMember = "villlage_code";
+                var dt = ds.Tables[0];
+
+
+
+
+                //for (i = 0; i <= dt.Rows.Count; i++)
+                //{
+                //    combo_cr01.Items.Insert(0, "select member");
+                //    combo_cr01.SelectedIndex = 0;
+                //    combo_cr01.Items.Add(dt.Rows[i][1]);
+                //}
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
 
         private void UCDropDown()
         {
@@ -185,7 +220,7 @@ namespace WinForm_Model
             {
                 DataBase cn = new DataBase();
 
-                SQLiteDataAdapter da = new SQLiteDataAdapter("select * from villages where district_code ='" + dis + "' ", cn.cn);
+                SQLiteDataAdapter da = new SQLiteDataAdapter("select * from villages ", cn.cn);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
                 da.Fill(ds);
@@ -232,6 +267,41 @@ namespace WinForm_Model
         private void combo_cr01_DisplayMemberChanged(object sender, EventArgs e)
         {
            
+        }
+
+        private void text_cr09_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void combo_cr02_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void combo_cr03_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void combo_cr04_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void combo_cr05_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void text_cr07_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
