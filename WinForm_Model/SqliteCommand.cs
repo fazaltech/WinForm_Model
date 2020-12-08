@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Data.SQLite;
+using Microsoft.Data.Sqlite;
 
 namespace WinForm_Model
 {
@@ -8,6 +9,18 @@ namespace WinForm_Model
     {
         private string commandText;
         private SQLiteConnection con;
+        private SqliteConnection con1;
+        private string v;
+
+        public SqliteCommand(SqliteConnection con1)
+        {
+            this.con1 = con1;
+        }
+
+        public SqliteCommand(string v)
+        {
+            this.v = v;
+        }
 
         public SqliteCommand(string commandText, SQLiteConnection con)
         {

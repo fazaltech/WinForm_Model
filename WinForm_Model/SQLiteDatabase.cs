@@ -1,11 +1,9 @@
-﻿using System;
+﻿using Microsoft.Data.Sqlite;
+using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Data.SQLite;
+using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static WinForm_Model.frmLogin;
 
 namespace WinForm_Model
@@ -15,9 +13,10 @@ namespace WinForm_Model
         // This class implements all the functions required to create table, insert data, update data in the SQLite Database.
         //
 
-        public static String DATABASE_PATH = "db";
-        public static String DATABASE_NAME = DATABASE_PATH+"\\case_gm2.db";
+        public static String DATABASE_PATH = "dbEnc";
+        public static String DATABASE_NAME = DATABASE_PATH+"\\casi_gm_encrypted.db3";
         public static int DATABASE_VERSION = 3;
+        public static string DATABASE_PASSWORD = "Aku@ku123";
         
         public static String SQL_CREATE_USERS = "CREATE TABLE users ("
             + "_ID INTEGER PRIMARY KEY AUTOINCREMENT,"
@@ -65,15 +64,37 @@ namespace WinForm_Model
        // public static String SQL_INSERT_USERS = INSERT INTO SyncInformation(timestamp, last_sync_value, last_retrieved_change_file, status) values('
 
 
-        private static SQLiteConnection con;
-
+        private static SqliteConnection con;
+        private static String strCon;
+        private static string connectionString;
 
         public SQLiteDatabase() {
 
             if (!Directory.Exists(DATABASE_PATH)) {
                 Directory.CreateDirectory(DATABASE_PATH);
             }
-                CreateDatabase();
+           
+                //SqliteConnection.CreateFile(DATABASE_NAME);
+
+                String strCon = "Data Source=" + DATABASE_NAME;
+                Boolean dbExsits = File.Exists(DATABASE_NAME);
+
+                connectionString = new SqliteConnectionStringBuilder(strCon)
+                {
+                    Mode = SqliteOpenMode.ReadWriteCreate,
+                   Password = DATABASE_PASSWORD
+                }.ToString();
+                con = new SqliteConnection(connectionString);
+
+            if (!dbExsits)
+            {
+                CreateTables();
+            }
+                //SQLiteCommand cmd = new SQLiteCommand(sql, con);
+                //cmd.ExecuteNonQuery();
+                //con.Close();
+
+            
 
         }
 
@@ -81,28 +102,46 @@ namespace WinForm_Model
         {
             if (!File.Exists(DATABASE_NAME))
             {
-                SQLiteConnection.CreateFile(DATABASE_NAME);
+                //SqliteConnection.CreateFile(DATABASE_NAME);
 
-                con = new SQLiteConnection("Data Source=" + DATABASE_NAME + ";Version=" + DATABASE_VERSION + ";");
-                CreateTables();
+                String strCon = "Data Source=" + DATABASE_NAME;
+
+                connectionString = new SqliteConnectionStringBuilder(strCon)
+                {
+                    Mode = SqliteOpenMode.ReadWriteCreate,
+                    Password = DATABASE_PASSWORD
+                }.ToString();
+                con = new SqliteConnection(connectionString);
+
+                try
+                {
+                    CreateTables();
+                }
+                catch { }
+
+
                 //SQLiteCommand cmd = new SQLiteCommand(sql, con);
                 //cmd.ExecuteNonQuery();
                 //con.Close();
 
             }
-            else {
-                con = new SQLiteConnection("Data Source=" + DATABASE_NAME + ";Version=" + DATABASE_VERSION + ";");
+          
 
-            }
+                strCon = "Data Source=" + DATABASE_NAME;
+                con = new SqliteConnection(strCon);
+
+       
 
 
         }
 
-        public static void CreateTables() {
+
+        public static void CreateTables()
+        {
 
             con.Open();
-            using (var cmd = new SQLiteCommand(con)) {
-
+            using (var cmd = con.CreateCommand())
+            {
                 cmd.CommandText = @SQL_CREATE_USERS;
                 cmd.ExecuteNonQuery();
 
@@ -119,6 +158,28 @@ namespace WinForm_Model
             con.Close();
         }
 
+
+        //public static void CreateTables() {
+
+
+        //    using (var cmd = new SQLiteCommand(con)) {
+
+        //        cmd.CommandText = @SQL_CREATE_USERS;
+        //        cmd.ExecuteNonQuery();
+
+        //        cmd.CommandText = @SQL_CREATE_VILLAGES;
+        //        cmd.ExecuteNonQuery();
+
+        //        cmd.CommandText = @SQL_DELETE_ZSTANDARDS;
+        //        cmd.ExecuteNonQuery();
+
+        //        //cmd.CommandText = @SQL_DELETE_FORMS;
+        //        //cmd.ExecuteNonQuery();
+
+        //    };
+        //    con.Close();
+        //}
+
         public static void InsertTestUser(List<user_model> users)
         {
 
@@ -126,11 +187,12 @@ namespace WinForm_Model
             using (con)
             {
                 con.Open();
-                string CommandText = "INSERT INTO users (username, password) VALUES(@username, @password)";
+               
 
-                using (SQLiteCommand cmd = new SQLiteCommand(CommandText, con))
+                using (var cmd = con.CreateCommand())
                 {
-                    
+                    cmd.CommandText = "INSERT INTO users (username, password) VALUES(@username, @password)";
+
                     for (int i = 0; i < users.Count; i++)
                     {
                         cmd.Parameters.Clear();

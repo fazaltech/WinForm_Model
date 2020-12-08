@@ -44,7 +44,7 @@ namespace WinForm_Model
                 users.Add(um);
             }
 
-            SQLiteDatabase.InsertTestUser(users);
+           SQLiteDatabase.InsertTestUser(users);
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
