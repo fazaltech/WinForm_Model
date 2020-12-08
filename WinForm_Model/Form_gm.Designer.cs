@@ -45,6 +45,12 @@
             this.label_cr27b = new System.Windows.Forms.Label();
             this.text_cr27a = new System.Windows.Forms.TextBox();
             this.label_cr27a = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dateTime_cr14 = new System.Windows.Forms.DateTimePicker();
+            this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.radio_cr13m = new System.Windows.Forms.RadioButton();
+            this.radio_cr13f = new System.Windows.Forms.RadioButton();
             this.label_cr28d = new System.Windows.Forms.Label();
             this.label_cr28fx = new System.Windows.Forms.Label();
             this.label_cr28f = new System.Windows.Forms.Label();
@@ -114,19 +120,14 @@
             this.groupBox16 = new System.Windows.Forms.GroupBox();
             this.radio_cr19b = new System.Windows.Forms.RadioButton();
             this.radio_cr19a = new System.Windows.Forms.RadioButton();
-            this.dateTime_cr14 = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.groupBox20 = new System.Windows.Forms.GroupBox();
-            this.radio_cr13m = new System.Windows.Forms.RadioButton();
-            this.radio_cr13f = new System.Windows.Forms.RadioButton();
             this.label_error = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox20.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -138,7 +139,6 @@
             this.groupBox14.SuspendLayout();
             this.groupBox15.SuspendLayout();
             this.groupBox16.SuspendLayout();
-            this.groupBox20.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -340,6 +340,75 @@
             this.label_cr27a.Size = new System.Drawing.Size(50, 17);
             this.label_cr27a.TabIndex = 103;
             this.label_cr27a.Text = "label20";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label4.Location = new System.Drawing.Point(382, 111);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(144, 17);
+            this.label4.TabIndex = 55;
+            this.label4.Text = "Q. CS13: Child’s gender";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label5.Location = new System.Drawing.Point(52, 177);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(182, 17);
+            this.label5.TabIndex = 56;
+            this.label5.Text = "Q. CS14: Child’s date of birth?";
+            // 
+            // dateTime_cr14
+            // 
+            this.dateTime_cr14.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dateTime_cr14.Location = new System.Drawing.Point(62, 197);
+            this.dateTime_cr14.Name = "dateTime_cr14";
+            this.dateTime_cr14.Size = new System.Drawing.Size(172, 25);
+            this.dateTime_cr14.TabIndex = 3;
+            // 
+            // groupBox20
+            // 
+            this.groupBox20.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox20.Controls.Add(this.radio_cr13m);
+            this.groupBox20.Controls.Add(this.radio_cr13f);
+            this.groupBox20.Location = new System.Drawing.Point(385, 128);
+            this.groupBox20.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox20.Name = "groupBox20";
+            this.groupBox20.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox20.Size = new System.Drawing.Size(235, 49);
+            this.groupBox20.TabIndex = 4;
+            this.groupBox20.TabStop = false;
+            // 
+            // radio_cr13m
+            // 
+            this.radio_cr13m.AutoSize = true;
+            this.radio_cr13m.BackColor = System.Drawing.Color.White;
+            this.radio_cr13m.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.radio_cr13m.Location = new System.Drawing.Point(10, 13);
+            this.radio_cr13m.Margin = new System.Windows.Forms.Padding(0);
+            this.radio_cr13m.Name = "radio_cr13m";
+            this.radio_cr13m.Size = new System.Drawing.Size(100, 21);
+            this.radio_cr13m.TabIndex = 0;
+            this.radio_cr13m.TabStop = true;
+            this.radio_cr13m.Text = "radioButton1";
+            this.radio_cr13m.UseVisualStyleBackColor = false;
+            // 
+            // radio_cr13f
+            // 
+            this.radio_cr13f.AutoSize = true;
+            this.radio_cr13f.BackColor = System.Drawing.Color.White;
+            this.radio_cr13f.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.radio_cr13f.Location = new System.Drawing.Point(110, 13);
+            this.radio_cr13f.Margin = new System.Windows.Forms.Padding(0);
+            this.radio_cr13f.Name = "radio_cr13f";
+            this.radio_cr13f.Size = new System.Drawing.Size(100, 21);
+            this.radio_cr13f.TabIndex = 1;
+            this.radio_cr13f.TabStop = true;
+            this.radio_cr13f.Text = "radioButton1";
+            this.radio_cr13f.UseVisualStyleBackColor = false;
             // 
             // label_cr28d
             // 
@@ -1111,14 +1180,6 @@
             this.radio_cr19a.Text = "radioButton1";
             this.radio_cr19a.UseVisualStyleBackColor = false;
             // 
-            // dateTime_cr14
-            // 
-            this.dateTime_cr14.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.dateTime_cr14.Location = new System.Drawing.Point(62, 197);
-            this.dateTime_cr14.Name = "dateTime_cr14";
-            this.dateTime_cr14.Size = new System.Drawing.Size(172, 25);
-            this.dateTime_cr14.TabIndex = 3;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -1129,26 +1190,6 @@
             this.label6.Size = new System.Drawing.Size(171, 17);
             this.label6.TabIndex = 57;
             this.label6.Text = "Q. CS15: How old is (name)?";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label5.Location = new System.Drawing.Point(52, 177);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(182, 17);
-            this.label5.TabIndex = 56;
-            this.label5.Text = "Q. CS14: Child’s date of birth?";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label4.Location = new System.Drawing.Point(382, 111);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(144, 17);
-            this.label4.TabIndex = 55;
-            this.label4.Text = "Q. CS13: Child’s gender";
             // 
             // label3
             // 
@@ -1180,54 +1221,17 @@
             this.label16.TabIndex = 13;
             this.label16.Text = "Q. CS10: Child Registration Number";
             // 
-            // groupBox20
-            // 
-            this.groupBox20.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupBox20.Controls.Add(this.radio_cr13m);
-            this.groupBox20.Controls.Add(this.radio_cr13f);
-            this.groupBox20.Location = new System.Drawing.Point(385, 128);
-            this.groupBox20.Margin = new System.Windows.Forms.Padding(0);
-            this.groupBox20.Name = "groupBox20";
-            this.groupBox20.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBox20.Size = new System.Drawing.Size(235, 49);
-            this.groupBox20.TabIndex = 4;
-            this.groupBox20.TabStop = false;
-            // 
-            // radio_cr13m
-            // 
-            this.radio_cr13m.AutoSize = true;
-            this.radio_cr13m.BackColor = System.Drawing.Color.White;
-            this.radio_cr13m.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.radio_cr13m.Location = new System.Drawing.Point(10, 13);
-            this.radio_cr13m.Margin = new System.Windows.Forms.Padding(0);
-            this.radio_cr13m.Name = "radio_cr13m";
-            this.radio_cr13m.Size = new System.Drawing.Size(100, 21);
-            this.radio_cr13m.TabIndex = 0;
-            this.radio_cr13m.TabStop = true;
-            this.radio_cr13m.Text = "radioButton1";
-            this.radio_cr13m.UseVisualStyleBackColor = false;
-            // 
-            // radio_cr13f
-            // 
-            this.radio_cr13f.AutoSize = true;
-            this.radio_cr13f.BackColor = System.Drawing.Color.White;
-            this.radio_cr13f.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.radio_cr13f.Location = new System.Drawing.Point(110, 13);
-            this.radio_cr13f.Margin = new System.Windows.Forms.Padding(0);
-            this.radio_cr13f.Name = "radio_cr13f";
-            this.radio_cr13f.Size = new System.Drawing.Size(100, 21);
-            this.radio_cr13f.TabIndex = 1;
-            this.radio_cr13f.TabStop = true;
-            this.radio_cr13f.Text = "radioButton1";
-            this.radio_cr13f.UseVisualStyleBackColor = false;
-            // 
             // label_error
             // 
             this.label_error.AutoSize = true;
-            this.label_error.Location = new System.Drawing.Point(763, 155);
+            this.label_error.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold);
+            this.label_error.ForeColor = System.Drawing.Color.Red;
+            this.label_error.Location = new System.Drawing.Point(777, 139);
             this.label_error.Name = "label_error";
-            this.label_error.Size = new System.Drawing.Size(0, 13);
-            this.label_error.TabIndex = 104;
+            this.label_error.Size = new System.Drawing.Size(0, 24);
+            this.label_error.TabIndex = 0;
+            this.label_error.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label_error.Click += new System.EventHandler(this.label_error_Click);
             // 
             // Form_gm
             // 
@@ -1298,6 +1302,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.groupBox20.ResumeLayout(false);
+            this.groupBox20.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -1320,8 +1326,6 @@
             this.groupBox15.PerformLayout();
             this.groupBox16.ResumeLayout(false);
             this.groupBox16.PerformLayout();
-            this.groupBox20.ResumeLayout(false);
-            this.groupBox20.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

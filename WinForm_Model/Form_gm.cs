@@ -491,5 +491,17 @@ namespace WinForm_Model
 
             return validation;
         }
+
+
+        private void errorcolor(Control errc)
+        {
+            errc.BackColor = Color.IndianRed;
+            errc.ForeColor = Color.White;
+        }
+
+        private void label_error_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
