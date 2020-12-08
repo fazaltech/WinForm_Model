@@ -17,11 +17,34 @@ namespace WinForm_Model
 {
     public partial class frmLogin : Form
     {
+        SQLiteDatabase db = new SQLiteDatabase();
         private DataBase cn = new DataBase();
+
         public frmLogin()
         {
             InitializeComponent();
+            DownloadUsers();
+      
             //grp();
+        }
+
+        private void DownloadUsers()
+        {
+
+
+
+            List<user_model> users = new List<user_model>();
+
+            for (int i = 0; i < 55; i++)
+            {
+                user_model um = new user_model();
+
+                um.username = "test" + i;
+                um.password = "pass" + i;
+                users.Add(um);
+            }
+
+            SQLiteDatabase.InsertTestUser(users);
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

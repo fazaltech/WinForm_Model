@@ -1,20 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Data.SQLite;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static WinForm_Model.frmLogin;
 
 namespace WinForm_Model
 {
-    class SQLiteDatabaseOperations
+    class SQLiteDatabase
     {
         // This class implements all the functions required to create table, insert data, update data in the SQLite Database.
         //
 
-        public static String DATABASE_NAME = "case_gm.db";
-        public static int DATABASE_VERSION = 1;
+        public static String DATABASE_PATH = "db";
+        public static String DATABASE_NAME = DATABASE_PATH+"\\case_gm2.db";
+        public static int DATABASE_VERSION = 3;
         
         public static String SQL_CREATE_USERS = "CREATE TABLE users ("
             + "_ID INTEGER PRIMARY KEY AUTOINCREMENT,"
@@ -59,27 +62,44 @@ namespace WinForm_Model
             "DROP TABLE IF EXISTS zstandards";
 
 
+       // public static String SQL_INSERT_USERS = INSERT INTO SyncInformation(timestamp, last_sync_value, last_retrieved_change_file, status) values('
+
+
         private static SQLiteConnection con;
 
+
+        public SQLiteDatabase() {
+
+            if (!Directory.Exists(DATABASE_PATH)) {
+                Directory.CreateDirectory(DATABASE_PATH);
+            }
+                CreateDatabase();
+
+        }
 
         public static void CreateDatabase()
         {
             if (!File.Exists(DATABASE_NAME))
             {
                 SQLiteConnection.CreateFile(DATABASE_NAME);
-                con = new SQLiteConnection("Data Source="+DATABASE_NAME+";Version="+DATABASE_VERSION+";");
-                
 
+                con = new SQLiteConnection("Data Source=" + DATABASE_NAME + ";Version=" + DATABASE_VERSION + ";");
+                CreateTables();
                 //SQLiteCommand cmd = new SQLiteCommand(sql, con);
                 //cmd.ExecuteNonQuery();
                 //con.Close();
 
             }
+            else {
+                con = new SQLiteConnection("Data Source=" + DATABASE_NAME + ";Version=" + DATABASE_VERSION + ";");
+
+            }
+
+
         }
 
         public static void CreateTables() {
 
-            
             con.Open();
             using (var cmd = new SQLiteCommand(con)) {
 
@@ -92,9 +112,42 @@ namespace WinForm_Model
                 cmd.CommandText = @SQL_DELETE_ZSTANDARDS;
                 cmd.ExecuteNonQuery();
 
+                //cmd.CommandText = @SQL_DELETE_FORMS;
+                //cmd.ExecuteNonQuery();
 
             };
+            con.Close();
         }
+
+        public static void InsertTestUser(List<user_model> users)
+        {
+
+
+            using (con)
+            {
+                con.Open();
+                string CommandText = "INSERT INTO users (username, password) VALUES(@username, @password)";
+
+                using (SQLiteCommand cmd = new SQLiteCommand(CommandText, con))
+                {
+                    
+                    for (int i = 0; i < users.Count; i++)
+                    {
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@username", users[i].username);
+                        cmd.Parameters.AddWithValue("@password", users[i].password);
+
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+
+                con.Close();
+            }
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////
+        //                                   SQLite Database
+        ////////////////////////////////////////////////////////////////////////////////////////////
 
 
         public static void InsertRecords(long last_sync_value, string last_retrieved_change_file)
@@ -105,6 +158,8 @@ namespace WinForm_Model
 
             SQLiteConnection con = new SQLiteConnection("Data Source=SyncInfoDatabase.sqllite;Version=3;");
             con.Open();
+
+
             SQLiteCommand cmd = new SQLiteCommand(sql, con);
             cmd.ExecuteNonQuery();
             con.Close();
