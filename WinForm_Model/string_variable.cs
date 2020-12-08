@@ -101,6 +101,9 @@ namespace WinForm_Model
         public string cr28fx01 = "Yes";
         public string cr28fx02 = "No";
 
+        public string cr02a = "Facility";
+        public string cr02b = "Home Visit";
+        public string cr02c = "Community outreach";
 
     }
 }

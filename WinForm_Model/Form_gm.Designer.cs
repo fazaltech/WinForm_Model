@@ -28,14 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.check_cr26c = new System.Windows.Forms.RadioButton();
-            this.check_cr26a = new System.Windows.Forms.RadioButton();
-            this.check_cr26d = new System.Windows.Forms.RadioButton();
-            this.check_cr26b = new System.Windows.Forms.RadioButton();
             this.btnContinue = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -124,9 +118,13 @@
             this.groupBox20 = new System.Windows.Forms.GroupBox();
             this.radio_cr13m = new System.Windows.Forms.RadioButton();
             this.radio_cr13f = new System.Windows.Forms.RadioButton();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.check_cr26b = new System.Windows.Forms.RadioButton();
+            this.check_cr26d = new System.Windows.Forms.RadioButton();
+            this.check_cr26a = new System.Windows.Forms.RadioButton();
+            this.check_cr26c = new System.Windows.Forms.RadioButton();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.button_close = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -139,7 +137,7 @@
             this.groupBox15.SuspendLayout();
             this.groupBox16.SuspendLayout();
             this.groupBox20.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -158,6 +156,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Controls.Add(this.button_close);
             this.groupBox1.Controls.Add(this.groupBox5);
             this.groupBox1.Controls.Add(this.btnContinue);
             this.groupBox1.Controls.Add(this.label17);
@@ -172,83 +171,16 @@
             this.groupBox1.Location = new System.Drawing.Point(27, 78);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(729, 1085);
-            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Screening Log For Children Under-5";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.check_cr26c);
-            this.groupBox5.Controls.Add(this.check_cr26a);
-            this.groupBox5.Controls.Add(this.check_cr26d);
-            this.groupBox5.Controls.Add(this.check_cr26b);
-            this.groupBox5.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.groupBox5.Location = new System.Drawing.Point(62, 675);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(0);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBox5.Size = new System.Drawing.Size(217, 57);
-            this.groupBox5.TabIndex = 113;
-            this.groupBox5.TabStop = false;
-            // 
-            // check_cr26c
-            // 
-            this.check_cr26c.AutoSize = true;
-            this.check_cr26c.BackColor = System.Drawing.Color.White;
-            this.check_cr26c.Location = new System.Drawing.Point(10, 31);
-            this.check_cr26c.Margin = new System.Windows.Forms.Padding(0);
-            this.check_cr26c.Name = "check_cr26c";
-            this.check_cr26c.Size = new System.Drawing.Size(100, 21);
-            this.check_cr26c.TabIndex = 3;
-            this.check_cr26c.TabStop = true;
-            this.check_cr26c.Text = "radioButton1";
-            this.check_cr26c.UseVisualStyleBackColor = false;
-            // 
-            // check_cr26a
-            // 
-            this.check_cr26a.AutoSize = true;
-            this.check_cr26a.BackColor = System.Drawing.Color.White;
-            this.check_cr26a.Location = new System.Drawing.Point(10, 10);
-            this.check_cr26a.Margin = new System.Windows.Forms.Padding(0);
-            this.check_cr26a.Name = "check_cr26a";
-            this.check_cr26a.Size = new System.Drawing.Size(100, 21);
-            this.check_cr26a.TabIndex = 3;
-            this.check_cr26a.TabStop = true;
-            this.check_cr26a.Text = "radioButton1";
-            this.check_cr26a.UseVisualStyleBackColor = false;
-            // 
-            // check_cr26d
-            // 
-            this.check_cr26d.AutoSize = true;
-            this.check_cr26d.BackColor = System.Drawing.Color.White;
-            this.check_cr26d.Location = new System.Drawing.Point(110, 31);
-            this.check_cr26d.Margin = new System.Windows.Forms.Padding(0);
-            this.check_cr26d.Name = "check_cr26d";
-            this.check_cr26d.Size = new System.Drawing.Size(100, 21);
-            this.check_cr26d.TabIndex = 3;
-            this.check_cr26d.TabStop = true;
-            this.check_cr26d.Text = "radioButton1";
-            this.check_cr26d.UseVisualStyleBackColor = false;
-            // 
-            // check_cr26b
-            // 
-            this.check_cr26b.AutoSize = true;
-            this.check_cr26b.BackColor = System.Drawing.Color.White;
-            this.check_cr26b.Location = new System.Drawing.Point(110, 10);
-            this.check_cr26b.Margin = new System.Windows.Forms.Padding(0);
-            this.check_cr26b.Name = "check_cr26b";
-            this.check_cr26b.Size = new System.Drawing.Size(100, 21);
-            this.check_cr26b.TabIndex = 3;
-            this.check_cr26b.TabStop = true;
-            this.check_cr26b.Text = "radioButton1";
-            this.check_cr26b.UseVisualStyleBackColor = false;
             // 
             // btnContinue
             // 
             this.btnContinue.Location = new System.Drawing.Point(502, 1034);
             this.btnContinue.Name = "btnContinue";
             this.btnContinue.Size = new System.Drawing.Size(195, 39);
-            this.btnContinue.TabIndex = 111;
+            this.btnContinue.TabIndex = 34;
             this.btnContinue.Text = "Enter Data Form";
             this.btnContinue.UseVisualStyleBackColor = true;
             this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
@@ -277,7 +209,7 @@
             this.textBox3.Location = new System.Drawing.Point(516, 739);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(111, 25);
-            this.textBox3.TabIndex = 78;
+            this.textBox3.TabIndex = 26;
             // 
             // label_cr27c
             // 
@@ -295,7 +227,7 @@
             this.textBox2.Location = new System.Drawing.Point(516, 712);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(111, 25);
-            this.textBox2.TabIndex = 78;
+            this.textBox2.TabIndex = 25;
             // 
             // label_cr27b
             // 
@@ -313,7 +245,8 @@
             this.textBox1.Location = new System.Drawing.Point(516, 685);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(111, 25);
-            this.textBox1.TabIndex = 78;
+            this.textBox1.TabIndex = 24;
+            this.textBox1.TabStop = false;
             // 
             // label_cr27a
             // 
@@ -427,7 +360,7 @@
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(0);
             this.groupBox2.Size = new System.Drawing.Size(217, 35);
-            this.groupBox2.TabIndex = 105;
+            this.groupBox2.TabIndex = 27;
             this.groupBox2.TabStop = false;
             // 
             // radio_cr28a01
@@ -438,7 +371,7 @@
             this.radio_cr28a01.Margin = new System.Windows.Forms.Padding(0);
             this.radio_cr28a01.Name = "radio_cr28a01";
             this.radio_cr28a01.Size = new System.Drawing.Size(100, 21);
-            this.radio_cr28a01.TabIndex = 3;
+            this.radio_cr28a01.TabIndex = 0;
             this.radio_cr28a01.TabStop = true;
             this.radio_cr28a01.Text = "radioButton1";
             this.radio_cr28a01.UseVisualStyleBackColor = false;
@@ -451,7 +384,7 @@
             this.radio_cr28a02.Margin = new System.Windows.Forms.Padding(0);
             this.radio_cr28a02.Name = "radio_cr28a02";
             this.radio_cr28a02.Size = new System.Drawing.Size(100, 21);
-            this.radio_cr28a02.TabIndex = 3;
+            this.radio_cr28a02.TabIndex = 1;
             this.radio_cr28a02.TabStop = true;
             this.radio_cr28a02.Text = "radioButton1";
             this.radio_cr28a02.UseVisualStyleBackColor = false;
@@ -465,7 +398,7 @@
             this.groupBox3.Location = new System.Drawing.Point(419, 872);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(218, 35);
-            this.groupBox3.TabIndex = 106;
+            this.groupBox3.TabIndex = 28;
             this.groupBox3.TabStop = false;
             // 
             // radio_cr28e01
@@ -476,7 +409,7 @@
             this.radio_cr28e01.Margin = new System.Windows.Forms.Padding(0);
             this.radio_cr28e01.Name = "radio_cr28e01";
             this.radio_cr28e01.Size = new System.Drawing.Size(100, 21);
-            this.radio_cr28e01.TabIndex = 3;
+            this.radio_cr28e01.TabIndex = 0;
             this.radio_cr28e01.TabStop = true;
             this.radio_cr28e01.Text = "radioButton1";
             this.radio_cr28e01.UseVisualStyleBackColor = false;
@@ -489,7 +422,7 @@
             this.radio_cr28e02.Margin = new System.Windows.Forms.Padding(0);
             this.radio_cr28e02.Name = "radio_cr28e02";
             this.radio_cr28e02.Size = new System.Drawing.Size(100, 21);
-            this.radio_cr28e02.TabIndex = 3;
+            this.radio_cr28e02.TabIndex = 1;
             this.radio_cr28e02.TabStop = true;
             this.radio_cr28e02.Text = "radioButton1";
             this.radio_cr28e02.UseVisualStyleBackColor = false;
@@ -502,7 +435,7 @@
             this.groupBox4.Location = new System.Drawing.Point(99, 932);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(217, 35);
-            this.groupBox4.TabIndex = 107;
+            this.groupBox4.TabIndex = 29;
             this.groupBox4.TabStop = false;
             // 
             // radio_cr28b01
@@ -513,7 +446,7 @@
             this.radio_cr28b01.Margin = new System.Windows.Forms.Padding(0);
             this.radio_cr28b01.Name = "radio_cr28b01";
             this.radio_cr28b01.Size = new System.Drawing.Size(100, 21);
-            this.radio_cr28b01.TabIndex = 3;
+            this.radio_cr28b01.TabIndex = 0;
             this.radio_cr28b01.TabStop = true;
             this.radio_cr28b01.Text = "radioButton1";
             this.radio_cr28b01.UseVisualStyleBackColor = false;
@@ -526,7 +459,7 @@
             this.radio_cr28b02.Margin = new System.Windows.Forms.Padding(0);
             this.radio_cr28b02.Name = "radio_cr28b02";
             this.radio_cr28b02.Size = new System.Drawing.Size(100, 21);
-            this.radio_cr28b02.TabIndex = 3;
+            this.radio_cr28b02.TabIndex = 1;
             this.radio_cr28b02.TabStop = true;
             this.radio_cr28b02.Text = "radioButton1";
             this.radio_cr28b02.UseVisualStyleBackColor = false;
@@ -539,7 +472,7 @@
             this.groupBox12.Location = new System.Drawing.Point(419, 932);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(218, 35);
-            this.groupBox12.TabIndex = 108;
+            this.groupBox12.TabIndex = 30;
             this.groupBox12.TabStop = false;
             // 
             // radio_cr28f01
@@ -550,7 +483,7 @@
             this.radio_cr28f01.Margin = new System.Windows.Forms.Padding(0);
             this.radio_cr28f01.Name = "radio_cr28f01";
             this.radio_cr28f01.Size = new System.Drawing.Size(100, 21);
-            this.radio_cr28f01.TabIndex = 3;
+            this.radio_cr28f01.TabIndex = 0;
             this.radio_cr28f01.TabStop = true;
             this.radio_cr28f01.Text = "radioButton1";
             this.radio_cr28f01.UseVisualStyleBackColor = false;
@@ -563,7 +496,7 @@
             this.radio_cr28f02.Margin = new System.Windows.Forms.Padding(0);
             this.radio_cr28f02.Name = "radio_cr28f02";
             this.radio_cr28f02.Size = new System.Drawing.Size(100, 21);
-            this.radio_cr28f02.TabIndex = 3;
+            this.radio_cr28f02.TabIndex = 1;
             this.radio_cr28f02.TabStop = true;
             this.radio_cr28f02.Text = "radioButton1";
             this.radio_cr28f02.UseVisualStyleBackColor = false;
@@ -576,7 +509,7 @@
             this.groupBox17.Location = new System.Drawing.Point(99, 992);
             this.groupBox17.Name = "groupBox17";
             this.groupBox17.Size = new System.Drawing.Size(217, 35);
-            this.groupBox17.TabIndex = 109;
+            this.groupBox17.TabIndex = 31;
             this.groupBox17.TabStop = false;
             // 
             // radio_cr28c01
@@ -587,7 +520,7 @@
             this.radio_cr28c01.Margin = new System.Windows.Forms.Padding(0);
             this.radio_cr28c01.Name = "radio_cr28c01";
             this.radio_cr28c01.Size = new System.Drawing.Size(100, 21);
-            this.radio_cr28c01.TabIndex = 3;
+            this.radio_cr28c01.TabIndex = 0;
             this.radio_cr28c01.TabStop = true;
             this.radio_cr28c01.Text = "radioButton1";
             this.radio_cr28c01.UseVisualStyleBackColor = false;
@@ -600,7 +533,7 @@
             this.radio_cr28c02.Margin = new System.Windows.Forms.Padding(0);
             this.radio_cr28c02.Name = "radio_cr28c02";
             this.radio_cr28c02.Size = new System.Drawing.Size(100, 21);
-            this.radio_cr28c02.TabIndex = 3;
+            this.radio_cr28c02.TabIndex = 1;
             this.radio_cr28c02.TabStop = true;
             this.radio_cr28c02.Text = "radioButton1";
             this.radio_cr28c02.UseVisualStyleBackColor = false;
@@ -613,7 +546,7 @@
             this.groupBox18.Location = new System.Drawing.Point(419, 992);
             this.groupBox18.Name = "groupBox18";
             this.groupBox18.Size = new System.Drawing.Size(218, 35);
-            this.groupBox18.TabIndex = 104;
+            this.groupBox18.TabIndex = 32;
             this.groupBox18.TabStop = false;
             // 
             // radio_cr28fx02
@@ -624,7 +557,7 @@
             this.radio_cr28fx02.Margin = new System.Windows.Forms.Padding(0);
             this.radio_cr28fx02.Name = "radio_cr28fx02";
             this.radio_cr28fx02.Size = new System.Drawing.Size(100, 21);
-            this.radio_cr28fx02.TabIndex = 3;
+            this.radio_cr28fx02.TabIndex = 1;
             this.radio_cr28fx02.TabStop = true;
             this.radio_cr28fx02.Text = "radioButton1";
             this.radio_cr28fx02.UseVisualStyleBackColor = false;
@@ -637,7 +570,7 @@
             this.radio_cr28fx01.Margin = new System.Windows.Forms.Padding(0);
             this.radio_cr28fx01.Name = "radio_cr28fx01";
             this.radio_cr28fx01.Size = new System.Drawing.Size(100, 21);
-            this.radio_cr28fx01.TabIndex = 3;
+            this.radio_cr28fx01.TabIndex = 0;
             this.radio_cr28fx01.TabStop = true;
             this.radio_cr28fx01.Text = "radioButton1";
             this.radio_cr28fx01.UseVisualStyleBackColor = false;
@@ -650,7 +583,7 @@
             this.groupBox19.Location = new System.Drawing.Point(99, 1052);
             this.groupBox19.Name = "groupBox19";
             this.groupBox19.Size = new System.Drawing.Size(217, 35);
-            this.groupBox19.TabIndex = 110;
+            this.groupBox19.TabIndex = 33;
             this.groupBox19.TabStop = false;
             // 
             // radio_cr28d01
@@ -661,7 +594,7 @@
             this.radio_cr28d01.Margin = new System.Windows.Forms.Padding(0);
             this.radio_cr28d01.Name = "radio_cr28d01";
             this.radio_cr28d01.Size = new System.Drawing.Size(100, 21);
-            this.radio_cr28d01.TabIndex = 3;
+            this.radio_cr28d01.TabIndex = 0;
             this.radio_cr28d01.TabStop = true;
             this.radio_cr28d01.Text = "radioButton1";
             this.radio_cr28d01.UseVisualStyleBackColor = false;
@@ -674,7 +607,7 @@
             this.radio_cr28d02.Margin = new System.Windows.Forms.Padding(0);
             this.radio_cr28d02.Name = "radio_cr28d02";
             this.radio_cr28d02.Size = new System.Drawing.Size(100, 21);
-            this.radio_cr28d02.TabIndex = 3;
+            this.radio_cr28d02.TabIndex = 1;
             this.radio_cr28d02.TabStop = true;
             this.radio_cr28d02.Text = "radioButton1";
             this.radio_cr28d02.UseVisualStyleBackColor = false;
@@ -683,10 +616,10 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label20.Location = new System.Drawing.Point(409, 310);
+            this.label20.Location = new System.Drawing.Point(409, 308);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(342, 17);
-            this.label20.TabIndex = 65;
+            this.label20.TabIndex = 25;
             this.label20.Text = "Q. CS17: Have you ever exclusively breast fed your child?";
             // 
             // check_cr24f
@@ -696,7 +629,7 @@
             this.check_cr24f.Location = new System.Drawing.Point(89, 706);
             this.check_cr24f.Name = "check_cr24f";
             this.check_cr24f.Size = new System.Drawing.Size(87, 21);
-            this.check_cr24f.TabIndex = 82;
+            this.check_cr24f.TabIndex = 19;
             this.check_cr24f.Text = "checkBox1";
             this.check_cr24f.UseVisualStyleBackColor = true;
             // 
@@ -707,7 +640,7 @@
             this.check_cr24e.Location = new System.Drawing.Point(89, 686);
             this.check_cr24e.Name = "check_cr24e";
             this.check_cr24e.Size = new System.Drawing.Size(87, 21);
-            this.check_cr24e.TabIndex = 81;
+            this.check_cr24e.TabIndex = 18;
             this.check_cr24e.Text = "checkBox1";
             this.check_cr24e.UseVisualStyleBackColor = true;
             // 
@@ -718,7 +651,7 @@
             this.check_cr24d.Location = new System.Drawing.Point(89, 666);
             this.check_cr24d.Name = "check_cr24d";
             this.check_cr24d.Size = new System.Drawing.Size(87, 21);
-            this.check_cr24d.TabIndex = 87;
+            this.check_cr24d.TabIndex = 17;
             this.check_cr24d.Text = "checkBox1";
             this.check_cr24d.UseVisualStyleBackColor = true;
             // 
@@ -729,7 +662,7 @@
             this.check_cr25c.Location = new System.Drawing.Point(419, 646);
             this.check_cr25c.Name = "check_cr25c";
             this.check_cr25c.Size = new System.Drawing.Size(87, 21);
-            this.check_cr25c.TabIndex = 83;
+            this.check_cr25c.TabIndex = 22;
             this.check_cr25c.Text = "checkBox1";
             this.check_cr25c.UseVisualStyleBackColor = true;
             // 
@@ -740,7 +673,7 @@
             this.check_cr25b.Location = new System.Drawing.Point(419, 626);
             this.check_cr25b.Name = "check_cr25b";
             this.check_cr25b.Size = new System.Drawing.Size(87, 21);
-            this.check_cr25b.TabIndex = 84;
+            this.check_cr25b.TabIndex = 21;
             this.check_cr25b.Text = "checkBox1";
             this.check_cr25b.UseVisualStyleBackColor = true;
             // 
@@ -751,7 +684,7 @@
             this.check_cr24c.Location = new System.Drawing.Point(89, 646);
             this.check_cr24c.Name = "check_cr24c";
             this.check_cr24c.Size = new System.Drawing.Size(87, 21);
-            this.check_cr24c.TabIndex = 85;
+            this.check_cr24c.TabIndex = 16;
             this.check_cr24c.Text = "checkBox1";
             this.check_cr24c.UseVisualStyleBackColor = true;
             // 
@@ -762,7 +695,7 @@
             this.check_cr25a.Location = new System.Drawing.Point(419, 606);
             this.check_cr25a.Name = "check_cr25a";
             this.check_cr25a.Size = new System.Drawing.Size(87, 21);
-            this.check_cr25a.TabIndex = 86;
+            this.check_cr25a.TabIndex = 20;
             this.check_cr25a.Text = "checkBox1";
             this.check_cr25a.UseVisualStyleBackColor = true;
             // 
@@ -773,7 +706,7 @@
             this.check_cr24b.Location = new System.Drawing.Point(89, 626);
             this.check_cr24b.Name = "check_cr24b";
             this.check_cr24b.Size = new System.Drawing.Size(87, 21);
-            this.check_cr24b.TabIndex = 79;
+            this.check_cr24b.TabIndex = 15;
             this.check_cr24b.Text = "checkBox1";
             this.check_cr24b.UseVisualStyleBackColor = true;
             // 
@@ -784,7 +717,7 @@
             this.check_cr24a.Location = new System.Drawing.Point(89, 606);
             this.check_cr24a.Name = "check_cr24a";
             this.check_cr24a.Size = new System.Drawing.Size(87, 21);
-            this.check_cr24a.TabIndex = 80;
+            this.check_cr24a.TabIndex = 14;
             this.check_cr24a.Text = "checkBox1";
             this.check_cr24a.UseVisualStyleBackColor = true;
             // 
@@ -881,7 +814,7 @@
             this.text_cr23.Location = new System.Drawing.Point(419, 546);
             this.text_cr23.Name = "text_cr23";
             this.text_cr23.Size = new System.Drawing.Size(187, 25);
-            this.text_cr23.TabIndex = 78;
+            this.text_cr23.TabIndex = 13;
             // 
             // text_cr22
             // 
@@ -889,7 +822,7 @@
             this.text_cr22.Location = new System.Drawing.Point(89, 546);
             this.text_cr22.Name = "text_cr22";
             this.text_cr22.Size = new System.Drawing.Size(187, 25);
-            this.text_cr22.TabIndex = 77;
+            this.text_cr22.TabIndex = 12;
             // 
             // text_cr21
             // 
@@ -897,7 +830,7 @@
             this.text_cr21.Location = new System.Drawing.Point(419, 486);
             this.text_cr21.Name = "text_cr21";
             this.text_cr21.Size = new System.Drawing.Size(187, 25);
-            this.text_cr21.TabIndex = 76;
+            this.text_cr21.TabIndex = 11;
             // 
             // text_cr16
             // 
@@ -905,7 +838,7 @@
             this.text_cr16.Location = new System.Drawing.Point(89, 330);
             this.text_cr16.Name = "text_cr16";
             this.text_cr16.Size = new System.Drawing.Size(187, 25);
-            this.text_cr16.TabIndex = 75;
+            this.text_cr16.TabIndex = 6;
             // 
             // text_cr15
             // 
@@ -913,7 +846,7 @@
             this.text_cr15.Location = new System.Drawing.Point(419, 275);
             this.text_cr15.Name = "text_cr15";
             this.text_cr15.Size = new System.Drawing.Size(172, 25);
-            this.text_cr15.TabIndex = 62;
+            this.text_cr15.TabIndex = 5;
             // 
             // text_cr12
             // 
@@ -921,7 +854,7 @@
             this.text_cr12.Location = new System.Drawing.Point(89, 215);
             this.text_cr12.Name = "text_cr12";
             this.text_cr12.Size = new System.Drawing.Size(172, 25);
-            this.text_cr12.TabIndex = 59;
+            this.text_cr12.TabIndex = 2;
             // 
             // text_cr11
             // 
@@ -929,7 +862,7 @@
             this.text_cr11.Location = new System.Drawing.Point(419, 155);
             this.text_cr11.Name = "text_cr11";
             this.text_cr11.Size = new System.Drawing.Size(172, 25);
-            this.text_cr11.TabIndex = 61;
+            this.text_cr11.TabIndex = 1;
             // 
             // text_cr10
             // 
@@ -937,7 +870,7 @@
             this.text_cr10.Location = new System.Drawing.Point(89, 155);
             this.text_cr10.Name = "text_cr10";
             this.text_cr10.Size = new System.Drawing.Size(172, 25);
-            this.text_cr10.TabIndex = 60;
+            this.text_cr10.TabIndex = 0;
             // 
             // groupBox13
             // 
@@ -949,7 +882,7 @@
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Padding = new System.Windows.Forms.Padding(0);
             this.groupBox13.Size = new System.Drawing.Size(235, 33);
-            this.groupBox13.TabIndex = 89;
+            this.groupBox13.TabIndex = 8;
             this.groupBox13.TabStop = false;
             // 
             // radio_cr18b
@@ -960,7 +893,7 @@
             this.radio_cr18b.Margin = new System.Windows.Forms.Padding(0);
             this.radio_cr18b.Name = "radio_cr18b";
             this.radio_cr18b.Size = new System.Drawing.Size(100, 21);
-            this.radio_cr18b.TabIndex = 0;
+            this.radio_cr18b.TabIndex = 1;
             this.radio_cr18b.TabStop = true;
             this.radio_cr18b.Text = "radioButton1";
             this.radio_cr18b.UseVisualStyleBackColor = false;
@@ -988,7 +921,7 @@
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Padding = new System.Windows.Forms.Padding(0);
             this.groupBox14.Size = new System.Drawing.Size(235, 33);
-            this.groupBox14.TabIndex = 90;
+            this.groupBox14.TabIndex = 10;
             this.groupBox14.TabStop = false;
             // 
             // radio_cr20a
@@ -1012,7 +945,7 @@
             this.radio_cr20b.Margin = new System.Windows.Forms.Padding(0);
             this.radio_cr20b.Name = "radio_cr20b";
             this.radio_cr20b.Size = new System.Drawing.Size(100, 21);
-            this.radio_cr20b.TabIndex = 0;
+            this.radio_cr20b.TabIndex = 1;
             this.radio_cr20b.TabStop = true;
             this.radio_cr20b.Text = "radioButton1";
             this.radio_cr20b.UseVisualStyleBackColor = false;
@@ -1027,7 +960,7 @@
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.Padding = new System.Windows.Forms.Padding(0);
             this.groupBox15.Size = new System.Drawing.Size(235, 33);
-            this.groupBox15.TabIndex = 88;
+            this.groupBox15.TabIndex = 7;
             this.groupBox15.TabStop = false;
             // 
             // radio_cr17b
@@ -1038,7 +971,7 @@
             this.radio_cr17b.Margin = new System.Windows.Forms.Padding(0);
             this.radio_cr17b.Name = "radio_cr17b";
             this.radio_cr17b.Size = new System.Drawing.Size(100, 21);
-            this.radio_cr17b.TabIndex = 0;
+            this.radio_cr17b.TabIndex = 1;
             this.radio_cr17b.TabStop = true;
             this.radio_cr17b.Text = "radioButton1";
             this.radio_cr17b.UseVisualStyleBackColor = false;
@@ -1066,7 +999,7 @@
             this.groupBox16.Name = "groupBox16";
             this.groupBox16.Padding = new System.Windows.Forms.Padding(0);
             this.groupBox16.Size = new System.Drawing.Size(235, 33);
-            this.groupBox16.TabIndex = 91;
+            this.groupBox16.TabIndex = 9;
             this.groupBox16.TabStop = false;
             // 
             // radio_cr19b
@@ -1077,7 +1010,7 @@
             this.radio_cr19b.Margin = new System.Windows.Forms.Padding(0);
             this.radio_cr19b.Name = "radio_cr19b";
             this.radio_cr19b.Size = new System.Drawing.Size(100, 21);
-            this.radio_cr19b.TabIndex = 0;
+            this.radio_cr19b.TabIndex = 1;
             this.radio_cr19b.TabStop = true;
             this.radio_cr19b.Text = "radioButton1";
             this.radio_cr19b.UseVisualStyleBackColor = false;
@@ -1101,7 +1034,7 @@
             this.dateTime_cr14.Location = new System.Drawing.Point(419, 215);
             this.dateTime_cr14.Name = "dateTime_cr14";
             this.dateTime_cr14.Size = new System.Drawing.Size(172, 25);
-            this.dateTime_cr14.TabIndex = 63;
+            this.dateTime_cr14.TabIndex = 3;
             // 
             // label6
             // 
@@ -1174,7 +1107,7 @@
             this.groupBox20.Name = "groupBox20";
             this.groupBox20.Padding = new System.Windows.Forms.Padding(0);
             this.groupBox20.Size = new System.Drawing.Size(235, 34);
-            this.groupBox20.TabIndex = 64;
+            this.groupBox20.TabIndex = 4;
             this.groupBox20.TabStop = false;
             // 
             // radio_cr13m
@@ -1186,7 +1119,7 @@
             this.radio_cr13m.Margin = new System.Windows.Forms.Padding(0);
             this.radio_cr13m.Name = "radio_cr13m";
             this.radio_cr13m.Size = new System.Drawing.Size(100, 21);
-            this.radio_cr13m.TabIndex = 4;
+            this.radio_cr13m.TabIndex = 0;
             this.radio_cr13m.TabStop = true;
             this.radio_cr13m.Text = "radioButton1";
             this.radio_cr13m.UseVisualStyleBackColor = false;
@@ -1200,14 +1133,88 @@
             this.radio_cr13f.Margin = new System.Windows.Forms.Padding(0);
             this.radio_cr13f.Name = "radio_cr13f";
             this.radio_cr13f.Size = new System.Drawing.Size(100, 21);
-            this.radio_cr13f.TabIndex = 4;
+            this.radio_cr13f.TabIndex = 1;
             this.radio_cr13f.TabStop = true;
             this.radio_cr13f.Text = "radioButton1";
             this.radio_cr13f.UseVisualStyleBackColor = false;
             // 
-            // errorProvider1
+            // check_cr26b
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.check_cr26b.AutoSize = true;
+            this.check_cr26b.BackColor = System.Drawing.Color.White;
+            this.check_cr26b.Location = new System.Drawing.Point(3, 14);
+            this.check_cr26b.Margin = new System.Windows.Forms.Padding(0);
+            this.check_cr26b.Name = "check_cr26b";
+            this.check_cr26b.Size = new System.Drawing.Size(100, 21);
+            this.check_cr26b.TabIndex = 0;
+            this.check_cr26b.TabStop = true;
+            this.check_cr26b.Text = "radioButton1";
+            this.check_cr26b.UseVisualStyleBackColor = false;
+            this.check_cr26b.CheckedChanged += new System.EventHandler(this.check_cr26b_CheckedChanged);
+            // 
+            // check_cr26d
+            // 
+            this.check_cr26d.AutoSize = true;
+            this.check_cr26d.BackColor = System.Drawing.Color.White;
+            this.check_cr26d.Location = new System.Drawing.Point(3, 38);
+            this.check_cr26d.Margin = new System.Windows.Forms.Padding(0);
+            this.check_cr26d.Name = "check_cr26d";
+            this.check_cr26d.Size = new System.Drawing.Size(100, 21);
+            this.check_cr26d.TabIndex = 2;
+            this.check_cr26d.TabStop = true;
+            this.check_cr26d.Text = "radioButton1";
+            this.check_cr26d.UseVisualStyleBackColor = false;
+            // 
+            // check_cr26a
+            // 
+            this.check_cr26a.AutoSize = true;
+            this.check_cr26a.BackColor = System.Drawing.Color.White;
+            this.check_cr26a.Location = new System.Drawing.Point(103, 14);
+            this.check_cr26a.Margin = new System.Windows.Forms.Padding(0);
+            this.check_cr26a.Name = "check_cr26a";
+            this.check_cr26a.Size = new System.Drawing.Size(100, 21);
+            this.check_cr26a.TabIndex = 1;
+            this.check_cr26a.TabStop = true;
+            this.check_cr26a.Text = "radioButton1";
+            this.check_cr26a.UseVisualStyleBackColor = false;
+            // 
+            // check_cr26c
+            // 
+            this.check_cr26c.AutoSize = true;
+            this.check_cr26c.BackColor = System.Drawing.Color.White;
+            this.check_cr26c.Location = new System.Drawing.Point(103, 38);
+            this.check_cr26c.Margin = new System.Windows.Forms.Padding(0);
+            this.check_cr26c.Name = "check_cr26c";
+            this.check_cr26c.Size = new System.Drawing.Size(100, 21);
+            this.check_cr26c.TabIndex = 3;
+            this.check_cr26c.TabStop = true;
+            this.check_cr26c.Text = "radioButton1";
+            this.check_cr26c.UseVisualStyleBackColor = false;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.check_cr26c);
+            this.groupBox5.Controls.Add(this.check_cr26a);
+            this.groupBox5.Controls.Add(this.check_cr26d);
+            this.groupBox5.Controls.Add(this.check_cr26b);
+            this.groupBox5.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.groupBox5.Location = new System.Drawing.Point(62, 675);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox5.Size = new System.Drawing.Size(217, 89);
+            this.groupBox5.TabIndex = 23;
+            this.groupBox5.TabStop = false;
+            // 
+            // button_close
+            // 
+            this.button_close.Location = new System.Drawing.Point(320, 1039);
+            this.button_close.Name = "button_close";
+            this.button_close.Size = new System.Drawing.Size(139, 34);
+            this.button_close.TabIndex = 113;
+            this.button_close.Text = "Close";
+            this.button_close.UseVisualStyleBackColor = true;
+            this.button_close.Click += new System.EventHandler(this.button_close_Click);
             // 
             // Form_gm
             // 
@@ -1279,8 +1286,6 @@
             this.Load += new System.EventHandler(this.Form_gm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -1305,7 +1310,8 @@
             this.groupBox16.PerformLayout();
             this.groupBox20.ResumeLayout(false);
             this.groupBox20.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1396,11 +1402,6 @@
         private System.Windows.Forms.RadioButton radio_cr13m;
         private System.Windows.Forms.RadioButton radio_cr13f;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.RadioButton check_cr26c;
-        private System.Windows.Forms.RadioButton check_cr26a;
-        private System.Windows.Forms.RadioButton check_cr26d;
-        private System.Windows.Forms.RadioButton check_cr26b;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label_cr27c;
@@ -1408,6 +1409,11 @@
         private System.Windows.Forms.Label label_cr27b;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label_cr27a;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.RadioButton check_cr26c;
+        private System.Windows.Forms.RadioButton check_cr26a;
+        private System.Windows.Forms.RadioButton check_cr26d;
+        private System.Windows.Forms.RadioButton check_cr26b;
+        private System.Windows.Forms.Button button_close;
     }
 }

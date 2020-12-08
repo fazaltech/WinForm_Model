@@ -16,6 +16,7 @@ namespace WinForm_Model
         static string g_iPOP_ID;
         static Form frm;
         static Form frmlogin;
+        static Form frm_main2;
         static bool IsHold;
         static string usrID;
         static string usrNme;
@@ -1027,7 +1028,20 @@ namespace WinForm_Model
         }
 
 
+        public static Form frm_main1
+        {
+            get
+            {
+                return frm_main2;
+            }
 
-    
-}
+            set
+            {
+                frm_main2 = value;
+            }
+        }
+
+
+
+    }
 }

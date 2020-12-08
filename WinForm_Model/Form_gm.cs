@@ -429,5 +429,15 @@ namespace WinForm_Model
         {
 
         }
+
+        private void check_cr26b_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
