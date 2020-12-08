@@ -13,6 +13,8 @@ namespace WinForm_Model.Model
             public string cr10 { get; set; }
             public string cr11 { get; set; }
             public string cr12 { get; set; }
+            public string cr13m { get; set; }
+            public string cr13f { get; set; }
             public string cr16 { get; set; }
             public string cr21 { get; set; }
             public string cr22 { get; set; }
