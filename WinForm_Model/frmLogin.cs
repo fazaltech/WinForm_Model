@@ -58,6 +58,8 @@ namespace WinForm_Model
         {
             if (text_user_name.Text == "test1234" && text_password.Text == "test1234")
             {
+                DataBaseVariable.frmlogin1 = this;
+                this.Hide();
                 frm_main obj_main = new frm_main();
                 obj_main.Show();
 
@@ -175,20 +177,20 @@ namespace WinForm_Model
 
         private void button_download_Click(object sender, EventArgs e)
         {
-            bool result = false;
-            if (result == false)
-            {
-                System.Diagnostics.Debug.WriteLine("starting download");
-                
-                get_villages();
-                System.Diagnostics.Debug.WriteLine("continue download");
+            //bool result = false;
+            //if (result == false)
+            //{
+            //    System.Diagnostics.Debug.WriteLine("starting download");
 
-                get_users();
-                System.Diagnostics.Debug.WriteLine("end download");
+            //    get_villages();
+            //    System.Diagnostics.Debug.WriteLine("continue download");
 
-                result = true;
-                MessageBox.Show("Data Download", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            //    get_users();
+            //    System.Diagnostics.Debug.WriteLine("end download");
+
+            //    result = true;
+            //    MessageBox.Show("Data Download", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
 
 
         }
@@ -217,72 +219,95 @@ namespace WinForm_Model
             public string full_name { get; set; }
 
         }
-
+        public List<data_villages> obj;
 
         public void get_villages()
         {
-            System.Diagnostics.Debug.WriteLine("villages start");
+
+            try
+            {
+                System.Diagnostics.Debug.WriteLine("villages start");
 
 
 
-            var test = "{\"table\":\"villages\"}";
+                var test = "{\"table\":\"villages\"}";
 
 
 
-            HttpWebRequest webRequest;
+                HttpWebRequest webRequest;
 
-            string requestParams = test.ToString();
+                string requestParams = test.ToString();
 
-            webRequest = (HttpWebRequest)WebRequest.Create("http://f38158/casi_gm/api/getdata.php");
+                webRequest = (HttpWebRequest)WebRequest.Create("http://f38158/casi_gm/api/getdata.php");
 
-            webRequest.Method = "POST";
-            webRequest.ContentType = "application/json";
+                webRequest.Method = "POST";
+                webRequest.ContentType = "application/json";
 
-            byte[] byteArray = Encoding.UTF8.GetBytes(requestParams);
-            webRequest.ContentLength = byteArray.Length;
-            Stream requestStream = webRequest.GetRequestStream();
+                byte[] byteArray = Encoding.UTF8.GetBytes(requestParams);
+                webRequest.ContentLength = byteArray.Length;
 
-            requestStream.Write(byteArray, 0, byteArray.Length);
+                Stream requestStream = webRequest.GetRequestStream();
 
-
-            // Get the response.
-            WebResponse response = webRequest.GetResponse();
-
-            Stream responseStream = response.GetResponseStream();
-
-            StreamReader rdr = new StreamReader(responseStream, Encoding.UTF8);
-            string Json = rdr.ReadToEnd(); // response from server
-            var obj = JsonConvert.DeserializeObject<List<data_villages>>(Json);
+                requestStream.Write(byteArray, 0, byteArray.Length);
 
 
+                // Get the response.
+                WebResponse response = webRequest.GetResponse();
 
+                Stream responseStream = response.GetResponseStream();
 
-            
+                StreamReader rdr = new StreamReader(responseStream, Encoding.UTF8);
+                string Json = rdr.ReadToEnd(); // response from server
+                obj = JsonConvert.DeserializeObject<List<data_villages>>(Json);
+            }
 
-            SQLiteDataAdapter da = null;
-            DataSet ds = null;
-
-            da = new SQLiteDataAdapter("delete from villages", cn.cn);
-            ds = new DataSet();
-            da.Fill(ds);
-
-
-            for (int a = 0; a <= obj.Count - 1; a++)
+            catch (Exception ex)
             {
 
-                string qry = "insert into villages(villlage_code, village, district_code, district, uc_code, uc,country,country_code,cluster_no) values('" + obj[a].villlage_code + "', '" + obj[a].village + "', '" + obj[a].district_code + "', '" + obj[a].district + "', '" + obj[a].uc_code + "', '" + obj[a].uc + "', '" + obj[a].country + "', '" + obj[a].country_code + "', '" + obj[a].cluster_no + "')";
+                if (ex.Message == "The remote name could not be resolved: 'f38158'")
+                {
+                    MessageBox.Show("Please Open Record", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
 
-                da = new SQLiteDataAdapter(qry, cn.cn);
 
+
+            finally
+            {
+
+                SQLiteDataAdapter da = null;
+                DataSet ds = null;
+
+                da = new SQLiteDataAdapter("delete from villages", cn.cn);
                 ds = new DataSet();
                 da.Fill(ds);
 
+
+                for (int a = 0; a <= obj.Count - 1; a++)
+                {
+
+                    string qry = "insert into villages(villlage_code, village, district_code, district, uc_code, uc,country,country_code,cluster_no) values('" + obj[a].villlage_code + "', '" + obj[a].village + "', '" + obj[a].district_code + "', '" + obj[a].district + "', '" + obj[a].uc_code + "', '" + obj[a].uc + "', '" + obj[a].country + "', '" + obj[a].country_code + "', '" + obj[a].cluster_no + "')";
+
+                    da = new SQLiteDataAdapter(qry, cn.cn);
+
+                    ds = new DataSet();
+                    da.Fill(ds);
+
+                }
+                //MessageBox.Show("Data Download", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                System.Diagnostics.Debug.WriteLine("villages end");
             }
-            //MessageBox.Show("Data Download", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
-            System.Diagnostics.Debug.WriteLine("villages end");
-
+        
+            
+           
         }
         public void get_users()
         {

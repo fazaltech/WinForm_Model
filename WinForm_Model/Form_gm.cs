@@ -415,19 +415,81 @@ namespace WinForm_Model
 
         private void btnContinue_Click(object sender, EventArgs e)
         {
-
-            MessageBox.Show("Cr10", "TEST");
-
-
-            if (ValidateChildren(ValidationConstraints.Enabled))
+            if (validation())
             {
-                MessageBox.Show(text_cr10.Text, "Demo App - Message!");
+                MessageBox.Show("Validation Successfull", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
+            else
+            {
+                label_error.Text = error_text;
+            }
+            //MessageBox.Show("Cr10", "TEST");
+
+
+            //if (ValidateChildren(ValidationConstraints.Enabled))
+            //{
+            //    MessageBox.Show(text_cr10.Text, "Demo App - Message!");
+            //}
         }
 
         private void label1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void check_cr26b_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        public string error_text;
+        
+        public bool validation()
+        {
+            bool validation = false;
+            if (validation == false)
+            {
+                //if (text_cr10.Text == "") { MessageBox.Show("Please Enter Child Registration Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                if (text_cr10.Text == "") { error_text = "Please Enter Child Registration Number"; return validation; }
+                if (text_cr11.Text == "") { error_text = "Please Enter Child Name"; return validation; }
+                if (text_cr12.Text == "") { error_text = "Please Enter Father Name"; return validation; }
+
+                if (radio_cr13m.Checked != true && radio_cr13f.Checked != true) { error_text = "Please Select Gender"; return validation; }
+                //if (text_cr15.Text == "") { MessageBox.Show("Please Enter Child Registration Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                if (text_cr16.Text == "") { error_text = "Please Enter Birth weight"; return validation; }
+                if (radio_cr17a.Checked != true && radio_cr17b.Checked != true) { error_text = "Please Select fed your child "; return validation; }
+                if (radio_cr18a.Checked != true && radio_cr18b.Checked != true) {error_text = "Please Select child being currently exclusively "; return validation; }
+                if (radio_cr19a.Checked != true && radio_cr19b.Checked != true) {error_text = "Please Select complimentary feeding "; return validation; }
+                if (radio_cr20a.Checked != true && radio_cr20b.Checked != true) {error_text = "Please Select breastfeeding & complimentary feeding"; return validation; }
+
+                if (text_cr21.Text == "") { error_text = "Please Enter Height"; return validation; };
+                    if (text_cr22.Text == "") { error_text = "Please  Enter Weight"; return validation; };
+                if (text_cr23.Text == "") { error_text = "Please Enter MUAC"; return validation; };
+
+                if (check_cr24a.Checked != true && check_cr24b.Checked != true && check_cr24c.Checked != true && check_cr24d.Checked != true && check_cr24e.Checked != true && check_cr24f.Checked != true) { error_text = "Please Select Assessment Outcome"; return validation; };
+                if (check_cr25a.Checked != true && check_cr25b.Checked != true && check_cr25c.Checked != true) { error_text = "Please Select Action Required"; return validation; };
+                if (check_cr26a.Checked != true && check_cr26b.Checked != true && check_cr26c.Checked != true && check_cr26d.Checked != true) { error_text = "Please Select Supplementation provided"; return validation; };
+                if (text_cr27a.Text == "" && text_cr27b.Text == "" && text_cr27c.Text == "") { error_text = "Please Enter Quantity of Supplement provided Number of Sachets"; return validation; };
+                if (radio_cr28a01.Checked != true && radio_cr28a02.Checked != true) { error_text = "Please Select Diarrhea"; return validation; };
+                if (radio_cr28b01.Checked != true && radio_cr28b02.Checked != true) { error_text = "Please  Select Cough/Flu "; return validation; };
+                if (radio_cr28c01.Checked != true && radio_cr28c02.Checked != true) { error_text = "Please  Select Fever "; return validation; };
+                if (radio_cr28d01.Checked != true && radio_cr28d02.Checked != true) { error_text = "Please  Select Chest in drawing "; return validation; };
+                if (radio_cr28e01.Checked != true && radio_cr28e02.Checked != true) { error_text = "Please  Select Worms in stool "; return validation; };
+                if (radio_cr28f01.Checked != true && radio_cr28f02.Checked != true) { error_text = "Please  Select Any other complication "; return validation; };
+                if (radio_cr28fx01.Checked != true && radio_cr28fx02.Checked != true) { error_text = "Please Select Specify Others"; return validation; }
+                else
+                {
+                    validation = true;
+                }
+            }
+          
+
+            return validation;
         }
     }
 }

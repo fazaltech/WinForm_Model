@@ -20,7 +20,6 @@ E:\WinForm_Model\WinForm_Model\bin\Debug\System.Data.SQLite.dll
 E:\WinForm_Model\WinForm_Model\bin\Debug\System.Data.SQLite.EF6.dll
 E:\WinForm_Model\WinForm_Model\bin\Debug\System.Data.SQLite.Linq.dll
 E:\WinForm_Model\WinForm_Model\bin\Debug\System.Data.SQLite.xml
-E:\WinForm_Model\WinForm_Model\obj\Debug\WinForm_Model.csprojAssemblyReference.cache
 F:\C#\Fazal\WinForm_Model\bin\Debug\WinForm_Model.exe.config
 F:\C#\Fazal\WinForm_Model\bin\Debug\WinForm_Model.exe
 F:\C#\Fazal\WinForm_Model\bin\Debug\WinForm_Model.pdb

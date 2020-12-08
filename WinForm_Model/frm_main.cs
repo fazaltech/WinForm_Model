@@ -22,31 +22,19 @@ namespace WinForm_Model
         public frm_main()
         {
             InitializeComponent();
-            // get_data();
+            controls_text();
             District_DropDown();
-            Village_DropDown();
-            UCDropDown();
+           
 
         }
         private win_mvc_conn db = new win_mvc_conn();
+        string_variable list = new string_variable();
 
 
-        public void Insert()
-        {
-
-            //tbluser users = new tbluser();
-            //users.user_id = Convert.ToInt32(this.txt_usr_id.Text);
-            //users.user_name= txt_usr_name.Text;
-            //users.fullname = txt_full_name.Text;
-            //users.email_id = txt_email.Text;
-            //bool result = SaveUserDetails(users);  
-            ////ShowStatus(result, "Save");
-
-        }
 
         private void button_insert_Click(object sender, EventArgs e)
         {
-            Insert();
+           
         }
         public bool SaveUserDetails(tbluser user_add) // calling SaveStudentMethod for insert a new record  
         {
@@ -69,79 +57,18 @@ namespace WinForm_Model
         {
 
         }
-       
-        //public void get_data()
-        //{
 
-           
-        //    var get_key = new post_data()
-        //    {
-        //        table = "villages"
-        //    };
-        //    var test = JsonConvert.SerializeObject(get_key);
+
+        public void controls_text()
+        {
+            radio_cr02a.Text = list.cr02a;
+            radio_cr02b.Text = list.cr02b;
+            radio_cr02c.Text = list.cr02c;
+        }
 
 
 
-        //    HttpWebRequest webRequest;
-
-        //    string requestParams = test.ToString();
-
-        //    webRequest = (HttpWebRequest)WebRequest.Create("http://f38158/casi_gm/api/getdata.php");
-
-        //    webRequest.Method = "POST";
-        //    webRequest.ContentType = "application/json";
-
-        //    byte[] byteArray = Encoding.UTF8.GetBytes(requestParams);
-        //    webRequest.ContentLength = byteArray.Length;
-        //    Stream requestStream = webRequest.GetRequestStream();
-
-        //    requestStream.Write(byteArray, 0, byteArray.Length);
-
-
-        //    // Get the response.
-        //    WebResponse response = webRequest.GetResponse();
-
-        //    Stream responseStream = response.GetResponseStream();
-
-        //    StreamReader rdr = new StreamReader(responseStream, Encoding.UTF8);
-        //    string Json = rdr.ReadToEnd(); // response from server
-        //    var obj = JsonConvert.DeserializeObject<List<data_villages>>(Json);
-
-
-
-
-        //    DataBase cn = new DataBase();
-
-        //    SQLiteDataAdapter da = null;
-        //    DataSet ds = null;
-
-        //    da = new SQLiteDataAdapter("delete from villages", cn.cn);
-        //    ds = new DataSet();
-        //    da.Fill(ds);
-
-
-        //    for (int a = 0; a <= obj.Count - 1; a++)
-        //    {
-
-        //        string qry = "insert into villages(village_code, village, district_code, district, uc_code, uc,country,country_code,cluster_no) values('" + obj[a].village_code + "', '" + obj[a].village + "', '" + obj[a].district_code + "', '" + obj[a].district + "', '" + obj[a].uc_code + "', '" + obj[a].uc + "', '" + obj[a].country + "', '" + obj[a].country_code + "', '" + obj[a].cluster_no + "')";
-
-        //        da = new SQLiteDataAdapter(qry, cn.cn);
-
-        //        ds = new DataSet();
-        //        da.Fill(ds);
-
-        //    }
-
-
-
-
-        //}
-
-
-
-
-
-        private void District_DropDown()
+            private void District_DropDown()
         {
             combo_cr01.DisplayMember = "Select";
             
@@ -149,25 +76,21 @@ namespace WinForm_Model
             {
                 DataBase cn = new DataBase();
 
-                SQLiteDataAdapter da = new SQLiteDataAdapter("select * from villages where country_code=2 group by district_code", cn.cn);
+                SQLiteDataAdapter da = new SQLiteDataAdapter("select * from villages where country_code=2 group by district", cn.cn);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
-                da.Fill(ds);
+               // da.Fill(ds);
 
                 combo_cr01.DataSource = ds.Tables[0];
                 combo_cr01.DisplayMember = "district";
+                
                 combo_cr01.ValueMember = "district_code";
                 var dt = ds.Tables[0];
 
        
 
 
-                //for (i = 0; i <= dt.Rows.Count; i++)
-                //{
-                //    combo_cr01.Items.Insert(0, "select member");
-                //    combo_cr01.SelectedIndex = 0;
-                //    combo_cr01.Items.Add(dt.Rows[i][1]);
-                //}
+              
             }
 
             catch (Exception ex)
@@ -179,52 +102,53 @@ namespace WinForm_Model
 
         private void Village_DropDown()
         {
-            combo_cr05.DisplayMember = "Select";
+            //string getvalue = combo_cr04.
+           string getvalue = combo_cr04.SelectedValue.ToString();
+            
+         
+                try
+                {
+                    DataBase cn = new DataBase();
 
-            try
-            {
-                DataBase cn = new DataBase();
+                    SQLiteDataAdapter da = new SQLiteDataAdapter("select * from villages  where uc_code ='" + getvalue + "' group by village", cn.cn);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+            
 
-                SQLiteDataAdapter da = new SQLiteDataAdapter("select * from villages ", cn.cn);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-                da.Fill(ds);
-
-                combo_cr05.DataSource = ds.Tables[0];
-                combo_cr05.DisplayMember = "village";
-                combo_cr05.ValueMember = "villlage_code";
-                var dt = ds.Tables[0];
+                    combo_cr05.DataSource = ds.Tables[0];
+                    combo_cr05.DisplayMember = "village";
+                    combo_cr05.ValueMember = "villlage_code";
+                    var dt = ds.Tables[0];
 
 
 
 
-                //for (i = 0; i <= dt.Rows.Count; i++)
-                //{
-                //    combo_cr01.Items.Insert(0, "select member");
-                //    combo_cr01.SelectedIndex = 0;
-                //    combo_cr01.Items.Add(dt.Rows[i][1]);
-                //}
-            }
+                    //for (i = 0; i <= dt.Rows.Count; i++)
+                    //{
+                    //    combo_cr01.Items.Insert(0, "select member");
+                    //    combo_cr01.SelectedIndex = 0;
+                    //    combo_cr01.Items.Add(dt.Rows[i][1]);
+                    //}
+                }
 
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            
         }
 
         private void UCDropDown()
         {
-            string dis = combo_cr01.ValueMember.ToString();
+            string dis = combo_cr01.SelectedValue.ToString();
             try
             {
                 DataBase cn = new DataBase();
 
-                SQLiteDataAdapter da = new SQLiteDataAdapter("select * from villages ", cn.cn);
+                SQLiteDataAdapter da = new SQLiteDataAdapter("select * from villages  where district_code ='" + dis + "' group by uc", cn.cn);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
-                da.Fill(ds);
-
+               
                 combo_cr04.DataSource = ds.Tables[0];
                 combo_cr04.DisplayMember = "uc";
                 combo_cr04.ValueMember = "uc_code";
@@ -234,7 +158,6 @@ namespace WinForm_Model
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
 
         private void frm_main_Load(object sender, EventArgs e)
@@ -254,7 +177,10 @@ namespace WinForm_Model
 
         private void combo_cr01_SelectedIndexChanged(object sender, EventArgs e)
         {
-            combo_cr04.Enabled = true;
+
+
+            combo_cr05.DataSource = null;
+            combo_cr05.Items.Clear();
             UCDropDown();
         }
 
@@ -291,7 +217,7 @@ namespace WinForm_Model
 
         private void combo_cr04_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            Village_DropDown();
         }
 
         private void combo_cr05_SelectedIndexChanged(object sender, EventArgs e)
@@ -302,6 +228,33 @@ namespace WinForm_Model
         private void text_cr07_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void combo_cr01_Leave(object sender, EventArgs e)
+        {
+         
+
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DataBaseVariable.frm_main1 = this;
+            this.Hide();
+
+            Form_gm obj_frmgm = new Form_gm();
+            obj_frmgm.Show();
+        }
+
+        private void combo_cr01_Enter(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void combo_cr04_Leave(object sender, EventArgs e)
+        {
+     
         }
     }
 }
