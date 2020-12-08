@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data.SQLite;
 using System.Diagnostics;
 using System.IO;
+using WinForm_Model.Model;
 using static WinForm_Model.frmLogin;
 
 namespace WinForm_Model
@@ -61,40 +62,42 @@ namespace WinForm_Model
             "DROP TABLE IF EXISTS zstandards";
 
 
-       // public static String SQL_INSERT_USERS = INSERT INTO SyncInformation(timestamp, last_sync_value, last_retrieved_change_file, status) values('
+        //public static String SQL_INSERT_USERS = INSERT INTO SyncInformation(timestamp, last_sync_value, last_retrieved_change_file, status) values('
 
 
         private static SqliteConnection con;
         private static String strCon;
         private static string connectionString;
 
-        public SQLiteDatabase() {
+        public SQLiteDatabase()
+        {
 
-            if (!Directory.Exists(DATABASE_PATH)) {
+            if (!Directory.Exists(DATABASE_PATH))
+            {
                 Directory.CreateDirectory(DATABASE_PATH);
             }
-           
-                //SqliteConnection.CreateFile(DATABASE_NAME);
 
-                String strCon = "Data Source=" + DATABASE_NAME;
-                Boolean dbExsits = File.Exists(DATABASE_NAME);
+            //SqliteConnection.CreateFile(DATABASE_NAME);
 
-                connectionString = new SqliteConnectionStringBuilder(strCon)
-                {
-                    Mode = SqliteOpenMode.ReadWriteCreate,
-                   Password = DATABASE_PASSWORD
-                }.ToString();
-                con = new SqliteConnection(connectionString);
+            String strCon = "Data Source=" + DATABASE_NAME;
+            Boolean dbExsits = File.Exists(DATABASE_NAME);
+
+            connectionString = new SqliteConnectionStringBuilder(strCon)
+            {
+                Mode = SqliteOpenMode.ReadWriteCreate,
+                Password = DATABASE_PASSWORD
+            }.ToString();
+            con = new SqliteConnection(connectionString);
 
             if (!dbExsits)
             {
                 CreateTables();
             }
-                //SQLiteCommand cmd = new SQLiteCommand(sql, con);
-                //cmd.ExecuteNonQuery();
-                //con.Close();
+            //SQLiteCommand cmd = new SQLiteCommand(sql, con);
+            //cmd.ExecuteNonQuery();
+            //con.Close();
 
-            
+
 
         }
 
@@ -159,10 +162,12 @@ namespace WinForm_Model
         }
 
 
-        //public static void CreateTables() {
+        //public static void CreateTables()
+        //{
 
 
-        //    using (var cmd = new SQLiteCommand(con)) {
+        //    using (var cmd = new SQLiteCommand(con))
+        //    {
 
         //        cmd.CommandText = @SQL_CREATE_USERS;
         //        cmd.ExecuteNonQuery();
@@ -187,7 +192,7 @@ namespace WinForm_Model
             using (con)
             {
                 con.Open();
-               
+
 
                 using (var cmd = con.CreateCommand())
                 {
@@ -207,6 +212,77 @@ namespace WinForm_Model
             }
         }
 
+
+
+        public static void InsertForm(form_data forms_data)
+        {
+
+
+            using (con)
+            {
+                con.Open();
+
+
+                using (var cmd = con.CreateCommand())
+                {
+                    cmd.CommandText = "INSERT INTO users (username, password) VALUES(@username, @password)";
+
+                    //for (int i = 0; i < forms_data.Count; i++)
+                    //{
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("cr10", forms_data.cr10);
+                        cmd.Parameters.AddWithValue("cr11", forms_data.cr11);
+                        cmd.Parameters.AddWithValue("cr12", forms_data.cr12);
+                        cmd.Parameters.AddWithValue("cr16", forms_data.cr16);
+                        cmd.Parameters.AddWithValue("cr21", forms_data.cr21);
+                        cmd.Parameters.AddWithValue("cr22", forms_data.cr22);
+                        cmd.Parameters.AddWithValue("cr23", forms_data.cr23);
+                        cmd.Parameters.AddWithValue("cr17a", forms_data.cr17a);
+                        cmd.Parameters.AddWithValue("cr17b", forms_data.cr17b);
+                        cmd.Parameters.AddWithValue("cr18a", forms_data.cr18a);
+                        cmd.Parameters.AddWithValue("cr18b", forms_data.cr18b);
+                        cmd.Parameters.AddWithValue("cr19a", forms_data.cr19a);
+                        cmd.Parameters.AddWithValue("cr19b", forms_data.cr19b);
+                        cmd.Parameters.AddWithValue("cr20a", forms_data.cr20a);
+                        cmd.Parameters.AddWithValue("cr20b", forms_data.cr20b);
+                        cmd.Parameters.AddWithValue("cr24a", forms_data.cr24a);
+                        cmd.Parameters.AddWithValue("cr24b", forms_data.cr24b);
+                        cmd.Parameters.AddWithValue("cr24c", forms_data.cr24c);
+                        cmd.Parameters.AddWithValue("cr24d", forms_data.cr24d);
+                        cmd.Parameters.AddWithValue("cr24e", forms_data.cr24e);
+                        cmd.Parameters.AddWithValue("cr24f", forms_data.cr24f);
+                        cmd.Parameters.AddWithValue("cr25a", forms_data.cr25a);
+                        cmd.Parameters.AddWithValue("cr25b", forms_data.cr25b);
+                        cmd.Parameters.AddWithValue("cr25c", forms_data.cr25c);
+                        cmd.Parameters.AddWithValue("cr26a", forms_data.cr26a);
+                        cmd.Parameters.AddWithValue("cr26b", forms_data.cr26b);
+                        cmd.Parameters.AddWithValue("cr26c", forms_data.cr26c);
+                        cmd.Parameters.AddWithValue("cr26d", forms_data.cr26d);
+                        cmd.Parameters.AddWithValue("cr27a", forms_data.cr27a);
+                        cmd.Parameters.AddWithValue("cr27b", forms_data.cr27b);
+                        cmd.Parameters.AddWithValue("cr27c", forms_data.cr27c);
+                        cmd.Parameters.AddWithValue("cr28a01", forms_data.cr28a01);
+                        cmd.Parameters.AddWithValue("cr28a02", forms_data.cr28a02);
+                        cmd.Parameters.AddWithValue("cr28b01", forms_data.cr28b01);
+                        cmd.Parameters.AddWithValue("cr28b02", forms_data.cr28b02);
+                        cmd.Parameters.AddWithValue("cr28c01", forms_data.cr28c01);
+                        cmd.Parameters.AddWithValue("cr28c02", forms_data.cr28c02);
+                        cmd.Parameters.AddWithValue("cr28d01", forms_data.cr28d01);
+                        cmd.Parameters.AddWithValue("cr28d02", forms_data.cr28d02);
+                        cmd.Parameters.AddWithValue("cr28e01", forms_data.cr28e01);
+                        cmd.Parameters.AddWithValue("cr28e02", forms_data.cr28e02);
+                        cmd.Parameters.AddWithValue("cr28f01", forms_data.cr28f01);
+                        cmd.Parameters.AddWithValue("cr28f02", forms_data.cr28f02);
+                        cmd.Parameters.AddWithValue("cr28fx01", forms_data.cr28fx01);
+                        cmd.Parameters.AddWithValue("cr28fx02", forms_data.cr28fx02);
+
+                        cmd.ExecuteNonQuery();
+                    //}
+                }
+
+                con.Close();
+            }
+        }
         ////////////////////////////////////////////////////////////////////////////////////////////
         //                                   SQLite Database
         ////////////////////////////////////////////////////////////////////////////////////////////

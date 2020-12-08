@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_gm));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.text_cr21 = new System.Windows.Forms.MaskedTextBox();
             this.button_close = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.check_cr26c = new System.Windows.Forms.RadioButton();
@@ -103,7 +104,6 @@
             this.label29 = new System.Windows.Forms.Label();
             this.text_cr23 = new System.Windows.Forms.TextBox();
             this.text_cr22 = new System.Windows.Forms.TextBox();
-            this.text_cr21 = new System.Windows.Forms.TextBox();
             this.text_cr16 = new System.Windows.Forms.TextBox();
             this.text_cr15 = new System.Windows.Forms.TextBox();
             this.text_cr12 = new System.Windows.Forms.TextBox();
@@ -128,6 +128,7 @@
             this.label_error = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.text_cr28fx98 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox20.SuspendLayout();
@@ -166,6 +167,9 @@
             this.groupBox1.Controls.Add(this.label27);
             this.groupBox1.Controls.Add(this.label28);
             this.groupBox1.Controls.Add(this.label20);
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Controls.Add(this.text_cr28fx98);
+            this.groupBox1.Controls.Add(this.text_cr21);
             this.groupBox1.Controls.Add(this.button_close);
             this.groupBox1.Controls.Add(this.label_error);
             this.groupBox1.Controls.Add(this.groupBox5);
@@ -236,6 +240,15 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Screening Log For Children Under-5";
+            // 
+            // text_cr21
+            // 
+            this.text_cr21.Location = new System.Drawing.Point(402, 412);
+            this.text_cr21.Mask = "##.#";
+            this.text_cr21.Name = "text_cr21";
+            this.text_cr21.Size = new System.Drawing.Size(162, 29);
+            this.text_cr21.TabIndex = 114;
+            this.text_cr21.ValidatingType = typeof(int);
             // 
             // button_close
             // 
@@ -770,6 +783,8 @@
             this.radio_cr28fx02.TabStop = true;
             this.radio_cr28fx02.Text = "radioButton1";
             this.radio_cr28fx02.UseVisualStyleBackColor = false;
+            this.radio_cr28fx02.CheckedChanged += new System.EventHandler(this.radio_cr28fx02_CheckedChanged);
+            this.radio_cr28fx02.Click += new System.EventHandler(this.radio_cr28fx02_Click);
             // 
             // radio_cr28fx01
             // 
@@ -783,6 +798,8 @@
             this.radio_cr28fx01.TabStop = true;
             this.radio_cr28fx01.Text = "radioButton1";
             this.radio_cr28fx01.UseVisualStyleBackColor = false;
+            this.radio_cr28fx01.CheckedChanged += new System.EventHandler(this.radio_cr28fx01_CheckedChanged);
+            this.radio_cr28fx01.Click += new System.EventHandler(this.radio_cr28fx01_Click);
             // 
             // groupBox19
             // 
@@ -1079,6 +1096,7 @@
             this.text_cr10.Name = "text_cr10";
             this.text_cr10.Size = new System.Drawing.Size(172, 25);
             this.text_cr10.TabIndex = 0;
+            this.text_cr10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_cr10_KeyPress);
             // 
             // groupBox13
             // 
@@ -1282,10 +1300,22 @@
             // label_error
             // 
             this.label_error.AutoSize = true;
-            this.label_error.Location = new System.Drawing.Point(736, 78);
+            this.label_error.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold);
+            this.label_error.ForeColor = System.Drawing.Color.Red;
+            this.label_error.Location = new System.Drawing.Point(777, 139);
             this.label_error.Name = "label_error";
-            this.label_error.Size = new System.Drawing.Size(0, 22);
-            this.label_error.TabIndex = 104;
+            this.label_error.Size = new System.Drawing.Size(0, 24);
+            this.label_error.TabIndex = 0;
+            this.label_error.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label_error.Click += new System.EventHandler(this.label_error_Click);
+            // 
+            // text_cr28fx98
+            // 
+            this.text_cr28fx98.Location = new System.Drawing.Point(395, 955);
+            this.text_cr28fx98.Name = "text_cr28fx98";
+            this.text_cr28fx98.Size = new System.Drawing.Size(207, 29);
+            this.text_cr28fx98.TabIndex = 115;
+            this.text_cr28fx98.Visible = false;
             // 
             // button2
             // 
@@ -1310,12 +1340,62 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(991, 834);
-            this.Controls.Add(this.button2);
+            this.AutoScroll = true;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.label_error);
+            this.Controls.Add(this.label_cr28d);
+            this.Controls.Add(this.label_cr28fx);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
-            this.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.Controls.Add(this.label_cr28f);
+            this.Controls.Add(this.label_cr28c);
+            this.Controls.Add(this.label_cr28b);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label_cr28e);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label_cr28a);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox12);
+            this.Controls.Add(this.text_cr10);
+            this.Controls.Add(this.groupBox17);
+            this.Controls.Add(this.text_cr11);
+            this.Controls.Add(this.groupBox18);
+            this.Controls.Add(this.text_cr12);
+            this.Controls.Add(this.groupBox19);
+            this.Controls.Add(this.text_cr15);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.text_cr16);
+            this.Controls.Add(this.check_cr24f);
+            this.Controls.Add(this.check_cr24e);
+            this.Controls.Add(this.text_cr22);
+            this.Controls.Add(this.check_cr24d);
+            this.Controls.Add(this.text_cr23);
+            this.Controls.Add(this.check_cr25c);
+            this.Controls.Add(this.label29);
+            this.Controls.Add(this.check_cr25b);
+            this.Controls.Add(this.label28);
+            this.Controls.Add(this.check_cr24c);
+            this.Controls.Add(this.label27);
+            this.Controls.Add(this.check_cr25a);
+            this.Controls.Add(this.label26);
+            this.Controls.Add(this.check_cr24b);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.check_cr24a);
+            this.Controls.Add(this.label24);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.groupBox16);
+            this.Controls.Add(this.groupBox13);
+            this.Controls.Add(this.groupBox15);
+            this.Controls.Add(this.groupBox14);
+            this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_gm";
             this.Text = "Form_gm";
@@ -1410,7 +1490,6 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TextBox text_cr23;
         private System.Windows.Forms.TextBox text_cr22;
-        private System.Windows.Forms.TextBox text_cr21;
         private System.Windows.Forms.TextBox text_cr16;
         private System.Windows.Forms.TextBox text_cr15;
         private System.Windows.Forms.TextBox text_cr12;
@@ -1453,6 +1532,8 @@
         private System.Windows.Forms.RadioButton check_cr26b;
         private System.Windows.Forms.Button button_close;
         private System.Windows.Forms.Label label_error;
+        private System.Windows.Forms.MaskedTextBox text_cr21;
+        private System.Windows.Forms.TextBox text_cr28fx98;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
     }
