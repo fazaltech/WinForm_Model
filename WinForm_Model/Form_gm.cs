@@ -148,6 +148,10 @@ namespace WinForm_Model
         public string cr11 = "-1";
         public string cr12 = "-1";
 
+        public string cr13m = "-1";
+        public string cr13f = "-1";
+        
+        
         public string cr16 = "-1";
          
         public string cr21 = "-1";
@@ -227,7 +231,8 @@ namespace WinForm_Model
             //if (radio_cr17a.Checked){cr17a = "1";}
 
             //if (radio_cr17b.Checked) { cr17b = "1"; }
-
+            if (radio_cr13m.Checked) { cr13m = "1"; }
+            if (radio_cr13f.Checked) { cr13f = "1"; }
             if (radio_cr18a.Checked) { cr18a = "1"; }
             if (radio_cr18b.Checked) { cr18b = "1"; }
 
@@ -302,6 +307,8 @@ namespace WinForm_Model
             forms.cr10 = cr10;
             forms.cr11 = cr11;
             forms.cr12 = cr12;
+            forms.cr13m = cr13m;
+            forms.cr13f = cr13f;
             forms.cr16 = cr16;
             forms.cr21 = cr21;
             forms.cr22 = cr22;
@@ -421,15 +428,16 @@ namespace WinForm_Model
 
         private void btnContinue_Click(object sender, EventArgs e)
         {
-            if (validation())
-            {
-                MessageBox.Show("Validation Successfull", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-            else
-            {
-                label_error.Text = error_text;
-            }
+            Insert();
+            //if (validation())
+            //{
+            //    MessageBox.Show("Validation Successfull", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               
+            //}
+            //else
+            //{
+            //    label_error.Text = error_text;
+            //}
             //MessageBox.Show("Cr10", "TEST");
 
 
@@ -457,7 +465,7 @@ namespace WinForm_Model
         
         public bool validation()
         {
-            //bool validation = false;
+            bool validation = false;
             //if (validation == false)
             //{
 

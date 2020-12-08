@@ -50,6 +50,58 @@ namespace WinForm_Model
             + " cat TEXT"
             + " );";
 
+        public static String SQL_CREATE_FORMS = "CREATE TABLE forms ("
+            + "_ID INTEGER PRIMARY KEY AUTOINCREMENT,"
+           + " cr10 TEXT,"
+            + " cr11 TEXT,"
+            + " cr12 TEXT,"
+            + " cr13m TEXT,"
+            + " cr13f TEXT,"
+            + " cr16 TEXT,"
+            + " cr21 TEXT,"
+            + " cr22 TEXT,"
+            + " cr23 TEXT,"
+            + " cr17a TEXT,"
+            + " cr17b TEXT,"
+            + " cr18a TEXT,"
+            + " cr18b TEXT,"
+            + " cr19a TEXT,"
+            + " cr19b TEXT,"
+            + " cr20a TEXT,"
+            + " cr20b TEXT,"
+            + " cr24a TEXT,"
+            + " cr24b TEXT,"
+            + " cr24c TEXT,"
+            + " cr24d TEXT,"
+            + " cr24e TEXT,"
+            + " cr24f TEXT,"
+            + " cr25a TEXT,"
+            + " cr25b TEXT,"
+            + " cr25c TEXT,"
+            + " cr26a TEXT,"
+            + " cr26b TEXT,"
+            + " cr26c TEXT,"
+            + " cr26d TEXT,"
+            + " cr27a TEXT,"
+            + " cr27b TEXT,"
+            + " cr27c TEXT,"
+            + " cr28a01 TEXT,"
+            + " cr28a02 TEXT,"
+            + " cr28b01 TEXT,"
+            + " cr28b02 TEXT,"
+            + " cr28c01 TEXT,"
+            + " cr28c02 TEXT,"
+            + " cr28d01 TEXT,"
+            + " cr28d02 TEXT,"
+            + " cr28e01 TEXT,"
+            + " cr28e02 TEXT,"
+            + " cr28f01 TEXT,"
+            + " cr28f02 TEXT,"
+            + " cr28fx01 TEXT,"
+            + " cr28fx02 TEXT,"
+            + " cr28fx98 TEXT"
+            + " );";
+
 
 
         private static String SQL_DELETE_USERS =
@@ -151,11 +203,11 @@ namespace WinForm_Model
                 cmd.CommandText = @SQL_CREATE_VILLAGES;
                 cmd.ExecuteNonQuery();
 
-                cmd.CommandText = @SQL_DELETE_ZSTANDARDS;
+                cmd.CommandText = @SQL_CREATE_ZSTANDARDS;
                 cmd.ExecuteNonQuery();
 
-                //cmd.CommandText = @SQL_DELETE_FORMS;
-                //cmd.ExecuteNonQuery();
+                cmd.CommandText = @SQL_CREATE_FORMS;
+                cmd.ExecuteNonQuery();
 
             };
             con.Close();
@@ -225,7 +277,7 @@ namespace WinForm_Model
 
                 using (var cmd = con.CreateCommand())
                 {
-                    cmd.CommandText = "INSERT INTO users (username, password) VALUES(@username, @password)";
+                    cmd.CommandText = "INSERT INTO forms (cr10,cr11,cr12,cr13m,cr13f,cr16,cr21,cr22,cr23,cr17a,cr17b,cr18a,cr18b,cr19a,cr19b,cr20a,cr20b,cr24a,cr24b,cr24c,cr24d,cr24e,cr24f,cr25a,cr25b,cr25c,cr26a,cr26b,cr26c,cr26d,cr27a,cr27b,cr27c,cr28a01,cr28a02,cr28b01,cr28b02,cr28c01,cr28c02,cr28d01,cr28d02,cr28e01,cr28e02,cr28f01,cr28f02,cr28fx01,cr28fx02,cr28fx98) VALUES(@cr10,@cr11,@cr12,@cr13m,@cr13f,@cr16,@cr21,@cr22,@cr23,@cr17a,@cr17b,@cr18a,@cr18b,@cr19a,@cr19b,@cr20a,@cr20b,@cr24a,@cr24b,@cr24c,@cr24d,@cr24e,@cr24f,@cr25a,@cr25b,@cr25c,@cr26a,@cr26b,@cr26c,@cr26d,@cr27a,@cr27b,@cr27c,@cr28a01,@cr28a02,@cr28b01,@cr28b02,@cr28c01,@cr28c02,@cr28d01,@cr28d02,@cr28e01,@cr28e02,@cr28f01,@cr28f02,@cr28fx01,@cr28fx02,@cr28fx98)";
 
                     //for (int i = 0; i < forms_data.Count; i++)
                     //{
@@ -233,6 +285,8 @@ namespace WinForm_Model
                         cmd.Parameters.AddWithValue("cr10", forms_data.cr10);
                         cmd.Parameters.AddWithValue("cr11", forms_data.cr11);
                         cmd.Parameters.AddWithValue("cr12", forms_data.cr12);
+                        cmd.Parameters.AddWithValue("cr13m", forms_data.cr12);
+                        cmd.Parameters.AddWithValue("cr13f", forms_data.cr12);
                         cmd.Parameters.AddWithValue("cr16", forms_data.cr16);
                         cmd.Parameters.AddWithValue("cr21", forms_data.cr21);
                         cmd.Parameters.AddWithValue("cr22", forms_data.cr22);
@@ -275,8 +329,9 @@ namespace WinForm_Model
                         cmd.Parameters.AddWithValue("cr28f02", forms_data.cr28f02);
                         cmd.Parameters.AddWithValue("cr28fx01", forms_data.cr28fx01);
                         cmd.Parameters.AddWithValue("cr28fx02", forms_data.cr28fx02);
+                        cmd.Parameters.AddWithValue("cr28fx98", forms_data.cr28fx98);
 
-                        cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery();
                     //}
                 }
 
