@@ -56,58 +56,67 @@ namespace WinForm_Model
         //private win_mvc_conn db = new win_mvc_conn();
         private void button_login_Click(object sender, EventArgs e)
         {
-            if (text_user_name.Text == "test1234" && text_password.Text == "test1234")
-            {
-                DataBaseVariable.frmlogin1 = this;
-                this.Hide();
-                frm_main obj_main = new frm_main();
-                obj_main.Show();
-
-            }
-            else if (text_user_name.Text != null && text_password.Text != null)
+            if (ValidateForm())
             {
 
-
-
-                DataBase cn = new DataBase();
-
-                SQLiteDataAdapter da = new SQLiteDataAdapter("select * from users where username='" + text_user_name.Text + "' and password='" + text_password.Text + "'", cn.cn);
-                //SQLiteDataAdapter da = new SQLiteDataAdapter("select * from users ", cn.cn);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-
-                if (ds != null)
+                if (text_user_name.Text == "test1234" && text_password.Text == "test1234")
                 {
-                    if (ds.Tables.Count > 0)
+                    DataBaseVariable.frmlogin1 = this;
+                    this.Hide();
+                    frm_main obj_main = new frm_main();
+                    obj_main.Show();
+
+                }
+                else if (text_user_name.Text != null && text_password.Text != null)
+                {
+
+
+
+                    DataBase cn = new DataBase();
+
+                    SQLiteDataAdapter da = new SQLiteDataAdapter("select * from users where username='" + text_user_name.Text + "' and password='" + text_password.Text + "'", cn.cn);
+                    //SQLiteDataAdapter da = new SQLiteDataAdapter("select * from users ", cn.cn);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+
+                    if (ds != null)
                     {
-                        if ((text_user_name.Text == "test1234" && text_password.Text == "test1234") 
-                            || (text_user_name.Text == "dmu@aku" && text_password.Text == "aku?dmu") 
-                            || ds.Tables[0].Rows.Count > 0 )
+                        if (ds.Tables.Count > 0)
                         {
+                            if ((text_user_name.Text == "test1234" && text_password.Text == "test1234")
+                                || (text_user_name.Text == "dmu@aku" && text_password.Text == "aku?dmu")
+                                || ds.Tables[0].Rows.Count > 0)
+                            {
 
-                            //DataBaseVariable.UserID = ds.Tables[0].Rows[0][0].ToString();
-                           // DataBaseVariable.UserName = ds.Tables[0].Rows[0][1].ToString();
-                           // DataBaseVariable.GetPassword = ds.Tables[0].Rows[0]["password"].ToString();
-                           // DataBaseVariable.GetDBName = "win_gb";
-
-
-                            //if (ds.Tables[0].Rows[0]["IsUserOrAdmin"].ToString() == "True")
-                            //{
-                            //    DataBaseVariable.IsAdmin = true;
-                            //}
-                            //else
-                            //{
-                            //    DataBaseVariable.IsAdmin = false;
-                            //}
+                                //DataBaseVariable.UserID = ds.Tables[0].Rows[0][0].ToString();
+                                // DataBaseVariable.UserName = ds.Tables[0].Rows[0][1].ToString();
+                                // DataBaseVariable.GetPassword = ds.Tables[0].Rows[0]["password"].ToString();
+                                // DataBaseVariable.GetDBName = "win_gb";
 
 
-                            //TODO: 
+                                //if (ds.Tables[0].Rows[0]["IsUserOrAdmin"].ToString() == "True")
+                                //{
+                                //    DataBaseVariable.IsAdmin = true;
+                                //}
+                                //else
+                                //{
+                                //    DataBaseVariable.IsAdmin = false;
+                                //}
 
-                            DataBaseVariable.frmlogin1 = this;
-                            this.Hide();
 
-                            frm_main obj_main = new frm_main();
-                            obj_main.Show();
+                                //TODO: 
+
+                                DataBaseVariable.frmlogin1 = this;
+                                this.Hide();
+
+                                frm_main obj_main = new frm_main();
+                                obj_main.Show();
+                            }
+                            else
+                            {
+                                MessageBox.Show("User does not exist ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                text_user_name.Focus();
+                            }
                         }
                         else
                         {
@@ -121,14 +130,34 @@ namespace WinForm_Model
                         text_user_name.Focus();
                     }
                 }
-                else
-                {
-                    MessageBox.Show("User does not exist ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    text_user_name.Focus();
-                }
+            } 
+        }
+
+        private bool ValidateForm()
+        {
+            if (string.IsNullOrEmpty(text_user_name.Text))
+            {
+                errorProvider1.SetError(text_user_name, "Please select enter Khandan Number.");
+                return false;
+            }
+            else
+            {
+                errorProvider1.Clear();
             }
 
+
+            if (string.IsNullOrEmpty(text_password.Text))
+            {
+                errorProvider1.SetError(text_password, "Please select enter Khandan Number.");
+                return false;
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+            return true;
         }
+
         //public void login( )
         //{
 
@@ -383,6 +412,11 @@ namespace WinForm_Model
             //string displayableVersion = $"{version}";
            
             this.text_verNo.Text = version.Major + "."+Math.Round((version.Build/365.24))+"."+Math.Round((double)(version.Revision/60)); 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

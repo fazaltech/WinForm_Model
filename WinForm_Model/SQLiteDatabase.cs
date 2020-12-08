@@ -14,8 +14,8 @@ namespace WinForm_Model
         // This class implements all the functions required to create table, insert data, update data in the SQLite Database.
         //
 
-        public static String DATABASE_PATH = "dbEnc";
-        public static String DATABASE_NAME = DATABASE_PATH+"\\casi_gm_encrypted.db3";
+        public static String DATABASE_PATH = "enc";
+        public static String DATABASE_NAME = DATABASE_PATH+"\\casi_gm.db3";
         public static int DATABASE_VERSION = 3;
         public static string DATABASE_PASSWORD = "Aku@ku123";
         
