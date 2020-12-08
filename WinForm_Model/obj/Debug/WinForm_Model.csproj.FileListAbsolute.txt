@@ -35,7 +35,6 @@ F:\C#\Fazal\WinForm_Model\bin\Debug\Newtonsoft.Json.xml
 F:\C#\Fazal\WinForm_Model\bin\Debug\System.Data.SQLite.xml
 F:\C#\Fazal\WinForm_Model\obj\Debug\WinForm_Model.frm_main.resources
 F:\C#\Fazal\WinForm_Model\obj\Debug\WinForm_Model.Form_gm.resources
-F:\C#\Fazal\WinForm_Model\obj\Debug\WinForm_Model.frmLogin.resources
 F:\C#\Fazal\WinForm_Model\obj\Debug\WinForm_Model.Properties.Resources.resources
 F:\C#\Fazal\WinForm_Model\obj\Debug\WinForm_Model.csproj.GenerateResource.cache
 F:\C#\Fazal\WinForm_Model\obj\Debug\WinForm_Model.csproj.CoreCompileInputs.cache
@@ -157,3 +156,4 @@ F:\C#\Fazal\WinForm_Model\bin\Debug\SQLitePCLRaw.batteries_v2.dll
 F:\C#\Fazal\WinForm_Model\bin\Debug\SQLitePCLRaw.nativelibrary.dll
 F:\C#\Fazal\WinForm_Model\bin\Debug\SQLitePCLRaw.provider.dynamic_cdecl.dll
 F:\C#\Fazal\WinForm_Model\obj\Debug\WinForm_Model.csprojAssemblyReference.cache
+F:\C#\Fazal\WinForm_Model\obj\Debug\WinForm_Model.frmLogin.resources
