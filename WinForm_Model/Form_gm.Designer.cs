@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.text_cr21 = new System.Windows.Forms.MaskedTextBox();
             this.button_close = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.check_cr26c = new System.Windows.Forms.RadioButton();
@@ -102,7 +103,6 @@
             this.label29 = new System.Windows.Forms.Label();
             this.text_cr23 = new System.Windows.Forms.TextBox();
             this.text_cr22 = new System.Windows.Forms.TextBox();
-            this.text_cr21 = new System.Windows.Forms.TextBox();
             this.text_cr16 = new System.Windows.Forms.TextBox();
             this.text_cr15 = new System.Windows.Forms.TextBox();
             this.text_cr12 = new System.Windows.Forms.TextBox();
@@ -125,6 +125,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label_error = new System.Windows.Forms.Label();
+            this.text_cr28fx98 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox20.SuspendLayout();
@@ -157,6 +158,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Controls.Add(this.text_cr28fx98);
+            this.groupBox1.Controls.Add(this.text_cr21);
             this.groupBox1.Controls.Add(this.button_close);
             this.groupBox1.Controls.Add(this.groupBox5);
             this.groupBox1.Controls.Add(this.btnContinue);
@@ -179,6 +182,15 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Screening Log For Children Under-5";
+            // 
+            // text_cr21
+            // 
+            this.text_cr21.Location = new System.Drawing.Point(402, 412);
+            this.text_cr21.Mask = "##.#";
+            this.text_cr21.Name = "text_cr21";
+            this.text_cr21.Size = new System.Drawing.Size(162, 29);
+            this.text_cr21.TabIndex = 114;
+            this.text_cr21.ValidatingType = typeof(int);
             // 
             // button_close
             // 
@@ -713,6 +725,8 @@
             this.radio_cr28fx02.TabStop = true;
             this.radio_cr28fx02.Text = "radioButton1";
             this.radio_cr28fx02.UseVisualStyleBackColor = false;
+            this.radio_cr28fx02.CheckedChanged += new System.EventHandler(this.radio_cr28fx02_CheckedChanged);
+            this.radio_cr28fx02.Click += new System.EventHandler(this.radio_cr28fx02_Click);
             // 
             // radio_cr28fx01
             // 
@@ -726,6 +740,8 @@
             this.radio_cr28fx01.TabStop = true;
             this.radio_cr28fx01.Text = "radioButton1";
             this.radio_cr28fx01.UseVisualStyleBackColor = false;
+            this.radio_cr28fx01.CheckedChanged += new System.EventHandler(this.radio_cr28fx01_CheckedChanged);
+            this.radio_cr28fx01.Click += new System.EventHandler(this.radio_cr28fx01_Click);
             // 
             // groupBox19
             // 
@@ -976,14 +992,6 @@
             this.text_cr22.Size = new System.Drawing.Size(187, 25);
             this.text_cr22.TabIndex = 12;
             // 
-            // text_cr21
-            // 
-            this.text_cr21.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.text_cr21.Location = new System.Drawing.Point(419, 486);
-            this.text_cr21.Name = "text_cr21";
-            this.text_cr21.Size = new System.Drawing.Size(187, 25);
-            this.text_cr21.TabIndex = 11;
-            // 
             // text_cr16
             // 
             this.text_cr16.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -1023,6 +1031,7 @@
             this.text_cr10.Name = "text_cr10";
             this.text_cr10.Size = new System.Drawing.Size(172, 25);
             this.text_cr10.TabIndex = 0;
+            this.text_cr10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_cr10_KeyPress);
             // 
             // groupBox13
             // 
@@ -1233,13 +1242,21 @@
             this.label_error.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label_error.Click += new System.EventHandler(this.label_error_Click);
             // 
+            // text_cr28fx98
+            // 
+            this.text_cr28fx98.Location = new System.Drawing.Point(395, 955);
+            this.text_cr28fx98.Name = "text_cr28fx98";
+            this.text_cr28fx98.Size = new System.Drawing.Size(207, 29);
+            this.text_cr28fx98.TabIndex = 115;
+            this.text_cr28fx98.Visible = false;
+            // 
             // Form_gm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(991, 729);
+            this.ClientSize = new System.Drawing.Size(1008, 729);
             this.Controls.Add(this.label_error);
             this.Controls.Add(this.label_cr28d);
             this.Controls.Add(this.label_cr28fx);
@@ -1269,7 +1286,6 @@
             this.Controls.Add(this.label20);
             this.Controls.Add(this.text_cr16);
             this.Controls.Add(this.check_cr24f);
-            this.Controls.Add(this.text_cr21);
             this.Controls.Add(this.check_cr24e);
             this.Controls.Add(this.text_cr22);
             this.Controls.Add(this.check_cr24d);
@@ -1387,7 +1403,6 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TextBox text_cr23;
         private System.Windows.Forms.TextBox text_cr22;
-        private System.Windows.Forms.TextBox text_cr21;
         private System.Windows.Forms.TextBox text_cr16;
         private System.Windows.Forms.TextBox text_cr15;
         private System.Windows.Forms.TextBox text_cr12;
@@ -1430,5 +1445,7 @@
         private System.Windows.Forms.RadioButton check_cr26b;
         private System.Windows.Forms.Button button_close;
         private System.Windows.Forms.Label label_error;
+        private System.Windows.Forms.MaskedTextBox text_cr21;
+        private System.Windows.Forms.TextBox text_cr28fx98;
     }
 }
