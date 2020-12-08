@@ -124,6 +124,7 @@
             this.groupBox20 = new System.Windows.Forms.GroupBox();
             this.radio_cr13m = new System.Windows.Forms.RadioButton();
             this.radio_cr13f = new System.Windows.Forms.RadioButton();
+            this.label_error = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -200,7 +201,7 @@
             this.groupBox5.Margin = new System.Windows.Forms.Padding(0);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBox5.Size = new System.Drawing.Size(217, 89);
+            this.groupBox5.Size = new System.Drawing.Size(306, 89);
             this.groupBox5.TabIndex = 23;
             this.groupBox5.TabStop = false;
             // 
@@ -1188,7 +1189,7 @@
             this.groupBox20.Margin = new System.Windows.Forms.Padding(0);
             this.groupBox20.Name = "groupBox20";
             this.groupBox20.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBox20.Size = new System.Drawing.Size(235, 34);
+            this.groupBox20.Size = new System.Drawing.Size(235, 49);
             this.groupBox20.TabIndex = 4;
             this.groupBox20.TabStop = false;
             // 
@@ -1197,7 +1198,7 @@
             this.radio_cr13m.AutoSize = true;
             this.radio_cr13m.BackColor = System.Drawing.Color.White;
             this.radio_cr13m.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.radio_cr13m.Location = new System.Drawing.Point(10, 10);
+            this.radio_cr13m.Location = new System.Drawing.Point(10, 13);
             this.radio_cr13m.Margin = new System.Windows.Forms.Padding(0);
             this.radio_cr13m.Name = "radio_cr13m";
             this.radio_cr13m.Size = new System.Drawing.Size(100, 21);
@@ -1211,7 +1212,7 @@
             this.radio_cr13f.AutoSize = true;
             this.radio_cr13f.BackColor = System.Drawing.Color.White;
             this.radio_cr13f.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.radio_cr13f.Location = new System.Drawing.Point(110, 10);
+            this.radio_cr13f.Location = new System.Drawing.Point(110, 13);
             this.radio_cr13f.Margin = new System.Windows.Forms.Padding(0);
             this.radio_cr13f.Name = "radio_cr13f";
             this.radio_cr13f.Size = new System.Drawing.Size(100, 21);
@@ -1220,6 +1221,14 @@
             this.radio_cr13f.Text = "radioButton1";
             this.radio_cr13f.UseVisualStyleBackColor = false;
             // 
+            // label_error
+            // 
+            this.label_error.AutoSize = true;
+            this.label_error.Location = new System.Drawing.Point(763, 155);
+            this.label_error.Name = "label_error";
+            this.label_error.Size = new System.Drawing.Size(0, 13);
+            this.label_error.TabIndex = 104;
+            // 
             // Form_gm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1227,6 +1236,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(991, 729);
+            this.Controls.Add(this.label_error);
             this.Controls.Add(this.label_cr28d);
             this.Controls.Add(this.label_cr28fx);
             this.Controls.Add(this.label1);
@@ -1415,5 +1425,6 @@
         private System.Windows.Forms.RadioButton check_cr26d;
         private System.Windows.Forms.RadioButton check_cr26b;
         private System.Windows.Forms.Button button_close;
+        private System.Windows.Forms.Label label_error;
     }
 }
