@@ -347,6 +347,33 @@ namespace WinForm_Model
                 }
             }
         }
+
+
+        public List<form_data> GetAllForms()
+        {
+            List<form_data> fdList = new List<form_data>();
+
+
+            con.Open();
+            using (var cmd = con.CreateCommand())
+            {
+                cmd.CommandText = @"SELECT * from forms";
+                SqliteDataReader r = cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    form_data fd = new form_data();
+                    fd.id = Int32.Parse(r["id"].ToString());
+                    fd.cr10 = r["cr10"].ToString();
+
+
+                    // 
+                    fdList.Add(fd);
+                }
+            }
+            con.Close();
+
+            return fdList;
+        }
         ////////////////////////////////////////////////////////////////////////////////////////////
         //                                   SQLite Database
         ////////////////////////////////////////////////////////////////////////////////////////////
