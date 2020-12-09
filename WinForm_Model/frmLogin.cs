@@ -88,7 +88,26 @@ namespace WinForm_Model
                                 || ds.Tables[0].Rows.Count > 0)
                             {
 
+<<<<<<< HEAD
                                
+=======
+                                //DataBaseVariable.UserID = ds.Tables[0].Rows[0][0].ToString();
+                                // DataBaseVariable.UserName = ds.Tables[0].Rows[0][1].ToString();
+                                // DataBaseVariable.GetPassword = ds.Tables[0].Rows[0]["password"].ToString();
+                                // DataBaseVariable.GetDBName = "win_gb";
+
+
+                                //if (ds.Tables[0].Rows[0]["IsUserOrAdmin"].ToString() == "True")
+                                //{
+                                //    DataBaseVariable.IsAdmin = true;
+                                //}
+                                //else
+                                //{
+                                //    DataBaseVariable.IsAdmin = false;
+                                //}
+
+
+>>>>>>> af5ea399f117ee1815ffd9b6e7d1fbc56327f4d6
                                 //TODO: 
 
                                 DataBaseVariable.frmlogin1 = this;
@@ -116,7 +135,43 @@ namespace WinForm_Model
                     }
                 }
             } 
+<<<<<<< HEAD
         }
+=======
+        }
+
+        private bool ValidateForm()
+        {
+            if (string.IsNullOrEmpty(text_user_name.Text))
+            {
+                errorProvider1.SetError(text_user_name, "Please select enter Khandan Number.");
+                return false;
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+
+
+            if (string.IsNullOrEmpty(text_password.Text))
+            {
+                errorProvider1.SetError(text_password, "Please select enter Khandan Number.");
+                return false;
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+            return true;
+        }
+
+        //public void login( )
+        //{
+
+        //    tbluser users = new tbluser();
+        //    users.user_name = text_user_name.Text;
+        //    users.password = text_password.Text;
+>>>>>>> af5ea399f117ee1815ffd9b6e7d1fbc56327f4d6
 
         private bool ValidateForm()
         {
@@ -360,6 +415,7 @@ namespace WinForm_Model
         {
             Application.Exit();
         }
+<<<<<<< HEAD
 
         public void insert_data()
         {
@@ -388,5 +444,7 @@ namespace WinForm_Model
             }
 
         }
+=======
+>>>>>>> af5ea399f117ee1815ffd9b6e7d1fbc56327f4d6
     }
 }

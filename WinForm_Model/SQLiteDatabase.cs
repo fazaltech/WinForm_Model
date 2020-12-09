@@ -14,8 +14,13 @@ namespace WinForm_Model
         // This class implements all the functions required to create table, insert data, update data in the SQLite Database.
         //
 
+<<<<<<< HEAD
         public static String DATABASE_PATH = "dbEnc";
         public static String DATABASE_NAME = DATABASE_PATH + "\\casi_gm_encrypted.db3";
+=======
+        public static String DATABASE_PATH = "enc";
+        public static String DATABASE_NAME = DATABASE_PATH+"\\casi_gm.db3";
+>>>>>>> af5ea399f117ee1815ffd9b6e7d1fbc56327f4d6
         public static int DATABASE_VERSION = 3;
         public static string DATABASE_PASSWORD = "Aku@ku123";
 
@@ -57,8 +62,11 @@ namespace WinForm_Model
             + " cr12 TEXT,"
             + " cr13m TEXT,"
             + " cr13f TEXT,"
+<<<<<<< HEAD
             + " cr14 TEXT,"
              + " cr15 TEXT,"
+=======
+>>>>>>> af5ea399f117ee1815ffd9b6e7d1fbc56327f4d6
             + " cr16 TEXT,"
             + " cr21 TEXT,"
             + " cr22 TEXT,"
@@ -279,6 +287,7 @@ namespace WinForm_Model
 
                 using (var cmd = con.CreateCommand())
                 {
+<<<<<<< HEAD
                     cmd.CommandText = "INSERT INTO forms (cr10,cr11,cr12,cr13m,cr13f,cr14,cr15,cr16,cr21,cr22,cr23,cr17a,cr17b,cr18a,cr18b,cr19a,cr19b,cr20a,cr20b,cr24a,cr24b,cr24c,cr24d,cr24e,cr24f,cr25a,cr25b,cr25c,cr26a,cr26b,cr26c,cr26d,cr27a,cr27b,cr27c,cr28a01,cr28a02,cr28b01,cr28b02,cr28c01,cr28c02,cr28d01,cr28d02,cr28e01,cr28e02,cr28f01,cr28f02,cr28fx01,cr28fx02,cr28fx98) VALUES(@cr10,@cr11,@cr12,@cr13m,@cr13f,@cr16,@cr21,@cr22,@cr23,@cr17a,@cr17b,@cr18a,@cr18b,@cr19a,@cr19b,@cr20a,@cr20b,@cr24a,@cr24b,@cr24c,@cr24d,@cr24e,@cr24f,@cr25a,@cr25b,@cr25c,@cr26a,@cr26b,@cr26c,@cr26d,@cr27a,@cr27b,@cr27c,@cr28a01,@cr28a02,@cr28b01,@cr28b02,@cr28c01,@cr28c02,@cr28d01,@cr28d02,@cr28e01,@cr28e02,@cr28f01,@cr28f02,@cr28fx01,@cr28fx02,@cr28fx98)";
 
                     //for (int i = 0; i < forms_data.Count; i++)
@@ -334,6 +343,61 @@ namespace WinForm_Model
                     cmd.Parameters.AddWithValue("cr28fx01", forms_data.cr28fx01);
                     cmd.Parameters.AddWithValue("cr28fx02", forms_data.cr28fx02);
                     cmd.Parameters.AddWithValue("cr28fx98", forms_data.cr28fx98);
+=======
+                    cmd.CommandText = "INSERT INTO forms (cr10,cr11,cr12,cr13m,cr13f,cr16,cr21,cr22,cr23,cr17a,cr17b,cr18a,cr18b,cr19a,cr19b,cr20a,cr20b,cr24a,cr24b,cr24c,cr24d,cr24e,cr24f,cr25a,cr25b,cr25c,cr26a,cr26b,cr26c,cr26d,cr27a,cr27b,cr27c,cr28a01,cr28a02,cr28b01,cr28b02,cr28c01,cr28c02,cr28d01,cr28d02,cr28e01,cr28e02,cr28f01,cr28f02,cr28fx01,cr28fx02,cr28fx98) VALUES(@cr10,@cr11,@cr12,@cr13m,@cr13f,@cr16,@cr21,@cr22,@cr23,@cr17a,@cr17b,@cr18a,@cr18b,@cr19a,@cr19b,@cr20a,@cr20b,@cr24a,@cr24b,@cr24c,@cr24d,@cr24e,@cr24f,@cr25a,@cr25b,@cr25c,@cr26a,@cr26b,@cr26c,@cr26d,@cr27a,@cr27b,@cr27c,@cr28a01,@cr28a02,@cr28b01,@cr28b02,@cr28c01,@cr28c02,@cr28d01,@cr28d02,@cr28e01,@cr28e02,@cr28f01,@cr28f02,@cr28fx01,@cr28fx02,@cr28fx98)";
+
+                    //for (int i = 0; i < forms_data.Count; i++)
+                    //{
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("cr10", forms_data.cr10);
+                        cmd.Parameters.AddWithValue("cr11", forms_data.cr11);
+                        cmd.Parameters.AddWithValue("cr12", forms_data.cr12);
+                        cmd.Parameters.AddWithValue("cr13m", forms_data.cr12);
+                        cmd.Parameters.AddWithValue("cr13f", forms_data.cr12);
+                        cmd.Parameters.AddWithValue("cr16", forms_data.cr16);
+                        cmd.Parameters.AddWithValue("cr21", forms_data.cr21);
+                        cmd.Parameters.AddWithValue("cr22", forms_data.cr22);
+                        cmd.Parameters.AddWithValue("cr23", forms_data.cr23);
+                        cmd.Parameters.AddWithValue("cr17a", forms_data.cr17a);
+                        cmd.Parameters.AddWithValue("cr17b", forms_data.cr17b);
+                        cmd.Parameters.AddWithValue("cr18a", forms_data.cr18a);
+                        cmd.Parameters.AddWithValue("cr18b", forms_data.cr18b);
+                        cmd.Parameters.AddWithValue("cr19a", forms_data.cr19a);
+                        cmd.Parameters.AddWithValue("cr19b", forms_data.cr19b);
+                        cmd.Parameters.AddWithValue("cr20a", forms_data.cr20a);
+                        cmd.Parameters.AddWithValue("cr20b", forms_data.cr20b);
+                        cmd.Parameters.AddWithValue("cr24a", forms_data.cr24a);
+                        cmd.Parameters.AddWithValue("cr24b", forms_data.cr24b);
+                        cmd.Parameters.AddWithValue("cr24c", forms_data.cr24c);
+                        cmd.Parameters.AddWithValue("cr24d", forms_data.cr24d);
+                        cmd.Parameters.AddWithValue("cr24e", forms_data.cr24e);
+                        cmd.Parameters.AddWithValue("cr24f", forms_data.cr24f);
+                        cmd.Parameters.AddWithValue("cr25a", forms_data.cr25a);
+                        cmd.Parameters.AddWithValue("cr25b", forms_data.cr25b);
+                        cmd.Parameters.AddWithValue("cr25c", forms_data.cr25c);
+                        cmd.Parameters.AddWithValue("cr26a", forms_data.cr26a);
+                        cmd.Parameters.AddWithValue("cr26b", forms_data.cr26b);
+                        cmd.Parameters.AddWithValue("cr26c", forms_data.cr26c);
+                        cmd.Parameters.AddWithValue("cr26d", forms_data.cr26d);
+                        cmd.Parameters.AddWithValue("cr27a", forms_data.cr27a);
+                        cmd.Parameters.AddWithValue("cr27b", forms_data.cr27b);
+                        cmd.Parameters.AddWithValue("cr27c", forms_data.cr27c);
+                        cmd.Parameters.AddWithValue("cr28a01", forms_data.cr28a01);
+                        cmd.Parameters.AddWithValue("cr28a02", forms_data.cr28a02);
+                        cmd.Parameters.AddWithValue("cr28b01", forms_data.cr28b01);
+                        cmd.Parameters.AddWithValue("cr28b02", forms_data.cr28b02);
+                        cmd.Parameters.AddWithValue("cr28c01", forms_data.cr28c01);
+                        cmd.Parameters.AddWithValue("cr28c02", forms_data.cr28c02);
+                        cmd.Parameters.AddWithValue("cr28d01", forms_data.cr28d01);
+                        cmd.Parameters.AddWithValue("cr28d02", forms_data.cr28d02);
+                        cmd.Parameters.AddWithValue("cr28e01", forms_data.cr28e01);
+                        cmd.Parameters.AddWithValue("cr28e02", forms_data.cr28e02);
+                        cmd.Parameters.AddWithValue("cr28f01", forms_data.cr28f01);
+                        cmd.Parameters.AddWithValue("cr28f02", forms_data.cr28f02);
+                        cmd.Parameters.AddWithValue("cr28fx01", forms_data.cr28fx01);
+                        cmd.Parameters.AddWithValue("cr28fx02", forms_data.cr28fx02);
+                        cmd.Parameters.AddWithValue("cr28fx98", forms_data.cr28fx98);
+>>>>>>> af5ea399f117ee1815ffd9b6e7d1fbc56327f4d6
 
                     cmd.ExecuteNonQuery();
                     //}
