@@ -43,21 +43,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.text_cr09 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radio_cr02c = new System.Windows.Forms.RadioButton();
-            this.radio_cr02b = new System.Windows.Forms.RadioButton();
-            this.radio_cr02a = new System.Windows.Forms.RadioButton();
             this.text_cr03 = new System.Windows.Forms.TextBox();
             this.label_cr08 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.grp_cr02 = new System.Windows.Forms.GroupBox();
+            this.radio_cr02a = new System.Windows.Forms.RadioButton();
+            this.radio_cr02c = new System.Windows.Forms.RadioButton();
+            this.radio_cr02b = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.grp_cr02 = new System.Windows.Forms.GroupBox();
             this.errMessages = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.grp_cr02.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label_cr01
@@ -128,7 +128,6 @@
             this.combo_cr01.SelectedIndexChanged += new System.EventHandler(this.combo_cr01_SelectedIndexChanged);
             this.combo_cr01.DisplayMemberChanged += new System.EventHandler(this.combo_cr01_DisplayMemberChanged);
             this.combo_cr01.SelectedValueChanged += new System.EventHandler(this.combo_cr01_SelectedValueChanged);
-           
             this.combo_cr01.Leave += new System.EventHandler(this.combo_cr01_Leave);
             // 
             // combo_cr04
@@ -141,7 +140,6 @@
             this.combo_cr04.Size = new System.Drawing.Size(151, 25);
             this.combo_cr04.TabIndex = 6;
             this.combo_cr04.SelectedIndexChanged += new System.EventHandler(this.combo_cr04_SelectedIndexChanged);
-           
             // 
             // combo_cr05
             // 
@@ -220,43 +218,6 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Section A";
-          
-            // 
-            // radio_cr02c
-            // 
-            this.radio_cr02c.AutoSize = true;
-            this.radio_cr02c.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.radio_cr02c.Location = new System.Drawing.Point(6, 54);
-            this.radio_cr02c.Name = "radio_cr02c";
-            this.radio_cr02c.Size = new System.Drawing.Size(100, 21);
-            this.radio_cr02c.TabIndex = 4;
-            this.radio_cr02c.TabStop = true;
-            this.radio_cr02c.Text = "radioButton1";
-            this.radio_cr02c.UseVisualStyleBackColor = true;
-            // 
-            // radio_cr02b
-            // 
-            this.radio_cr02b.AutoSize = true;
-            this.radio_cr02b.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.radio_cr02b.Location = new System.Drawing.Point(6, 34);
-            this.radio_cr02b.Name = "radio_cr02b";
-            this.radio_cr02b.Size = new System.Drawing.Size(100, 21);
-            this.radio_cr02b.TabIndex = 3;
-            this.radio_cr02b.TabStop = true;
-            this.radio_cr02b.Text = "radioButton1";
-            this.radio_cr02b.UseVisualStyleBackColor = true;
-            // 
-            // radio_cr02a
-            // 
-            this.radio_cr02a.AutoSize = true;
-            this.radio_cr02a.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.radio_cr02a.Location = new System.Drawing.Point(6, 12);
-            this.radio_cr02a.Name = "radio_cr02a";
-            this.radio_cr02a.Size = new System.Drawing.Size(100, 21);
-            this.radio_cr02a.TabIndex = 2;
-            this.radio_cr02a.TabStop = true;
-            this.radio_cr02a.Text = "radioButton1";
-            this.radio_cr02a.UseVisualStyleBackColor = true;
             // 
             // text_cr03
             // 
@@ -286,6 +247,53 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(151, 25);
             this.dateTimePicker1.TabIndex = 9;
             // 
+            // grp_cr02
+            // 
+            this.grp_cr02.Controls.Add(this.radio_cr02a);
+            this.grp_cr02.Controls.Add(this.radio_cr02c);
+            this.grp_cr02.Controls.Add(this.radio_cr02b);
+            this.grp_cr02.Location = new System.Drawing.Point(29, 196);
+            this.grp_cr02.Name = "grp_cr02";
+            this.grp_cr02.Size = new System.Drawing.Size(151, 79);
+            this.grp_cr02.TabIndex = 11;
+            this.grp_cr02.TabStop = false;
+            // 
+            // radio_cr02a
+            // 
+            this.radio_cr02a.AutoSize = true;
+            this.radio_cr02a.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.radio_cr02a.Location = new System.Drawing.Point(6, 12);
+            this.radio_cr02a.Name = "radio_cr02a";
+            this.radio_cr02a.Size = new System.Drawing.Size(100, 21);
+            this.radio_cr02a.TabIndex = 2;
+            this.radio_cr02a.TabStop = true;
+            this.radio_cr02a.Text = "radioButton1";
+            this.radio_cr02a.UseVisualStyleBackColor = true;
+            // 
+            // radio_cr02c
+            // 
+            this.radio_cr02c.AutoSize = true;
+            this.radio_cr02c.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.radio_cr02c.Location = new System.Drawing.Point(6, 54);
+            this.radio_cr02c.Name = "radio_cr02c";
+            this.radio_cr02c.Size = new System.Drawing.Size(100, 21);
+            this.radio_cr02c.TabIndex = 4;
+            this.radio_cr02c.TabStop = true;
+            this.radio_cr02c.Text = "radioButton1";
+            this.radio_cr02c.UseVisualStyleBackColor = true;
+            // 
+            // radio_cr02b
+            // 
+            this.radio_cr02b.AutoSize = true;
+            this.radio_cr02b.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.radio_cr02b.Location = new System.Drawing.Point(6, 34);
+            this.radio_cr02b.Name = "radio_cr02b";
+            this.radio_cr02b.Size = new System.Drawing.Size(100, 21);
+            this.radio_cr02b.TabIndex = 3;
+            this.radio_cr02b.TabStop = true;
+            this.radio_cr02b.Text = "radioButton1";
+            this.radio_cr02b.UseVisualStyleBackColor = true;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -313,17 +321,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // grp_cr02
-            // 
-            this.grp_cr02.Controls.Add(this.radio_cr02a);
-            this.grp_cr02.Controls.Add(this.radio_cr02c);
-            this.grp_cr02.Controls.Add(this.radio_cr02b);
-            this.grp_cr02.Location = new System.Drawing.Point(29, 196);
-            this.grp_cr02.Name = "grp_cr02";
-            this.grp_cr02.Size = new System.Drawing.Size(151, 79);
-            this.grp_cr02.TabIndex = 11;
-            this.grp_cr02.TabStop = false;
-            // 
             // errMessages
             // 
             this.errMessages.ForeColor = System.Drawing.Color.Red;
@@ -340,7 +337,7 @@
             this.button2.Size = new System.Drawing.Size(16, 16);
             this.button2.TabIndex = 13;
             this.button2.UseVisualStyleBackColor = true;
-           
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // frm_main
             // 
@@ -361,9 +358,9 @@
             this.Load += new System.EventHandler(this.frm_main_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.grp_cr02.ResumeLayout(false);
             this.grp_cr02.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

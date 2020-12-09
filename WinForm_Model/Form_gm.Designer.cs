@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.text_cr28fx98 = new System.Windows.Forms.TextBox();
             this.text_cr21 = new System.Windows.Forms.MaskedTextBox();
             this.button_close = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -125,7 +127,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label_error = new System.Windows.Forms.Label();
-            this.text_cr28fx98 = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox20.SuspendLayout();
@@ -140,6 +142,7 @@
             this.groupBox14.SuspendLayout();
             this.groupBox15.SuspendLayout();
             this.groupBox16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -182,6 +185,14 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Screening Log For Children Under-5";
+            // 
+            // text_cr28fx98
+            // 
+            this.text_cr28fx98.Location = new System.Drawing.Point(395, 955);
+            this.text_cr28fx98.Name = "text_cr28fx98";
+            this.text_cr28fx98.Size = new System.Drawing.Size(207, 29);
+            this.text_cr28fx98.TabIndex = 115;
+            this.text_cr28fx98.Visible = false;
             // 
             // text_cr21
             // 
@@ -1242,13 +1253,9 @@
             this.label_error.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label_error.Click += new System.EventHandler(this.label_error_Click);
             // 
-            // text_cr28fx98
+            // errorProvider1
             // 
-            this.text_cr28fx98.Location = new System.Drawing.Point(395, 955);
-            this.text_cr28fx98.Name = "text_cr28fx98";
-            this.text_cr28fx98.Size = new System.Drawing.Size(207, 29);
-            this.text_cr28fx98.TabIndex = 115;
-            this.text_cr28fx98.Visible = false;
+            this.errorProvider1.ContainerControl = this;
             // 
             // Form_gm
             // 
@@ -1342,6 +1349,7 @@
             this.groupBox15.PerformLayout();
             this.groupBox16.ResumeLayout(false);
             this.groupBox16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1447,5 +1455,6 @@
         private System.Windows.Forms.Label label_error;
         private System.Windows.Forms.MaskedTextBox text_cr21;
         private System.Windows.Forms.TextBox text_cr28fx98;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

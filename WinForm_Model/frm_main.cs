@@ -271,22 +271,13 @@ namespace WinForm_Model
         {
 
 
-
-
-          
+            if (ValidateForm())
+            {
                 DataBaseVariable.frm_main1 = this;
                 this.Hide();
 
-
-
-  
-                {
-                    DataBaseVariable.frm_main1 = this;
-                    this.Hide();
-
-                    Form_gm obj_frmgm = new Form_gm();
-                    obj_frmgm.Show();
-             
+                Form_gm obj_frmgm = new Form_gm();
+                obj_frmgm.Show();
             }
 
 
@@ -294,8 +285,84 @@ namespace WinForm_Model
 
 
 
-         
+        }
+        private bool ValidateForm()
+        {
+
+            if (combo_cr01.SelectedIndex < 1)
+            {
+                errorProvider1.SetError(combo_cr01, "Please select District.");
+                return false;
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+
+
+            if (combo_cr04.SelectedIndex < 1)
+            {
+                errorProvider1.SetError(combo_cr04, "Please select UC.");
+                return false;
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+
+            if (combo_cr05.SelectedIndex < 1)
+            {
+                errorProvider1.SetError(combo_cr05, "Please select Village.");
+                return false;
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+
+            if (!(radio_cr02a.Checked || radio_cr02b.Checked || radio_cr02c.Checked))
+            {
+                errorProvider1.SetError(grp_cr02, "Please select Place of Screening.");
+                return false;
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+
+            if (string.IsNullOrEmpty(text_cr09.Text))
+            {
+                errorProvider1.SetError(text_cr09, "Please select enter Khandan Number.");
+                return false;
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+            if (string.IsNullOrEmpty(text_cr03.Text))
+            {
+                errorProvider1.SetError(text_cr03, "Please select enter Facility.");
+                return false;
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+            if (string.IsNullOrEmpty(text_cr07.Text))
+            {
+                errorProvider1.SetError(text_cr07, "Please select enter Assessor Name.");
+                return false;
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+            return true;
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
-    } 
+} 

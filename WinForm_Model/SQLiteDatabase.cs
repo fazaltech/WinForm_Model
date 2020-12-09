@@ -267,7 +267,7 @@ namespace WinForm_Model
 
 
 
-        public static void InsertForm(form_data forms_data, Form form)
+        public static void InsertForm(form_data forms_data)
         {
 
 
