@@ -53,7 +53,7 @@ namespace WinForm_Model
 
 
         }
-        //private win_mvc_conn db = new win_mvc_conn();
+  
         private void button_login_Click(object sender, EventArgs e)
         {
             if (ValidateForm())
@@ -88,6 +88,9 @@ namespace WinForm_Model
                                 || ds.Tables[0].Rows.Count > 0)
                             {
 
+<<<<<<< HEAD
+                               
+=======
                                 //DataBaseVariable.UserID = ds.Tables[0].Rows[0][0].ToString();
                                 // DataBaseVariable.UserName = ds.Tables[0].Rows[0][1].ToString();
                                 // DataBaseVariable.GetPassword = ds.Tables[0].Rows[0]["password"].ToString();
@@ -104,6 +107,7 @@ namespace WinForm_Model
                                 //}
 
 
+>>>>>>> af5ea399f117ee1815ffd9b6e7d1fbc56327f4d6
                                 //TODO: 
 
                                 DataBaseVariable.frmlogin1 = this;
@@ -131,6 +135,9 @@ namespace WinForm_Model
                     }
                 }
             } 
+<<<<<<< HEAD
+        }
+=======
         }
 
         private bool ValidateForm()
@@ -164,46 +171,36 @@ namespace WinForm_Model
         //    tbluser users = new tbluser();
         //    users.user_name = text_user_name.Text;
         //    users.password = text_password.Text;
+>>>>>>> af5ea399f117ee1815ffd9b6e7d1fbc56327f4d6
 
-        //    if (IsValid(users.user_name, users.password))
-        //    {
-
-        //        Form1 obj_main = new Form1();
-        //        obj_main.Show();
-
-        //    }
-        //}
-
-        //public void grp()
-        //{
-        //    Label label = new Label();
-        //    label.Text = groupBox1.Text;
-        //    groupBox1.Text = "";
-        //    label.Left = groupBox1.Left + (groupBox1.Width - label.Width) / 2;
-        //    label.Top = groupBox1.Top + 2;
-        //    label.Parent = groupBox1.Parent;
-        //    label.BringToFront();
-        //}
+        private bool ValidateForm()
+        {
+            if (string.IsNullOrEmpty(text_user_name.Text))
+            {
+                errorProvider1.SetError(text_user_name, "Please select enter Khandan Number.");
+                return false;
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
 
 
-        //private bool IsValid(string name, string passwords)
-        //{
+            if (string.IsNullOrEmpty(text_password.Text))
+            {
+                errorProvider1.SetError(text_password, "Please select enter Khandan Number.");
+                return false;
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+            return true;
+        }
 
-        //    //bool IsValid = false;
+       
 
-
-        //    //var user = db.tblusers.FirstOrDefault(u => u.user_name == name);
-        //    //if (user != null)
-        //    //{
-        //    //    if (user.password == passwords)
-        //    //    {
-        //    //        IsValid = true;
-        //    //    }
-        //    //}
-
-        //    return IsValid;
-        //}
-
+       
         private void button_download_Click(object sender, EventArgs e)
         {
             //bool result = false;
@@ -418,5 +415,36 @@ namespace WinForm_Model
         {
             Application.Exit();
         }
+<<<<<<< HEAD
+
+        public void insert_data()
+        {
+            try
+            {
+                SQLiteDatabase cn = new SQLiteDatabase();
+
+                SQLiteDataAdapter da = new SQLiteDataAdapter("select * from forms  where district_code ='" + dis + "' group by uc", cn.cn);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+
+              
+
+                DataView newView =
+                new DataView(ds.Tables[0],       // source table
+                "",                             // filter
+                "uc_code",            // sort by column
+                DataViewRowState.CurrentRows);  // rows with state to display
+
+            
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+=======
+>>>>>>> af5ea399f117ee1815ffd9b6e7d1fbc56327f4d6
     }
 }

@@ -82,12 +82,21 @@ namespace WinForm_Model
                 DataSet ds = new DataSet();
                 da.Fill(ds);
                 // da.Fill(ds);
+<<<<<<< HEAD
 
                 emptyRow = ds.Tables[0].NewRow();
                 emptyRow["district"] = "";
                 emptyRow["district_code"] = "";
                 ds.Tables[0].Rows.Add(emptyRow);
 
+=======
+
+                emptyRow = ds.Tables[0].NewRow();
+                emptyRow["district"] = "";
+                emptyRow["district_code"] = "";
+                ds.Tables[0].Rows.Add(emptyRow);
+
+>>>>>>> af5ea399f117ee1815ffd9b6e7d1fbc56327f4d6
                 DataView newView =
                 new DataView(ds.Tables[0],       // source table
                 "",                             // filter
@@ -118,6 +127,8 @@ namespace WinForm_Model
             //string getvalue = combo_cr04.
             string getvalue = combo_cr04.SelectedValue.ToString();
 
+<<<<<<< HEAD
+=======
 
             try
             {
@@ -160,38 +171,67 @@ namespace WinForm_Model
             }
 
         }
+>>>>>>> af5ea399f117ee1815ffd9b6e7d1fbc56327f4d6
 
-        private void UCDropDown()
-        {
-            string dis = combo_cr01.SelectedValue.ToString();
             try
             {
                 DataBase cn = new DataBase();
 
-                SQLiteDataAdapter da = new SQLiteDataAdapter("select * from villages  where district_code ='" + dis + "' group by uc", cn.cn);
+                SQLiteDataAdapter da = new SQLiteDataAdapter("select * from villages  where uc_code ='" + getvalue + "' group by village", cn.cn);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
 
                 emptyRow = ds.Tables[0].NewRow();
+<<<<<<< HEAD
+                emptyRow["village"] = "";
+                emptyRow["district_code"] = "";
+=======
                 emptyRow["uc"] = "";
                 emptyRow["uc_code"] = "";
+>>>>>>> af5ea399f117ee1815ffd9b6e7d1fbc56327f4d6
                 ds.Tables[0].Rows.Add(emptyRow);
 
                 DataView newView =
                 new DataView(ds.Tables[0],       // source table
                 "",                             // filter
+<<<<<<< HEAD
+                "villlage_code",            // sort by column
+                DataViewRowState.CurrentRows);  // rows with state to display
+
+                combo_cr05.DataSource = newView;
+                combo_cr05.DisplayMember = "village";
+                combo_cr05.ValueMember = "villlage_code";
+                var dt = ds.Tables[0];
+
+
+
+
+                //for (i = 0; i <= dt.Rows.Count; i++)
+                //{
+                //    combo_cr01.Items.Insert(0, "select member");
+                //    combo_cr01.SelectedIndex = 0;
+                //    combo_cr01.Items.Add(dt.Rows[i][1]);
+                //}
+=======
                 "uc_code",            // sort by column
                 DataViewRowState.CurrentRows);  // rows with state to display
 
                 combo_cr04.DataSource = newView;
                 combo_cr04.DisplayMember = "uc";
                 combo_cr04.ValueMember = "uc_code";
+>>>>>>> af5ea399f117ee1815ffd9b6e7d1fbc56327f4d6
             }
 
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+
+        }
+
+        private void UCDropDown()
+        {
+           
         }
 
         private void frm_main_Load(object sender, EventArgs e)
@@ -276,12 +316,21 @@ namespace WinForm_Model
         {
           
 
+<<<<<<< HEAD
 
             if (ValidateForm())
             {
                 DataBaseVariable.frm_main1 = this;
                 this.Hide();
 
+=======
+
+            if (ValidateForm())
+            {
+                DataBaseVariable.frm_main1 = this;
+                this.Hide();
+
+>>>>>>> af5ea399f117ee1815ffd9b6e7d1fbc56327f4d6
                 Form_gm obj_frmgm = new Form_gm();
                 obj_frmgm.Show();
             }
