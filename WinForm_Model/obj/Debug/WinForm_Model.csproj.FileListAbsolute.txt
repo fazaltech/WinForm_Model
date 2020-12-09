@@ -9,9 +9,6 @@ F:\C#\Fazal\WinForm_Model\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 E:\WinForm_Model\WinForm_Model\bin\Debug\runtimes\win-x86\native\e_sqlcipher.dll
 E:\WinForm_Model\WinForm_Model\bin\Debug\runtimes\win-x64\native\e_sqlcipher.dll
 E:\WinForm_Model\WinForm_Model\bin\Debug\runtimes\win-arm\native\e_sqlcipher.dll
-E:\WinForm_Model\WinForm_Model\bin\Debug\WinForm_Model.exe.config
-E:\WinForm_Model\WinForm_Model\bin\Debug\WinForm_Model.exe
-E:\WinForm_Model\WinForm_Model\bin\Debug\WinForm_Model.pdb
 E:\WinForm_Model\WinForm_Model\bin\Debug\Microsoft.Win32.Primitives.dll
 E:\WinForm_Model\WinForm_Model\bin\Debug\netstandard.dll
 E:\WinForm_Model\WinForm_Model\bin\Debug\System.AppContext.dll
@@ -132,8 +129,6 @@ E:\WinForm_Model\WinForm_Model\bin\Debug\System.Data.SQLite.xml
 E:\WinForm_Model\WinForm_Model\bin\Debug\System.Memory.xml
 E:\WinForm_Model\WinForm_Model\bin\Debug\System.Numerics.Vectors.xml
 E:\WinForm_Model\WinForm_Model\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-E:\WinForm_Model\WinForm_Model\obj\Debug\WinForm_Model.csprojAssemblyReference.cache
-E:\WinForm_Model\WinForm_Model\obj\Debug\WinForm_Model.exe.config
 E:\WinForm_Model\WinForm_Model\obj\Debug\WinForm_Model.frm_main.resources
 E:\WinForm_Model\WinForm_Model\obj\Debug\WinForm_Model.Form_gm.resources
 E:\WinForm_Model\WinForm_Model\obj\Debug\WinForm_Model.frmLogin.resources
@@ -141,8 +136,6 @@ E:\WinForm_Model\WinForm_Model\obj\Debug\WinForm_Model.Properties.Resources.reso
 E:\WinForm_Model\WinForm_Model\obj\Debug\WinForm_Model.csproj.GenerateResource.cache
 E:\WinForm_Model\WinForm_Model\obj\Debug\WinForm_Model.csproj.CoreCompileInputs.cache
 E:\WinForm_Model\WinForm_Model\obj\Debug\WinForm_Model.csproj.CopyComplete
-E:\WinForm_Model\WinForm_Model\obj\Debug\WinForm_Model.exe
-E:\WinForm_Model\WinForm_Model\obj\Debug\WinForm_Model.pdb
 F:\C#\Fazal\WinForm_Model\obj\Debug\WinForm_Model.exe.config
 F:\C#\Fazal\WinForm_Model\obj\Debug\WinForm_Model.frm_main.resources
 F:\C#\Fazal\WinForm_Model\obj\Debug\WinForm_Model.Form_gm.resources
@@ -272,3 +265,9 @@ F:\C#\Fazal\WinForm_Model\bin\Debug\System.Memory.xml
 F:\C#\Fazal\WinForm_Model\obj\Debug\WinForm_Model.csproj.CopyComplete
 F:\C#\Fazal\WinForm_Model\obj\Debug\WinForm_Model.exe
 F:\C#\Fazal\WinForm_Model\obj\Debug\WinForm_Model.pdb
+E:\WinForm_Model\WinForm_Model\bin\Debug\WinForm_Model.exe.config
+E:\WinForm_Model\WinForm_Model\bin\Debug\WinForm_Model.exe
+E:\WinForm_Model\WinForm_Model\bin\Debug\WinForm_Model.pdb
+E:\WinForm_Model\WinForm_Model\obj\Debug\WinForm_Model.exe.config
+E:\WinForm_Model\WinForm_Model\obj\Debug\WinForm_Model.exe
+E:\WinForm_Model\WinForm_Model\obj\Debug\WinForm_Model.pdb

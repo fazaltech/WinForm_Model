@@ -17,8 +17,7 @@ namespace WinForm_Model
         static Form frm;
         static Form frmlogin;
         static Form frm_main2;
-        static Form frm_gm2;
-
+        static Form frm_gm;
         static bool IsHold;
         static string usrID;
         static string usrNme;
@@ -1042,19 +1041,19 @@ namespace WinForm_Model
                 frm_main2 = value;
             }
         }
-
         public static Form frm_gm1
         {
             get
             {
-                return frm_main2;
+                return frm_gm;
             }
 
             set
             {
-                frm_main2 = value;
+                frm_gm = value;
             }
         }
+
 
     }
 }

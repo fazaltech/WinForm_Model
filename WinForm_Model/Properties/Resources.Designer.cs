@@ -59,15 +59,5 @@ namespace WinForm_Model.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap GB_gateway {
-            get {
-                object obj = ResourceManager.GetObject("GB_gateway", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }
