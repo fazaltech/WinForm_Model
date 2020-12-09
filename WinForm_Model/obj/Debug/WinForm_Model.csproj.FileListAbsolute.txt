@@ -271,3 +271,4 @@ E:\WinForm_Model\WinForm_Model\obj\Debug\WinForm_Model.csproj.CoreCompileInputs.
 E:\WinForm_Model\WinForm_Model\obj\Debug\WinForm_Model.csproj.CopyComplete
 E:\WinForm_Model\WinForm_Model\obj\Debug\WinForm_Model.exe
 E:\WinForm_Model\WinForm_Model\obj\Debug\WinForm_Model.pdb
+E:\WinForm_Model\WinForm_Model\obj\Debug\WinForm_Model.csprojAssemblyReference.cache
