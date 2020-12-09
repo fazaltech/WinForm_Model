@@ -128,7 +128,7 @@
             this.combo_cr01.SelectedIndexChanged += new System.EventHandler(this.combo_cr01_SelectedIndexChanged);
             this.combo_cr01.DisplayMemberChanged += new System.EventHandler(this.combo_cr01_DisplayMemberChanged);
             this.combo_cr01.SelectedValueChanged += new System.EventHandler(this.combo_cr01_SelectedValueChanged);
-            this.combo_cr01.Enter += new System.EventHandler(this.combo_cr01_Enter);
+           
             this.combo_cr01.Leave += new System.EventHandler(this.combo_cr01_Leave);
             // 
             // combo_cr04
@@ -141,7 +141,7 @@
             this.combo_cr04.Size = new System.Drawing.Size(151, 25);
             this.combo_cr04.TabIndex = 6;
             this.combo_cr04.SelectedIndexChanged += new System.EventHandler(this.combo_cr04_SelectedIndexChanged);
-            this.combo_cr04.Leave += new System.EventHandler(this.combo_cr04_Leave);
+           
             // 
             // combo_cr05
             // 
@@ -220,7 +220,7 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Section A";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+          
             // 
             // radio_cr02c
             // 
@@ -340,7 +340,7 @@
             this.button2.Size = new System.Drawing.Size(16, 16);
             this.button2.TabIndex = 13;
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+           
             // 
             // frm_main
             // 

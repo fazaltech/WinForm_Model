@@ -15,11 +15,10 @@ namespace WinForm_Model.Model
             public string cr12 { get; set; }
             public string cr13m { get; set; }
             public string cr13f { get; set; }
-<<<<<<< HEAD
+
             public string cr14 { get; set; }
             public string cr15 { get; set; }
-=======
->>>>>>> af5ea399f117ee1815ffd9b6e7d1fbc56327f4d6
+
             public string cr16 { get; set; }
             public string cr21 { get; set; }
             public string cr22 { get; set; }
