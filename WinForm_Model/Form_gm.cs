@@ -429,22 +429,17 @@ namespace WinForm_Model
         private void btnContinue_Click(object sender, EventArgs e)
         {
             Insert();
-            //if (validation())
-            //{
-            //    MessageBox.Show("Validation Successfull", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-               
-            //}
-            //else
-            //{
-            //    label_error.Text = error_text;
-            //}
-            //MessageBox.Show("Cr10", "TEST");
+            if (validation())
+            {
 
+                Insert();
+                DataBaseVariable.frm_gm1 = this;
+                this.Hide();
 
-            //if (ValidateChildren(ValidationConstraints.Enabled))
-            //{
-            //    MessageBox.Show(text_cr10.Text, "Demo App - Message!");
-            //}
+                Form_gm obj_frmgm = new Form_gm();
+                obj_frmgm.Show();
+            }
+          
         }
 
         private void label1_Click_1(object sender, EventArgs e)
