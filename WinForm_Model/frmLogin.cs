@@ -272,6 +272,28 @@ namespace WinForm_Model
             datas = db.GetAllForms();
             var data_obj = JsonConvert.SerializeObject(datas);
 
+            var form_var = "{\"table\":\"forms_VAL\"}"; 
+            HttpWebRequest webRequest;
+
+            string requestParams = form_var.ToString();
+
+            webRequest = (HttpWebRequest)WebRequest.Create("http://f38158/casi_gm/api/getdata.php");
+
+            webRequest.Method = "GET";
+            webRequest.ContentType = "application/json";
+
+            byte[] byteArray = Encoding.UTF8.GetBytes(requestParams);
+            webRequest.ContentLength = byteArray.Length;
+            Stream requestStream = webRequest.GetRequestStream();
+            requestStream.Write(byteArray, 0, byteArray.Length);
+
+
+            byte[] DataArray = Encoding.UTF8.GetBytes(data_obj);
+            webRequest.ContentLength = byteArray.Length;
+            Stream requestData = webRequest.GetRequestStream();
+            requestData.Write(byteArray, 0, byteArray.Length);
+
+
 
 
         }
