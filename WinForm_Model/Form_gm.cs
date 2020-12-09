@@ -428,7 +428,7 @@ namespace WinForm_Model
 
         private void btnContinue_Click(object sender, EventArgs e)
         {
-            Insert();
+          
             if (validation())
             {
 
