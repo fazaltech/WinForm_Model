@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.Sqlite;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
@@ -362,14 +363,63 @@ namespace WinForm_Model
                 while (r.Read())
                 {
                     form_data fd = new form_data();
-                    fd.id = Int32.Parse(r["id"].ToString());
+                    fd.id = Int32.Parse(r["_ID"].ToString());
                     fd.cr10 = r["cr10"].ToString();
+                    fd.cr11 = r["cr11"].ToString();
+                    fd.cr12 = r["cr12"].ToString();
+                    fd.cr13m = r["cr12"].ToString();
+                    fd.cr13f = r["cr12"].ToString();
+                    fd.cr16 = r["cr16"].ToString();
+                    fd.cr21 = r["cr21"].ToString();
+                    fd.cr22 = r["cr22"].ToString();
+                    fd.cr23 = r["cr23"].ToString();
+                    fd.cr17a = r["cr17a"].ToString();
+                    fd.cr17b = r["cr17b"].ToString();
+                    fd.cr18a = r["cr18a"].ToString();
+                    fd.cr18b = r["cr18b"].ToString();
+                    fd.cr19a = r["cr19a"].ToString();
+                    fd.cr19b = r["cr19b"].ToString();
+                    fd.cr20a = r["cr20a"].ToString();
+                    fd.cr20b = r["cr20b"].ToString();
+                    fd.cr24a = r["cr24a"].ToString();
+                    fd.cr24b = r["cr24b"].ToString();
+                    fd.cr24c = r["cr24c"].ToString();
+                    fd.cr24d = r["cr24d"].ToString();
+                    fd.cr24e = r["cr24e"].ToString();
+                    fd.cr24f = r["cr24f"].ToString();
+                    fd.cr25a = r["cr25a"].ToString();
+                    fd.cr25b = r["cr25b"].ToString();
+                    fd.cr25c = r["cr25c"].ToString();
+                    fd.cr26a = r["cr26a"].ToString();
+                    fd.cr26b = r["cr26b"].ToString();
+                    fd.cr26c = r["cr26c"].ToString();
+                    fd.cr26d = r["cr26d"].ToString();
+                    fd.cr27a = r["cr27a"].ToString();
+                    fd.cr27b = r["cr27b"].ToString();
+                    fd.cr27c = r["cr27c"].ToString();
+                    fd.cr28a01 = r["cr28a01"].ToString();
+                    fd.cr28a02 = r["cr28a02"].ToString();
+                    fd.cr28b01 = r["cr28b01"].ToString();
+                    fd.cr28b02 = r["cr28b02"].ToString();
+                    fd.cr28c01 = r["cr28c01"].ToString();
+                    fd.cr28c02 = r["cr28c02"].ToString();
+                    fd.cr28d01 = r["cr28d01"].ToString();
+                    fd.cr28d02 = r["cr28d02"].ToString();
+                    fd.cr28e01 = r["cr28e01"].ToString();
+                    fd.cr28e02 = r["cr28e02"].ToString();
+                    fd.cr28f01 = r["cr28f01"].ToString();
+                    fd.cr28f02 = r["cr28f02"].ToString();
+                    fd.cr28fx01 = r["cr28fx01"].ToString();
+                    fd.cr28fx02 = r["cr28fx02"].ToString();
+                    fd.cr28fx98 = r["cr28fx98"].ToString();
 
 
                     // 
                     fdList.Add(fd);
+
                 }
             }
+          
             con.Close();
 
             return fdList;

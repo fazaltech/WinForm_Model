@@ -264,6 +264,17 @@ namespace WinForm_Model
             
            
         }
+
+
+        public void upload_forms()
+        {
+            List<form_data> datas = new List<form_data>();
+            datas = db.GetAllForms();
+            var data_obj = JsonConvert.SerializeObject(datas);
+
+
+
+        }
         public void get_users()
         {
             System.Diagnostics.Debug.WriteLine("user start");
@@ -338,6 +349,11 @@ namespace WinForm_Model
             //string displayableVersion = $"{version}";
            
             this.text_verNo.Text = version.Major + "."+Math.Round((version.Build/365.24))+"."+Math.Round((double)(version.Revision/60)); 
+        }
+
+        private void button_upload_Click(object sender, EventArgs e)
+        {
+            upload_forms();
         }
     }
 }
