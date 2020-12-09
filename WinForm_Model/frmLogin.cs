@@ -53,61 +53,55 @@ namespace WinForm_Model
 
 
         }
-        //private win_mvc_conn db = new win_mvc_conn();
+  
         private void button_login_Click(object sender, EventArgs e)
         {
-            if (text_user_name.Text == "test1234" && text_password.Text == "test1234")
-            {
-                DataBaseVariable.frmlogin1 = this;
-                this.Hide();
-                frm_main obj_main = new frm_main();
-                obj_main.Show();
-
-            }
-            else if (text_user_name.Text != null && text_password.Text != null)
+            if (ValidateForm())
             {
 
-
-
-                DataBase cn = new DataBase();
-
-                SQLiteDataAdapter da = new SQLiteDataAdapter("select * from users where username='" + text_user_name.Text + "' and password='" + text_password.Text + "'", cn.cn);
-                //SQLiteDataAdapter da = new SQLiteDataAdapter("select * from users ", cn.cn);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-
-                if (ds != null)
+                if (text_user_name.Text == "test1234" && text_password.Text == "test1234")
                 {
-                    if (ds.Tables.Count > 0)
+                    DataBaseVariable.frmlogin1 = this;
+                    this.Hide();
+                    frm_main obj_main = new frm_main();
+                    obj_main.Show();
+
+                }
+                else if (text_user_name.Text != null && text_password.Text != null)
+                {
+
+
+
+                    DataBase cn = new DataBase();
+
+                    SQLiteDataAdapter da = new SQLiteDataAdapter("select * from users where username='" + text_user_name.Text + "' and password='" + text_password.Text + "'", cn.cn);
+                    //SQLiteDataAdapter da = new SQLiteDataAdapter("select * from users ", cn.cn);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+
+                    if (ds != null)
                     {
-                        if ((text_user_name.Text == "test1234" && text_password.Text == "test1234") 
-                            || (text_user_name.Text == "dmu@aku" && text_password.Text == "aku?dmu") 
-                            || ds.Tables[0].Rows.Count > 0 )
+                        if (ds.Tables.Count > 0)
                         {
+                            if ((text_user_name.Text == "test1234" && text_password.Text == "test1234")
+                                || (text_user_name.Text == "dmu@aku" && text_password.Text == "aku?dmu")
+                                || ds.Tables[0].Rows.Count > 0)
+                            {
 
-                            //DataBaseVariable.UserID = ds.Tables[0].Rows[0][0].ToString();
-                           // DataBaseVariable.UserName = ds.Tables[0].Rows[0][1].ToString();
-                           // DataBaseVariable.GetPassword = ds.Tables[0].Rows[0]["password"].ToString();
-                           // DataBaseVariable.GetDBName = "win_gb";
+                               
+                                //TODO: 
 
+                                DataBaseVariable.frmlogin1 = this;
+                                this.Hide();
 
-                            //if (ds.Tables[0].Rows[0]["IsUserOrAdmin"].ToString() == "True")
-                            //{
-                            //    DataBaseVariable.IsAdmin = true;
-                            //}
-                            //else
-                            //{
-                            //    DataBaseVariable.IsAdmin = false;
-                            //}
-
-
-                            //TODO: 
-
-                            DataBaseVariable.frmlogin1 = this;
-                            this.Hide();
-
-                            frm_main obj_main = new frm_main();
-                            obj_main.Show();
+                                frm_main obj_main = new frm_main();
+                                obj_main.Show();
+                            }
+                            else
+                            {
+                                MessageBox.Show("User does not exist ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                text_user_name.Focus();
+                            }
                         }
                         else
                         {
@@ -121,60 +115,37 @@ namespace WinForm_Model
                         text_user_name.Focus();
                     }
                 }
-                else
-                {
-                    MessageBox.Show("User does not exist ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    text_user_name.Focus();
-                }
+            } 
+        }
+
+        private bool ValidateForm()
+        {
+            if (string.IsNullOrEmpty(text_user_name.Text))
+            {
+                errorProvider1.SetError(text_user_name, "Please select enter Khandan Number.");
+                return false;
+            }
+            else
+            {
+                errorProvider1.Clear();
             }
 
+
+            if (string.IsNullOrEmpty(text_password.Text))
+            {
+                errorProvider1.SetError(text_password, "Please select enter Khandan Number.");
+                return false;
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+            return true;
         }
-        //public void login( )
-        //{
 
-        //    tbluser users = new tbluser();
-        //    users.user_name = text_user_name.Text;
-        //    users.password = text_password.Text;
+       
 
-        //    if (IsValid(users.user_name, users.password))
-        //    {
-
-        //        Form1 obj_main = new Form1();
-        //        obj_main.Show();
-
-        //    }
-        //}
-
-        //public void grp()
-        //{
-        //    Label label = new Label();
-        //    label.Text = groupBox1.Text;
-        //    groupBox1.Text = "";
-        //    label.Left = groupBox1.Left + (groupBox1.Width - label.Width) / 2;
-        //    label.Top = groupBox1.Top + 2;
-        //    label.Parent = groupBox1.Parent;
-        //    label.BringToFront();
-        //}
-
-
-        //private bool IsValid(string name, string passwords)
-        //{
-
-        //    //bool IsValid = false;
-
-
-        //    //var user = db.tblusers.FirstOrDefault(u => u.user_name == name);
-        //    //if (user != null)
-        //    //{
-        //    //    if (user.password == passwords)
-        //    //    {
-        //    //        IsValid = true;
-        //    //    }
-        //    //}
-
-        //    return IsValid;
-        //}
-
+       
         private void button_download_Click(object sender, EventArgs e)
         {
             //bool result = false;
@@ -383,6 +354,39 @@ namespace WinForm_Model
             //string displayableVersion = $"{version}";
            
             this.text_verNo.Text = version.Major + "."+Math.Round((version.Build/365.24))+"."+Math.Round((double)(version.Revision/60)); 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        public void insert_data()
+        {
+            try
+            {
+                SQLiteDatabase cn = new SQLiteDatabase();
+
+                SQLiteDataAdapter da = new SQLiteDataAdapter("select * from forms  where district_code ='" + dis + "' group by uc", cn.cn);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+
+              
+
+                DataView newView =
+                new DataView(ds.Tables[0],       // source table
+                "",                             // filter
+                "uc_code",            // sort by column
+                DataViewRowState.CurrentRows);  // rows with state to display
+
+            
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }
