@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data.SQLite;
 using System.Diagnostics;
 using System.IO;
+using System.Windows.Forms;
 using WinForm_Model.Model;
 using static WinForm_Model.frmLogin;
 
@@ -266,21 +267,23 @@ namespace WinForm_Model
 
 
 
-        public static void InsertForm(form_data forms_data)
+        public static void InsertForm(form_data forms_data, Form form)
         {
 
 
             using (con)
             {
-                con.Open();
-
-
-                using (var cmd = con.CreateCommand())
+                try
                 {
-                    cmd.CommandText = "INSERT INTO forms (cr10,cr11,cr12,cr13m,cr13f,cr16,cr21,cr22,cr23,cr17a,cr17b,cr18a,cr18b,cr19a,cr19b,cr20a,cr20b,cr24a,cr24b,cr24c,cr24d,cr24e,cr24f,cr25a,cr25b,cr25c,cr26a,cr26b,cr26c,cr26d,cr27a,cr27b,cr27c,cr28a01,cr28a02,cr28b01,cr28b02,cr28c01,cr28c02,cr28d01,cr28d02,cr28e01,cr28e02,cr28f01,cr28f02,cr28fx01,cr28fx02,cr28fx98) VALUES(@cr10,@cr11,@cr12,@cr13m,@cr13f,@cr16,@cr21,@cr22,@cr23,@cr17a,@cr17b,@cr18a,@cr18b,@cr19a,@cr19b,@cr20a,@cr20b,@cr24a,@cr24b,@cr24c,@cr24d,@cr24e,@cr24f,@cr25a,@cr25b,@cr25c,@cr26a,@cr26b,@cr26c,@cr26d,@cr27a,@cr27b,@cr27c,@cr28a01,@cr28a02,@cr28b01,@cr28b02,@cr28c01,@cr28c02,@cr28d01,@cr28d02,@cr28e01,@cr28e02,@cr28f01,@cr28f02,@cr28fx01,@cr28fx02,@cr28fx98)";
+                    con.Open();
 
-                    //for (int i = 0; i < forms_data.Count; i++)
-                    //{
+
+                    using (var cmd = con.CreateCommand())
+                    {
+                        cmd.CommandText = "INSERT INTO forms (cr10,cr11,cr12,cr13m,cr13f,cr16,cr21,cr22,cr23,cr17a,cr17b,cr18a,cr18b,cr19a,cr19b,cr20a,cr20b,cr24a,cr24b,cr24c,cr24d,cr24e,cr24f,cr25a,cr25b,cr25c,cr26a,cr26b,cr26c,cr26d,cr27a,cr27b,cr27c,cr28a01,cr28a02,cr28b01,cr28b02,cr28c01,cr28c02,cr28d01,cr28d02,cr28e01,cr28e02,cr28f01,cr28f02,cr28fx01,cr28fx02,cr28fx98) VALUES(@cr10,@cr11,@cr12,@cr13m,@cr13f,@cr16,@cr21,@cr22,@cr23,@cr17a,@cr17b,@cr18a,@cr18b,@cr19a,@cr19b,@cr20a,@cr20b,@cr24a,@cr24b,@cr24c,@cr24d,@cr24e,@cr24f,@cr25a,@cr25b,@cr25c,@cr26a,@cr26b,@cr26c,@cr26d,@cr27a,@cr27b,@cr27c,@cr28a01,@cr28a02,@cr28b01,@cr28b02,@cr28c01,@cr28c02,@cr28d01,@cr28d02,@cr28e01,@cr28e02,@cr28f01,@cr28f02,@cr28fx01,@cr28fx02,@cr28fx98)";
+
+                        //for (int i = 0; i < forms_data.Count; i++)
+                        //{
                         cmd.Parameters.Clear();
                         cmd.Parameters.AddWithValue("cr10", forms_data.cr10);
                         cmd.Parameters.AddWithValue("cr11", forms_data.cr11);
@@ -331,11 +334,17 @@ namespace WinForm_Model
                         cmd.Parameters.AddWithValue("cr28fx02", forms_data.cr28fx02);
                         cmd.Parameters.AddWithValue("cr28fx98", forms_data.cr28fx98);
 
-                    cmd.ExecuteNonQuery();
-                    //}
-                }
+                        cmd.ExecuteNonQuery();
+                         MessageBox.Show("SUCCESS!", "Form saved!");
 
-                con.Close();
+                        //}
+                    }
+
+                    con.Close();
+                } catch (Exception e)
+                {
+                    MessageBox.Show("ERROR!", "Form was not saved. "+"\n"+e.Message);
+                }
             }
         }
         ////////////////////////////////////////////////////////////////////////////////////////////
