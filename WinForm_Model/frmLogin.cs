@@ -9,6 +9,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WinForm_Model.Model;
@@ -23,7 +24,7 @@ namespace WinForm_Model
         public frmLogin()
         {
             InitializeComponent();
-            DownloadUsers();
+           // DownloadUsers();
       
             //grp();
         }
@@ -271,27 +272,37 @@ namespace WinForm_Model
             List<form_data> datas = new List<form_data>();
             datas = db.GetAllForms();
             var data_obj = JsonConvert.SerializeObject(datas);
+            
 
-            var form_var = "{\"table\":\"forms_VAL\"}"; 
+            var table_var = "{\"table\":\"forms\"}, "+data_obj +"";
+            
+            string requestParams = table_var.ToString();
             HttpWebRequest webRequest;
 
-            string requestParams = form_var.ToString();
+           
 
-            webRequest = (HttpWebRequest)WebRequest.Create("http://f38158/casi_gm/api/getdata.php");
+            webRequest = (HttpWebRequest)WebRequest.Create("http://f38158/casi_gm/api/sync.php");
 
-            webRequest.Method = "GET";
+            webRequest.Method = "POST";
             webRequest.ContentType = "application/json";
 
-            byte[] byteArray = Encoding.UTF8.GetBytes(requestParams);
-            webRequest.ContentLength = byteArray.Length;
-            Stream requestStream = webRequest.GetRequestStream();
-            requestStream.Write(byteArray, 0, byteArray.Length);
+
+            //  byte[] byteArray = Encoding.UTF8.GetBytes(requestParams);
+            using (var streamWriter = new StreamWriter(webRequest.GetRequestStream()))
+            {
+                streamWriter.Write(requestParams);
+            }
 
 
-            byte[] DataArray = Encoding.UTF8.GetBytes(data_obj);
-            webRequest.ContentLength = byteArray.Length;
-            Stream requestData = webRequest.GetRequestStream();
-            requestData.Write(byteArray, 0, byteArray.Length);
+
+            var result = "";
+
+            var httpResponse = (HttpWebResponse)webRequest.GetResponse();
+            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            {
+                result = streamReader.ReadToEnd();
+            }
+
 
 
 
@@ -376,6 +387,50 @@ namespace WinForm_Model
         private void button_upload_Click(object sender, EventArgs e)
         {
             upload_forms();
+        }
+
+
+        public string DataTableToJsonObj(DataTable dt)
+        {
+            DataSet ds = new DataSet();
+            ds.Merge(dt);
+            StringBuilder JsonString = new StringBuilder();
+            if (ds != null && ds.Tables[0].Rows.Count > 0)
+            {
+                JsonString.Append("[{\"table\":\"forms\"},[");
+
+
+
+                for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                {
+                    JsonString.Append("{");
+                    for (int j = 0; j < ds.Tables[0].Columns.Count; j++)
+                    {
+                        if (j < ds.Tables[0].Columns.Count - 1)
+                        {
+                            JsonString.Append("\"" + ds.Tables[0].Columns[j].ColumnName.ToString() + "\":" + "\"" + ds.Tables[0].Rows[i][j].ToString() + "\",");
+                        }
+                        else if (j == ds.Tables[0].Columns.Count - 1)
+                        {
+                            JsonString.Append("\"" + ds.Tables[0].Columns[j].ColumnName.ToString() + "\":" + "\"" + ds.Tables[0].Rows[i][j].ToString() + "\"");
+                        }
+                    }
+                    if (i == ds.Tables[0].Rows.Count - 1)
+                    {
+                        JsonString.Append("}");
+                    }
+                    else
+                    {
+                        JsonString.Append("},");
+                    }
+                }
+                JsonString.Append("]]");
+                return JsonString.ToString();
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

@@ -270,7 +270,7 @@ namespace WinForm_Model
         private void button1_Click(object sender, EventArgs e)
         {
 
-
+                
             if (ValidateForm())
             {
                 DataBaseVariable.frm_main1 = this;

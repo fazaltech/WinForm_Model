@@ -428,17 +428,17 @@ namespace WinForm_Model
 
         private void btnContinue_Click(object sender, EventArgs e)
         {
-          
-            if (validation())
-            {
+            Insert();
+            //if (validation())
+            //{
 
-                Insert();
-                DataBaseVariable.frm_gm1 = this;
-                this.Hide();
+            //    Insert();
+            //    DataBaseVariable.frm_gm1 = this;
+            //    this.Hide();
 
-                Form_gm obj_frmgm = new Form_gm();
-                obj_frmgm.Show();
-            }
+            //    Form_gm obj_frmgm = new Form_gm();
+            //    obj_frmgm.Show();
+            //}
           
         }
 
@@ -457,7 +457,7 @@ namespace WinForm_Model
             Application.Exit();
         }
         public string error_text;
-        
+
         public bool validation()
         {
             if (text_cr10.Text == "")
@@ -756,7 +756,7 @@ namespace WinForm_Model
             }
             return true;
 
-           
+
         }
 
 
