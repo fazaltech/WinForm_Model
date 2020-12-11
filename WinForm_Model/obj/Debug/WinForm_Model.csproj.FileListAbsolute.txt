@@ -261,6 +261,7 @@ E:\WinForm_Model\WinForm_Model\bin\Debug\System.Data.SQLite.xml
 E:\WinForm_Model\WinForm_Model\bin\Debug\System.Memory.xml
 E:\WinForm_Model\WinForm_Model\bin\Debug\System.Numerics.Vectors.xml
 E:\WinForm_Model\WinForm_Model\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\WinForm_Model\WinForm_Model\obj\Debug\WinForm_Model.csprojAssemblyReference.cache
 E:\WinForm_Model\WinForm_Model\obj\Debug\WinForm_Model.exe.config
 E:\WinForm_Model\WinForm_Model\obj\Debug\WinForm_Model.frm_main.resources
 E:\WinForm_Model\WinForm_Model\obj\Debug\WinForm_Model.Form_gm.resources

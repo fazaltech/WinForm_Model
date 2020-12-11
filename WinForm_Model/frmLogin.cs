@@ -271,10 +271,11 @@ namespace WinForm_Model
         {
             List<form_data> datas = new List<form_data>();
             datas = db.GetAllForms();
+
             var data_obj = JsonConvert.SerializeObject(datas);
             
 
-            var table_var = "{\"table\":\"forms\"}, "+data_obj +"";
+            var table_var = "[{\"table\":\"forms\"}, " + data_obj +"]";
             
             string requestParams = table_var.ToString();
             HttpWebRequest webRequest;
@@ -314,7 +315,7 @@ namespace WinForm_Model
 
 
 
-            var user_var = "{\"table\":\"users\"}"; ;
+            var user_var = "{\"table\":\"users\"}"; 
 
 
 

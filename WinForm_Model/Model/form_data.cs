@@ -9,7 +9,10 @@ namespace WinForm_Model.Model
     class form_data
     {//------------------------------------------------------------------------------
 
-            public int id { get; set; }
+        
+            public int _ID { get; set; }
+            public int _uid { get; set; }
+            public int appversion { get; set; }
             public string cr10 { get; set; }
             public string cr11 { get; set; }
             public string cr12 { get; set; }
@@ -62,7 +65,27 @@ namespace WinForm_Model.Model
             public string cr28fx01 { get; set; }
             public string cr28fx02 { get; set; }
             public string cr28fx98 { get; set; }
-        
+            public string deviceid { get; set; }
+            public string endingdatetime { get; set; }
+            public string gpsacc { get; set; }
+            public string gpsdate { get; set; }
+            public string gpslat { get; set; }
+            public string gpslng { get; set; }
+            public string istatus { get; set; }
+            public string istatus96x { get; set; }
+            public string sysdate { get; set; }
+            public string tagid { get; set; }
+            public string username { get; set; }
+
+
+       
+      
+    
+     
+     
+   
+
+
     }
 
 }

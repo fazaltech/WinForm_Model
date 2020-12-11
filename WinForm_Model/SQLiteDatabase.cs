@@ -54,6 +54,8 @@ namespace WinForm_Model
 
         public static String SQL_CREATE_FORMS = "CREATE TABLE forms ("
             + "_ID INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + "_uid,"
+            + "appversion,"
            + " cr10 TEXT,"
             + " cr11 TEXT,"
             + " cr12 TEXT,"
@@ -102,8 +104,22 @@ namespace WinForm_Model
             + " cr28fx01 TEXT,"
             + " cr28fx02 TEXT,"
             + " cr28fx98 TEXT"
+            + " deviceid TEXT"
+            + " endingdatetime TEXT"
+            + " gpsacc TEXT"
+            + " gpsdate TEXT"
+            + " gpslat TEXT"
+            + " gpslng TEXT"
+            + " istatus TEXT"
+            + " istatus96x TEXT"
+            + " sysdate TEXT"
+            + " tagid TEXT"
+            + " username TEXT"
             + " );";
 
+    
+   
+     
 
 
         private static String SQL_DELETE_USERS =
@@ -363,7 +379,7 @@ namespace WinForm_Model
                 while (r.Read())
                 {
                     form_data fd = new form_data();
-                    fd.id = Int32.Parse(r["_ID"].ToString());
+                    fd._ID = Int32.Parse(r["_ID"].ToString());
                     fd.cr10 = r["cr10"].ToString();
                     fd.cr11 = r["cr11"].ToString();
                     fd.cr12 = r["cr12"].ToString();
