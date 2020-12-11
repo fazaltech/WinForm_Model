@@ -143,72 +143,53 @@ namespace WinForm_Model
 
         }
 
-       
+
+        public string cr01 = "-1";
+        public string cr02 = "-1";
+        public string cr03 = "-1";
+        public string cr04 = "-1";
+        public string cr05 = "-1";
+        public string cr06 = "-1";
+        public string cr07 = "-1";
+        public string cr08d = "-1";
+        public string cr08m = "-1";
+        public string cr08y = "-1";
+        public string cr09 = "-1";
         public string cr10 = "-1";
         public string cr11 = "-1";
         public string cr12 = "-1";
-
-        public string cr13m = "-1";
-        public string cr13f = "-1";
-        
-        
+        public string cr13 = "-1";
+        public string cr14d = "-1";
+        public string cr15m = "-1";
+        public string cr15y = "-1";
         public string cr16 = "-1";
-         
+        public string cr17 = "-1";
+        public string cr18 = "-1";
+        public string cr19 = "-1";
+        public string cr20 = "-1";
         public string cr21 = "-1";
         public string cr22 = "-1";
         public string cr23 = "-1";
-         
-         
-        public string cr17a = "-1";
-        public string cr17b = "-1";
-         
-        public string cr18a = "-1";
-        public string cr18b = "-1";
-         
-        public string cr19a = "-1";
-        public string cr19b = "-1";
-         
-        public string cr20a = "-1";
-        public string cr20b = "-1";
-         
         public string cr24a = "-1";
         public string cr24b = "-1";
         public string cr24c = "-1";
         public string cr24d = "-1";
         public string cr24e = "-1";
         public string cr24f = "-1";
-         
-         
-        public string cr25a = "-1";
-        public string cr25b = "-1";
-        public string cr25c = "-1";
-         
-        public string cr26a = "-1";
-        public string cr26b = "-1";
-        public string cr26c = "-1";
-        public string cr26d = "-1";
-         
+        public string cr25 = "-1";
+        public string cr26 = "-1";
         public string cr27a = "-1";
         public string cr27b = "-1";
         public string cr27c = "-1";
-         
-        public string cr28a01 = "-1";
-        public string cr28a02 = "-1";
-        public string cr28b01 = "-1";
-        public string cr28b02 = "-1";
-        public string cr28c01 = "-1";
-        public string cr28c02 = "-1";
-        public string cr28d01 = "-1";
-        public string cr28d02 = "-1";
-        public string cr28e01 = "-1";
-        public string cr28e02 = "-1";
-        public string cr28f01 = "-1";
-        public string cr28f02 = "-1";
-        public string cr28fx01 = "-1";
-        public string cr28fx02 = "-1";
-        public string cr28fx98 = "-1";
+        public string cr28a = "-1";
+        public string cr28b = "-1";
+        public string cr28c = "-1";
+        public string cr28d = "-1";
+        public string cr28e = "-1";
+        public string cr28f = "-1";
+        public string cr28fx = "-1";
 
-    
+
 
         public void controls_value()
         {
@@ -223,62 +204,52 @@ namespace WinForm_Model
             if (text_cr21.Text !=null) { cr21 = text_cr21.Text; }
             if (text_cr22.Text !=null) { cr22 = text_cr22.Text; }
             if (text_cr23.Text !=null) { cr23 = text_cr23.Text; }
-            if (text_cr23.Text != null) { cr23 = text_cr23.Text; }
-            if (text_cr28fx98.Text != null) { cr28fx98 = text_cr28fx98.Text; }
+            if (text_cr27a.Text !=null) { cr27a = text_cr27a.Text; }
+            if (text_cr27b.Text !=null) { cr27a = text_cr27b.Text; }
+            if (text_cr27c.Text !=null) { cr27a = text_cr27c.Text; }
+            
+            
+            if (text_cr28fx98.Text != null) { cr28fx = text_cr28fx98.Text; }
 
 
 
             //if (radio_cr17a.Checked){cr17a = "1";}
 
             //if (radio_cr17b.Checked) { cr17b = "1"; }
-            if (radio_cr13m.Checked) { cr13m = "1"; }
-            if (radio_cr13f.Checked) { cr13f = "1"; }
-            if (radio_cr18a.Checked) { cr18a = "1"; }
-            if (radio_cr18b.Checked) { cr18b = "1"; }
-
-            if (radio_cr19a.Checked) { cr19a = "1"; }
-            if (radio_cr19b.Checked) { cr19b = "1"; }
-
-            if (radio_cr20a.Checked) { cr19a = "1"; }
-            if (radio_cr20b.Checked) { cr19b = "1"; }
-
-            if (check_cr24a.Checked) { cr24a = "1"; }
-            if (check_cr24b.Checked) { cr24b = "1"; }
-            if (check_cr24c.Checked) { cr24c = "1"; }
-            if (check_cr24d.Checked) { cr24d = "1"; }
-            if (check_cr24e.Checked) { cr24e = "1"; }
-            if (check_cr24f.Checked) { cr24f = "1"; }
-
-            if (check_cr25a.Checked) { cr25a = "1"; }
-            if (check_cr25b.Checked) { cr25b = "1"; }
-            if (check_cr25c.Checked) { cr25c = "1"; }
-
-            if (check_cr26a.Checked) { cr26a = "1"; }
-            if (check_cr26b.Checked) { cr26b = "1"; }
-            if (check_cr26c.Checked) { cr26c = "1"; }
-            if (check_cr26d.Checked) { cr26d = "1"; }
-
-            //if (check_cr27a.Checked) { cr27a = "1"; }
-            //if (check_cr27b.Checked) { cr27b = "1"; }
-            //if (check_cr27c.Checked) { cr27c = "1"; }
-
-
-            if (radio_cr28a01.Checked) { cr28a01 = "1"; }
-            if (radio_cr28a02.Checked) { cr28a02 = "1"; }
-            if (radio_cr28b01.Checked) { cr28b01 = "1"; }
-            if (radio_cr28b02.Checked) { cr28b02 = "1"; }
-            if (radio_cr28c01.Checked) { cr28c01 = "1"; }
-            if (radio_cr28c02.Checked) { cr28c02 = "1"; }
-            if (radio_cr28d01.Checked) { cr28d01 = "1"; }
-            if (radio_cr28d02.Checked) { cr28d02 = "1"; }
-            if (radio_cr28e01.Checked) { cr28e01 = "1"; }
-            if (radio_cr28e02.Checked) { cr28e02 = "1"; }
-
-            if (radio_cr28f01.Checked) { cr28f01 = "1"; }
-            if (radio_cr28f02.Checked) { cr28f02 = "1"; }
-            if (radio_cr28fx01.Checked) { cr28fx01 = "1"; }
-            if (radio_cr28fx02.Checked) { cr28fx02 = "1"; }
+            if (radio_cr13m.Checked) { cr13 = "1"; } else if (!radio_cr13m.Checked) { cr13 = "2"; }
+          
             
+            if (radio_cr17a.Checked) { cr17 = "1"; } else if (!radio_cr17a.Checked) { cr17 = "2"; }
+            if (radio_cr18a.Checked) { cr18 = "1"; } else if (!radio_cr18a.Checked) { cr18 = "2"; }
+            if (radio_cr19a.Checked) { cr18 = "1"; } else if (!radio_cr19a.Checked) { cr19 = "2"; }
+            if (radio_cr20a.Checked) { cr20 = "1"; } else if (!radio_cr20a.Checked) { cr20 = "2"; }
+
+        
+            if (check_cr24a.Checked) { cr24a = "1"; }
+            if (check_cr24b.Checked) { cr24b = "2"; }
+            if (check_cr24c.Checked) { cr24c = "3"; }
+            if (check_cr24d.Checked) { cr24d = "4"; }
+            if (check_cr24e.Checked) { cr24e = "5"; }
+            if (check_cr24f.Checked) { cr24f = "6"; }
+
+            if (check_cr25a.Checked) { cr25 = "1"; }else if (check_cr25b.Checked) { cr25 = "2"; }  if (check_cr25c.Checked) { cr25 = "3"; }
+
+            if (check_cr26a.Checked) { cr26 = "1"; }else if (check_cr26b.Checked) { cr26 = "2"; }if (check_cr26c.Checked) { cr26 = "3"; }if (check_cr26d.Checked) { cr26 = "4"; }
+
+           // if (check_cr27a.Checked) { cr27a = "1"; }else if (check_cr27b.Checked) { cr27b = "1"; }else if (check_cr27c.Checked) { cr27c = "1"; }
+
+            if (radio_cr28a01.Checked) { cr28a = "1"; }else if(radio_cr28a02.Checked) { cr28a = "2"; }
+            if (radio_cr28b01.Checked) { cr28b = "1"; }else if(!radio_cr28b02.Checked) { cr28b = "2"; }
+            if (radio_cr28c01.Checked) { cr28c = "1"; }else if(!radio_cr28c02.Checked) { cr28b = "2"; }
+            if (radio_cr28d01.Checked) { cr28d = "1"; }else if(!radio_cr28d02.Checked) { cr28b = "2"; }
+            if (radio_cr28e01.Checked) { cr28e = "1"; }else if(!radio_cr28e02.Checked) { cr28b = "2"; }
+            if (radio_cr28f01.Checked) { cr28fx = "1"; }else if(!radio_cr28f02.Checked) { cr28fx = "2"; }
+           
+
+
+            
+           
+
 
         }
 
@@ -320,53 +291,45 @@ namespace WinForm_Model
             forms.cr10 = cr10;
             forms.cr11 = cr11;
             forms.cr12 = cr12;
-            forms.cr13m = cr13m;
-            forms.cr13f = cr13f;
-            forms.cr14 = cr10;
-            forms.cr15 = cr10;
+            forms.cr13 = cr13;
+           
+            forms.cr14d = cr10;
+            forms.cr15m = cr10;
+            forms.cr15y = cr10;
             forms.cr16 = cr16;
             forms.cr21 = cr21;
             forms.cr22 = cr22;
             forms.cr23 = cr23;
-            forms.cr17a = cr17a;
-            forms.cr17b = cr17b;
-            forms.cr18a = cr18a;
-            forms.cr18b = cr18b;
-            forms.cr19a = cr19a;
-            forms.cr19b = cr19b;
-            forms.cr20a = cr20a;
-            forms.cr20b = cr20b;
+            forms.cr17 = cr17;
+            
+            forms.cr18 = cr18;
+           
+            forms.cr19 = cr19;
+            
+            forms.cr20 = cr20;
+           
             forms.cr24a = cr24a;
             forms.cr24b = cr24b;
             forms.cr24c = cr24c;
             forms.cr24d = cr24d;
             forms.cr24e = cr24e;
             forms.cr24f = cr24f;
-            forms.cr25a = cr25a;
-            forms.cr25b = cr25b;
-            forms.cr25c = cr25c;
-            forms.cr26a = cr26a;
-            forms.cr26b = cr26b;
-            forms.cr26c = cr26c;
-            forms.cr26d = cr26d;
+            forms.cr25 = cr25;
+           
+            forms.cr26 = cr26;
+           
             forms.cr27a = cr27a;
             forms.cr27b = cr27b;
             forms.cr27c = cr27c;
-            forms.cr28a01 = cr28a01;
-            forms.cr28a02 = cr28a02;
-            forms.cr28b01 = cr28b01;
-            forms.cr28b02 = cr28b02;
-            forms.cr28c01 = cr28c01;
-            forms.cr28c02 = cr28c02;
-            forms.cr28d01 = cr28d01;
-            forms.cr28d02 = cr28d02;
-            forms.cr28e01 = cr28e01;
-            forms.cr28e02 = cr28e02;
-            forms.cr28f01 = cr28f01;
-            forms.cr28f02 = cr28f02;
-            forms.cr28fx01 = cr28fx01;
-            forms.cr28fx02 = cr28fx02;
-            forms.cr28fx98 = cr28fx02;
+            forms.cr28a = cr28a;
+             forms.cr28b=  cr28b;
+             forms.cr28c=  cr28c;
+             forms.cr28d=  cr28d;
+             forms.cr28e=  cr28e;
+             forms.cr28f = cr28fx;
+             forms.cr28fx= cr28fx;
+
+
             forms.username = DataBaseVariable.UserName;
 
             SQLiteDatabase.InsertForm(forms);

@@ -161,10 +161,11 @@ namespace WinForm_Model
 
 
 
-
         private void UCDropDown()
         {
             string dis = combo_cr01.SelectedValue.ToString();
+
+
             try
             {
                 DataBase cn = new DataBase();
@@ -173,21 +174,32 @@ namespace WinForm_Model
                 DataSet ds = new DataSet();
                 da.Fill(ds);
 
-
                 emptyRow = ds.Tables[0].NewRow();
                 emptyRow["village"] = "";
                 emptyRow["district_code"] = "";
                 ds.Tables[0].Rows.Add(emptyRow);
 
-                combo_cr04.DataSource = ds.Tables[0];
+                DataView newView =
+                new DataView(ds.Tables[0],       // source table
+                "",                             // filter
+                "uc_code",            // sort by column
+                DataViewRowState.CurrentRows);  // rows with state to display
+
+                combo_cr04.DataSource = newView;
                 combo_cr04.DisplayMember = "uc";
                 combo_cr04.ValueMember = "uc_code";
+                var dt = ds.Tables[0];
+
+
+
+
             }
 
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+
         }
         private void frm_main_Load(object sender, EventArgs e)
         {
