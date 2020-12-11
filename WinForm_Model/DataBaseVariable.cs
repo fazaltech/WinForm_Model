@@ -98,6 +98,11 @@ namespace WinForm_Model
         static string _etdt;
 
         static string lang;
+        static string dis;
+        static string ucss;
+        static string vill;
+
+
 
 
 
@@ -1054,6 +1059,43 @@ namespace WinForm_Model
             }
         }
 
+
+        public static string dis1
+        {
+            get
+            {
+                return dis;
+            }
+
+            set
+            {
+                dis = value;
+            }
+        }
+        public static string vill1
+        {
+            get
+            {
+                return vill;
+            }
+
+            set
+            {
+                vill = value;
+            }
+        }
+        public static string ucss1
+        {
+            get
+            {
+                return ucss;
+            }
+
+            set
+            {
+                ucss = value;
+            }
+        }
 
     }
 }

@@ -17,10 +17,10 @@ namespace WinForm_Model
         //
 
         public static String DATABASE_PATH = "enc";
-        public static String DATABASE_NAME = DATABASE_PATH+"\\casi_gm.db3";
+        public static String DATABASE_NAME = DATABASE_PATH + "\\casi_gm.db3";
         public static int DATABASE_VERSION = 3;
         public static string DATABASE_PASSWORD = "Aku@ku123";
-        
+
         public static String SQL_CREATE_USERS = "CREATE TABLE users ("
             + "_ID INTEGER PRIMARY KEY AUTOINCREMENT,"
             + " username TEXT,"
@@ -53,73 +53,68 @@ namespace WinForm_Model
             + " );";
 
         public static String SQL_CREATE_FORMS = "CREATE TABLE forms ("
-            + "_ID INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + "_uid,"
-            + "appversion,"
-           + " cr10 TEXT,"
-            + " cr11 TEXT,"
-            + " cr12 TEXT,"
-            + " cr13m TEXT,"
-            + " cr13f TEXT,"
-            + " cr16 TEXT,"
-            + " cr21 TEXT,"
-            + " cr22 TEXT,"
-            + " cr23 TEXT,"
-            + " cr17a TEXT,"
-            + " cr17b TEXT,"
-            + " cr18a TEXT,"
-            + " cr18b TEXT,"
-            + " cr19a TEXT,"
-            + " cr19b TEXT,"
-            + " cr20a TEXT,"
-            + " cr20b TEXT,"
-            + " cr24a TEXT,"
-            + " cr24b TEXT,"
-            + " cr24c TEXT,"
-            + " cr24d TEXT,"
-            + " cr24e TEXT,"
-            + " cr24f TEXT,"
-            + " cr25a TEXT,"
-            + " cr25b TEXT,"
-            + " cr25c TEXT,"
-            + " cr26a TEXT,"
-            + " cr26b TEXT,"
-            + " cr26c TEXT,"
-            + " cr26d TEXT,"
-            + " cr27a TEXT,"
-            + " cr27b TEXT,"
-            + " cr27c TEXT,"
-            + " cr28a01 TEXT,"
-            + " cr28a02 TEXT,"
-            + " cr28b01 TEXT,"
-            + " cr28b02 TEXT,"
-            + " cr28c01 TEXT,"
-            + " cr28c02 TEXT,"
-            + " cr28d01 TEXT,"
-            + " cr28d02 TEXT,"
-            + " cr28e01 TEXT,"
-            + " cr28e02 TEXT,"
-            + " cr28f01 TEXT,"
-            + " cr28f02 TEXT,"
-            + " cr28fx01 TEXT,"
-            + " cr28fx02 TEXT,"
-            + " cr28fx98 TEXT"
-            + " deviceid TEXT"
-            + " endingdatetime TEXT"
-            + " gpsacc TEXT"
-            + " gpsdate TEXT"
-            + " gpslat TEXT"
-            + " gpslng TEXT"
-            + " istatus TEXT"
-            + " istatus96x TEXT"
-            + " sysdate TEXT"
-            + " tagid TEXT"
-            + " username TEXT"
-            + " );";
+            + "_id INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + "_uid TEXT,"
+            + "appversion TEXT,"
+            + "cr01 TEXT,"
+            + "cr02 TEXT,"
+            + "cr03 TEXT,"
+            + "cr04 TEXT,"
+            + "cr05 TEXT,"
+            + "cr06 TEXT,"
+            + "cr07 TEXT,"
+            + "cr08d TEXT,"
+            + "cr08m TEXT,"
+            + "cr08y TEXT,"
+            + "cr09 TEXT,"
+            + "cr10 TEXT,"
+            + "cr11 TEXT,"
+            + "cr12 TEXT,"
+            + "cr13 TEXT,"
+            + "cr14d TEXT,"
+            + "cr15m TEXT,"
+            + "cr15y TEXT,"
+            + "cr16 TEXT,"
+            + "cr17 TEXT,"
+            + "cr18 TEXT,"
+            + "cr19 TEXT,"
+            + "cr20 TEXT,"
+            + "cr21 TEXT,"
+            + "cr22 TEXT,"
+            + "cr23 TEXT,"
+            + "cr24a TEXT,"
+            + "cr24b TEXT,"
+            + "cr24c TEXT,"
+            + "cr24d TEXT,"
+            + "cr24e TEXT,"
+            + "cr24f TEXT,"
+            + "cr25 TEXT,"
+            + "cr26 TEXT,"
+            + "cr27a TEXT,"
+            + "cr27b TEXT,"
+            + "cr27c TEXT,"
+            + "cr28a TEXT,"
+            + "cr28b TEXT,"
+            + "cr28c TEXT,"
+            + "cr28d TEXT,"
+            + "cr28e TEXT,"
+            + "cr28f TEXT,"
+            + "cr28fx TEXT,"
+            + "deviceid TEXT,"
+            + "endingdatetime TEXT,"
+            + "gpsacc TEXT,"
+            + "gpsdate TEXT,"
+            + "gpslat TEXT,"
+            + "gpslng TEXT,"
+            + "istatus TEXT,"
+            + "istatus96x TEXT,"
+            + "sysdate TEXT,"
+            + "tagid TEXT,"
+            + "username TEXT" + " );";
 
-    
-   
-     
+
+
+
 
 
         private static String SQL_DELETE_USERS =
@@ -198,12 +193,12 @@ namespace WinForm_Model
                 //con.Close();
 
             }
-          
 
-                strCon = "Data Source=" + DATABASE_NAME;
-                con = new SqliteConnection(strCon);
 
-       
+            strCon = "Data Source=" + DATABASE_NAME;
+            con = new SqliteConnection(strCon);
+
+
 
 
         }
@@ -297,70 +292,79 @@ namespace WinForm_Model
 
                     using (var cmd = con.CreateCommand())
                     {
-                        cmd.CommandText = "INSERT INTO forms (cr10,cr11,cr12,cr13m,cr13f,cr16,cr21,cr22,cr23,cr17a,cr17b,cr18a,cr18b,cr19a,cr19b,cr20a,cr20b,cr24a,cr24b,cr24c,cr24d,cr24e,cr24f,cr25a,cr25b,cr25c,cr26a,cr26b,cr26c,cr26d,cr27a,cr27b,cr27c,cr28a01,cr28a02,cr28b01,cr28b02,cr28c01,cr28c02,cr28d01,cr28d02,cr28e01,cr28e02,cr28f01,cr28f02,cr28fx01,cr28fx02,cr28fx98) VALUES(@cr10,@cr11,@cr12,@cr13m,@cr13f,@cr16,@cr21,@cr22,@cr23,@cr17a,@cr17b,@cr18a,@cr18b,@cr19a,@cr19b,@cr20a,@cr20b,@cr24a,@cr24b,@cr24c,@cr24d,@cr24e,@cr24f,@cr25a,@cr25b,@cr25c,@cr26a,@cr26b,@cr26c,@cr26d,@cr27a,@cr27b,@cr27c,@cr28a01,@cr28a02,@cr28b01,@cr28b02,@cr28c01,@cr28c02,@cr28d01,@cr28d02,@cr28e01,@cr28e02,@cr28f01,@cr28f02,@cr28fx01,@cr28fx02,@cr28fx98)";
+                        cmd.CommandText = "INSERT INTO forms (cr01,cr02,cr03,cr04,cr05,cr06,cr07,cr08d,cr08m,cr08y,cr09,cr10,cr11,cr12,cr13,cr14d,cr15m,cr15y,cr16,cr17,cr18,cr19,cr20,cr21,cr22,cr23,cr24a,cr24b,cr24c,cr24d,cr24e,cr24f,cr25,cr26,cr27a,cr27b,cr27c,cr28a,cr28b,cr28c,cr28d,cr28e,cr28f,cr28fx,deviceid,endingdatetime,gpsacc,gpsdate,gpslat,gpslng,istatus,istatus96x,sysdate,tagid,username) VALUES(@cr01,@cr02,@cr03,@cr04,@cr05,@cr06,@cr07,@cr08d,@cr08m,@cr08y,@cr09,@cr10,@cr11,@cr12,@cr13,@cr14d,@cr15m,@cr15y,@cr16,@cr17,@cr18,@cr19,@cr20,@cr21,@cr22,@cr23,@cr24a,@cr24b,@cr24c,@cr24d,@cr24e,@cr24f,@cr25,@cr26,@cr27a,@cr27b,@cr27c,@cr28a,@cr28b,@cr28c,@cr28d,@cr28e,@cr28f,@cr28fx,@deviceid,@endingdatetime,@gpsacc,@gpsdate,@gpslat,@gpslng,@istatus,@istatus96x,@sysdate,@tagid,@username)";
 
                         //for (int i = 0; i < forms_data.Count; i++)
                         //{
                         cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("cr01", forms_data.cr01);
+                        cmd.Parameters.AddWithValue("cr02", forms_data.cr02);
+                        cmd.Parameters.AddWithValue("cr03", forms_data.cr03);
+                        cmd.Parameters.AddWithValue("cr04", forms_data.cr04);
+                        cmd.Parameters.AddWithValue("cr05", forms_data.cr05);
+                        cmd.Parameters.AddWithValue("cr06", forms_data.cr06);
+                        cmd.Parameters.AddWithValue("cr07", forms_data.cr07);
+                        cmd.Parameters.AddWithValue("cr08d", forms_data.cr08d);
+                        cmd.Parameters.AddWithValue("cr08m", forms_data.cr08m);
+                        cmd.Parameters.AddWithValue("cr08y", forms_data.cr08y);
+                        cmd.Parameters.AddWithValue("cr09", forms_data.cr09);
                         cmd.Parameters.AddWithValue("cr10", forms_data.cr10);
                         cmd.Parameters.AddWithValue("cr11", forms_data.cr11);
                         cmd.Parameters.AddWithValue("cr12", forms_data.cr12);
-                        cmd.Parameters.AddWithValue("cr13m", forms_data.cr12);
-                        cmd.Parameters.AddWithValue("cr13f", forms_data.cr12);
+                        cmd.Parameters.AddWithValue("cr13", forms_data.cr13);
+                        cmd.Parameters.AddWithValue("cr14d", forms_data.cr14d);
+                        cmd.Parameters.AddWithValue("cr15m", forms_data.cr15m);
+                        cmd.Parameters.AddWithValue("cr15y", forms_data.cr15y);
                         cmd.Parameters.AddWithValue("cr16", forms_data.cr16);
+                        cmd.Parameters.AddWithValue("cr17", forms_data.cr17);
+                        cmd.Parameters.AddWithValue("cr18", forms_data.cr18);
+                        cmd.Parameters.AddWithValue("cr19", forms_data.cr19);
+                        cmd.Parameters.AddWithValue("cr20", forms_data.cr20);
                         cmd.Parameters.AddWithValue("cr21", forms_data.cr21);
                         cmd.Parameters.AddWithValue("cr22", forms_data.cr22);
                         cmd.Parameters.AddWithValue("cr23", forms_data.cr23);
-                        cmd.Parameters.AddWithValue("cr17a", forms_data.cr17a);
-                        cmd.Parameters.AddWithValue("cr17b", forms_data.cr17b);
-                        cmd.Parameters.AddWithValue("cr18a", forms_data.cr18a);
-                        cmd.Parameters.AddWithValue("cr18b", forms_data.cr18b);
-                        cmd.Parameters.AddWithValue("cr19a", forms_data.cr19a);
-                        cmd.Parameters.AddWithValue("cr19b", forms_data.cr19b);
-                        cmd.Parameters.AddWithValue("cr20a", forms_data.cr20a);
-                        cmd.Parameters.AddWithValue("cr20b", forms_data.cr20b);
                         cmd.Parameters.AddWithValue("cr24a", forms_data.cr24a);
                         cmd.Parameters.AddWithValue("cr24b", forms_data.cr24b);
                         cmd.Parameters.AddWithValue("cr24c", forms_data.cr24c);
                         cmd.Parameters.AddWithValue("cr24d", forms_data.cr24d);
                         cmd.Parameters.AddWithValue("cr24e", forms_data.cr24e);
                         cmd.Parameters.AddWithValue("cr24f", forms_data.cr24f);
-                        cmd.Parameters.AddWithValue("cr25a", forms_data.cr25a);
-                        cmd.Parameters.AddWithValue("cr25b", forms_data.cr25b);
-                        cmd.Parameters.AddWithValue("cr25c", forms_data.cr25c);
-                        cmd.Parameters.AddWithValue("cr26a", forms_data.cr26a);
-                        cmd.Parameters.AddWithValue("cr26b", forms_data.cr26b);
-                        cmd.Parameters.AddWithValue("cr26c", forms_data.cr26c);
-                        cmd.Parameters.AddWithValue("cr26d", forms_data.cr26d);
+                        cmd.Parameters.AddWithValue("cr25", forms_data.cr25);
+                        cmd.Parameters.AddWithValue("cr26", forms_data.cr26);
                         cmd.Parameters.AddWithValue("cr27a", forms_data.cr27a);
                         cmd.Parameters.AddWithValue("cr27b", forms_data.cr27b);
                         cmd.Parameters.AddWithValue("cr27c", forms_data.cr27c);
-                        cmd.Parameters.AddWithValue("cr28a01", forms_data.cr28a01);
-                        cmd.Parameters.AddWithValue("cr28a02", forms_data.cr28a02);
-                        cmd.Parameters.AddWithValue("cr28b01", forms_data.cr28b01);
-                        cmd.Parameters.AddWithValue("cr28b02", forms_data.cr28b02);
-                        cmd.Parameters.AddWithValue("cr28c01", forms_data.cr28c01);
-                        cmd.Parameters.AddWithValue("cr28c02", forms_data.cr28c02);
-                        cmd.Parameters.AddWithValue("cr28d01", forms_data.cr28d01);
-                        cmd.Parameters.AddWithValue("cr28d02", forms_data.cr28d02);
-                        cmd.Parameters.AddWithValue("cr28e01", forms_data.cr28e01);
-                        cmd.Parameters.AddWithValue("cr28e02", forms_data.cr28e02);
-                        cmd.Parameters.AddWithValue("cr28f01", forms_data.cr28f01);
-                        cmd.Parameters.AddWithValue("cr28f02", forms_data.cr28f02);
-                        cmd.Parameters.AddWithValue("cr28fx01", forms_data.cr28fx01);
-                        cmd.Parameters.AddWithValue("cr28fx02", forms_data.cr28fx02);
-                        cmd.Parameters.AddWithValue("cr28fx98", forms_data.cr28fx98);
+                        cmd.Parameters.AddWithValue("cr28a", forms_data.cr28a);
+                        cmd.Parameters.AddWithValue("cr28b", forms_data.cr28b);
+                        cmd.Parameters.AddWithValue("cr28c", forms_data.cr28c);
+                        cmd.Parameters.AddWithValue("cr28d", forms_data.cr28d);
+                        cmd.Parameters.AddWithValue("cr28e", forms_data.cr28e);
+                        cmd.Parameters.AddWithValue("cr28f", forms_data.cr28f);
+                        cmd.Parameters.AddWithValue("cr28fx", forms_data.cr28fx);
+                        cmd.Parameters.AddWithValue("deviceid", forms_data.deviceid);
+                        cmd.Parameters.AddWithValue("endingdatetime", forms_data.endingdatetime);
+                        cmd.Parameters.AddWithValue("gpsacc", forms_data.gpsacc);
+                        cmd.Parameters.AddWithValue("gpsdate", forms_data.gpsdate);
+                        cmd.Parameters.AddWithValue("gpslat", forms_data.gpslat);
+                        cmd.Parameters.AddWithValue("gpslng", forms_data.gpslng);
+                        cmd.Parameters.AddWithValue("istatus", forms_data.istatus);
+                        cmd.Parameters.AddWithValue("istatus96x", forms_data.istatus96x);
+                        cmd.Parameters.AddWithValue("sysdate", forms_data.sysdate);
+                        cmd.Parameters.AddWithValue("tagid", forms_data.tagid);
+                        cmd.Parameters.AddWithValue("username", forms_data.username);
+
 
                         cmd.ExecuteNonQuery();
-                         MessageBox.Show("SUCCESS!", "Form saved!");
+                        MessageBox.Show("SUCCESS!", "Form saved!");
 
                         //}
                     }
 
                     con.Close();
-                } catch (Exception e)
+                }
+                catch (Exception e)
                 {
-                    MessageBox.Show("ERROR!", "Form was not saved. "+"\n"+e.Message);
+                    MessageBox.Show("ERROR!", "Form was not saved. " + "\n" + e.Message);
                 }
             }
         }
@@ -379,55 +383,64 @@ namespace WinForm_Model
                 while (r.Read())
                 {
                     form_data fd = new form_data();
-                    fd._ID = Int32.Parse(r["_ID"].ToString());
+                    fd._id = r["_ID"].ToString();
+                    fd._uid=r["_uid"].ToString();
+                    fd.appversion=r["appversion"].ToString();
+                    fd.cr01 = r["cr01"].ToString();
+                    fd.cr02 = r["cr02"].ToString();
+                    fd.cr03 = r["cr03"].ToString();
+                    fd.cr04 = r["cr04"].ToString();
+                    fd.cr05 = r["cr05"].ToString();
+                    fd.cr06 = r["cr06"].ToString();
+                    fd.cr07 = r["cr07"].ToString();
+                    fd.cr08d = r["cr08d"].ToString();
+                    fd.cr08m = r["cr08m"].ToString();
+                    fd.cr08y = r["cr08y"].ToString();
+                    fd.cr09 = r["cr09"].ToString();
                     fd.cr10 = r["cr10"].ToString();
                     fd.cr11 = r["cr11"].ToString();
                     fd.cr12 = r["cr12"].ToString();
-                    fd.cr13m = r["cr12"].ToString();
-                    fd.cr13f = r["cr12"].ToString();
+                    fd.cr13 = r["cr13"].ToString();
+                    fd.cr14d = r["cr14d"].ToString();
+                    fd.cr15m = r["cr15m"].ToString();
+                    fd.cr15y = r["cr15y"].ToString();
                     fd.cr16 = r["cr16"].ToString();
+                    fd.cr17 = r["cr17"].ToString();
+                    fd.cr18 = r["cr18"].ToString();
+                    fd.cr19 = r["cr19"].ToString();
+                    fd.cr20 = r["cr20"].ToString();
                     fd.cr21 = r["cr21"].ToString();
                     fd.cr22 = r["cr22"].ToString();
                     fd.cr23 = r["cr23"].ToString();
-                    fd.cr17a = r["cr17a"].ToString();
-                    fd.cr17b = r["cr17b"].ToString();
-                    fd.cr18a = r["cr18a"].ToString();
-                    fd.cr18b = r["cr18b"].ToString();
-                    fd.cr19a = r["cr19a"].ToString();
-                    fd.cr19b = r["cr19b"].ToString();
-                    fd.cr20a = r["cr20a"].ToString();
-                    fd.cr20b = r["cr20b"].ToString();
                     fd.cr24a = r["cr24a"].ToString();
                     fd.cr24b = r["cr24b"].ToString();
                     fd.cr24c = r["cr24c"].ToString();
                     fd.cr24d = r["cr24d"].ToString();
                     fd.cr24e = r["cr24e"].ToString();
                     fd.cr24f = r["cr24f"].ToString();
-                    fd.cr25a = r["cr25a"].ToString();
-                    fd.cr25b = r["cr25b"].ToString();
-                    fd.cr25c = r["cr25c"].ToString();
-                    fd.cr26a = r["cr26a"].ToString();
-                    fd.cr26b = r["cr26b"].ToString();
-                    fd.cr26c = r["cr26c"].ToString();
-                    fd.cr26d = r["cr26d"].ToString();
+                    fd.cr25 = r["cr25"].ToString();
+                    fd.cr26 = r["cr26"].ToString();
                     fd.cr27a = r["cr27a"].ToString();
                     fd.cr27b = r["cr27b"].ToString();
                     fd.cr27c = r["cr27c"].ToString();
-                    fd.cr28a01 = r["cr28a01"].ToString();
-                    fd.cr28a02 = r["cr28a02"].ToString();
-                    fd.cr28b01 = r["cr28b01"].ToString();
-                    fd.cr28b02 = r["cr28b02"].ToString();
-                    fd.cr28c01 = r["cr28c01"].ToString();
-                    fd.cr28c02 = r["cr28c02"].ToString();
-                    fd.cr28d01 = r["cr28d01"].ToString();
-                    fd.cr28d02 = r["cr28d02"].ToString();
-                    fd.cr28e01 = r["cr28e01"].ToString();
-                    fd.cr28e02 = r["cr28e02"].ToString();
-                    fd.cr28f01 = r["cr28f01"].ToString();
-                    fd.cr28f02 = r["cr28f02"].ToString();
-                    fd.cr28fx01 = r["cr28fx01"].ToString();
-                    fd.cr28fx02 = r["cr28fx02"].ToString();
-                    fd.cr28fx98 = r["cr28fx98"].ToString();
+                    fd.cr28a = r["cr28a"].ToString();
+                    fd.cr28b = r["cr28b"].ToString();
+                    fd.cr28c = r["cr28c"].ToString();
+                    fd.cr28d = r["cr28d"].ToString();
+                    fd.cr28e = r["cr28e"].ToString();
+                    fd.cr28f = r["cr28f"].ToString();
+                    fd.cr28fx = r["cr28fx"].ToString();
+                    fd.deviceid = r["deviceid"].ToString();
+                    fd.endingdatetime = r["endingdatetime"].ToString();
+                    fd.gpsacc = r["gpsacc"].ToString();
+                    fd.gpsdate = r["gpsdate"].ToString();
+                    fd.gpslat = r["gpslat"].ToString();
+                    fd.gpslng = r["gpslng"].ToString();
+                    fd.istatus = r["istatus"].ToString();
+                    fd.istatus96x = r["istatus96x"].ToString();
+                    fd.sysdate = r["sysdate"].ToString();
+                    fd.tagid = r["tagid"].ToString();
+                    fd.username = r["username"].ToString();
 
 
                     // 
@@ -435,7 +448,7 @@ namespace WinForm_Model
 
                 }
             }
-          
+
             con.Close();
 
             return fdList;

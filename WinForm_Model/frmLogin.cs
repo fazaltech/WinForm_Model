@@ -59,6 +59,9 @@ namespace WinForm_Model
         {
             if (text_user_name.Text == "test1234" && text_password.Text == "test1234")
             {
+
+
+                DataBaseVariable.UserName = text_user_name.Text;
                 DataBaseVariable.frmlogin1 = this;
                 this.Hide();
                 frm_main obj_main = new frm_main();

@@ -273,6 +273,11 @@ namespace WinForm_Model
                 
             if (ValidateForm())
             {
+                DataBaseVariable.dis1 = combo_cr01.SelectedValue.ToString();
+                DataBaseVariable.ucss1 = combo_cr04.SelectedValue.ToString();
+                DataBaseVariable.vill1 = combo_cr05.SelectedValue.ToString();
+
+
                 DataBaseVariable.frm_main1 = this;
                 this.Hide();
 

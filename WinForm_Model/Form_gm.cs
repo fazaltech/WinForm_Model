@@ -304,11 +304,26 @@ namespace WinForm_Model
 
 
             form_data forms = new form_data();
+
+            forms.cr01 = DataBaseVariable.dis1;
+            forms.cr02 = cr10;
+            forms.cr03 = cr10;
+            forms.cr04 = DataBaseVariable.ucss1;
+            forms.cr05 = DataBaseVariable.vill1;
+            forms.cr06 = cr10;
+            forms.cr07 = cr10;
+            forms.cr08d = cr10;
+            forms.cr08m = cr10;
+            forms.cr08y = cr10;
+            forms.cr09 = cr10;
+           
             forms.cr10 = cr10;
             forms.cr11 = cr11;
             forms.cr12 = cr12;
             forms.cr13m = cr13m;
             forms.cr13f = cr13f;
+            forms.cr14 = cr10;
+            forms.cr15 = cr10;
             forms.cr16 = cr16;
             forms.cr21 = cr21;
             forms.cr22 = cr22;
@@ -352,6 +367,7 @@ namespace WinForm_Model
             forms.cr28fx01 = cr28fx01;
             forms.cr28fx02 = cr28fx02;
             forms.cr28fx98 = cr28fx02;
+            forms.username = DataBaseVariable.UserName;
 
             SQLiteDatabase.InsertForm(forms);
             ////ShowStatus(result, "Save");
