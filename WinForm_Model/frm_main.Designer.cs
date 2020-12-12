@@ -45,7 +45,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.text_cr03 = new System.Windows.Forms.TextBox();
             this.label_cr08 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTime_cr08 = new System.Windows.Forms.DateTimePicker();
             this.grp_cr02 = new System.Windows.Forms.GroupBox();
             this.radio_cr02a = new System.Windows.Forms.RadioButton();
             this.radio_cr02c = new System.Windows.Forms.RadioButton();
@@ -64,6 +64,7 @@
             this.radio_cr0605 = new System.Windows.Forms.RadioButton();
             this.radio_cr06098 = new System.Windows.Forms.RadioButton();
             this.text_cr06other = new System.Windows.Forms.TextBox();
+            this.label_cr06other = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.grp_cr02.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -205,9 +206,10 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.label_cr06other);
             this.groupBox1.Controls.Add(this.text_cr03);
             this.groupBox1.Controls.Add(this.label_cr08);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.dateTime_cr08);
             this.groupBox1.Controls.Add(this.combo_cr01);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.text_cr06other);
@@ -250,15 +252,15 @@
             this.label_cr08.TabIndex = 5;
             this.label_cr08.Text = "Date of Screening";
             // 
-            // dateTimePicker1
+            // dateTime_cr08
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(238, 43);
-            this.dateTimePicker1.MinDate = new System.DateTime(2020, 12, 8, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(151, 25);
-            this.dateTimePicker1.TabIndex = 9;
+            this.dateTime_cr08.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dateTime_cr08.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTime_cr08.Location = new System.Drawing.Point(238, 43);
+            this.dateTime_cr08.MinDate = new System.DateTime(2020, 12, 8, 0, 0, 0, 0);
+            this.dateTime_cr08.Name = "dateTime_cr08";
+            this.dateTime_cr08.Size = new System.Drawing.Size(151, 25);
+            this.dateTime_cr08.TabIndex = 9;
             // 
             // grp_cr02
             // 
@@ -454,12 +456,23 @@
             // text_cr06other
             // 
             this.text_cr06other.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.text_cr06other.Location = new System.Drawing.Point(238, 323);
+            this.text_cr06other.Location = new System.Drawing.Point(238, 343);
             this.text_cr06other.Name = "text_cr06other";
             this.text_cr06other.Size = new System.Drawing.Size(151, 25);
             this.text_cr06other.TabIndex = 10;
             this.text_cr06other.Visible = false;
             this.text_cr06other.TextChanged += new System.EventHandler(this.text_cr09_TextChanged);
+            // 
+            // label_cr06other
+            // 
+            this.label_cr06other.AutoSize = true;
+            this.label_cr06other.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label_cr06other.Location = new System.Drawing.Point(238, 324);
+            this.label_cr06other.Name = "label_cr06other";
+            this.label_cr06other.Size = new System.Drawing.Size(87, 17);
+            this.label_cr06other.TabIndex = 12;
+            this.label_cr06other.Text = "Other Specify";
+            this.label_cr06other.Visible = false;
             // 
             // frm_main
             // 
@@ -508,7 +521,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label_cr08;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTime_cr08;
         private System.Windows.Forms.TextBox text_cr03;
         private System.Windows.Forms.RadioButton radio_cr02c;
         private System.Windows.Forms.RadioButton radio_cr02b;
@@ -526,6 +539,7 @@
         private System.Windows.Forms.RadioButton radio_cr0603;
         private System.Windows.Forms.RadioButton radio_cr0602;
         private System.Windows.Forms.TextBox text_cr06other;
+        private System.Windows.Forms.Label label_cr06other;
     }
 }
 

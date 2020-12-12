@@ -61,18 +61,43 @@ namespace WinForm_Model
         }
 
         public string cr02 = "-1";
+        public string cr06 = "-1";
+        public string cr0698 = "-1";
+        public string cr03 = "-1";
+        public string cr07 = "-1";
+        
+        public string cr09 = "-1";
+        
+       
 
         public void controls_value()
         {
 
-            //if (.Checked) { cr17 = "1"; } else if (!radio_cr17a.Checked) { cr17 = "2"; }
+            if (radio_cr02a.Checked) { cr02 = "1"; }else if (radio_cr02b.Checked) { cr02 = "2"; } else if (radio_cr02c.Checked) { cr02 = "3"; }
+            if (radio_cr0601.Checked) { cr06 = "1"; } else if (radio_cr0602.Checked) { cr06 = "2"; } else if (radio_cr0603.Checked) { cr06 = "3"; } else if (radio_cr0604.Checked) { cr06 = "4"; } else if (radio_cr0605.Checked) { cr06 = "5"; } else if (radio_cr06098.Checked) { cr06 = "98"; }
+            if (text_cr06other.Text != null) { cr0698 = text_cr06other.Text; }
+            if (text_cr03.Text != null) { cr03 = text_cr03.Text; }
+            if (text_cr07.Text != null) { cr07 = text_cr07.Text; }
+            if (text_cr09.Text != null) { cr09 = text_cr09.Text; }
+            DataBaseVariable.ScreenData = dateTime_cr08.Value;
+            DataBaseVariable.dis1 = combo_cr01.SelectedValue.ToString();
+            DataBaseVariable.ucss1 = combo_cr04.SelectedValue.ToString();
+            DataBaseVariable.vill1 = combo_cr05.SelectedValue.ToString();
+            DataBaseVariable.CR_09 = cr09;
+            DataBaseVariable.CR_06 = cr06;
+            DataBaseVariable.CR_0698 = cr0698;
+            DataBaseVariable.CR_07 = cr07;
+            DataBaseVariable.CR_02 = cr02;
+            DataBaseVariable.CR_03 = cr03;
+            
+
             //if (radio_cr18a.Checked) { cr18 = "1"; } else if (!radio_cr18a.Checked) { cr18 = "2"; }
             //if (radio_cr19a.Checked) { cr18 = "1"; } else if (!radio_cr19a.Checked) { cr19 = "2"; }
             //if (radio_cr20a.Checked) { cr20 = "1"; } else if (!radio_cr20a.Checked) { cr20 = "2"; }
         }
 
 
-            public void controls_text()
+        public void controls_text()
         {
             radio_cr02a.Text = list.cr02a;
             radio_cr02b.Text = list.cr02b;
@@ -299,13 +324,13 @@ namespace WinForm_Model
         private void button1_Click(object sender, EventArgs e)
         {
 
-                
+
             if (ValidateForm())
             {
                 DataBaseVariable.dis1 = combo_cr01.SelectedValue.ToString();
                 DataBaseVariable.ucss1 = combo_cr04.SelectedValue.ToString();
                 DataBaseVariable.vill1 = combo_cr05.SelectedValue.ToString();
-
+                controls_value();
 
                 DataBaseVariable.frm_main1 = this;
                 this.Hide();
@@ -404,6 +429,7 @@ namespace WinForm_Model
             if (text_cr06other.Visible == true)
             {
                 text_cr06other.Visible = false;
+                label_cr06other.Visible = false;
                 text_cr06other.Text = "";
 
             }
@@ -414,10 +440,11 @@ namespace WinForm_Model
         {
             if (text_cr06other.Visible == false)
             {
+                label_cr06other.Visible = true;
                 text_cr06other.Visible = true;
-                
+
             }
 
         }
     }
-} 
+}

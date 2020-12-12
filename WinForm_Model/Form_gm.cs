@@ -277,17 +277,17 @@ namespace WinForm_Model
             form_data forms = new form_data();
 
             forms.cr01 = DataBaseVariable.dis1;
-            forms.cr02 = cr10;
-            forms.cr03 = cr10;
+            forms.cr02 = DataBaseVariable.CR_02;
+            forms.cr03 = DataBaseVariable.CR_03;
             forms.cr04 = DataBaseVariable.ucss1;
             forms.cr05 = DataBaseVariable.vill1;
-            forms.cr06 = cr10;
-            forms.cr07 = cr10;
-            forms.cr08d = cr10;
-            forms.cr08m = cr10;
-            forms.cr08y = cr10;
-            forms.cr09 = cr10;
-           
+            forms.cr06 = DataBaseVariable.CR_06; 
+            forms.cr07 = DataBaseVariable.CR_07; 
+            forms.cr08d = DataBaseVariable.ScreenData.ToString("DD");
+            forms.cr08m = DataBaseVariable.ScreenData.ToString("mm");
+            forms.cr08y = DataBaseVariable.ScreenData.ToString("yyyy");
+            forms.cr09 = DataBaseVariable.CR_09;
+
             forms.cr10 = cr10;
             forms.cr11 = cr11;
             forms.cr12 = cr12;

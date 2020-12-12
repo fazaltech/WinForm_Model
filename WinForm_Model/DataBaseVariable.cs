@@ -39,6 +39,7 @@ namespace WinForm_Model
         static public bool Success = false;
         static string tabname = "";
         static DateTime StartDt;
+        static DateTime ScrntDt;
         static DateTime EndDt;
         static DateTime StartDate_Audit;
         static DateTime EndDate_Audit;
@@ -101,7 +102,13 @@ namespace WinForm_Model
         static string dis;
         static string ucss;
         static string vill;
-
+        static string cr09;
+        static string cr06;
+        static string cr0698;
+        static string cr07;
+        static string cr02;
+        static string cr03;
+        
 
 
 
@@ -1094,6 +1101,92 @@ namespace WinForm_Model
             set
             {
                 ucss = value;
+            }
+        }
+        public static DateTime ScreenData
+        {
+            get
+            {
+                return ScrntDt;
+            }
+
+            set
+            {
+                ScrntDt = value;
+            }
+        }
+
+        public static string CR_09
+        {
+            get
+            {
+                return cr09;
+            }
+
+            set
+            {
+                cr09 = value;
+            }
+        }
+        public static string CR_0698
+        {
+            get
+            {
+                return cr0698;
+            }
+
+            set
+            {
+                cr0698 = value;
+            }
+        }
+        public static string CR_06
+        {
+            get
+            {
+                return cr0698;
+            }
+
+            set
+            {
+                cr0698 = value;
+            }
+        }
+        public static string CR_07
+        {
+            get
+            {
+                return cr0698;
+            }
+
+            set
+            {
+                cr0698 = value;
+            }
+        }
+        public static string CR_02
+        {
+            get
+            {
+                return cr02;
+            }
+
+            set
+            {
+                cr02 = value;
+            }
+        }
+
+        public static string CR_03
+        {
+            get
+            {
+                return cr03;
+            }
+
+            set
+            {
+                cr03 = value;
             }
         }
 
