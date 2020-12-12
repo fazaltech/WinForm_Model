@@ -292,7 +292,7 @@ namespace WinForm_Model
 
                     using (var cmd = con.CreateCommand())
                     {
-                        cmd.CommandText = "INSERT INTO forms (cr01,cr02,cr03,cr04,cr05,cr06,cr07,cr08d,cr08m,cr08y,cr09,cr10,cr11,cr12,cr13,cr14d,cr15m,cr15y,cr16,cr17,cr18,cr19,cr20,cr21,cr22,cr23,cr24a,cr24b,cr24c,cr24d,cr24e,cr24f,cr25,cr26,cr27a,cr27b,cr27c,cr28a,cr28b,cr28c,cr28d,cr28e,cr28f,cr28fx,username) VALUES (@cr01,@cr02,@cr03,@cr04,@cr05,@cr06,@cr07,@cr08d,@cr08m,@cr08y,@cr09,@cr10,@cr11,@cr12,@cr13,@cr14d,@cr15m,@cr15y,@cr16,@cr17,@cr18,@cr19,@cr20,@cr21,@cr22,@cr23,@cr24a,@cr24b,@cr24c,@cr24d,@cr24e,@cr24f,@cr25,@cr26,@cr27a,@cr27b,@cr27c,@cr28a,@cr28b,@cr28c,@cr28d,@cr28e,@cr28f,@cr28fx,@username)";
+                        cmd.CommandText = "INSERT INTO forms (cr01,cr02,cr03,cr04,cr05,cr06,cr07,cr08d,cr08m,cr08y,cr09,cr10,cr11,cr12,cr13,cr14d,cr15m,cr15y,cr16,cr17,cr18,cr19,cr20,cr21,cr22,cr23,cr24a,cr24b,cr24c,cr24d,cr24e,cr24f,cr25,cr26,cr27a,cr27b,cr27c,cr28a,cr28b,cr28c,cr28d,cr28e,cr28f,cr28fx,endingdatetime,username) VALUES (@cr01,@cr02,@cr03,@cr04,@cr05,@cr06,@cr07,@cr08d,@cr08m,@cr08y,@cr09,@cr10,@cr11,@cr12,@cr13,@cr14d,@cr15m,@cr15y,@cr16,@cr17,@cr18,@cr19,@cr20,@cr21,@cr22,@cr23,@cr24a,@cr24b,@cr24c,@cr24d,@cr24e,@cr24f,@cr25,@cr26,@cr27a,@cr27b,@cr27c,@cr28a,@cr28b,@cr28c,@cr28d,@cr28e,@cr28f,@cr28fx,@endingdatetime,@username)";
 
                         //for (int i = 0; i < forms_data.Count; i++)
                         //{
@@ -342,7 +342,7 @@ namespace WinForm_Model
                         cmd.Parameters.AddWithValue("cr28f", forms_data.cr28f);
                         cmd.Parameters.AddWithValue("cr28fx", forms_data.cr28fx);
                         //cmd.Parameters.AddWithValue("deviceid", forms_data.deviceid);
-                        //cmd.Parameters.AddWithValue("endingdatetime", forms_data.endingdatetime);
+                        cmd.Parameters.AddWithValue("endingdatetime", forms_data.endingdatetime);
                         //cmd.Parameters.AddWithValue("gpsacc", forms_data.gpsacc);
                         //cmd.Parameters.AddWithValue("gpsdate", forms_data.gpsdate);
                         //cmd.Parameters.AddWithValue("gpslat", forms_data.gpslat);

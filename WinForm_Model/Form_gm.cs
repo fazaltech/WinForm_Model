@@ -273,7 +273,7 @@ namespace WinForm_Model
         {
             controls_value();
 
-
+            DateTime now = DateTime.Now;
             form_data forms = new form_data();
 
             forms.cr01 = DataBaseVariable.dis1;
@@ -328,8 +328,8 @@ namespace WinForm_Model
              forms.cr28e=  cr28e;
              forms.cr28f = cr28fx;
              forms.cr28fx= cr28fx;
-
-
+            
+            forms.endingdatetime = now.ToString("MM/dd/yyyy HH:mm:ss.fff");
             forms.username = DataBaseVariable.UserName;
 
             SQLiteDatabase.InsertForm(forms);
