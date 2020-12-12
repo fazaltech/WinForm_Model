@@ -60,12 +60,29 @@ namespace WinForm_Model
 
         }
 
+        public string cr02 = "-1";
 
-        public void controls_text()
+        public void controls_value()
+        {
+
+            //if (.Checked) { cr17 = "1"; } else if (!radio_cr17a.Checked) { cr17 = "2"; }
+            //if (radio_cr18a.Checked) { cr18 = "1"; } else if (!radio_cr18a.Checked) { cr18 = "2"; }
+            //if (radio_cr19a.Checked) { cr18 = "1"; } else if (!radio_cr19a.Checked) { cr19 = "2"; }
+            //if (radio_cr20a.Checked) { cr20 = "1"; } else if (!radio_cr20a.Checked) { cr20 = "2"; }
+        }
+
+
+            public void controls_text()
         {
             radio_cr02a.Text = list.cr02a;
             radio_cr02b.Text = list.cr02b;
             radio_cr02c.Text = list.cr02c;
+            radio_cr0601.Text = list.cr06a;
+            radio_cr0602.Text = list.cr06b;
+            radio_cr0603.Text = list.cr06c;
+            radio_cr0604.Text = list.cr06d;
+            radio_cr0605.Text = list.cr06e;
+            radio_cr06098.Text = list.cr06x;
         }
 
 
@@ -380,6 +397,27 @@ namespace WinForm_Model
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void radio_cr06098_CheckedChanged(object sender, EventArgs e)
+        {
+            if (text_cr06other.Visible == true)
+            {
+                text_cr06other.Visible = false;
+                text_cr06other.Text = "";
+
+            }
+
+        }
+
+        private void radio_cr06098_Click(object sender, EventArgs e)
+        {
+            if (text_cr06other.Visible == false)
+            {
+                text_cr06other.Visible = true;
+                
+            }
+
         }
     }
 } 

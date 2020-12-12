@@ -55,9 +55,19 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errMessages = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.label_cr06 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radio_cr0601 = new System.Windows.Forms.RadioButton();
+            this.radio_cr0603 = new System.Windows.Forms.RadioButton();
+            this.radio_cr0602 = new System.Windows.Forms.RadioButton();
+            this.radio_cr0604 = new System.Windows.Forms.RadioButton();
+            this.radio_cr0605 = new System.Windows.Forms.RadioButton();
+            this.radio_cr06098 = new System.Windows.Forms.RadioButton();
+            this.text_cr06other = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.grp_cr02.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label_cr01
@@ -200,7 +210,9 @@
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.combo_cr01);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.text_cr06other);
             this.groupBox1.Controls.Add(this.text_cr09);
+            this.groupBox1.Controls.Add(this.label_cr06);
             this.groupBox1.Controls.Add(this.label_cr07);
             this.groupBox1.Controls.Add(this.label_cr05);
             this.groupBox1.Controls.Add(this.text_cr07);
@@ -210,6 +222,7 @@
             this.groupBox1.Controls.Add(this.label_cr02);
             this.groupBox1.Controls.Add(this.combo_cr04);
             this.groupBox1.Controls.Add(this.label_cr01);
+            this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.grp_cr02);
             this.groupBox1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.groupBox1.Location = new System.Drawing.Point(21, 54);
@@ -339,6 +352,115 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label_cr06
+            // 
+            this.label_cr06.AutoSize = true;
+            this.label_cr06.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label_cr06.Location = new System.Drawing.Point(235, 127);
+            this.label_cr06.Name = "label_cr06";
+            this.label_cr06.Size = new System.Drawing.Size(143, 17);
+            this.label_cr06.TabIndex = 1;
+            this.label_cr06.Text = "Assessor’s designation";
+            this.label_cr06.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.radio_cr0601);
+            this.groupBox2.Controls.Add(this.radio_cr06098);
+            this.groupBox2.Controls.Add(this.radio_cr0605);
+            this.groupBox2.Controls.Add(this.radio_cr0604);
+            this.groupBox2.Controls.Add(this.radio_cr0603);
+            this.groupBox2.Controls.Add(this.radio_cr0602);
+            this.groupBox2.Location = new System.Drawing.Point(238, 161);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(151, 156);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            // 
+            // radio_cr0601
+            // 
+            this.radio_cr0601.AutoSize = true;
+            this.radio_cr0601.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.radio_cr0601.Location = new System.Drawing.Point(6, 12);
+            this.radio_cr0601.Name = "radio_cr0601";
+            this.radio_cr0601.Size = new System.Drawing.Size(100, 21);
+            this.radio_cr0601.TabIndex = 2;
+            this.radio_cr0601.TabStop = true;
+            this.radio_cr0601.Text = "radioButton1";
+            this.radio_cr0601.UseVisualStyleBackColor = true;
+            // 
+            // radio_cr0603
+            // 
+            this.radio_cr0603.AutoSize = true;
+            this.radio_cr0603.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.radio_cr0603.Location = new System.Drawing.Point(6, 58);
+            this.radio_cr0603.Name = "radio_cr0603";
+            this.radio_cr0603.Size = new System.Drawing.Size(100, 21);
+            this.radio_cr0603.TabIndex = 4;
+            this.radio_cr0603.TabStop = true;
+            this.radio_cr0603.Text = "radioButton1";
+            this.radio_cr0603.UseVisualStyleBackColor = true;
+            // 
+            // radio_cr0602
+            // 
+            this.radio_cr0602.AutoSize = true;
+            this.radio_cr0602.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.radio_cr0602.Location = new System.Drawing.Point(6, 35);
+            this.radio_cr0602.Name = "radio_cr0602";
+            this.radio_cr0602.Size = new System.Drawing.Size(100, 21);
+            this.radio_cr0602.TabIndex = 3;
+            this.radio_cr0602.TabStop = true;
+            this.radio_cr0602.Text = "radioButton1";
+            this.radio_cr0602.UseVisualStyleBackColor = true;
+            // 
+            // radio_cr0604
+            // 
+            this.radio_cr0604.AutoSize = true;
+            this.radio_cr0604.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.radio_cr0604.Location = new System.Drawing.Point(6, 81);
+            this.radio_cr0604.Name = "radio_cr0604";
+            this.radio_cr0604.Size = new System.Drawing.Size(100, 21);
+            this.radio_cr0604.TabIndex = 4;
+            this.radio_cr0604.TabStop = true;
+            this.radio_cr0604.Text = "radioButton1";
+            this.radio_cr0604.UseVisualStyleBackColor = true;
+            // 
+            // radio_cr0605
+            // 
+            this.radio_cr0605.AutoSize = true;
+            this.radio_cr0605.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.radio_cr0605.Location = new System.Drawing.Point(6, 104);
+            this.radio_cr0605.Name = "radio_cr0605";
+            this.radio_cr0605.Size = new System.Drawing.Size(100, 21);
+            this.radio_cr0605.TabIndex = 4;
+            this.radio_cr0605.TabStop = true;
+            this.radio_cr0605.Text = "radioButton1";
+            this.radio_cr0605.UseVisualStyleBackColor = true;
+            // 
+            // radio_cr06098
+            // 
+            this.radio_cr06098.AutoSize = true;
+            this.radio_cr06098.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.radio_cr06098.Location = new System.Drawing.Point(6, 127);
+            this.radio_cr06098.Name = "radio_cr06098";
+            this.radio_cr06098.Size = new System.Drawing.Size(100, 21);
+            this.radio_cr06098.TabIndex = 4;
+            this.radio_cr06098.TabStop = true;
+            this.radio_cr06098.Text = "radioButton1";
+            this.radio_cr06098.UseVisualStyleBackColor = true;
+            this.radio_cr06098.CheckedChanged += new System.EventHandler(this.radio_cr06098_CheckedChanged);
+            this.radio_cr06098.Click += new System.EventHandler(this.radio_cr06098_Click);
+            // 
+            // text_cr06other
+            // 
+            this.text_cr06other.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.text_cr06other.Location = new System.Drawing.Point(238, 323);
+            this.text_cr06other.Name = "text_cr06other";
+            this.text_cr06other.Size = new System.Drawing.Size(151, 25);
+            this.text_cr06other.TabIndex = 10;
+            this.text_cr06other.Visible = false;
+            this.text_cr06other.TextChanged += new System.EventHandler(this.text_cr09_TextChanged);
+            // 
             // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -361,6 +483,8 @@
             this.grp_cr02.ResumeLayout(false);
             this.grp_cr02.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -393,6 +517,15 @@
         private System.Windows.Forms.GroupBox grp_cr02;
         private System.Windows.Forms.Label errMessages;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label_cr06;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton radio_cr0601;
+        private System.Windows.Forms.RadioButton radio_cr06098;
+        private System.Windows.Forms.RadioButton radio_cr0605;
+        private System.Windows.Forms.RadioButton radio_cr0604;
+        private System.Windows.Forms.RadioButton radio_cr0603;
+        private System.Windows.Forms.RadioButton radio_cr0602;
+        private System.Windows.Forms.TextBox text_cr06other;
     }
 }
 
