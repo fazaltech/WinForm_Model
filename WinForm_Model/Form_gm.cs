@@ -239,11 +239,11 @@ namespace WinForm_Model
            // if (check_cr27a.Checked) { cr27a = "1"; }else if (check_cr27b.Checked) { cr27b = "1"; }else if (check_cr27c.Checked) { cr27c = "1"; }
 
             if (radio_cr28a01.Checked) { cr28a = "1"; }else if(radio_cr28a02.Checked) { cr28a = "2"; }
-            if (radio_cr28b01.Checked) { cr28b = "1"; }else if(!radio_cr28b02.Checked) { cr28b = "2"; }
-            if (radio_cr28c01.Checked) { cr28c = "1"; }else if(!radio_cr28c02.Checked) { cr28b = "2"; }
-            if (radio_cr28d01.Checked) { cr28d = "1"; }else if(!radio_cr28d02.Checked) { cr28b = "2"; }
-            if (radio_cr28e01.Checked) { cr28e = "1"; }else if(!radio_cr28e02.Checked) { cr28b = "2"; }
-            if (radio_cr28f01.Checked) { cr28fx = "1"; }else if(!radio_cr28f02.Checked) { cr28fx = "2"; }
+            if (radio_cr28b01.Checked) { cr28b = "1"; }else if(radio_cr28b02.Checked) { cr28b = "2"; }
+            if (radio_cr28c01.Checked) { cr28c = "1"; }else if(radio_cr28c02.Checked) { cr28b = "2"; }
+            if (radio_cr28d01.Checked) { cr28d = "1"; }else if(radio_cr28d02.Checked) { cr28b = "2"; }
+            if (radio_cr28e01.Checked) { cr28e = "1"; }else if(radio_cr28e02.Checked) { cr28b = "2"; }
+            if (radio_cr28f01.Checked) { cr28fx = "1"; }else if(radio_cr28f02.Checked) { cr28fx = "2"; }
            
 
 
