@@ -407,18 +407,18 @@ namespace WinForm_Model
 
         private void btnContinue_Click(object sender, EventArgs e)
         {
-            Insert();
-            //if (validation())
-            //{
+            
+            if (validation())
+            {
 
-            //    Insert();
-            //    DataBaseVariable.frm_gm1 = this;
-            //    this.Hide();
+                Insert();
+                DataBaseVariable.frm_gm1 = this;
+                this.Hide();
 
-            //    Form_gm obj_frmgm = new Form_gm();
-            //    obj_frmgm.Show();
-            //}
-          
+                Form_gm obj_frmgm = new Form_gm();
+                obj_frmgm.Show();
+            }
+
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -784,6 +784,22 @@ namespace WinForm_Model
                 text_cr28fx98.Text = "";
             }
            
+        }
+
+        private void text_cr10_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void text_cr11_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsLetter(e.KeyChar) || (e.KeyChar == (char)Keys.Back)))
+                e.Handled = true;
+        }
+
+        private void text_cr21_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }

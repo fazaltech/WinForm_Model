@@ -39,6 +39,8 @@
             this.label_cr28d = new System.Windows.Forms.Label();
             this.text_cr28fx98 = new System.Windows.Forms.TextBox();
             this.label_cr28fx = new System.Windows.Forms.Label();
+            this.text_cr22 = new System.Windows.Forms.MaskedTextBox();
+            this.text_cr23 = new System.Windows.Forms.MaskedTextBox();
             this.text_cr21 = new System.Windows.Forms.MaskedTextBox();
             this.button_close = new System.Windows.Forms.Button();
             this.label_cr28f = new System.Windows.Forms.Label();
@@ -127,8 +129,6 @@
             this.check_cr24c = new System.Windows.Forms.CheckBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.text_cr22 = new System.Windows.Forms.MaskedTextBox();
-            this.text_cr23 = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -319,6 +319,24 @@
             this.label_cr28fx.TabIndex = 102;
             this.label_cr28fx.Text = "label20";
             // 
+            // text_cr22
+            // 
+            this.text_cr22.Location = new System.Drawing.Point(69, 479);
+            this.text_cr22.Mask = "##.#";
+            this.text_cr22.Name = "text_cr22";
+            this.text_cr22.Size = new System.Drawing.Size(162, 29);
+            this.text_cr22.TabIndex = 114;
+            this.text_cr22.ValidatingType = typeof(int);
+            // 
+            // text_cr23
+            // 
+            this.text_cr23.Location = new System.Drawing.Point(399, 471);
+            this.text_cr23.Mask = "##.#";
+            this.text_cr23.Name = "text_cr23";
+            this.text_cr23.Size = new System.Drawing.Size(162, 29);
+            this.text_cr23.TabIndex = 114;
+            this.text_cr23.ValidatingType = typeof(int);
+            // 
             // text_cr21
             // 
             this.text_cr21.Location = new System.Drawing.Point(399, 412);
@@ -327,6 +345,7 @@
             this.text_cr21.Size = new System.Drawing.Size(162, 29);
             this.text_cr21.TabIndex = 114;
             this.text_cr21.ValidatingType = typeof(int);
+            this.text_cr21.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_cr21_KeyPress);
             // 
             // button_close
             // 
@@ -772,6 +791,7 @@
             this.text_cr10.Name = "text_cr10";
             this.text_cr10.Size = new System.Drawing.Size(172, 25);
             this.text_cr10.TabIndex = 0;
+            this.text_cr10.KeyDown += new System.Windows.Forms.KeyEventHandler(this.text_cr10_KeyDown);
             this.text_cr10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_cr10_KeyPress);
             // 
             // dateTime_cr14
@@ -868,6 +888,7 @@
             this.text_cr11.Name = "text_cr11";
             this.text_cr11.Size = new System.Drawing.Size(172, 25);
             this.text_cr11.TabIndex = 0;
+            this.text_cr11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_cr11_KeyPress);
             // 
             // groupBox14
             // 
@@ -1307,24 +1328,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(729, 614);
             this.panel1.TabIndex = 116;
-            // 
-            // text_cr22
-            // 
-            this.text_cr22.Location = new System.Drawing.Point(69, 479);
-            this.text_cr22.Mask = "##.#";
-            this.text_cr22.Name = "text_cr22";
-            this.text_cr22.Size = new System.Drawing.Size(162, 29);
-            this.text_cr22.TabIndex = 114;
-            this.text_cr22.ValidatingType = typeof(int);
-            // 
-            // text_cr23
-            // 
-            this.text_cr23.Location = new System.Drawing.Point(399, 471);
-            this.text_cr23.Mask = "##.#";
-            this.text_cr23.Name = "text_cr23";
-            this.text_cr23.Size = new System.Drawing.Size(162, 29);
-            this.text_cr23.TabIndex = 114;
-            this.text_cr23.ValidatingType = typeof(int);
             // 
             // Form_gm
             // 

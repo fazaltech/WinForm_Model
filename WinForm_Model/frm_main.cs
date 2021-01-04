@@ -446,5 +446,11 @@ namespace WinForm_Model
             }
 
         }
+
+        private void text_cr09_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsDigit(e.KeyChar) || (e.KeyChar == (char)Keys.Back)))
+                e.Handled = true;
+        }
     }
 }
