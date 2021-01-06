@@ -283,8 +283,8 @@ namespace WinForm_Model
             forms.cr05 = DataBaseVariable.vill1;
             forms.cr06 = DataBaseVariable.CR_06; 
             forms.cr07 = DataBaseVariable.CR_07; 
-            forms.cr08d = DataBaseVariable.ScreenData.ToString("DD");
-            forms.cr08m = DataBaseVariable.ScreenData.ToString("mm");
+            forms.cr08d = DataBaseVariable.ScreenData.ToString("dd");
+            forms.cr08m = DataBaseVariable.ScreenData.ToString("MM");
             forms.cr08y = DataBaseVariable.ScreenData.ToString("yyyy");
             forms.cr09 = DataBaseVariable.CR_09;
 
@@ -407,17 +407,17 @@ namespace WinForm_Model
 
         private void btnContinue_Click(object sender, EventArgs e)
         {
-            
-            if (validation())
-            {
+            Insert();
+            //if (validation())
+            //{
 
-                Insert();
-                DataBaseVariable.frm_gm1 = this;
-                this.Hide();
+            //    Insert();
+            //    DataBaseVariable.frm_gm1 = this;
+            //    this.Hide();
 
-                Form_gm obj_frmgm = new Form_gm();
-                obj_frmgm.Show();
-            }
+            //    Form_gm obj_frmgm = new Form_gm();
+            //    obj_frmgm.Show();
+            //}
 
         }
 
