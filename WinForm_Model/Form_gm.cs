@@ -244,11 +244,12 @@ namespace WinForm_Model
             if (radio_cr28d01.Checked) { cr28d = "1"; }else if(radio_cr28d02.Checked) { cr28b = "2"; }
             if (radio_cr28e01.Checked) { cr28e = "1"; }else if(radio_cr28e02.Checked) { cr28b = "2"; }
             if (radio_cr28f01.Checked) { cr28fx = "1"; }else if(radio_cr28f02.Checked) { cr28fx = "2"; }
-           
 
 
-            
-           
+
+            dateTime_cr14.MaxDate = DateTime.Today;
+
+
 
 
         }
@@ -799,22 +800,17 @@ namespace WinForm_Model
 
         private void text_cr21_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = ((new Char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' }).ToList<Char>()).Contains(e.KeyChar) ? false : true;
-
-            //you can either change it to 
-            e.Handled = char.IsDigit(e.KeyChar) ? false : true;
+ 
         }
 
         private void text_cr12_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(Char.IsLetter(e.KeyChar) || (e.KeyChar == (char)Keys.Back)))
-                e.Handled = true;
+          
         }
 
         private void text_cr22_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(Char.IsNumber(e.KeyChar) || (e.KeyChar == (char)Keys.Back)))
-                e.Handled = true;
+            
         }
 
         private void text_cr23_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)

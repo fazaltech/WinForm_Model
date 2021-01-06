@@ -801,6 +801,8 @@
             this.dateTime_cr14.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dateTime_cr14.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTime_cr14.Location = new System.Drawing.Point(69, 197);
+            this.dateTime_cr14.MaxDate = new System.DateTime(2021, 12, 31, 0, 0, 0, 0);
+            this.dateTime_cr14.MinDate = new System.DateTime(2015, 1, 1, 0, 0, 0, 0);
             this.dateTime_cr14.Name = "dateTime_cr14";
             this.dateTime_cr14.Size = new System.Drawing.Size(172, 25);
             this.dateTime_cr14.TabIndex = 3;
