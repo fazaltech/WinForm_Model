@@ -322,29 +322,31 @@
             // text_cr22
             // 
             this.text_cr22.Location = new System.Drawing.Point(69, 479);
-            this.text_cr22.Mask = "##.#";
+            this.text_cr22.Mask = "00.0";
             this.text_cr22.Name = "text_cr22";
             this.text_cr22.Size = new System.Drawing.Size(162, 29);
             this.text_cr22.TabIndex = 114;
             this.text_cr22.ValidatingType = typeof(int);
+            this.text_cr22.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_cr22_KeyPress);
             // 
             // text_cr23
             // 
             this.text_cr23.Location = new System.Drawing.Point(399, 471);
-            this.text_cr23.Mask = "##.#";
+            this.text_cr23.Mask = "00.0";
             this.text_cr23.Name = "text_cr23";
             this.text_cr23.Size = new System.Drawing.Size(162, 29);
             this.text_cr23.TabIndex = 114;
             this.text_cr23.ValidatingType = typeof(int);
+            this.text_cr23.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.text_cr23_MaskInputRejected);
+            this.text_cr23.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_cr23_KeyPress);
             // 
             // text_cr21
             // 
             this.text_cr21.Location = new System.Drawing.Point(399, 412);
-            this.text_cr21.Mask = "##.#";
+            this.text_cr21.Mask = "00.0";
             this.text_cr21.Name = "text_cr21";
             this.text_cr21.Size = new System.Drawing.Size(162, 29);
             this.text_cr21.TabIndex = 114;
-            this.text_cr21.ValidatingType = typeof(int);
             this.text_cr21.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_cr21_KeyPress);
             // 
             // button_close
@@ -1016,6 +1018,7 @@
             this.text_cr12.Name = "text_cr12";
             this.text_cr12.Size = new System.Drawing.Size(172, 25);
             this.text_cr12.TabIndex = 2;
+            this.text_cr12.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_cr12_KeyPress);
             // 
             // groupBox13
             // 

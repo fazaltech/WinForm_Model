@@ -407,17 +407,17 @@ namespace WinForm_Model
 
         private void btnContinue_Click(object sender, EventArgs e)
         {
-            Insert();
-            //if (validation())
-            //{
+            //Insert();
+            if (validation())
+            {
 
-            //    Insert();
-            //    DataBaseVariable.frm_gm1 = this;
-            //    this.Hide();
+                Insert();
+                DataBaseVariable.frm_gm1 = this;
+                this.Hide();
 
-            //    Form_gm obj_frmgm = new Form_gm();
-            //    obj_frmgm.Show();
-            //}
+                Form_gm obj_frmgm = new Form_gm();
+                obj_frmgm.Show();
+            }
 
         }
 
@@ -439,261 +439,261 @@ namespace WinForm_Model
 
         public bool validation()
         {
-            if (text_cr10.Text == "")
-            {
+            //if (text_cr10.Text == "")
+            //{
 
-                errorProvider1.SetError(text_cr10, "Please Enter Child Registration Number.");
-                return false;
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
-            if (text_cr11.Text == "")
-            {
+            //    errorProvider1.SetError(text_cr10, "Please Enter Child Registration Number.");
+            //    return false;
+            //}
+            //else
+            //{
+            //    errorProvider1.Clear();
+            //}
+            //if (text_cr11.Text == "")
+            //{
 
-                errorProvider1.SetError(text_cr11, "Please Enter Child Name");
-                return false;
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
-            if (text_cr12.Text == "")
-            {
+            //    errorProvider1.SetError(text_cr11, "Please Enter Child Name");
+            //    return false;
+            //}
+            //else
+            //{
+            //    errorProvider1.Clear();
+            //}
+            //if (text_cr12.Text == "")
+            //{
 
-                errorProvider1.SetError(text_cr12, "Please Enter Father Name");
-                return false;
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
-            if (radio_cr13m.Checked != true && radio_cr13f.Checked != true)
-            {
+            //    errorProvider1.SetError(text_cr12, "Please Enter Father Name");
+            //    return false;
+            //}
+            //else
+            //{
+            //    errorProvider1.Clear();
+            //}
+            //if (radio_cr13m.Checked != true && radio_cr13f.Checked != true)
+            //{
 
-                errorProvider1.SetError(radio_cr13m, "Please Select Gender");
-                return false;
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
-            if (text_cr16.Text == "")
-            {
+            //    errorProvider1.SetError(radio_cr13m, "Please Select Gender");
+            //    return false;
+            //}
+            //else
+            //{
+            //    errorProvider1.Clear();
+            //}
+            //if (text_cr16.Text == "")
+            //{
 
-                errorProvider1.SetError(text_cr16, "Please Select Gender");
-                return false;
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
-            if (radio_cr17a.Checked != true && radio_cr17b.Checked != true)
-            {
+            //    errorProvider1.SetError(text_cr16, "Please Select Gender");
+            //    return false;
+            //}
+            //else
+            //{
+            //    errorProvider1.Clear();
+            //}
+            //if (radio_cr17a.Checked != true && radio_cr17b.Checked != true)
+            //{
 
-                errorProvider1.SetError(radio_cr17a, "Please Select fed your child");
-                return false;
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
-            if (radio_cr18a.Checked != true && radio_cr18b.Checked != true)
-            {
+            //    errorProvider1.SetError(radio_cr17a, "Please Select fed your child");
+            //    return false;
+            //}
+            //else
+            //{
+            //    errorProvider1.Clear();
+            //}
+            //if (radio_cr18a.Checked != true && radio_cr18b.Checked != true)
+            //{
 
-                errorProvider1.SetError(radio_cr18a, "Please Select child being currently exclusively");
-                return false;
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
+            //    errorProvider1.SetError(radio_cr18a, "Please Select child being currently exclusively");
+            //    return false;
+            //}
+            //else
+            //{
+            //    errorProvider1.Clear();
+            //}
 
-            if (radio_cr19a.Checked != true && radio_cr19b.Checked != true)
-            {
+            //if (radio_cr19a.Checked != true && radio_cr19b.Checked != true)
+            //{
 
-                errorProvider1.SetError(label27, "Please Select complimentary feeding");
-                return false;
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
-            if (radio_cr19a.Checked != true && radio_cr19b.Checked != true)
-            {
+            //    errorProvider1.SetError(label27, "Please Select complimentary feeding");
+            //    return false;
+            //}
+            //else
+            //{
+            //    errorProvider1.Clear();
+            //}
+            //if (radio_cr19a.Checked != true && radio_cr19b.Checked != true)
+            //{
 
-                errorProvider1.SetError(label27, "Please Select complimentary feeding");
-                return false;
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
-            if (radio_cr20a.Checked != true && radio_cr20b.Checked != true)
-            {
+            //    errorProvider1.SetError(label27, "Please Select complimentary feeding");
+            //    return false;
+            //}
+            //else
+            //{
+            //    errorProvider1.Clear();
+            //}
+            //if (radio_cr20a.Checked != true && radio_cr20b.Checked != true)
+            //{
 
-                errorProvider1.SetError(label26, "Please Select complimentary feeding");
-                return false;
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
+            //    errorProvider1.SetError(label26, "Please Select complimentary feeding");
+            //    return false;
+            //}
+            //else
+            //{
+            //    errorProvider1.Clear();
+            //}
 
 
-            if (radio_cr20a.Checked != true && radio_cr20b.Checked != true)
-            {
+            //if (radio_cr20a.Checked != true && radio_cr20b.Checked != true)
+            //{
 
-                errorProvider1.SetError(radio_cr20a, "Please Select complimentary feeding");
-                return false;
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
+            //    errorProvider1.SetError(radio_cr20a, "Please Select complimentary feeding");
+            //    return false;
+            //}
+            //else
+            //{
+            //    errorProvider1.Clear();
+            //}
 
-            if (!text_cr21.MaskFull)
-            {
-                errorProvider1.SetError(text_cr21, "Please Select complimentary feeding");
-                return false;
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
-            if (text_cr22.Text == "")
-            {
-                errorProvider1.SetError(text_cr22, "Please Select complimentary feeding");
-                return false;
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
+            //if (!text_cr21.MaskFull)
+            //{
+            //    errorProvider1.SetError(text_cr21, "Please Select complimentary feeding");
+            //    return false;
+            //}
+            //else
+            //{
+            //    errorProvider1.Clear();
+            //}
+            //if (text_cr22.Text == "")
+            //{
+            //    errorProvider1.SetError(text_cr22, "Please Select complimentary feeding");
+            //    return false;
+            //}
+            //else
+            //{
+            //    errorProvider1.Clear();
+            //}
 
-            if (text_cr23.Text == "")
-            {
-                errorProvider1.SetError(text_cr23, "Please Select complimentary feeding");
-                return false;
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
-            if (check_cr24a.Checked != true && check_cr24b.Checked != true && check_cr24c.Checked != true && check_cr24d.Checked != true && check_cr24e.Checked != true && check_cr24f.Checked != true)
-            {
-                errorProvider1.SetError(check_cr24a, "Please Select ");
-                return false;
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
+            //if (text_cr23.Text == "")
+            //{
+            //    errorProvider1.SetError(text_cr23, "Please Select complimentary feeding");
+            //    return false;
+            //}
+            //else
+            //{
+            //    errorProvider1.Clear();
+            //}
+            //if (check_cr24a.Checked != true && check_cr24b.Checked != true && check_cr24c.Checked != true && check_cr24d.Checked != true && check_cr24e.Checked != true && check_cr24f.Checked != true)
+            //{
+            //    errorProvider1.SetError(check_cr24a, "Please Select ");
+            //    return false;
+            //}
+            //else
+            //{
+            //    errorProvider1.Clear();
+            //}
 
-            if (check_cr25a.Checked != true && check_cr25b.Checked != true && check_cr25c.Checked != true)
-            {
+            //if (check_cr25a.Checked != true && check_cr25b.Checked != true && check_cr25c.Checked != true)
+            //{
 
-                errorProvider1.SetError(check_cr25a, "Please Select ");
-                return false;
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
-            if (check_cr26a.Checked != true && check_cr26b.Checked != true && check_cr26c.Checked != true && check_cr26d.Checked != true)
-            {
-                errorProvider1.SetError(check_cr26a, "Please Select ");
-                return false;
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
-            if (text_cr27a.Text == "" && text_cr27b.Text == "" && text_cr27c.Text == "")
-            {
+            //    errorProvider1.SetError(check_cr25a, "Please Select ");
+            //    return false;
+            //}
+            //else
+            //{
+            //    errorProvider1.Clear();
+            //}
+            //if (check_cr26a.Checked != true && check_cr26b.Checked != true && check_cr26c.Checked != true && check_cr26d.Checked != true)
+            //{
+            //    errorProvider1.SetError(check_cr26a, "Please Select ");
+            //    return false;
+            //}
+            //else
+            //{
+            //    errorProvider1.Clear();
+            //}
+            //if (text_cr27a.Text == "" && text_cr27b.Text == "" && text_cr27c.Text == "")
+            //{
 
-                errorProvider1.SetError(text_cr27a, "Please Select ");
-                return false;
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
-            if (radio_cr28a01.Checked != true && radio_cr28a02.Checked != true)
-            {
+            //    errorProvider1.SetError(text_cr27a, "Please Select ");
+            //    return false;
+            //}
+            //else
+            //{
+            //    errorProvider1.Clear();
+            //}
+            //if (radio_cr28a01.Checked != true && radio_cr28a02.Checked != true)
+            //{
 
-                errorProvider1.SetError(radio_cr28a01, "Please Select ");
-                return false;
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
-            if (radio_cr28b01.Checked != true && radio_cr28b02.Checked != true)
-            {
+            //    errorProvider1.SetError(radio_cr28a01, "Please Select ");
+            //    return false;
+            //}
+            //else
+            //{
+            //    errorProvider1.Clear();
+            //}
+            //if (radio_cr28b01.Checked != true && radio_cr28b02.Checked != true)
+            //{
 
-                errorProvider1.SetError(radio_cr28b01, "Please Select ");
-                return false;
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
-            if (radio_cr28c01.Checked != true && radio_cr28c02.Checked != true)
-            {
-                errorProvider1.SetError(radio_cr28c01, "Please Select ");
-                return false;
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
-            if (radio_cr28d01.Checked != true && radio_cr28d02.Checked != true)
-            {
-                errorProvider1.SetError(radio_cr28d01, "Please Select ");
-                return false;
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
-            if (radio_cr28e01.Checked != true && radio_cr28e02.Checked != true)
-            {
-                errorProvider1.SetError(radio_cr28e01, "Please Select ");
-                return false;
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
-            if (radio_cr28f01.Checked != true && radio_cr28f02.Checked != true)
-            {
-                errorProvider1.SetError(radio_cr28f01, "Please Select ");
-                return false;
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
-            if (radio_cr28fx01.Checked != true && radio_cr28fx02.Checked != true)
-            {
-                errorProvider1.SetError(radio_cr28fx01, "Please Select ");
-                return false;
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
-            if (text_cr28fx98.Visible == true && text_cr28fx98.Text == "")
-            {
-                errorProvider1.SetError(radio_cr28fx01, "Please Select ");
-                return false;
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
+            //    errorProvider1.SetError(radio_cr28b01, "Please Select ");
+            //    return false;
+            //}
+            //else
+            //{
+            //    errorProvider1.Clear();
+            //}
+            //if (radio_cr28c01.Checked != true && radio_cr28c02.Checked != true)
+            //{
+            //    errorProvider1.SetError(radio_cr28c01, "Please Select ");
+            //    return false;
+            //}
+            //else
+            //{
+            //    errorProvider1.Clear();
+            //}
+            //if (radio_cr28d01.Checked != true && radio_cr28d02.Checked != true)
+            //{
+            //    errorProvider1.SetError(radio_cr28d01, "Please Select ");
+            //    return false;
+            //}
+            //else
+            //{
+            //    errorProvider1.Clear();
+            //}
+            //if (radio_cr28e01.Checked != true && radio_cr28e02.Checked != true)
+            //{
+            //    errorProvider1.SetError(radio_cr28e01, "Please Select ");
+            //    return false;
+            //}
+            //else
+            //{
+            //    errorProvider1.Clear();
+            //}
+            //if (radio_cr28f01.Checked != true && radio_cr28f02.Checked != true)
+            //{
+            //    errorProvider1.SetError(radio_cr28f01, "Please Select ");
+            //    return false;
+            //}
+            //else
+            //{
+            //    errorProvider1.Clear();
+            //}
+            //if (radio_cr28fx01.Checked != true && radio_cr28fx02.Checked != true)
+            //{
+            //    errorProvider1.SetError(radio_cr28fx01, "Please Select ");
+            //    return false;
+            //}
+            //else
+            //{
+            //    errorProvider1.Clear();
+            //}
+            //if (text_cr28fx98.Visible == true && text_cr28fx98.Text == "")
+            //{
+            //    errorProvider1.SetError(radio_cr28fx01, "Please Select ");
+            //    return false;
+            //}
+            //else
+            //{
+            //    errorProvider1.Clear();
+            //}
             float height;
             if (float.TryParse(text_cr21.Text, out height))
             {
@@ -799,7 +799,34 @@ namespace WinForm_Model
 
         private void text_cr21_KeyPress(object sender, KeyPressEventArgs e)
         {
+            e.Handled = ((new Char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' }).ToList<Char>()).Contains(e.KeyChar) ? false : true;
 
+            //you can either change it to 
+            e.Handled = char.IsDigit(e.KeyChar) ? false : true;
+        }
+
+        private void text_cr12_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsLetter(e.KeyChar) || (e.KeyChar == (char)Keys.Back)))
+                e.Handled = true;
+        }
+
+        private void text_cr22_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsNumber(e.KeyChar) || (e.KeyChar == (char)Keys.Back)))
+                e.Handled = true;
+        }
+
+        private void text_cr23_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+
+        }
+
+        private void text_cr23_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsNumber(e.KeyChar) || (e.KeyChar == (char)Keys.Back)))
+                e.Handled = true;
         }
     }
 }
