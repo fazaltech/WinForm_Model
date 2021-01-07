@@ -824,5 +824,34 @@ namespace WinForm_Model
             if (!(Char.IsNumber(e.KeyChar) || (e.KeyChar == (char)Keys.Back)))
                 e.Handled = true;
         }
+
+       
+
+        private void dateTime_cr14_Leave(object sender, EventArgs e)
+        {
+            age_calulator();
+        }
+
+        public void age_calulator()
+        {
+
+            DateTime start = dateTime_cr14.Value;
+            DateTime end = DateTime.Now;
+
+            TimeSpan ts = end - start;
+
+            double th = ts.TotalHours;
+            double td = (ts.Hours / 24);
+            //double tm = (ts. / 24);
+
+            text_cr15.Text = td.ToString("0");
+
+
+        }
+
+        private void text_cr15_KeyPress(object sender, KeyPressEventArgs e)
+        {
+          
+        }
     }
 }

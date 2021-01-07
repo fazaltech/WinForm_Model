@@ -520,7 +520,7 @@
             // text_cr27c
             // 
             this.text_cr27c.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.text_cr27c.Location = new System.Drawing.Point(516, 739);
+            this.text_cr27c.Location = new System.Drawing.Point(533, 739);
             this.text_cr27c.Name = "text_cr27c";
             this.text_cr27c.Size = new System.Drawing.Size(111, 25);
             this.text_cr27c.TabIndex = 26;
@@ -558,7 +558,7 @@
             // text_cr27b
             // 
             this.text_cr27b.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.text_cr27b.Location = new System.Drawing.Point(516, 712);
+            this.text_cr27b.Location = new System.Drawing.Point(533, 712);
             this.text_cr27b.Name = "text_cr27b";
             this.text_cr27b.Size = new System.Drawing.Size(111, 25);
             this.text_cr27b.TabIndex = 25;
@@ -599,7 +599,7 @@
             // text_cr27a
             // 
             this.text_cr27a.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.text_cr27a.Location = new System.Drawing.Point(516, 685);
+            this.text_cr27a.Location = new System.Drawing.Point(533, 685);
             this.text_cr27a.Name = "text_cr27a";
             this.text_cr27a.Size = new System.Drawing.Size(111, 25);
             this.text_cr27a.TabIndex = 0;
@@ -806,6 +806,7 @@
             this.dateTime_cr14.Name = "dateTime_cr14";
             this.dateTime_cr14.Size = new System.Drawing.Size(172, 25);
             this.dateTime_cr14.TabIndex = 3;
+            this.dateTime_cr14.Leave += new System.EventHandler(this.dateTime_cr14_Leave);
             // 
             // groupBox17
             // 
@@ -1144,6 +1145,7 @@
             this.text_cr15.Name = "text_cr15";
             this.text_cr15.Size = new System.Drawing.Size(172, 25);
             this.text_cr15.TabIndex = 5;
+            this.text_cr15.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_cr15_KeyPress);
             // 
             // label22
             // 
