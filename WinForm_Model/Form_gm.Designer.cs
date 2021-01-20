@@ -112,7 +112,6 @@
             this.text_cr15 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.text_cr16 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.check_cr24f = new System.Windows.Forms.CheckBox();
             this.label24 = new System.Windows.Forms.Label();
@@ -129,6 +128,7 @@
             this.check_cr24c = new System.Windows.Forms.CheckBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.text_cr16 = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -164,6 +164,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.text_cr16);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.label28);
             this.groupBox1.Controls.Add(this.label27);
@@ -217,7 +218,6 @@
             this.groupBox1.Controls.Add(this.text_cr15);
             this.groupBox1.Controls.Add(this.label22);
             this.groupBox1.Controls.Add(this.label23);
-            this.groupBox1.Controls.Add(this.text_cr16);
             this.groupBox1.Controls.Add(this.label21);
             this.groupBox1.Controls.Add(this.check_cr24f);
             this.groupBox1.Controls.Add(this.label24);
@@ -343,7 +343,7 @@
             // text_cr21
             // 
             this.text_cr21.Location = new System.Drawing.Point(399, 412);
-            this.text_cr21.Mask = "00.0";
+            this.text_cr21.Mask = "000.0";
             this.text_cr21.Name = "text_cr21";
             this.text_cr21.Size = new System.Drawing.Size(162, 29);
             this.text_cr21.TabIndex = 114;
@@ -1167,14 +1167,6 @@
             this.label23.TabIndex = 71;
             this.label23.Text = "Q. CS23: MUAC in cms.";
             // 
-            // text_cr16
-            // 
-            this.text_cr16.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.text_cr16.Location = new System.Drawing.Point(69, 255);
-            this.text_cr16.Name = "text_cr16";
-            this.text_cr16.Size = new System.Drawing.Size(187, 25);
-            this.text_cr16.TabIndex = 6;
-            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -1336,6 +1328,15 @@
             this.panel1.Size = new System.Drawing.Size(729, 614);
             this.panel1.TabIndex = 116;
             // 
+            // text_cr16
+            // 
+            this.text_cr16.Location = new System.Drawing.Point(69, 255);
+            this.text_cr16.Mask = "00.0";
+            this.text_cr16.Name = "text_cr16";
+            this.text_cr16.Size = new System.Drawing.Size(162, 29);
+            this.text_cr16.TabIndex = 116;
+            this.text_cr16.ValidatingType = typeof(int);
+            // 
             // Form_gm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1437,7 +1438,6 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox text_cr16;
         private System.Windows.Forms.TextBox text_cr15;
         private System.Windows.Forms.TextBox text_cr12;
         private System.Windows.Forms.TextBox text_cr11;
@@ -1485,5 +1485,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.MaskedTextBox text_cr22;
         private System.Windows.Forms.MaskedTextBox text_cr23;
+        private System.Windows.Forms.MaskedTextBox text_cr16;
     }
 }
