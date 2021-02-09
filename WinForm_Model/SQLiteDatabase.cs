@@ -2,9 +2,12 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SQLite;
 using System.Diagnostics;
 using System.IO;
+using System.Net;
+using System.Text;
 using System.Windows.Forms;
 using WinForm_Model.Model;
 using static WinForm_Model.frmLogin;
@@ -15,11 +18,11 @@ namespace WinForm_Model
     {
         // This class implements all the functions required to create table, insert data, update data in the SQLite Database.
         //
-
+        private DataRow emptyRow;
         public static String DATABASE_PATH = "enc";
         public static String DATABASE_NAME = DATABASE_PATH + "\\casi_gm.db3";
         public static int DATABASE_VERSION = 3;
-        public static string DATABASE_PASSWORD = "Aku@ku123";
+        public static string DATABASE_PASSWORD = "123";
 
         public static String SQL_CREATE_USERS = "CREATE TABLE users ("
             + "_ID INTEGER PRIMARY KEY AUTOINCREMENT,"
@@ -40,6 +43,11 @@ namespace WinForm_Model
             + " villlage_code TEXT,"
             + " cluster_no TEXT"
             + " );";
+
+        internal static void InsertTestUser(List<frmLogin.user_model> users)
+        {
+            throw new NotImplementedException();
+        }
 
         public static String SQL_CREATE_ZSTANDARDS = "CREATE TABLE zstandards ("
             + "_ID INTEGER PRIMARY KEY AUTOINCREMENT,"
@@ -130,9 +138,11 @@ namespace WinForm_Model
         //public static String SQL_INSERT_USERS = INSERT INTO SyncInformation(timestamp, last_sync_value, last_retrieved_change_file, status) values('
 
 
-        private static SqliteConnection con;
-        private static String strCon;
-        private static string connectionString;
+       public static SqliteConnection con;
+        public static String strCon;
+        public static string connectionString;
+
+        public static SqliteDataReader r;
 
         public SQLiteDatabase()
         {
@@ -547,6 +557,444 @@ namespace WinForm_Model
             SQLiteCommand cmd = new SQLiteCommand(sql, con);
             int rows = cmd.ExecuteNonQuery();
             con.Close();
+        }
+
+
+
+        public class data_villages
+        {
+            public string country { get; set; }
+            public string district { get; set; }
+            public string uc { get; set; }
+            public string village { get; set; }
+            public string country_code { get; set; }
+            public string district_code { get; set; }
+            public string uc_code { get; set; }
+            public string villlage_code { get; set; }
+            public string cluster_no { get; set; }
+
+
+        }
+
+
+        public class user_model
+        {
+            public string username { get; set; }
+            public string password { get; set; }
+            public string full_name { get; set; }
+
+        }
+        public List<data_villages> obj;
+        public List<user_model> user_obj;
+        public void get_villages()
+        {
+
+            try
+            {
+
+
+
+
+                var test = "{\"table\":\"villages\"}";
+
+
+
+                HttpWebRequest webRequest;
+
+                string requestParams = test.ToString();
+
+                webRequest = (HttpWebRequest)WebRequest.Create("http://f38158/casi_gm/api/getdata.php");
+
+                webRequest.Method = "POST";
+                webRequest.ContentType = "application/json";
+
+                byte[] byteArray = Encoding.UTF8.GetBytes(requestParams);
+                webRequest.ContentLength = byteArray.Length;
+
+                Stream requestStream = webRequest.GetRequestStream();
+
+                requestStream.Write(byteArray, 0, byteArray.Length);
+
+
+                // Get the response.
+                WebResponse response = webRequest.GetResponse();
+
+                Stream responseStream = response.GetResponseStream();
+
+                StreamReader rdr = new StreamReader(responseStream, Encoding.UTF8);
+                string Json = rdr.ReadToEnd(); // response from server
+                obj = JsonConvert.DeserializeObject<List<data_villages>>(Json);
+
+                
+            }
+
+            catch (Exception ex)
+            {
+
+                if (ex.Message == "The remote name could not be resolved: 'f38158'")
+                {
+                    MessageBox.Show("Please Open Record", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+
+
+            finally
+            {
+
+
+                using (con)
+                {
+                    try
+                    {
+                        con.Open();
+
+
+                        using (var cmd = con.CreateCommand())
+                        {
+
+                            cmd.CommandText = "Delete from villages";
+
+                            cmd.ExecuteNonQuery();
+
+
+
+                        }
+
+                        con.Close();
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show("ERROR!", "Form was not saved. " + "\n" + e.Message);
+                    }
+                }
+
+
+
+                
+                
+
+                    using (con)
+                    {
+                        try
+                        {
+                            con.Open();
+
+
+                            using (var cmd = con.CreateCommand())
+                            {
+                                for (int a = 0; a <= obj.Count - 1; a++)
+                                {
+                                    cmd.CommandText = "insert into villages(villlage_code, village, district_code, district, uc_code, uc,country,country_code,cluster_no) values('" + obj[a].villlage_code + "', '" + obj[a].village + "', '" + obj[a].district_code + "', '" + obj[a].district + "', '" + obj[a].uc_code + "', '" + obj[a].uc + "', '" + obj[a].country + "', '" + obj[a].country_code + "', '" + obj[a].cluster_no + "')";
+
+                                    cmd.ExecuteNonQuery();
+                                }
+
+
+                            }
+
+                            con.Close();
+                        }
+                        catch (Exception e)
+                        {
+                            MessageBox.Show("ERROR!", "Form was not saved. " + "\n" + e.Message);
+                        }
+                    }
+
+                
+             //   MessageBox.Show("Data Download", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                //System.Diagnostics.Debug.WriteLine("villages end");
+            }
+
+
+
+
+
+        }
+
+
+
+
+        public void get_users()
+        {
+            try
+            {
+               // System.Diagnostics.Debug.WriteLine("user start");
+
+
+
+                var user_var = "{\"table\":\"users\"}";
+
+
+
+                HttpWebRequest webRequest;
+
+                string requestParams = user_var.ToString();
+
+                webRequest = (HttpWebRequest)WebRequest.Create("http://f38158/casi_gm/api/getdata.php");
+
+                webRequest.Method = "POST";
+                webRequest.ContentType = "application/json";
+
+                byte[] byteArray = Encoding.UTF8.GetBytes(requestParams);
+                webRequest.ContentLength = byteArray.Length;
+                Stream requestStream = webRequest.GetRequestStream();
+
+                requestStream.Write(byteArray, 0, byteArray.Length);
+
+
+                // Get the response.
+                WebResponse response = webRequest.GetResponse();
+
+                Stream responseStream = response.GetResponseStream();
+
+                StreamReader rdr = new StreamReader(responseStream, Encoding.UTF8);
+                string Json = rdr.ReadToEnd(); // response from server
+                user_obj = JsonConvert.DeserializeObject<List<user_model>>(Json);
+
+
+            }
+            catch (Exception ex)
+            {
+
+                if (ex.Message == "The remote name could not be resolved: 'f38158'")
+                {
+                    MessageBox.Show("Please Open Record", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+
+
+            finally
+            {
+
+
+                using (con)
+                {
+                    try
+                    {
+                        con.Open();
+
+
+                        using (var cmd = con.CreateCommand())
+                        {
+
+                            cmd.CommandText = "Delete from users";
+
+
+                            cmd.ExecuteNonQuery();
+
+
+                        }
+
+                        con.Close();
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show("ERROR!", "Form was not saved. " + "\n" + e.Message);
+                    }
+                }
+
+
+
+             
+
+                    using (con)
+                    {
+                        try
+                        {
+                            con.Open();
+
+
+                            using (var cmd = con.CreateCommand())
+                            {
+                                for (int a = 0; a <= user_obj.Count - 1; a++) { 
+                                    cmd.CommandText= "insert into users(username,password,full_name)  values('" + user_obj[a].username + "','" + user_obj[a].password + "','" + user_obj[a].full_name + "')";
+
+
+                                cmd.ExecuteNonQuery();
+
+                                }
+                            }
+
+                            con.Close();
+                        }
+                        catch (Exception e)
+                        {
+                            MessageBox.Show("ERROR!", "Form was not saved. " + "\n" + e.Message);
+                        }
+                    }
+
+                
+              //  MessageBox.Show("Data Download", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+               
+            }
+
+
+
+
+            //MessageBox.Show("Data Download", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+           // System.Diagnostics.Debug.WriteLine("villages end");
+
+
+        }
+
+
+      
+
+     
+
+
+
+
+
+
+
+        public List<district_data> GetDistrict()
+        {
+
+
+            List<district_data> fdList = new List<district_data>() ;
+
+            
+            try
+            {
+                con.Open();
+                using (var cmd = con.CreateCommand())
+                {
+
+
+                    cmd.CommandText = "select * from villages where country_code = 2 group by district";
+                    r = cmd.ExecuteReader();
+
+                    district_data fd = new district_data();
+                    fd.district_code = "";
+                    fd.district = "";
+
+                    fdList.Add(fd);
+                    while (r.Read())
+                    {
+                        district_data f = new district_data();
+
+                        f.district_code = r["district_code"].ToString();
+                        f.district = r["district"].ToString();
+
+
+                        // 
+                        fdList.Add(f);
+
+                    }
+                    r.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return fdList;
+        }
+
+
+        public List<uc_data> GetUC(string dis)
+        {
+
+
+            List<uc_data> fdList = new List<uc_data>();
+
+
+            try
+            {
+                con.Open();
+                using (var cmd = con.CreateCommand())
+                {
+
+
+                    cmd.CommandText = "select * from villages  where district_code ='" + dis + "' group by uc";
+                    r = cmd.ExecuteReader();
+
+                    uc_data fd = new uc_data();
+                    fd.uc = "";
+                    fd.uc_code = "";
+                    fdList.Add(fd);
+                    while (r.Read())
+                    {
+                        uc_data f = new uc_data();
+
+                        f.uc_code = r["uc_code"].ToString();
+                        f.uc = r["uc"].ToString();
+
+
+                        // 
+                        fdList.Add(f);
+
+                    }
+                    r.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return fdList;
+        }
+
+        public List<village_data> GetVillage(string getvalue)
+        {
+
+
+            List<village_data> fdList = new List<village_data>();
+
+
+            try
+            {
+                con.Open();
+                using (var cmd = con.CreateCommand())
+                {
+
+
+                    cmd.CommandText = "select * from villages  where uc_code ='" + getvalue + "' group by village";
+                    r = cmd.ExecuteReader();
+
+                    village_data fd = new village_data();
+                    fd.villlage_code = "";
+                    fd.village = "";
+                    fdList.Add(fd);
+                    while (r.Read())
+                    {
+                        village_data f = new village_data();
+
+                        f.villlage_code = r["villlage_code"].ToString();
+                        f.village = r["village"].ToString();
+
+
+                        // 
+                        fdList.Add(f);
+
+                    }
+                    r.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return fdList;
         }
 
     }

@@ -31,6 +31,7 @@ namespace WinForm_Model
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button_upload = new System.Windows.Forms.Button();
             this.button_download = new System.Windows.Forms.Button();
             this.button_login = new System.Windows.Forms.Button();
             this.text_password = new System.Windows.Forms.TextBox();
@@ -40,12 +41,13 @@ namespace WinForm_Model
             this.lbl_verNo = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.text_verNo = new System.Windows.Forms.Label();
-            this.button_upload = new System.Windows.Forms.Button();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.progressBar1);
             this.groupBox1.Controls.Add(this.button_upload);
             this.groupBox1.Controls.Add(this.button_download);
             this.groupBox1.Controls.Add(this.button_login);
@@ -63,6 +65,19 @@ namespace WinForm_Model
             this.groupBox1.Text = "Login";
             this.groupBox1.UseWaitCursor = true;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // button_upload
+            // 
+            this.button_upload.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button_upload.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.button_upload.Location = new System.Drawing.Point(6, 205);
+            this.button_upload.Name = "button_upload";
+            this.button_upload.Size = new System.Drawing.Size(113, 24);
+            this.button_upload.TabIndex = 4;
+            this.button_upload.Text = "UPLOAD DATA";
+            this.button_upload.UseVisualStyleBackColor = false;
+            this.button_upload.UseWaitCursor = true;
+            this.button_upload.Click += new System.EventHandler(this.button_upload_Click);
             // 
             // button_download
             // 
@@ -163,18 +178,13 @@ namespace WinForm_Model
             this.text_verNo.Size = new System.Drawing.Size(0, 10);
             this.text_verNo.TabIndex = 0;
             // 
-            // button_upload
+            // progressBar1
             // 
-            this.button_upload.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button_upload.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.button_upload.Location = new System.Drawing.Point(6, 205);
-            this.button_upload.Name = "button_upload";
-            this.button_upload.Size = new System.Drawing.Size(113, 24);
-            this.button_upload.TabIndex = 4;
-            this.button_upload.Text = "UPLOAD DATA";
-            this.button_upload.UseVisualStyleBackColor = false;
-            this.button_upload.UseWaitCursor = true;
-            this.button_upload.Click += new System.EventHandler(this.button_upload_Click);
+            this.progressBar1.Location = new System.Drawing.Point(17, 183);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(216, 18);
+            this.progressBar1.TabIndex = 5;
+            this.progressBar1.Visible = false;
             // 
             // frmLogin
             // 
@@ -211,5 +221,6 @@ namespace WinForm_Model
         private System.Windows.Forms.Label lbl_verNo;
         private System.Windows.Forms.Label text_verNo;
         private System.Windows.Forms.Button button_upload;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }

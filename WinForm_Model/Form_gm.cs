@@ -434,7 +434,13 @@ namespace WinForm_Model
 
         private void button_close_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            //Application.Exit();
+
+            DataBaseVariable.frm_main1 = this;
+            this.Hide();
+
+            frmLogin obj_frmgm = new frmLogin();
+            obj_frmgm.Show();
         }
         public string error_text;
 
@@ -814,7 +820,8 @@ namespace WinForm_Model
 
         private void text_cr12_KeyPress(object sender, KeyPressEventArgs e)
         {
-          
+            if (!(Char.IsLetter(e.KeyChar) || (e.KeyChar == (char)Keys.Back)))
+                e.Handled = true;
         }
 
         private void text_cr22_KeyPress(object sender, KeyPressEventArgs e)
@@ -865,7 +872,7 @@ namespace WinForm_Model
             string textyy= ty.ToString("00");
             //string textday;
             //string textday;
-            text_cr15.Text = textday+" Days "+textmm+"Month "+textyy+"year ";
+            text_cr15.Text = textday+" Days "+textmm+" Month "+textyy+" Year ";
 
 
         }
@@ -873,6 +880,24 @@ namespace WinForm_Model
         private void text_cr15_KeyPress(object sender, KeyPressEventArgs e)
         {
           
+        }
+
+        private void text_cr27a_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsDigit(e.KeyChar) || (e.KeyChar == (char)Keys.Back)))
+                e.Handled = true;
+        }
+
+        private void text_cr27b_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsDigit(e.KeyChar) || (e.KeyChar == (char)Keys.Back)))
+                e.Handled = true;
+        }
+
+        private void text_cr27c_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsDigit(e.KeyChar) || (e.KeyChar == (char)Keys.Back)))
+                e.Handled = true;
         }
     }
 }

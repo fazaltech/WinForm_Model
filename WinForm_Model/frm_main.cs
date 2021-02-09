@@ -14,11 +14,13 @@ using System.Data.SqlClient;
 using Newtonsoft.Json;
 using System.Web;
 using System.Data.SQLite;
+using Microsoft.Data.Sqlite;
 
 namespace WinForm_Model
 {
     public partial class frm_main : Form
     {
+
         public frm_main()
         {
             InitializeComponent();
@@ -91,9 +93,7 @@ namespace WinForm_Model
             DataBaseVariable.CR_03 = cr03;
             
 
-            //if (radio_cr18a.Checked) { cr18 = "1"; } else if (!radio_cr18a.Checked) { cr18 = "2"; }
-            //if (radio_cr19a.Checked) { cr18 = "1"; } else if (!radio_cr19a.Checked) { cr19 = "2"; }
-            //if (radio_cr20a.Checked) { cr20 = "1"; } else if (!radio_cr20a.Checked) { cr20 = "2"; }
+      
         }
 
 
@@ -118,35 +118,20 @@ namespace WinForm_Model
 
             try
             {
-                DataBase cn = new DataBase();
-
-                SQLiteDataAdapter da = new SQLiteDataAdapter("select * from villages where country_code=2 group by district", cn.cn);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-
-
-                emptyRow = ds.Tables[0].NewRow();
-                emptyRow["district"] = "";
-                emptyRow["district_code"] = "";
-                ds.Tables[0].Rows.Add(emptyRow);
 
 
 
+                SQLiteDatabase db = new SQLiteDatabase();
+                List<district_data> datas = new List<district_data>();
+                datas = db.GetDistrict();
 
-                DataView newView =
-                new DataView(ds.Tables[0],       // source table
-                "",                             // filter
-                "district_code",            // sort by column
-                DataViewRowState.CurrentRows);  // rows with state to display
-
-                combo_cr01.DataSource = newView;
+                combo_cr01.DataSource = datas;
                 combo_cr01.DisplayMember = "district";
-
                 combo_cr01.ValueMember = "district_code";
-                var dt = ds.Tables[0];
 
 
 
+                
 
 
             }
@@ -156,37 +141,26 @@ namespace WinForm_Model
                 MessageBox.Show(ex.Message);
             }
 
+           
+
         }
 
         private void Village_DropDown()
         {
-            //string getvalue = combo_cr04.
+            
             string getvalue = combo_cr04.SelectedValue.ToString();
 
 
             try
             {
-                DataBase cn = new DataBase();
 
-                SQLiteDataAdapter da = new SQLiteDataAdapter("select * from villages  where uc_code ='" + getvalue + "' group by village", cn.cn);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
 
-                emptyRow = ds.Tables[0].NewRow();
-                emptyRow["village"] = "";
-                emptyRow["district_code"] = "";
-                ds.Tables[0].Rows.Add(emptyRow);
-
-                DataView newView =
-                new DataView(ds.Tables[0],       // source table
-                "",                             // filter
-                "villlage_code",            // sort by column
-                DataViewRowState.CurrentRows);  // rows with state to display
-
-                combo_cr05.DataSource = newView;
+                SQLiteDatabase db = new SQLiteDatabase();
+                List<village_data> datas = new List<village_data>();
+                datas = db.GetVillage(getvalue);
+                combo_cr05.DataSource = datas;
                 combo_cr05.DisplayMember = "village";
                 combo_cr05.ValueMember = "villlage_code";
-                var dt = ds.Tables[0];
 
 
 
@@ -210,27 +184,17 @@ namespace WinForm_Model
 
             try
             {
-                DataBase cn = new DataBase();
 
-                SQLiteDataAdapter da = new SQLiteDataAdapter("select * from villages  where district_code ='" + dis + "' group by uc", cn.cn);
+
+
+                SQLiteDatabase db = new SQLiteDatabase();
+                List<uc_data> datas = new List<uc_data>();
+                datas = db.GetUC(dis);
+
                 DataSet ds = new DataSet();
-                da.Fill(ds);
-
-                emptyRow = ds.Tables[0].NewRow();
-                emptyRow["village"] = "";
-                emptyRow["district_code"] = "";
-                ds.Tables[0].Rows.Add(emptyRow);
-
-                DataView newView =
-                new DataView(ds.Tables[0],       // source table
-                "",                             // filter
-                "uc_code",            // sort by column
-                DataViewRowState.CurrentRows);  // rows with state to display
-
-                combo_cr04.DataSource = newView;
+                combo_cr04.DataSource = datas;
                 combo_cr04.DisplayMember = "uc";
                 combo_cr04.ValueMember = "uc_code";
-                var dt = ds.Tables[0];
 
 
 

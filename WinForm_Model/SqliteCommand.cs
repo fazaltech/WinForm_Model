@@ -5,12 +5,12 @@ using Microsoft.Data.Sqlite;
 
 namespace WinForm_Model
 {
-    internal class SqliteCommand
+    public class SqliteCommand
     {
-        private string commandText;
-        private SQLiteConnection con;
-        private SqliteConnection con1;
-        private string v;
+        public string commandText;
+        public SQLiteConnection con;
+        public SqliteConnection con1;
+        public string v;
 
         public SqliteCommand(SqliteConnection con1)
         {

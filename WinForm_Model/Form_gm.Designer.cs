@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.text_cr16 = new System.Windows.Forms.MaskedTextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
@@ -128,7 +129,6 @@
             this.check_cr24c = new System.Windows.Forms.CheckBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.text_cr16 = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -239,6 +239,15 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Screening Log For Children Under-5";
+            // 
+            // text_cr16
+            // 
+            this.text_cr16.Location = new System.Drawing.Point(69, 255);
+            this.text_cr16.Mask = "00.0";
+            this.text_cr16.Name = "text_cr16";
+            this.text_cr16.Size = new System.Drawing.Size(162, 29);
+            this.text_cr16.TabIndex = 116;
+            this.text_cr16.ValidatingType = typeof(int);
             // 
             // label15
             // 
@@ -524,6 +533,7 @@
             this.text_cr27c.Name = "text_cr27c";
             this.text_cr27c.Size = new System.Drawing.Size(111, 25);
             this.text_cr27c.TabIndex = 26;
+            this.text_cr27c.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_cr27c_KeyPress);
             // 
             // label_cr28a
             // 
@@ -562,6 +572,7 @@
             this.text_cr27b.Name = "text_cr27b";
             this.text_cr27b.Size = new System.Drawing.Size(111, 25);
             this.text_cr27b.TabIndex = 25;
+            this.text_cr27b.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_cr27b_KeyPress);
             // 
             // label6
             // 
@@ -604,6 +615,7 @@
             this.text_cr27a.Size = new System.Drawing.Size(111, 25);
             this.text_cr27a.TabIndex = 0;
             this.text_cr27a.TabStop = false;
+            this.text_cr27a.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_cr27a_KeyPress);
             // 
             // groupBox2
             // 
@@ -1140,6 +1152,7 @@
             // 
             // text_cr15
             // 
+            this.text_cr15.Enabled = false;
             this.text_cr15.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.text_cr15.Location = new System.Drawing.Point(399, 200);
             this.text_cr15.Name = "text_cr15";
@@ -1327,15 +1340,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(729, 614);
             this.panel1.TabIndex = 116;
-            // 
-            // text_cr16
-            // 
-            this.text_cr16.Location = new System.Drawing.Point(69, 255);
-            this.text_cr16.Mask = "00.0";
-            this.text_cr16.Name = "text_cr16";
-            this.text_cr16.Size = new System.Drawing.Size(162, 29);
-            this.text_cr16.TabIndex = 116;
-            this.text_cr16.ValidatingType = typeof(int);
             // 
             // Form_gm
             // 
